@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+/* @theme {
+    --font-sans: "Instrument Sans", ui-sans-serif, system-ui, sans-serif,
+        "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+        "Noto Color Emoji";
+} */
+
+:root {
+    --color-brand: #6adbd9;
+    --color-nav: #212529;
+    --color-text: #2d3d3d;
+    --color-heading: #124846;
+    --color-white: #ffffff;
+    --color-black: #1e1e1e;
+}
+
+body {
+    font-family: "DM Sans", sans-serif;
+    line-height: 1;
+}
+
+.container {
+    max-width: 1440px;
+    padding: 0 20px;
+}
+
+.btn-brand {
+    @apply bg-[#6ADBD9] text-white text-base font-bold py-2 px-4 rounded-[60px] transition-all duration-300 ease-in-out flex items-center justify-between gap-3 min-w-[164px] h-[45px];
+}
+
+.btn-outline {
+    @apply min-w-[164px] h-[45px] border border-[#6ADBD9] text-white text-base font-bold py-2 px-4 rounded-[60px] transition-all duration-300 ease-in-out flex items-center justify-between gap-3 hover:bg-[#6ADBD9] hover:text-[#1b1b18];
+}
+
+.btn-outline:hover svg path {
+    stroke: #1b1b18;
+}
+
+.nav-link {
+    @apply text-sm font-medium text-[var(--color-nav)] hover:text-[#6ADBD9] transition-all duration-300 ease-in-out;
+}
+
+.nav-link.active {
+    @apply text-[#6ADBD9];
+}
+
+#mobile-menu .nav-link {
+    @apply text-white;
+}
+
+.footer-cta {
+    @apply bg-[#2B2B2B] text-white text-base font-bold py-6 px-6 rounded-lg transition-all duration-300 ease-in-out flex flex-wrap items-center justify-between gap-4;
+}
