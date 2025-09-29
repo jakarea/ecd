@@ -3,6 +3,8 @@
 @section('title', 'Homepage')
 
 @section('content')
+
+    {{-- Hero Section --}}
     <section style="background-image: url('{{ asset('assets/img/hero-bg.png') }}');"
         class="bg-no-repeat bg-cover bg-center min-h-[500px] md:min-h-[680px] relative py-10">
         <div class="container mx-auto">
@@ -65,4 +67,7 @@
             </div>
         </div>
     </section>
+
+    {{-- Home About --}}
+    @include('partials.home-about')
 @endsection

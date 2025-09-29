@@ -18,13 +18,13 @@
 
 <body>
 
-    @include('components.header')
+    @include('partials.header')
     {{-- Main Content --}}
     <main>
         @yield('content')
     </main>
 
-    @include('components.footer')
+    @include('partials.footer')
 
     {{-- Common JS --}}
     {{-- <script src="{{ asset('resources/js/app.js') }}"></script> --}}
