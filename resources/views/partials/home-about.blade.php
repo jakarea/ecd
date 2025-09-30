@@ -25,6 +25,31 @@
             'description' =>
                 'Skip the hassle of driving to a car wash—our mobile service brings premium car care directly to your home or workplace.',
         ],
+
+        [
+            'icon' => 'assets/img/about-icon1.svg',
+            'title' => 'Expert Team',
+            'description' =>
+                'Our skilled professionals bring years of hands-on experience, delivering precise, high-quality results every single time.',
+        ],
+        [
+            'icon' => 'assets/img/about-icon2.svg',
+            'title' => 'Premium-Grade Products',
+            'description' =>
+                'We use only top-tier, industry-approved products to ensure a spotless shine and long-lasting protection for your vehicle.',
+        ],
+        [
+            'icon' => 'assets/img/about-icon3.svg',
+            'title' => 'Eco-Friendly Cleaning',
+            'description' =>
+                'We care about both your car and the planet. That’s why we use eco-friendly solutions that are tough on dirt but gentle on the environment.',
+        ],
+        [
+            'icon' => 'assets/img/about-icon4.svg',
+            'title' => 'Service at Your Doorstep',
+            'description' =>
+                'Skip the hassle of driving to a car wash—our mobile service brings premium car care directly to your home or workplace.',
+        ],
     ];
 @endphp
 
@@ -73,22 +98,37 @@
                     class="w-full max-w-[587px]max-h-[410px] rounded-[16px]">
             </div>
         </div>
-        <div class="flex">
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-10">
+
+        <!-- Swiper Slider -->
+
+        <div class="swiper mySwiper mt-10">
+            <div class="swiper-wrapper items-stretch">
                 @foreach ($features as $feature)
-                    <div class="border border-[#D1D7DF] rounded-[20px] p-8">
-                        <div class="inline-block mb-6">
-                            <img src="{{ asset($feature['icon']) }}" alt="icon" class="w-10 h-10">
-                        </div>
-                        <h3 class="text-[20px] font-semibold mb-4 text-[var(--color-heading)] leading-[24px]">
-                            {{ $feature['title'] }}
-                        </h3>
-                        <div class="text-base text-[var(--color-text)] leading-[1.5]">
-                            {{ $feature['description'] }}
+                    <div class="swiper-slide flex">
+                        <div
+                            class="flex flex-col justify-between h-full w-full p-8 border border-[#D1D7DF] rounded-[20px] bg-white">
+                            <div>
+                                <div class="inline-block mb-6">
+                                    <img src="{{ asset($feature['icon']) }}" alt="icon" class="w-10 h-10">
+                                </div>
+                                <h3 class="text-[20px] font-semibold mb-4 text-[var(--color-heading)] leading-[24px]">
+                                    {{ $feature['title'] }}
+                                </h3>
+                                <div class="text-base text-[var(--color-text)] leading-[1.5]">
+                                    {{ $feature['description'] }}
+                                </div>
+                            </div>
                         </div>
                     </div>
                 @endforeach
             </div>
+
+
+            <!-- Navigation Buttons -->
+            <div class="swiper-button-next swiper-btn"></div>
+            <div class="swiper-button-prev swiper-btn"></div>
+
         </div>
+
     </div>
 </section>

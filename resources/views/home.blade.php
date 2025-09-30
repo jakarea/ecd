@@ -70,4 +70,7 @@
 
     {{-- Home About --}}
     @include('partials.home-about')
+
+    {{-- Working steps --}}
+    @include('partials.working-steps')
 @endsection
