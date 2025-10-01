@@ -85,8 +85,7 @@
                 </p>
                 <div class="inline-flex">
                     <a href="{{ route('about') }}" class="btn-brand"><span>About Us</span>
-                        <svg width="25" height="11" viewBox="0 0 25 11" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
+                        <svg width="25" height="11" viewBox="0 0 25 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M24 5.5H1M24 5.5L19.5 1M24 5.5L19.5 10" stroke="white" stroke-width="1.5"
                                 stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
@@ -101,33 +100,36 @@
 
         <!-- Swiper Slider -->
 
-        <div class="swiper mySwiper mt-10">
-            <div class="swiper-wrapper items-stretch">
-                @foreach ($features as $feature)
-                    <div class="swiper-slide flex">
-                        <div
-                            class="flex flex-col justify-between h-full w-full p-8 border border-[#D1D7DF] rounded-[20px] bg-white">
-                            <div>
-                                <div class="inline-block mb-6">
-                                    <img src="{{ asset($feature['icon']) }}" alt="icon" class="w-10 h-10">
-                                </div>
-                                <h3 class="text-[20px] font-semibold mb-4 text-[var(--color-heading)] leading-[24px]">
-                                    {{ $feature['title'] }}
-                                </h3>
-                                <div class="text-base text-[var(--color-text)] leading-[1.5]">
-                                    {{ $feature['description'] }}
+        <div class="relative swiper-container">
+            <div class="swiper mySwiper mt-10">
+                <div class="swiper-wrapper items-stretch">
+                    @foreach ($features as $feature)
+                        <div class="swiper-slide flex">
+                            <div
+                                class="flex flex-col justify-between h-full w-full p-8 border border-[#D1D7DF] rounded-[20px] bg-white">
+                                <div>
+                                    <div class="inline-block mb-6">
+                                        <img src="{{ asset($feature['icon']) }}" alt="icon" class="w-10 h-10">
+                                    </div>
+                                    <h3 class="text-[20px] font-semibold mb-4 text-[var(--color-heading)] leading-[24px]">
+                                        {{ $feature['title'] }}
+                                    </h3>
+                                    <div class="text-base text-[var(--color-text)] leading-[1.5]">
+                                        {{ $feature['description'] }}
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                @endforeach
+                    @endforeach
+                </div>
+
+
+
+
             </div>
-
-
             <!-- Navigation Buttons -->
             <div class="swiper-button-next swiper-btn"></div>
             <div class="swiper-button-prev swiper-btn"></div>
-
         </div>
 
     </div>

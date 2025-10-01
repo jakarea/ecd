@@ -2,19 +2,19 @@
     $workingSteps = [
         [
             'step' => '01',
-            'icon' => 'assets/img/step-1.webp',
+            'icon' => 'assets/img/step-1.png',
             'title' => 'Book Online',
             'description' => 'Schedule your service in just a few clicks—fast, easy, and hassle-free',
         ],
         [
             'step' => '02',
-            'icon' => 'assets/img/step-2.webp',
+            'icon' => 'assets/img/step-2.png',
             'title' => 'We come to you',
             'description' => 'Our team arrives at your location, fully equipped and ready to get to work.',
         ],
         [
             'step' => '03',
-            'icon' => 'assets/img/step-3.webp',
+            'icon' => 'assets/img/step-3.png',
             'title' => 'Enjoy the shine',
             'description' => 'Sit back, relax, and admire your spotless, sparkling results.',
         ],
@@ -47,18 +47,68 @@
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-2 mt-20">
-            @foreach ($workingSteps as $workingStep)
-                <div
-                    class="flex flex-col items-center text-center bg-[var(--color-black)] rounded-[16px] pt-[60px] pb-[10px] px-[10px]">
-                    <div class="max-w-[284px] w-full relative mb-10">
-                        <span
-                            class="text-[50px] font-black text-[#6ADBD926] block absolute left-0 top-[-30px] w-full ">{{ $workingStep['step'] }}</span>
-                        <h4 class="text-[28px] font-semibold text-white mb-4">{{ $workingStep['title'] }}</h4>
-                        <p class="text-sm leading-[1.5] text-[#787878]">{{ $workingStep['description'] }}</p>
-                    </div>
-                    <img src="{{ asset($workingStep['icon']) }}" alt="{{ $workingStep['title'] }}"
-                        class="h-[253px] object-cover block">
+            <div
+                class="flex flex-col items-center text-center bg-[var(--color-black)] rounded-[16px] pt-[60px] pb-[10px] px-[10px] relative">
+                <div class="max-w-[284px] w-full relative mb-10">
+                    <span
+                        class="text-[50px] font-black text-[#6ADBD926] block absolute left-0 top-[-30px] w-full ">01</span>
+                    <h4 class="text-[28px] font-semibold text-white mb-4">Book online</h4>
+                    <p class="text-sm leading-[1.5] text-[#787878]">Schedule your service in just a few clicks—fast,
+                        easy, and hassle-free.</p>
                 </div>
-            @endforeach
+                <img src="{{ asset('assets/img/step-1.png') }}" alt="step-1" class="h-[253px] object-cover block">
+                <div
+                    class="absolute bottom-[-35px] md:top-[50%] md:translate-y-[-50%] md:right-[-35px] md:translate-x-none w-[70px] h-[70px] p-2 bg-[#303030] flex items-center justify-center rounded-full z-9">
+                    <div
+                        class="w-[37px] h-[37px] bg-[var(--color-brand)] rounded-full flex items-center justify-center">
+
+                        <svg width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg"
+                            class="rotate-90 md:rotate-0">
+                            <path
+                                d="M15.1465 5.86334H0.8535M15.1465 5.86334L10.1989 0.915771M15.1465 5.86334L10.1989 10.8109"
+                                stroke="white" stroke-width="1.64919" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+
+                    </div>
+                </div>
+            </div>
+
+            <div
+                class="flex flex-col items-center text-center bg-[var(--color-black)] rounded-[16px] pt-[60px] pb-[10px] px-[10px] relative">
+                <div class="max-w-[284px] w-full relative mb-10">
+                    <span
+                        class="text-[50px] font-black text-[#6ADBD926] block absolute left-0 top-[-30px] w-full ">02</span>
+                    <h4 class="text-[28px] font-semibold text-white mb-4">We come to you</h4>
+                    <p class="text-sm leading-[1.5] text-[#787878]">Our team arrives at your location, fully equipped
+                        and ready to get to work.</p>
+                </div>
+                <img src="{{ asset('assets/img/step-2.png') }}" alt="step-1" class="h-[253px] object-cover block">
+                <div
+                    class="absolute bottom-[-35px] md:top-[50%] md:translate-y-[-50%] md:right-[-35px] md:translate-x-none w-[70px] h-[70px] p-2 bg-[#303030] flex items-center justify-center rounded-full z-9">
+                    <div
+                        class="w-[37px] h-[37px] bg-[var(--color-brand)] rounded-full flex items-center justify-center">
+
+                        <svg width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg"
+                            class="rotate-90 md:rotate-0">
+                            <path
+                                d="M15.1465 5.86334H0.8535M15.1465 5.86334L10.1989 0.915771M15.1465 5.86334L10.1989 10.8109"
+                                stroke="white" stroke-width="1.64919" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+
+                    </div>
+                </div>
+            </div>
+            <div
+                class="flex flex-col items-center text-center bg-[var(--color-black)] rounded-[16px] pt-[60px] pb-[10px] px-[10px]">
+                <div class="max-w-[284px] w-full relative mb-10">
+                    <span
+                        class="text-[50px] font-black text-[#6ADBD926] block absolute left-0 top-[-30px] w-full ">03</span>
+                    <h4 class="text-[28px] font-semibold text-white mb-4">Enjoy the shine</h4>
+                    <p class="text-sm leading-[1.5] text-[#787878]">Sit back, relax, and admire your spotless, sparkling
+                        results.</p>
+                </div>
+                <img src="{{ asset('assets/img/step-3.png') }}" alt="step-1" class="h-[253px] object-cover block">
+            </div>
         </div>
+    </div>
 </section>
