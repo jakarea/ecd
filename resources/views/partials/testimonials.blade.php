@@ -4,30 +4,39 @@
             'image' => 'assets/img/testimonial-1.png',
             'name' => 'Theresa Webb',
             'role' => 'CEO, Company XYZ',
-            'profile-img' => 'assets/img/profile-1.png',
-            'review' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ipsum lorem, tempor ut ex aliquam, fringilla lacinia quam...',
+            'profile_img' => 'assets/img/profile-1.png',
+            'review' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ipsum lorem, tempor ut ex aliquam, fringilla lacinia quam. Sed mattis ante at massa aliquet consectetur. Nullam enim sapien, tristique sit amet lorem lacinia, luctus molestie velit. Nam nunc quam, elementum nec neque nec, ullamcorper interdum orci. Sed gravida urna eu sapien maximus molestie. ',
         ],
         [
             'image' => 'assets/img/testimonial-1.png',
             'name' => 'Theresa Webb',
             'role' => 'CEO, Company XYZ',
-            'profile-img' => 'assets/img/profile-1.png',
-            'review' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ipsum lorem, tempor ut ex aliquam, fringilla lacinia quam...',
+            'profile_img' => 'assets/img/profile-1.png',
+            'review' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ipsum lorem, tempor ut ex aliquam, fringilla lacinia quam. Sed mattis ante at massa aliquet consectetur. Nullam enim sapien, tristique sit amet lorem lacinia, luctus molestie velit. Nam nunc quam, elementum nec neque nec, ullamcorper interdum orci. Sed gravida urna eu sapien maximus molestie. ',
         ],
         [
             'image' => 'assets/img/testimonial-1.png',
             'name' => 'Theresa Webb',
             'role' => 'CEO, Company XYZ',
-            'profile-img' => 'assets/img/profile-1.png',
-            'review' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ipsum lorem, tempor ut ex aliquam, fringilla lacinia quam...',
+            'profile_img' => 'assets/img/profile-1.png',
+            'review' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ipsum lorem, tempor ut ex aliquam, fringilla lacinia quam. Sed mattis ante at massa aliquet consectetur. Nullam enim sapien, tristique sit amet lorem lacinia, luctus molestie velit. Nam nunc quam, elementum nec neque nec, ullamcorper interdum orci. Sed gravida urna eu sapien maximus molestie. ',
         ],
     ];
+
+    $testimonial = (object) [
+        'image' => 'assets/img/testimonial-1.png',
+        'name' => 'Theresa Webb',
+        'role' => 'CEO, Company XYZ',
+        'profile_img' => 'assets/img/profile-1.png',
+        'review' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ipsum lorem, tempor ut ex aliquam, fringilla lacinia quam. Sed mattis ante at massa aliquet consectetur. Nullam enim sapien, tristique sit amet lorem lacinia, luctus molestie velit. Nam nunc quam, elementum nec neque nec, ullamcorper interdum orci. Sed gravida urna eu sapien maximus molestie.',
+    ];
+
 @endphp
 
 <section class="bg-[#F9F9F9] py-16 relative" id="testimonials">
     <div class="container mx-auto px-4">
         <!-- Section Header -->
-        <div class="max-w-[948px] mx-auto text-center mb-12">
+        <div class="max-w-[948px] mx-auto text-center mb-20">
             <div
                 class="py-2 px-4 inline-flex items-center gap-2 mb-4 bg-[#6ADBD926] rounded-[60px] text-[var(--color-heading)]">
                 <svg width="11" height="13" viewBox="0 0 11 13" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -46,34 +55,70 @@
         </div>
 
         <!-- Swiper Slider -->
-        <div class="relative max-w-[705px] mx-auto">
+
+        {{-- <div class="container mx-auto">
+            <div class="w-[794px] mx-auto">
+                <div
+                    class="bg-[#6ADBD926] w-[705px] h-[342px] py-8 pr-8 pl-[160px] rounded-[20px] shadow-sm flex flex-col justify-between relative ml-[100px]">
+                    <div class="flex items-center gap-4">
+                        <div class="absolute top-1/2 left-[-100px] -translate-y-1/2">
+                            <img src="{{ asset($testimonial->image) }}" alt="Testimonial"
+                                class="max-w-[225px] w-full h-[296px] object-cover rounded-[12px]">
+                        </div>
+                        <div>
+                            <div class="flex items-center gap-4 mb-5">
+                                <img src="{{ asset($testimonial->profile_img) }}" alt="{{ $testimonial->name }}"
+                                    class="w-[62px] h-[62px] rounded-full object-cover border-1 border-[var(--color-brand)] p-1">
+                                <div>
+                                    <h4 class="text-[18px] font-semibold text-[var(--color-heading)] mb-2">
+                                        {{ $testimonial->name }}
+                                    </h4>
+                                    <span class="text-sm font-medium text-[var(--color-text)]">{{ $testimonial->role
+                                        }}</span>
+                                </div>
+                            </div>
+                            <p class="text-[14px] text-[var(--color-text)] 
+                             leading-[1.6]">
+                                {{ $testimonial->review }}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> --}}
+
+        <div class="relative">
             <div class="swiper testimonialSwiper overflow-visible">
                 <div class="swiper-wrapper">
                     @foreach ($testimonials as $testimonial)
-                        <div class="swiper-slide px-2">
-                            <div
-                                class="bg-[#6ADBD926] py-8 pr-8 pl-[160px] rounded-[20px] shadow-sm h-full flex flex-col justify-between relative">
-                                <div class="flex items-center gap-4">
-                                    <div class="absolute top-50% left-[-100px]">
-                                        <img src="{{ asset($testimonial['image']) }}" alt="Testimonial"
-                                            class="max-w-[225px] w-full h-[296px] object-cover rounded-[12px]">
-                                    </div>
-                                    <div class="">
-                                        <div class="flex items-center gap-4">
-                                            <img src="{{ asset($testimonial['profile-img']) }}"
-                                                alt="{{ $testimonial['name'] }}"
-                                                class="w-12 h-12 rounded-full object-cover">
-                                            <div>
-                                                <h4 class="text-[16px] font-semibold text-[var(--color-heading)]">
-                                                    {{ $testimonial['name'] }}
-                                                </h4>
-                                                <span
-                                                    class="text-sm text-[var(--color-text)]">{{ $testimonial['role'] }}</span>
-                                            </div>
+                        <div class="swiper-slide">
+                            <div class="w-[794px] mx-auto">
+                                <div
+                                    class="bg-[#6ADBD926] w-[705px] h-[342px] py-8 pr-8 pl-[160px] rounded-[20px] shadow-sm flex flex-col justify-between relative ml-[100px]">
+                                    <div class="flex items-center gap-4">
+                                        <div class="absolute top-1/2 left-[-100px] -translate-y-1/2">
+                                            <img src="{{ asset($testimonial['image']) }}" alt="Testimonial"
+                                                class="max-w-[225px] w-full h-[296px] object-cover rounded-[12px]">
                                         </div>
-                                        <p class="text-[15px] text-[var(--color-text)] leading-[1.6]">
-                                            {{ $testimonial['review'] }}
-                                        </p>
+                                        <div>
+                                            <div class="flex items-center gap-4 mb-5">
+                                                <img src="{{ asset($testimonial['profile_img']) }}"
+                                                    alt="{{ $testimonial['name'] }}"
+                                                    class="w-[62px] h-[62px] rounded-full object-cover border-1 border-[var(--color-brand)] p-1">
+                                                <div>
+                                                    <h4 class="text-[18px] font-semibold text-[var(--color-heading)] mb-2">
+                                                        {{ $testimonial['name']  }}
+                                                    </h4>
+                                                    <span
+                                                        class="text-sm font-medium text-[var(--color-text)]">{{ $testimonial['role']}}</span>
+                                                </div>
+                                            </div>
+                                            <p
+                                                class="text-[14px] text-[var(--color-text)] 
+                                                                                                                                                         leading-[1.6]">
+                                                {{ $testimonial['review']}}
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -82,10 +127,13 @@
                 </div>
 
                 <!-- Swiper Navigation -->
-                <div class="swiper-button-prev testimonial-nav left-[-22px] top-1/2 -translate-y-1/2 absolute z-10">
-                </div>
-                <div class="swiper-button-next testimonial-nav right-[-22px] top-1/2 -translate-y-1/2 absolute z-10">
-                </div>
+
+
+            </div>
+            <div class="testimonial-controls flex justify-center items-center gap-6 mt-10">
+                <div class="swiper-button-prev testimonial-nav"></div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next testimonial-nav"></div>
             </div>
         </div>
     </div>
@@ -101,16 +149,28 @@
     .testimonialSwiper .swiper-wrapper {
         align-items: stretch;
     }
-</style>
 
-<script>
-    const swiper = new Swiper('.testimonialSwiper', {
-        slidesPerView: 1,
-        spaceBetween: 20,
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-        dots: true
-    });
-</script>
+    .testimonial-controls .swiper-button-prev,
+    .testimonial-controls .swiper-button-next,
+    .testimonial-controls .swiper-pagination {
+        position: static !important;
+        flex-shrink: 0;
+        margin: 0;
+    }
+
+    .testimonial-controls .swiper-pagination {
+        width: auto;
+    }
+
+    .testimonial-controls .swiper-pagination-bullet {
+        width: 10px;
+        height: 10px;
+        background-color: #fff;
+        border: 1px solid var(--color-brand);
+        opacity: 1;
+    }
+
+    .testimonial-controls .swiper-pagination-bullet-active {
+        background-color: var(--color-brand);
+    }
+</style>

@@ -10,6 +10,10 @@ document.addEventListener("DOMContentLoaded", function () {
         slidesPerView: 1,
         spaceBetween: 20,
         loop: true,
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+        },
         pagination: {
             el: ".swiper-pagination",
             clickable: true,
@@ -28,6 +32,20 @@ document.addEventListener("DOMContentLoaded", function () {
             1024: {
                 slidesPerView: 4,
             },
+        },
+    });
+
+    //testimonial
+
+    const swiper = new Swiper(".testimonialSwiper", {
+        slidesPerView: 1,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
         },
     });
 });

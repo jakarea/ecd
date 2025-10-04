@@ -47,7 +47,8 @@
         </div>
         <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6">
             @foreach ($benefits as $benefit)
-                <div class="h-[166px] bg-white rounded-[20px] p-[30px] flex flex-col justify-center items-center gap-8">
+                <div
+                    class="h-[166px] bg-white rounded-[20px] p-[30px] flex flex-col justify-center items-center gap-8 text-center">
                     <img src="{{ asset($benefit['image']) }}" alt="{{ $benefit['title'] }}">
                     <h3 class="text-[20px] font-semibold text-[var(--color-heading)]">{{  $benefit['title'] }}</h3>
                 </div>

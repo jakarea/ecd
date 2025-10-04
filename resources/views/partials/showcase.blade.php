@@ -1,3 +1,7 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css" />
+<link rel="stylesheet" href="{{ asset('assets/css/cndk.beforeafter.css') }}">
+
 <section class="py-12">
     <div class="container">
         <div class="max-w-[948px] mx-auto text-center">
@@ -23,5 +27,251 @@
                 results that will leave you amazed.
             </p>
         </div>
+
+    </div>
+    <div class="showcase-slider-container">
+        <div class="showcase-image-slider -mx-3 px-6 mt-20" id="showcase-slider">
+            <div class="showcase-image px-3">
+                <div class="showcase-card">
+                    <img src="{{ asset('assets/img/showcase1.webp') }}" alt="Showcase 1"
+                        class="w-full h-full object-cover" />
+                </div>
+            </div>
+
+            <div class="showcase-image px-3">
+                <div class="showcase-card">
+                    <img src="{{ asset('assets/img/showcase2.webp') }}" alt="Showcase 2"
+                        class="w-full h-full object-cover" />
+                </div>
+            </div>
+
+            <div class="showcase-image px-3">
+                <div class="showcase-card">
+                    {{-- <img src="{{ asset('assets/img/showcase3.webp') }}" alt="Showcase 3"
+                        class="w-full h-full object-cover" /> --}}
+                    <div class="beforeafterdefault">
+                        <div data-type="data-type-image">
+                            <div data-type="before"><img src="{{ asset('assets/img/showcase3.webp') }}"></div>
+                            <div data-type="after"><img src="{{ asset('assets/img/showcase3.webp') }}"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- duplicate slides as needed -->
+            <div class="showcase-image px-3">
+                <div class="showcase-card">
+                    <img src="{{ asset('assets/img/showcase1.webp') }}" alt="Showcase 1"
+                        class="w-full h-full object-cover" />
+                </div>
+            </div>
+            <div class="showcase-image px-3">
+                <div class="showcase-card">
+                    <img src="{{ asset('assets/img/showcase2.webp') }}" alt="Showcase 2"
+                        class="w-full h-full object-cover" />
+                </div>
+            </div>
+            <div class="showcase-image px-3">
+                <div class="showcase-card">
+                    <img src="{{ asset('assets/img/showcase3.webp') }}" alt="Showcase 3"
+                        class="w-full h-full object-cover" />
+                </div>
+            </div>
+        </div>
+        <div class="slider-controls"></div>
     </div>
 </section>
+
+
+<!-- scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+<script src="{{asset('assets/js/cndk.beforeafter.js')}}"></script>
+
+<script>
+    $(document).ready(function () {
+        $('#showcase-slider').slick({
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            centerMode: true,
+            arrows: true,
+            dots: true,
+            speed: 300,
+            centerPadding: '20px',
+            infinite: true,
+            autoplaySpeed: 5000,
+            // autoplay: true
+            appendArrows: $('.slider-controls'),
+            appendDots: $('.slider-controls'),
+
+            prevArrow: `<button type="button" class="slick-prev custom-arrow">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15 18L9 12L15 6" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>`,
+            nextArrow: `<button type="button" class="slick-next custom-arrow">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9 6L15 12L9 18" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>`,
+
+            responsive: [{
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: true
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    centerMode: false,
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    centerMode: false,
+                }
+            },
+
+            ]
+        });
+
+        $(".beforeafterdefault").cndkbeforeafter({
+            mode: "drag"
+        });
+    });
+</script>
+
+<style>
+    .showcase-image-slider .slick-track {
+        padding: 50px 0;
+    }
+
+    .showcase-image-slider .slick-slide {
+        height: 384px;
+        margin: 0 15px 0 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: scale(0.8);
+        transition: all 0.4s ease-in-out;
+        border-radius: 20px;
+    }
+
+    .showcase-image-slider .slick-slide,
+    .showcase-image-slider .slick-slide[aria-hidden="true"]:not(.slick-cloned)~.slick-cloned[aria-hidden="true"] {
+        transform: scale(0.8, 0.8);
+        transition: all 0.4s ease-in-out;
+    }
+
+    /* Active center slide (You can change anything here for cenetr slide)*/
+    .showcase-image-slider .slick-center,
+    .showcase-image-slider .slick-slide[aria-hidden="true"]:not([tabindex="-1"])+.slick-cloned[aria-hidden="true"] {
+        transform: scale(1.1);
+    }
+
+    .showcase-image-slider .slick-current.slick-active {
+        transform: scale(1.1);
+    }
+
+    .showcase-image-slider .slick-slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 20px;
+    }
+
+    .showcase-image-slider .slick-slide div {
+        width: 100%;
+        height: 100%;
+    }
+
+    /* Wrapper for controls below slider */
+    .slider-controls {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        /* space between arrows and dots */
+        margin-top: 20px;
+    }
+
+    /* --- Slider Control Area (arrows + dots) --- */
+    .slider-controls {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        /* supports responsive stacking if needed */
+        gap: 20px;
+        margin-top: 20px;
+    }
+
+    /* --- Custom Arrow Buttons --- */
+    .custom-arrow {
+        background: none;
+        border: none;
+        padding: 8px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: transform 0.2s ease;
+    }
+
+    .custom-arrow:hover {
+        transform: scale(1.1);
+    }
+
+    .custom-arrow svg {
+        width: 28px;
+        height: 28px;
+        stroke: #000;
+    }
+
+    /* --- Slick Dots (Pagination) --- */
+    #showcase-slider .slick-dots {
+        position: static;
+        display: flex !important;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    #showcase-slider .slick-dots li {
+        margin: 0;
+    }
+
+    #showcase-slider .slick-dots li button {
+        background: none;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+    }
+
+    #showcase-slider .slick-dots li button:before {
+        content: '';
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: #000;
+        opacity: 0.3;
+        transition: opacity 0.3s;
+    }
+
+    #showcase-slider .slick-dots li.slick-active button:before {
+        opacity: 1;
+    }
+</style>
