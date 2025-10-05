@@ -54,7 +54,7 @@
             </div>
         </div>
         <div class="pricing-table mt-10">
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div class="pricing-card flex flex-col justify-between p-[30px] rounded-[20px] bg-[#003868] text-white">
                     <div class="pricing-card-header flex flex-col gap-4 pb-4 border-b border-[#0C5798]">
                         <div class="w-[44px] h-[44px] bg-white rounded-[16px] flex justify-center items-center">
@@ -270,8 +270,8 @@
                     </div>
                     <div class="pricing-card-footer mt-4">
                         <a href="#"
-                            class="text-[#230C0F] text-base font-bold rounded-[60px] px-5 py-3.5 text-center flex items-center justify-center gap-3 cursor-pointer min-w-[164px] bg-white">
-                            <span>Get started with Basic</span>
+                            class="text-[#230C0F] text-[15px] font-bold rounded-[60px] px-2 py-3.5 text-center flex items-center justify-center gap-3 cursor-pointer min-w-[164px] bg-white">
+                            <span>Get started with Premium</span>
 
                             <svg width="8" height="12" viewBox="0 0 8 12" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -412,7 +412,7 @@
                     <div class="pricing-card-footer mt-4">
                         <a href="#"
                             class="text-[#230C0F] text-base font-bold rounded-[60px] px-5 py-3.5 text-center flex items-center justify-center gap-3 cursor-pointer min-w-[164px] bg-white">
-                            <span>Get started with Basic</span>
+                            <span>Get started with Full Detail</span>
 
                             <svg width="8" height="12" viewBox="0 0 8 12" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">

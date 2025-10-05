@@ -53,7 +53,7 @@
     ];
 @endphp
 
-<section class="py-12">
+<section class="pt-8 md:pt-25 pb-8 md:pb-[50px]">
     <div class="container mx-auto">
         <div class="flex flex-col md:flex-row items-center justify-between gap-4">
             <div class="w-full md:w-1/2 md:pr-[50px] lg:pr-[100px]">

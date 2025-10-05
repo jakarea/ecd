@@ -23,7 +23,7 @@
     ];
 @endphp
 
-<section class="bg-[#ededed]">
+<section class="bg-[#ededed] py-8 md:py-25">
     <div class="container">
         <div class="max-w-[900px] mx-auto text-center">
             <div

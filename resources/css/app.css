@@ -36,9 +36,9 @@ body {
     margin: 0 auto;
 }
 
-section {
+/* section {
     @apply py-20;
-}
+} */
 
 .pricing-opt.active {
     @apply bg-white text-[#454852];

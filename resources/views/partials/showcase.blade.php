@@ -2,32 +2,19 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css" />
 <link rel="stylesheet" href="{{ asset('assets/css/cndk.beforeafter.css') }}">
 
-<section class="py-12">
+<section class="py-8 md:py-25">
     <div class="container">
-        <div class="max-w-[948px] mx-auto text-center">
-            <div
-                class="py-2 px-4 inline-flex items-center gap-2 mb-4 text-[var(--color-heading)] bg-[#6ADBD926] rounded-[60px]">
-
+        <x-section-heading pretitle="We Prove It" title="Transform Your Ride: Stunning before & after car detailing"
+            description="Our skilled team employs top-notch techniques and eco-friendly products to rejuvenate your ride, ensuring it looks its absolute best. From quick washes to comprehensive detailing, we deliver remarkable results that will leave you amazed."
+            width="max-w-[948px]">
+            <x-slot name="icon">
                 <svg width="11" height="13" viewBox="0 0 11 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
                         d="M5.5 0.137207L0.25 2.47054V5.97054C0.25 9.20804 2.49 12.2355 5.5 12.9705C8.51 12.2355 10.75 9.20804 10.75 5.97054V2.47054L5.5 0.137207ZM7.29667 8.88721L5.5 7.80804L3.70917 8.88721L4.18167 6.84554L2.60083 5.48054L4.68917 5.29971L5.5 3.37471L6.31083 5.29387L8.39917 5.47471L6.81833 6.84554L7.29667 8.88721Z"
                         fill="#124846" />
                 </svg>
-
-
-                <h3 class="text-[11px] font-semibold uppercase text-[var(--color-heading)]">We Prove It
-                </h3>
-            </div>
-            <h2 class="text-[34px] font-extrabold mb-8 text-[var(--color-heading)] leading-[1.2] tracking-[0.02px]">
-                Transform Your Ride: Stunning before & after car detailing
-            </h2>
-            <p class="text-[16px] leading-[1.5] text-[var(--color-text)] mb-8">
-                Our skilled team employs top-notch techniques and eco-friendly products to rejuvenate your ride,
-                ensuring it looks its absolute best. From quick washes to comprehensive detailing, we deliver remarkable
-                results that will leave you amazed.
-            </p>
-        </div>
-
+            </x-slot>
+        </x-section-heading>
     </div>
     <div class="showcase-slider-container">
         <div class="showcase-image-slider -mx-3 px-6 mt-20" id="showcase-slider">
@@ -217,6 +204,7 @@
 
     /* --- Custom Arrow Buttons --- */
     .custom-arrow {
+        position: static;
         background: none;
         border: none;
         padding: 8px;
@@ -238,7 +226,7 @@
     }
 
     /* --- Slick Dots (Pagination) --- */
-    #showcase-slider .slick-dots {
+    .showcase-slider-container .slick-dots {
         position: static;
         display: flex !important;
         justify-content: center;
@@ -249,18 +237,18 @@
         list-style: none;
     }
 
-    #showcase-slider .slick-dots li {
+    .showcase-slider-container .slick-dots li {
         margin: 0;
     }
 
-    #showcase-slider .slick-dots li button {
+    .showcase-slider-container .slick-dots li button {
         background: none;
         border: none;
         padding: 0;
         cursor: pointer;
     }
 
-    #showcase-slider .slick-dots li button:before {
+    .showcase-slider-container .slick-dots li button:before {
         content: '';
         display: inline-block;
         width: 10px;
@@ -271,7 +259,7 @@
         transition: opacity 0.3s;
     }
 
-    #showcase-slider .slick-dots li.slick-active button:before {
+    .showcase-slider-container .slick-dots li.slick-active button:before {
         opacity: 1;
     }
 </style>
