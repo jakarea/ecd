@@ -36,23 +36,17 @@
 <section class="bg-[#F9F9F9] py-16 relative" id="testimonials">
     <div class="container mx-auto px-4">
         <!-- Section Header -->
-        <div class="max-w-[948px] mx-auto text-center mb-20">
-            <div
-                class="py-2 px-4 inline-flex items-center gap-2 mb-4 bg-[#6ADBD926] rounded-[60px] text-[var(--color-heading)]">
+        <x-section-heading pretitle="Testimonials" title="Our Reviews"
+            description="Hear what our satisfied customers have to say!." width="max-w-[948px]">
+            <x-slot name="icon">
                 <svg width="11" height="13" viewBox="0 0 11 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
                         d="M5.5 0.137207L0.25 2.47054V5.97054C0.25 9.20804 2.49 12.2355 5.5 12.9705C8.51 12.2355 10.75 9.20804 10.75 5.97054V2.47054L5.5 0.137207ZM7.29667 8.88721L5.5 7.80804L3.70917 8.88721L4.18167 6.84554L2.60083 5.48054L4.68917 5.29971L5.5 3.37471L6.31083 5.29387L8.39917 5.47471L6.81833 6.84554L7.29667 8.88721Z"
                         fill="#124846" />
                 </svg>
-                <h3 class="text-[11px] font-semibold uppercase">Testimonials</h3>
-            </div>
-            <h2 class="text-[34px] font-extrabold leading-[1.2] tracking-[0.02px] text-[var(--color-heading)] mb-4">
-                Our Reviews
-            </h2>
-            <p class="text-[16px] text-[var(--color-text)] leading-[1.5]">
-                Hear what our satisfied customers have to say!
-            </p>
-        </div>
+            </x-slot>
+        </x-section-heading>
+
 
         <!-- Swiper Slider -->
 
@@ -113,9 +107,7 @@
                                                         class="text-sm font-medium text-[var(--color-text)]">{{ $testimonial['role']}}</span>
                                                 </div>
                                             </div>
-                                            <p
-                                                class="text-[14px] text-[var(--color-text)] 
-                                                                                                                                                         leading-[1.6]">
+                                            <p class="text-[14px] text-[var(--color-text)] leading-[1.6] font-sf">
                                                 {{ $testimonial['review']}}
                                             </p>
                                         </div>

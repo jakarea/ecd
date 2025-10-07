@@ -13,11 +13,13 @@ class HeroSection extends Component
      */
     public $title;
     public $bgImage;
+    public $bgColor;
 
-    public function __construct($title, $bgImage)
+    public function __construct($title, $bgImage, $bgColor = 'white')
     {
         $this->title = $title;
         $this->bgImage = $bgImage;
+        $this->bgColor = $bgColor;
     }
 
     /**

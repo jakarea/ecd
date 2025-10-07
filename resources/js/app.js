@@ -5,6 +5,31 @@ import gsap from "gsap";
 import Swiper from "swiper/bundle";
 import "swiper/css/bundle"; // includes core + navigation + pagination
 
+function equalizeSlideHeights() {
+    const slides = document.querySelectorAll(".swiper-slide");
+    let maxHeight = 0;
+
+    // Reset and measure
+    slides.forEach((slide) => {
+        slide.style.height = "auto";
+        maxHeight = Math.max(maxHeight, slide.offsetHeight);
+    });
+
+    // Reduce height slightly (e.g., 10px less)
+    const adjustedHeight = maxHeight - 30;
+
+    // Apply adjusted height
+    slides.forEach((slide) => {
+        slide.style.height = adjustedHeight + "px";
+    });
+}
+
+let resizeTimeout;
+window.addEventListener("resize", () => {
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(equalizeSlideHeights, 150);
+});
+
 // Initialize Swiper
 document.addEventListener("DOMContentLoaded", function () {
     new Swiper(".mySwiper", {
@@ -33,6 +58,11 @@ document.addEventListener("DOMContentLoaded", function () {
             1024: {
                 slidesPerView: 4,
             },
+        },
+
+        on: {
+            init: equalizeSlideHeights,
+            resize: equalizeSlideHeights,
         },
     });
 

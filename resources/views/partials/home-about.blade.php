@@ -104,7 +104,7 @@
             <div class="swiper mySwiper mt-10">
                 <div class="swiper-wrapper items-stretch">
                     @foreach ($features as $feature)
-                        <div class="swiper-slide flex">
+                        <div class="swiper-slide flex h-[288px]">
                             <div
                                 class="flex flex-col justify-between h-full w-full p-8 border border-[#D1D7DF] rounded-[20px] bg-white">
                                 <div>
@@ -114,7 +114,7 @@
                                     <h3 class="text-[20px] font-semibold mb-4 text-[var(--color-heading)] leading-[24px]">
                                         {{ $feature['title'] }}
                                     </h3>
-                                    <div class="text-base text-[var(--color-text)] leading-[1.5]">
+                                    <div class="text-base text-[var(--color-text)] leading-[1.5] font-sf">
                                         {{ $feature['description'] }}
                                     </div>
                                 </div>

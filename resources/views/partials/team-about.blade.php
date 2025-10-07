@@ -52,7 +52,7 @@
                             {{ $team['name'] }}
                         </h3>
                         <p
-                            class="text-[16px] font-normal text-[var(--color-heading)] group-hover:text-white transition-all duration-300">
+                            class="text-[16px] font-normal text-[var(--color-heading)] group-hover:text-white transition-all duration-300 font-sf">
                             {{ $team['position'] }}</p>
                     </div>
                 </div>

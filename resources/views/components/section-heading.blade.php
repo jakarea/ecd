@@ -37,7 +37,7 @@
 
     {{-- Description --}}
     @if($description)
-        <p class="text-[16px] text-[var(--color-text)] leading-[1.5]">
+        <p class="text-[16px] text-[var(--color-text)] leading-[1.5] font-sf">
             {{ $description }}
         </p>
     @endif

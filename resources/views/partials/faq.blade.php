@@ -68,7 +68,7 @@
                     </div>
 
                     <div id="{{ $qid }}"
-                        class="acc-content text-base text-[var(--color-text)] pt-4 pr-4 pl-[46px] md:pl-[58px] w-full max-w-[666px] overflow-hidden"
+                        class="acc-content text-base text-[var(--color-text)] pt-4 pr-4 pl-[46px] md:pl-[58px] w-full max-w-[666px] overflow-hidden font-sf"
                         aria-hidden="true" style="display:none">
                         {!! nl2br(e($faq['answer'])) !!}
                     </div>

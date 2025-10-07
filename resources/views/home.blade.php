@@ -33,7 +33,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="static md:fixed bottom-25 right-10 self-start mt-8 md:mt-0 z-10">
+                <div class="fixed top-[50%] -translate-y-[50%] left-10 md:right-10 md:left-auto z-10">
                     <nav class="flex flex-col gap-2">
                         <a href="#" class="w-10 h-10 flex items-center justify-center bg-[#10C379] rounded-full">
                             <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">

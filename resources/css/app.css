@@ -11,6 +11,109 @@
         "Noto Color Emoji";
 } */
 
+/* === Register your custom font === */
+@font-face {
+    font-family: "SF Pro Display";
+    src: url("../fonts/SFPRODISPLAYREGULAR.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "SF Pro Display";
+    src: url("../fonts/SFPRODISPLAYMEDIUM.woff2") format("woff2");
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "SF Pro Display";
+    src: url("../fonts/SFPRODISPLAYBOLD.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "SF Pro Display";
+    src: url("../fonts/SFPRODISPLAYSEMIBOLDITALIC.woff2") format("woff2");
+    font-weight: 700;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "SF Pro Display";
+    src: url("../fonts/SFPRODISPLAYSEMIBOLD.woff2") format("woff2");
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "SF Pro Display";
+    src: url("../fonts/SFPRODISPLAYSEMIBOLDITALIC.woff2") format("woff2");
+    font-weight: 600;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "SF Pro Display";
+    src: url("../fonts/SFPRODISPLAYSEMIBLACKITALIC.woff2") format("woff2");
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "SF Pro Display";
+    src: url("../fonts/SFPRODISPLAYLIGHT.woff2") format("woff2");
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "SF Pro Display";
+    src: url("../fonts/SFPRODISPLAYLIGHTITALIC.woff2") format("woff2");
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "SF Pro Display";
+    src: url("../fonts/SFPRODISPLAYHEAVY.woff2") format("woff2");
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "SF Pro Display";
+    src: url("../fonts/SFPRODISPLAYHEAVYITALIC.woff2") format("woff2");
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "SF Pro Display";
+    src: url("../fonts/SFPRODISPLAYLIGHTITALIC.woff2") format("woff2");
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "SF Pro Display";
+    src: url("../fonts/SFPRODISPLAYTHIN.woff2") format("woff2");
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "SF Pro Display";
+    src: url("../fonts/SFPRODISPLAYTHINITALIC.woff2") format("woff2");
+    font-weight: 100;
+    font-style: italic;
+}
+
+@theme {
+    --font-sf: "SF Pro Display", sans-serif;
+}
+
 :root {
     --color-brand: #6adbd9;
     --color-nav: #212529;
@@ -77,6 +180,7 @@ body {
 .swiper-slide {
     display: flex;
     align-self: stretch;
+    height: 320px;
 }
 
 .swiper-button-prev,

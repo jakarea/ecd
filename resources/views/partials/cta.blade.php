@@ -3,12 +3,16 @@
         {{-- <div class="container"> --}}
             <div class="flex flex-wrap">
                 <div
-                    class="w-[60%] bg-[var(--color-black)] rounded-tr-[20px] rounded-br-[20px] py-10 pr-10 pl-[calc((100vw-1200px)/2)] flex flex-col justify-center">
-                    <div class="space-y-5 pr-25">
-                        <h2 class="text-white text-4xl font-bold leading-[52px]">Make your car sparkle today!</h2>
-                        <p class="text-white text-lg font-medium leading-[30px]">Book your wash and detailing in
+                    class="w-full lg:w-[60%] bg-[var(--color-black)] rounded-tr-[20px] rounded-br-[20px] py-10 px-4 md:pr-10 lg:pl-6 xl:pl-[calc((100vw-1200px)/2)] flex flex-col justify-center">
+                    <div class="lg:pr-25">
+                        <h2
+                            class="text-white text-[28px] md:text-[34px] font-black leading-[1.2] md:leading-[42px] tracking-[0.03px]">
+                            Make your car sparkle
+                            today!</h2>
+                        <p class="text-white text-lg leading-[1.3] mt-4 mb-[26px]">Book your wash and
+                            detailing in
                             minutes. We’ll come to you and leave your ride spotless inside and out.</p>
-                        <div class="">
+                        <div class="inline-flex">
                             <a href="#" class="btn-brand"><span>Book Now</span>
                                 <svg width="25" height="11" viewBox="0 0 25 11" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -19,11 +23,11 @@
                         </div>
                     </div>
                 </div>
-                <div class="w-[13%]">
+                <div class="w-1/2 lg:w-[13%]">
                     <img src="{{ asset('assets/img/cta-image1.png') }}" alt="CTA Image 1"
                         class="w-full h-full object-cover rounded-[24px]">
                 </div>
-                <div class="w-[27%]">
+                <div class="w-1/2 lg:w-[27%]">
                     <img src="{{ asset('assets/img/cta-image2.png') }}" alt="CTA Image 2"
                         class="w-full h-full object-cover rounded-[24px]">
                 </div>

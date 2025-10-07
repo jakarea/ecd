@@ -1,3 +1,97 @@
+@php
+    $plans = [
+        [
+            'name' => 'Basic Treatment',
+            'slug' => '€44.95',
+            'price' => '€64.95',
+            'color' => '#003868',
+            'borderColor' => '#0C5798',
+            'buttonText' => 'Get started with Basic',
+            'icon' => '<svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_425_15641)"><path fill-rule="evenodd" clip-rule="evenodd"d="M14.6697 1.93946C14.1018 0.380531 11.8983 0.380531 11.3304 1.93946L8.75361 9.02339L1.66968 11.6002C0.110756 12.168 0.110756 14.3716 1.66968 14.9395L8.75361 17.5162L11.3304 24.6002C11.8983 26.1591 14.1018 26.1591 14.6697 24.6002L17.2465 17.5162L24.3304 14.9395C25.8893 14.3716 25.8893 12.168 24.3304 11.6002L17.2465 9.02339L14.6697 1.93946Z" fill="#003868" /></g><defs><clipPath id="clip0_425_15641"><rect width="25" height="25" fill="white" transform="translate(0.5 0.769775)" /></clipPath></defs></svg>',
+            'features' => [
+                'extra' => null,
+                'exterior' => [
+                    'Thorough wash of the exterior including rims, bumpers, and windows.',
+                    'Removes dirt, deposits, and insect residues for a fresh appearance.',
+                    'Door frames cleaned.'
+                ],
+                'interior' => [
+                    'Vacuuming mats and seats.'
+                ]
+            ]
+        ],
+        [
+            'name' => 'Premium Treatment',
+            'price' => '€84.95',
+            'color' => 'var(--color-brand)',
+            'borderColor' => '#63FFFA',
+            'buttonText' => 'Get started with Premium',
+            'icon' => '<svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"> <g clip-path="url(#clip0_706_5175)"> <path fill-rule="evenodd" clip-rule="evenodd" d="M14.6697 3.93946C14.1018 2.38053 11.8983 2.38053 11.3304 3.93946L8.75361 11.0234L1.66968 13.6002C0.110756 14.168 0.110756 16.3716 1.66968 16.9395L8.75361 19.5162L11.3304 26.6002C11.8983 28.1591 14.1018 28.1591 14.6697 26.6002L17.2465 19.5162L24.3304 16.9395C25.8893 16.3716 25.8893 14.168 24.3304 13.6002L17.2465 11.0234L14.6697 3.93946Z" fill="#6ADBD9" /></g><g clip-path="url(#clip1_706_5175)"><path d="M18.0905 5.17814L21.079 4.09028L22.1662 1.10243C22.1911 1.03398 22.2365 0.974858 22.2962 0.933081C22.3558 0.891305 22.4269 0.868896 22.4997 0.868896C22.5726 0.868896 22.6437 0.891305 22.7033 0.933081C22.763 0.974858 22.8084 1.03398 22.8333 1.10243L23.9212 4.091L26.9097 5.17814C26.9782 5.20307 27.0373 5.24844 27.0791 5.30812C27.1209 5.36779 27.1433 5.43887 27.1433 5.51171C27.1433 5.58456 27.1209 5.65563 27.0791 5.71531C27.0373 5.77498 26.9782 5.82036 26.9097 5.84528L23.9205 6.93314L22.8333 9.92171C22.8084 9.99016 22.763 10.0493 22.7033 10.0911C22.6437 10.1328 22.5726 10.1552 22.4997 10.1552C22.4269 10.1552 22.3558 10.1328 22.2962 10.0911C22.2365 10.0493 22.1911 9.99016 22.1662 9.92171L21.0783 6.93243L18.0905 5.84528C18.022 5.82036 17.9629 5.77498 17.9211 5.71531C17.8793 5.65563 17.8569 5.58456 17.8569 5.51171C17.8569 5.43887 17.8793 5.36779 17.9211 5.30812C17.9629 5.24844 18.022 5.20307 18.0905 5.17814Z" fill="#6ADBD9" /></g><defs><clipPath id="clip0_706_5175"><rect width="25" height="25" fill="white" transform="translate(0.5 2.76978)" /></clipPath><clipPath id="clip1_706_5175"><rect width="10" height="10" fill="white" transform="translate(17.5 0.511719)" /></clipPath></defs></svg>',
+            'features' => [
+                'extra' => 'Everything in the Basic Package, plus:',
+                'exterior' => [
+                    'Exterior cleaning',
+                    'Door frames cleaned.'
+                ],
+                'interior' => [
+                    'Vacuuming mats and seats.',
+                    'Cleaning windows (inside)',
+                    'Dashboard cleaning',
+                    'Cleaning plastic parts'
+                ]
+            ]
+        ],
+        [
+            'name' => 'Full Detail Treatment',
+            'price' => '€279.95',
+            'color' => '#CBA328',
+            'borderColor' => '#E6BA30',
+            'buttonText' => 'Get started with Full Detail',
+            'icon' => '<svg width="31" height="34" viewBox="0 0 31 34" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_707_5176)"><path fill-rule="evenodd" clip-rule="evenodd" d="M15.6697 5.93946C15.1018 4.38053 12.8983 4.38053 12.3304 5.93946L9.75361 13.0234L2.66968 15.6002C1.11076 16.168 1.11076 18.3716 2.66968 18.9395L9.75361 21.5162L12.3304 28.6002C12.8983 30.1591 15.1018 30.1591 15.6697 28.6002L18.2465 21.5162L25.3304 18.9395C26.8893 18.3716 26.8893 16.168 25.3304 15.6002L18.2465 13.0234L15.6697 5.93946Z" fill="#CBA328" /></g><g clip-path="url(#clip1_707_5176)"><path d="M19.2089 6.11152L22.7952 4.80609L24.0998 1.22067C24.1297 1.13853 24.1842 1.06758 24.2558 1.01745C24.3274 0.96732 24.4127 0.94043 24.5001 0.94043C24.5875 0.94043 24.6728 0.96732 24.7444 1.01745C24.816 1.06758 24.8705 1.13853 24.9004 1.22067L26.2058 4.80695L29.7921 6.11152C29.8742 6.14143 29.9452 6.19589 29.9953 6.26749C30.0454 6.3391 30.0723 6.4244 30.0723 6.51181C30.0723 6.59922 30.0454 6.68452 29.9953 6.75612C29.9452 6.82773 29.8742 6.88218 29.7921 6.91209L26.2049 8.21752L24.9004 11.8038C24.8705 11.8859 24.816 11.9569 24.7444 12.007C24.6728 12.0572 24.5875 12.084 24.5001 12.084C24.4127 12.084 24.3274 12.0572 24.2558 12.007C24.1842 11.9569 24.1297 11.8859 24.0998 11.8038L22.7944 8.21667L19.2089 6.91209C19.1268 6.88218 19.0559 6.82773 19.0057 6.75612C18.9556 6.68452 18.9287 6.59922 18.9287 6.51181C18.9287 6.4244 18.9556 6.3391 19.0057 6.26749C19.0559 6.19589 19.1268 6.14143 19.2089 6.11152Z" fill="#CBA328" /></g> <g clip-path="url(#clip2_707_5176)"><path d="M0.913471 26.2665L3.00547 25.505L3.76647 23.4135C3.78392 23.3656 3.81568 23.3242 3.85745 23.2949C3.89922 23.2657 3.94898 23.25 3.99997 23.25C4.05096 23.25 4.10072 23.2657 4.14249 23.2949C4.18426 23.3242 4.21602 23.3656 4.23347 23.4135L4.99497 25.5055L7.08697 26.2665C7.13488 26.2839 7.17627 26.3157 7.20551 26.3575C7.23476 26.3992 7.25044 26.449 7.25044 26.5C7.25044 26.551 7.23476 26.6007 7.20551 26.6425C7.17627 26.6843 7.13488 26.716 7.08697 26.7335L4.99447 27.495L4.23347 29.587C4.21602 29.6349 4.18426 29.6763 4.14249 29.7055C4.10072 29.7348 4.05096 29.7504 3.99997 29.7504C3.94898 29.7504 3.89922 29.7348 3.85745 29.7055C3.81568 29.6763 3.78392 29.6349 3.76647 29.587L3.00497 27.4945L0.913471 26.7335C0.865558 26.716 0.824173 26.6843 0.794929 26.6425C0.765686 26.6007 0.75 26.551 0.75 26.5C0.75 26.449 0.765686 26.3992 0.794929 26.3575C0.824173 26.3157 0.865558 26.2839 0.913471 26.2665Z"
+                                                                 fill="#CBA328" /></g><g clip-path="url(#clip3_707_5176)"> <path d="M18.8545 30.7999L20.6476 30.1472L21.2999 28.3545C21.3149 28.3134 21.3421 28.2779 21.3779 28.2529C21.4137 28.2278 21.4563 28.2144 21.5 28.2144C21.5438 28.2144 21.5864 28.2278 21.6222 28.2529C21.658 28.2779 21.6852 28.3134 21.7002 28.3545L22.3529 30.1476L24.146 30.7999C24.1871 30.8149 24.2226 30.8421 24.2477 30.8779C24.2727 30.9137 24.2862 30.9563 24.2862 31C24.2862 31.0438 24.2727 31.0864 24.2477 31.1222C24.2226 31.158 24.1871 31.1852 24.146 31.2002L22.3525 31.8529L21.7002 33.646C21.6852 33.6871 21.658 33.7226 21.6222 33.7477C21.5864 33.7727 21.5438 33.7862 21.5 33.7862C21.4563 33.7862 21.4137 33.7727 21.3779 33.7477C21.3421 33.7226 21.3149 33.6871 21.2999 33.646L20.6472 31.8525L18.8545 31.2002C18.8134 31.1852 18.7779 31.158 18.7529 31.1222C18.7278 31.0864 18.7144 31.0438 18.7144 31C18.7144 30.9563 18.7278 30.9137 18.7529 30.8779C18.7779 30.8421 18.8134 30.8149 18.8545 30.7999Z" fill="#CBA328" /></g> <defs><clipPath id="clip0_707_5176"><rect width="25" height="25" fill="white" transform="translate(1.5 4.76978)" /></clipPath><clipPath id="clip1_707_5176"> <rect width="12" height="12" fill="white" transform="translate(18.5 0.511719)" /></clipPath><clipPath id="clip2_707_5176"><rect width="7" height="7" fill="white" transform="translate(0.5 23)" /></clipPath><clipPath id="clip3_707_5176"><rect width="6" height="6" fill="white" transform="translate(18.5 28)" /></clipPath></defs></svg>',
+            'features' => [
+                'extra' => 'Everything in the Premium Package, plus:',
+                'exterior' => [
+                    'Exterior cleaning',
+                    'Door frames cleaned.'
+                ],
+                'interior' => [
+                    'Vacuuming mats and seats.',
+                    'Cleaning windows (inside)',
+                    'Dashboard cleaning',
+                    'Cleaning plastic parts'
+                ]
+            ]
+        ]
+    ];
+
+    $extraOptions = [
+        [
+            'title' => 'Undercarriage cleaning – €20',
+            'description' => 'Removes dirt and deposits from the underside of the car'
+        ],
+        [
+            'title' => 'Paint sealing (2–3 months protection) – €50',
+            'description' => 'Protective paint layer against dirt and UV'
+        ],
+        [
+            'title' => 'Engine bay cleaning – €20',
+            'description' => 'Cleaning and care of the engine compartment'
+        ],
+        [
+            'title' => 'Hybrid Ceramic Coating (5–6 months) – €80',
+            'description' => 'Premium coating for long-lasting shine and protection'
+        ],
+        [
+            'title' => 'Leather or fabric upholstery cleaning – €60',
+            'description' => 'Deep cleaning of seats and upholstery'
+        ],
+    ];
+
+@endphp
+
+
+
 <section class="bg-[var(--color-black)] py-25 relative" id="pricing">
     <div class="container">
         <div class="flex flex-wrap items-center justify-between gap-4 mb-[60px]">
@@ -55,374 +149,109 @@
         </div>
         <div class="pricing-table mt-10">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="pricing-card flex flex-col justify-between p-[30px] rounded-[20px] bg-[#003868] text-white">
-                    <div class="pricing-card-header flex flex-col gap-4 pb-4 border-b border-[#0C5798]">
-                        <div class="w-[44px] h-[44px] bg-white rounded-[16px] flex justify-center items-center">
-
-                            <svg width="26" height="26" viewBox="0 0 26 26" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip0_425_15641)">
-                                    <path fill-rule="evenodd" clip-rule="evenodd"
-                                        d="M14.6697 1.93946C14.1018 0.380531 11.8983 0.380531 11.3304 1.93946L8.75361 9.02339L1.66968 11.6002C0.110756 12.168 0.110756 14.3716 1.66968 14.9395L8.75361 17.5162L11.3304 24.6002C11.8983 26.1591 14.1018 26.1591 14.6697 24.6002L17.2465 17.5162L24.3304 14.9395C25.8893 14.3716 25.8893 12.168 24.3304 11.6002L17.2465 9.02339L14.6697 1.93946Z"
-                                        fill="#003868" />
-                                </g>
-                                <defs>
-                                    <clipPath id="clip0_425_15641">
-                                        <rect width="25" height="25" fill="white" transform="translate(0.5 0.769775)" />
-                                    </clipPath>
-                                </defs>
-                            </svg>
-
+                @foreach ($plans as $plan)
+                    <div class="pricing-card flex flex-col justify-between p-[30px] rounded-[20px] text-white"
+                        style="background-color: {{ $plan['color'] }}">
+                        {{-- Header --}}
+                        <div class="pricing-card-header flex flex-col gap-4 pb-4 border-b"
+                            style="border-color: {{ $plan['borderColor'] }}">
+                            <div class="w-[44px] h-[44px] bg-white rounded-[16px] flex justify-center items-center">
+                                {!! $plan['icon'] !!}
+                            </div>
+                            <h3 class="text-[22px] font-semibold">{{ $plan['name'] }}</h3>
+                            <span class="text-[36px] font-extrabold">{{ $plan['price'] }}</span>
                         </div>
-                        <h3 class="text-[22px] font-semibold">Basic Treatment</h3>
-                        <span class="text-[36px] font-extrabold">€64.95</span>
-                    </div>
-                    <div class="pricing-card-body flex-1">
-                        <div class="pricing-card-features py-4 space-y-4 border-b border-[#0C5798]">
-                            <div class="text-white text-lg font-bold mb-4">Exterior Dealing</div>
-                            <div class="flex gap-3">
-                                <svg width="20" height="21" viewBox="0 0 20 21" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg" class="flex-shrink-0">
-                                    <rect x="0.5" y="1.05347" width="19" height="19" rx="6.16667" stroke="white" />
-                                    <path fill-rule="evenodd" clip-rule="evenodd"
-                                        d="M16.6237 7.0549L8.05424 15.6243L3.37646 10.9466L4.9487 9.37433L8.05424 12.4799L15.0514 5.48267L16.6237 7.0549Z"
-                                        fill="white" />
-                                </svg>
-                                <span class="text-[15px] font-medium">Thorough wash of the exterior including rims,
-                                    bumpers, and windows.</span>
+
+                        {{-- Body --}}
+                        <div class="pricing-card-body flex-1">
+                            <div class="pricing-card-features py-4 space-y-4 border-b"
+                                style="border-color: {{ $plan['borderColor'] }}">
+                                @if ($plan['features']['extra'])
+                                    <div class="text-white text-lg font-bold pb-4 mb-4 border-b"
+                                        style="border-color: {{ $plan['borderColor'] }}">
+                                        {{ $plan['features']['extra'] }}
+                                    </div>
+                                @endif
+
+                                <div class="text-white text-lg font-bold mb-4">Exterior Dealing</div>
+                                @foreach ($plan['features']['exterior'] as $feature)
+                                    <div class="flex gap-3">
+                                        <svg width="20" height="21" viewBox="0 0 20 21" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg" class="flex-shrink-0">
+                                            <rect x="0.5" y="1.05347" width="19" height="19" rx="6.16667" stroke="white" />
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M16.6237 7.0549L8.05424 15.6243L3.37646 10.9466L4.9487 9.37433L8.05424 12.4799L15.0514 5.48267L16.6237 7.0549Z"
+                                                fill="white" />
+                                        </svg>
+                                        <span class="text-[15px] font-medium">{{ $feature }}</span>
+                                    </div>
+                                @endforeach
                             </div>
-                            <div class="flex gap-3">
-                                <svg width="20" height="21" viewBox="0 0 20 21" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg" class="flex-shrink-0">
-                                    <rect x="0.5" y="1.05347" width="19" height="19" rx="6.16667" stroke="white" />
-                                    <path fill-rule="evenodd" clip-rule="evenodd"
-                                        d="M16.6237 7.0549L8.05424 15.6243L3.37646 10.9466L4.9487 9.37433L8.05424 12.4799L15.0514 5.48267L16.6237 7.0549Z"
-                                        fill="white" />
-                                </svg>
-                                <span class="text-[15px] font-medium">Removes dirt, deposits, and insect residues for a
-                                    fresh appearance.</span>
-                            </div>
-                            <div class="flex gap-3">
-                                <svg width="20" height="21" viewBox="0 0 20 21" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg" class="flex-shrink-0">
-                                    <rect x="0.5" y="1.05347" width="19" height="19" rx="6.16667" stroke="white" />
-                                    <path fill-rule="evenodd" clip-rule="evenodd"
-                                        d="M16.6237 7.0549L8.05424 15.6243L3.37646 10.9466L4.9487 9.37433L8.05424 12.4799L15.0514 5.48267L16.6237 7.0549Z"
-                                        fill="white" />
-                                </svg>
-                                <span class="text-[15px] font-medium">Door frames cleaned.</span>
+
+                            <div class="pricing-card-features py-4 space-y-4">
+                                <div class="text-white text-lg font-bold mb-4">Interior</div>
+                                @foreach ($plan['features']['interior'] as $feature)
+                                    <div class="flex gap-3">
+                                        <svg width="20" height="21" viewBox="0 0 20 21" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg" class="flex-shrink-0">
+                                            <rect x="0.5" y="1.05347" width="19" height="19" rx="6.16667" stroke="white" />
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M16.6237 7.0549L8.05424 15.6243L3.37646 10.9466L4.9487 9.37433L8.05424 12.4799L15.0514 5.48267L16.6237 7.0549Z"
+                                                fill="white" />
+                                        </svg>
+                                        <span class="text-[15px] font-medium">{{ $feature }}</span>
+                                    </div>
+                                @endforeach
                             </div>
                         </div>
-                        <div class="pricing-card-features py-4 space-y-4">
-                            <div class="text-white text-lg font-bold mb-4">Interior</div>
-                            <div class="flex gap-3">
-                                <svg width="20" height="21" viewBox="0 0 20 21" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg" class="flex-shrink-0">
-                                    <rect x="0.5" y="1.05347" width="19" height="19" rx="6.16667" stroke="white" />
-                                    <path fill-rule="evenodd" clip-rule="evenodd"
-                                        d="M16.6237 7.0549L8.05424 15.6243L3.37646 10.9466L4.9487 9.37433L8.05424 12.4799L15.0514 5.48267L16.6237 7.0549Z"
-                                        fill="white" />
-                                </svg>
-                                <span class="text-[15px] font-medium">Vacuuming mats and seats.</span>
-                            </div>
-                            <div class="flex gap-3">
-                                <svg width="20" height="21" viewBox="0 0 20 21" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg" class="flex-shrink-0">
-                                    <rect x="0.5" y="1.05347" width="19" height="19" rx="6.16667" stroke="white" />
-                                    <path fill-rule="evenodd" clip-rule="evenodd"
-                                        d="M16.6237 7.0549L8.05424 15.6243L3.37646 10.9466L4.9487 9.37433L8.05424 12.4799L15.0514 5.48267L16.6237 7.0549Z"
-                                        fill="white" />
-                                </svg>
-                                <span class="text-[15px] font-medium">Removes dirt, deposits, and insect residues for a
-                                    fresh appearance.</span>
-                            </div>
 
+                        {{-- Footer --}}
+                        <div class="pricing-card-footer mt-4">
+                            <a href="#"
+                                class="text-[#230C0F] text-base font-bold rounded-[60px] px-5 py-3.5 text-center flex items-center justify-center gap-3 cursor-pointer min-w-[164px] bg-white">
+                                <span>{{ $plan['buttonText'] }}</span>
+                                <svg width="8" height="12" viewBox="0 0 8 12" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1.5 11.0535L6.5 6.05347L1.5 1.05347" stroke="#230C0F" stroke-width="1.6"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </a>
                         </div>
                     </div>
-                    <div class="pricing-card-footer mt-4">
-                        <a href="#"
-                            class="text-[#230C0F] text-base font-bold rounded-[60px] px-5 py-3.5 text-center flex items-center justify-center gap-3 cursor-pointer min-w-[164px] bg-white">
-                            <span>Get started with Basic</span>
+                @endforeach
+            </div>
+        </div>
 
-                            <svg width="8" height="12" viewBox="0 0 8 12" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path d="M1.5 11.0535L6.5 6.05347L1.5 1.05347" stroke="#230C0F" stroke-width="1.6"
-                                    stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-
-                        </a>
-                    </div>
-                </div>
+        <div class="extra-options border-15 border-[#272727] rounded-[20px] mt-6 p-[20px] md:p-[30px]">
+            <div class="flex flex-wrap">
                 <div
-                    class="pricing-card flex flex-col justify-between p-[30px] rounded-[20px] bg-[var(--color-brand)] text-white">
-                    <div class="pricing-card-header flex flex-col gap-4 pb-4 border-b border-[#63FFFA]">
-                        <div class="w-[44px] h-[44px] bg-white rounded-[16px] flex justify-center items-center">
-
-
-                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip0_706_5175)">
-                                    <path fill-rule="evenodd" clip-rule="evenodd"
-                                        d="M14.6697 3.93946C14.1018 2.38053 11.8983 2.38053 11.3304 3.93946L8.75361 11.0234L1.66968 13.6002C0.110756 14.168 0.110756 16.3716 1.66968 16.9395L8.75361 19.5162L11.3304 26.6002C11.8983 28.1591 14.1018 28.1591 14.6697 26.6002L17.2465 19.5162L24.3304 16.9395C25.8893 16.3716 25.8893 14.168 24.3304 13.6002L17.2465 11.0234L14.6697 3.93946Z"
-                                        fill="#6ADBD9" />
-                                </g>
-                                <g clip-path="url(#clip1_706_5175)">
-                                    <path
-                                        d="M18.0905 5.17814L21.079 4.09028L22.1662 1.10243C22.1911 1.03398 22.2365 0.974858 22.2962 0.933081C22.3558 0.891305 22.4269 0.868896 22.4997 0.868896C22.5726 0.868896 22.6437 0.891305 22.7033 0.933081C22.763 0.974858 22.8084 1.03398 22.8333 1.10243L23.9212 4.091L26.9097 5.17814C26.9782 5.20307 27.0373 5.24844 27.0791 5.30812C27.1209 5.36779 27.1433 5.43887 27.1433 5.51171C27.1433 5.58456 27.1209 5.65563 27.0791 5.71531C27.0373 5.77498 26.9782 5.82036 26.9097 5.84528L23.9205 6.93314L22.8333 9.92171C22.8084 9.99016 22.763 10.0493 22.7033 10.0911C22.6437 10.1328 22.5726 10.1552 22.4997 10.1552C22.4269 10.1552 22.3558 10.1328 22.2962 10.0911C22.2365 10.0493 22.1911 9.99016 22.1662 9.92171L21.0783 6.93243L18.0905 5.84528C18.022 5.82036 17.9629 5.77498 17.9211 5.71531C17.8793 5.65563 17.8569 5.58456 17.8569 5.51171C17.8569 5.43887 17.8793 5.36779 17.9211 5.30812C17.9629 5.24844 18.022 5.20307 18.0905 5.17814Z"
-                                        fill="#6ADBD9" />
-                                </g>
-                                <defs>
-                                    <clipPath id="clip0_706_5175">
-                                        <rect width="25" height="25" fill="white" transform="translate(0.5 2.76978)" />
-                                    </clipPath>
-                                    <clipPath id="clip1_706_5175">
-                                        <rect width="10" height="10" fill="white"
-                                            transform="translate(17.5 0.511719)" />
-                                    </clipPath>
-                                </defs>
-                            </svg>
-
-                        </div>
-                        <h3 class="text-[22px] font-semibold">Premium Treatment</h3>
-                        <span class="text-[36px] font-extrabold">€84.95</span>
-                    </div>
-                    <div class="pricing-card-body flex-1">
-                        <div class="pricing-card-features py-4 space-y-4 border-b border-[#63FFFA]">
-                            <div class="text-white text-lg font-bold pb-4 mb-4 border-b border-[#63FFFA]">Everything in
-                                the
-                                Basic Package,
-                                plus:</div>
-                            <div class="text-white text-lg font-bold mb-4">Exterior Dealing</div>
-                            <div class="flex gap-3">
-                                <svg width="20" height="21" viewBox="0 0 20 21" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg" class="flex-shrink-0">
-                                    <rect x="0.5" y="1.05347" width="19" height="19" rx="6.16667" stroke="white" />
-                                    <path fill-rule="evenodd" clip-rule="evenodd"
-                                        d="M16.6237 7.0549L8.05424 15.6243L3.37646 10.9466L4.9487 9.37433L8.05424 12.4799L15.0514 5.48267L16.6237 7.0549Z"
-                                        fill="white" />
-                                </svg>
-                                <span class="text-[15px] font-medium">Exterior cleaning</span>
-                            </div>
-                            <div class="flex gap-3">
-                                <svg width="20" height="21" viewBox="0 0 20 21" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg" class="flex-shrink-0">
-                                    <rect x="0.5" y="1.05347" width="19" height="19" rx="6.16667" stroke="white" />
-                                    <path fill-rule="evenodd" clip-rule="evenodd"
-                                        d="M16.6237 7.0549L8.05424 15.6243L3.37646 10.9466L4.9487 9.37433L8.05424 12.4799L15.0514 5.48267L16.6237 7.0549Z"
-                                        fill="white" />
-                                </svg>
-                                <span class="text-[15px] font-medium">Door frames cleaned.</span>
-                            </div>
-                        </div>
-                        <div class="pricing-card-features py-4 space-y-4">
-                            <div class="text-white text-lg font-bold mb-4">Interior</div>
-                            <div class="flex gap-3">
-                                <svg width="20" height="21" viewBox="0 0 20 21" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg" class="flex-shrink-0">
-                                    <rect x="0.5" y="1.05347" width="19" height="19" rx="6.16667" stroke="white" />
-                                    <path fill-rule="evenodd" clip-rule="evenodd"
-                                        d="M16.6237 7.0549L8.05424 15.6243L3.37646 10.9466L4.9487 9.37433L8.05424 12.4799L15.0514 5.48267L16.6237 7.0549Z"
-                                        fill="white" />
-                                </svg>
-                                <span class="text-[15px] font-medium">Vacuuming mats and seats.</span>
-                            </div>
-                            <div class="flex gap-3">
-                                <svg width="20" height="21" viewBox="0 0 20 21" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg" class="flex-shrink-0">
-                                    <rect x="0.5" y="1.05347" width="19" height="19" rx="6.16667" stroke="white" />
-                                    <path fill-rule="evenodd" clip-rule="evenodd"
-                                        d="M16.6237 7.0549L8.05424 15.6243L3.37646 10.9466L4.9487 9.37433L8.05424 12.4799L15.0514 5.48267L16.6237 7.0549Z"
-                                        fill="white" />
-                                </svg>
-                                <span class="text-[15px] font-medium">Cleaning windows (inside)</span>
-                            </div>
-                            <div class="flex gap-3">
-                                <svg width="20" height="21" viewBox="0 0 20 21" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg" class="flex-shrink-0">
-                                    <rect x="0.5" y="1.05347" width="19" height="19" rx="6.16667" stroke="white" />
-                                    <path fill-rule="evenodd" clip-rule="evenodd"
-                                        d="M16.6237 7.0549L8.05424 15.6243L3.37646 10.9466L4.9487 9.37433L8.05424 12.4799L15.0514 5.48267L16.6237 7.0549Z"
-                                        fill="white" />
-                                </svg>
-                                <span class="text-[15px] font-medium">Cleaning windows (inside)</span>
-                            </div>
-                            <div class="flex gap-3">
-                                <svg width="20" height="21" viewBox="0 0 20 21" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg" class="flex-shrink-0">
-                                    <rect x="0.5" y="1.05347" width="19" height="19" rx="6.16667" stroke="white" />
-                                    <path fill-rule="evenodd" clip-rule="evenodd"
-                                        d="M16.6237 7.0549L8.05424 15.6243L3.37646 10.9466L4.9487 9.37433L8.05424 12.4799L15.0514 5.48267L16.6237 7.0549Z"
-                                        fill="white" />
-                                </svg>
-                                <span class="text-[15px] font-medium">Dashboard cleaning</span>
-                            </div>
-                            <div class="flex gap-3">
-                                <svg width="20" height="21" viewBox="0 0 20 21" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg" class="flex-shrink-0">
-                                    <rect x="0.5" y="1.05347" width="19" height="19" rx="6.16667" stroke="white" />
-                                    <path fill-rule="evenodd" clip-rule="evenodd"
-                                        d="M16.6237 7.0549L8.05424 15.6243L3.37646 10.9466L4.9487 9.37433L8.05424 12.4799L15.0514 5.48267L16.6237 7.0549Z"
-                                        fill="white" />
-                                </svg>
-                                <span class="text-[15px] font-medium">Cleaning plastic parts</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="pricing-card-footer mt-4">
-                        <a href="#"
-                            class="text-[#230C0F] text-[15px] font-bold rounded-[60px] px-2 py-3.5 text-center flex items-center justify-center gap-3 cursor-pointer min-w-[164px] bg-white">
-                            <span>Get started with Premium</span>
-
-                            <svg width="8" height="12" viewBox="0 0 8 12" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path d="M1.5 11.0535L6.5 6.05347L1.5 1.05347" stroke="#230C0F" stroke-width="1.6"
-                                    stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-
-                        </a>
-                    </div>
+                    class="flex flex-col gap-3 md:pr-[45px] border-b md:border-b-0 md:border-r border-[#424242] w-full md:w-[200px] flex-shrink-0 pb-4 md:pb-0 mb-5 md:mb-0">
+                    <svg width="44" height="45" viewBox="0 0 44 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect y="0.553467" width="44" height="44" rx="16" fill="#6ADBD9" />
+                        <path
+                            d="M20.125 20.6785V8.49097H23.875V20.6785H36.0625V24.4285H23.875V36.616H20.125V24.4285H7.9375V20.6785H20.125Z"
+                            fill="white" />
+                    </svg>
+                    <div class="text-[22px] text-white font-medium">Extra options</div>
                 </div>
-                <div class="pricing-card flex flex-col justify-between p-[30px] rounded-[20px] bg-[#CBA328] text-white">
-                    <div class="pricing-card-header flex flex-col gap-4 pb-4 border-b border-[#E6BA30]">
-                        <div class="w-[44px] h-[44px] bg-white rounded-[16px] flex justify-center items-center">
-                            <svg width="31" height="34" viewBox="0 0 31 34" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip0_707_5176)">
-                                    <path fill-rule="evenodd" clip-rule="evenodd"
-                                        d="M15.6697 5.93946C15.1018 4.38053 12.8983 4.38053 12.3304 5.93946L9.75361 13.0234L2.66968 15.6002C1.11076 16.168 1.11076 18.3716 2.66968 18.9395L9.75361 21.5162L12.3304 28.6002C12.8983 30.1591 15.1018 30.1591 15.6697 28.6002L18.2465 21.5162L25.3304 18.9395C26.8893 18.3716 26.8893 16.168 25.3304 15.6002L18.2465 13.0234L15.6697 5.93946Z"
-                                        fill="#CBA328" />
-                                </g>
-                                <g clip-path="url(#clip1_707_5176)">
-                                    <path
-                                        d="M19.2089 6.11152L22.7952 4.80609L24.0998 1.22067C24.1297 1.13853 24.1842 1.06758 24.2558 1.01745C24.3274 0.96732 24.4127 0.94043 24.5001 0.94043C24.5875 0.94043 24.6728 0.96732 24.7444 1.01745C24.816 1.06758 24.8705 1.13853 24.9004 1.22067L26.2058 4.80695L29.7921 6.11152C29.8742 6.14143 29.9452 6.19589 29.9953 6.26749C30.0454 6.3391 30.0723 6.4244 30.0723 6.51181C30.0723 6.59922 30.0454 6.68452 29.9953 6.75612C29.9452 6.82773 29.8742 6.88218 29.7921 6.91209L26.2049 8.21752L24.9004 11.8038C24.8705 11.8859 24.816 11.9569 24.7444 12.007C24.6728 12.0572 24.5875 12.084 24.5001 12.084C24.4127 12.084 24.3274 12.0572 24.2558 12.007C24.1842 11.9569 24.1297 11.8859 24.0998 11.8038L22.7944 8.21667L19.2089 6.91209C19.1268 6.88218 19.0559 6.82773 19.0057 6.75612C18.9556 6.68452 18.9287 6.59922 18.9287 6.51181C18.9287 6.4244 18.9556 6.3391 19.0057 6.26749C19.0559 6.19589 19.1268 6.14143 19.2089 6.11152Z"
-                                        fill="#CBA328" />
-                                </g>
-                                <g clip-path="url(#clip2_707_5176)">
-                                    <path
-                                        d="M0.913471 26.2665L3.00547 25.505L3.76647 23.4135C3.78392 23.3656 3.81568 23.3242 3.85745 23.2949C3.89922 23.2657 3.94898 23.25 3.99997 23.25C4.05096 23.25 4.10072 23.2657 4.14249 23.2949C4.18426 23.3242 4.21602 23.3656 4.23347 23.4135L4.99497 25.5055L7.08697 26.2665C7.13488 26.2839 7.17627 26.3157 7.20551 26.3575C7.23476 26.3992 7.25044 26.449 7.25044 26.5C7.25044 26.551 7.23476 26.6007 7.20551 26.6425C7.17627 26.6843 7.13488 26.716 7.08697 26.7335L4.99447 27.495L4.23347 29.587C4.21602 29.6349 4.18426 29.6763 4.14249 29.7055C4.10072 29.7348 4.05096 29.7504 3.99997 29.7504C3.94898 29.7504 3.89922 29.7348 3.85745 29.7055C3.81568 29.6763 3.78392 29.6349 3.76647 29.587L3.00497 27.4945L0.913471 26.7335C0.865558 26.716 0.824173 26.6843 0.794929 26.6425C0.765686 26.6007 0.75 26.551 0.75 26.5C0.75 26.449 0.765686 26.3992 0.794929 26.3575C0.824173 26.3157 0.865558 26.2839 0.913471 26.2665Z"
-                                        fill="#CBA328" />
-                                </g>
-                                <g clip-path="url(#clip3_707_5176)">
-                                    <path
-                                        d="M18.8545 30.7999L20.6476 30.1472L21.2999 28.3545C21.3149 28.3134 21.3421 28.2779 21.3779 28.2529C21.4137 28.2278 21.4563 28.2144 21.5 28.2144C21.5438 28.2144 21.5864 28.2278 21.6222 28.2529C21.658 28.2779 21.6852 28.3134 21.7002 28.3545L22.3529 30.1476L24.146 30.7999C24.1871 30.8149 24.2226 30.8421 24.2477 30.8779C24.2727 30.9137 24.2862 30.9563 24.2862 31C24.2862 31.0438 24.2727 31.0864 24.2477 31.1222C24.2226 31.158 24.1871 31.1852 24.146 31.2002L22.3525 31.8529L21.7002 33.646C21.6852 33.6871 21.658 33.7226 21.6222 33.7477C21.5864 33.7727 21.5438 33.7862 21.5 33.7862C21.4563 33.7862 21.4137 33.7727 21.3779 33.7477C21.3421 33.7226 21.3149 33.6871 21.2999 33.646L20.6472 31.8525L18.8545 31.2002C18.8134 31.1852 18.7779 31.158 18.7529 31.1222C18.7278 31.0864 18.7144 31.0438 18.7144 31C18.7144 30.9563 18.7278 30.9137 18.7529 30.8779C18.7779 30.8421 18.8134 30.8149 18.8545 30.7999Z"
-                                        fill="#CBA328" />
-                                </g>
-                                <defs>
-                                    <clipPath id="clip0_707_5176">
-                                        <rect width="25" height="25" fill="white" transform="translate(1.5 4.76978)" />
-                                    </clipPath>
-                                    <clipPath id="clip1_707_5176">
-                                        <rect width="12" height="12" fill="white"
-                                            transform="translate(18.5 0.511719)" />
-                                    </clipPath>
-                                    <clipPath id="clip2_707_5176">
-                                        <rect width="7" height="7" fill="white" transform="translate(0.5 23)" />
-                                    </clipPath>
-                                    <clipPath id="clip3_707_5176">
-                                        <rect width="6" height="6" fill="white" transform="translate(18.5 28)" />
-                                    </clipPath>
-                                </defs>
+                <div class="flex flex-wrap md:pl-[45px] gap-x-[30px] gap-y-4 w-full md:w-[calc(100%-200px)]">
+                    @foreach ($extraOptions as $option)
+                        <div class="flex gap-3 w-full md:w-[calc(50%-15px)] text-white">
+                            <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                class="flex-shrink-0">
+                                <rect x="0.5" y="1.05347" width="19" height="19" rx="6.16667" stroke="var(--color-brand)" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M16.6237 7.0549L8.05424 15.6243L3.37646 10.9466L4.9487 9.37433L8.05424 12.4799L15.0514 5.48267L16.6237 7.0549Z"
+                                    fill="var(--color-brand)" />
                             </svg>
-                        </div>
-                        <h3 class="text-[22px] font-semibold">Full Detail Treatment</h3>
-                        <span class="text-[36px] font-extrabold">€279.95</span>
-                    </div>
-                    <div class="pricing-card-body flex-1">
-                        <div class="pricing-card-features py-4 space-y-4 border-b border-[#E6BA30]">
-                            <div class="text-white text-lg font-bold pb-4 mb-4 border-b border-[#E6BA30]">Everything in
-                                the
-                                Premiium Package,
-                                plus:</div>
-                            <div class="text-white text-lg font-bold mb-4">Exterior Dealing</div>
-                            <div class="flex gap-3">
-                                <svg width="20" height="21" viewBox="0 0 20 21" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg" class="flex-shrink-0">
-                                    <rect x="0.5" y="1.05347" width="19" height="19" rx="6.16667" stroke="white" />
-                                    <path fill-rule="evenodd" clip-rule="evenodd"
-                                        d="M16.6237 7.0549L8.05424 15.6243L3.37646 10.9466L4.9487 9.37433L8.05424 12.4799L15.0514 5.48267L16.6237 7.0549Z"
-                                        fill="white" />
-                                </svg>
-                                <span class="text-[15px] font-medium">Exterior cleaning</span>
-                            </div>
-                            <div class="flex gap-3">
-                                <svg width="20" height="21" viewBox="0 0 20 21" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg" class="flex-shrink-0">
-                                    <rect x="0.5" y="1.05347" width="19" height="19" rx="6.16667" stroke="white" />
-                                    <path fill-rule="evenodd" clip-rule="evenodd"
-                                        d="M16.6237 7.0549L8.05424 15.6243L3.37646 10.9466L4.9487 9.37433L8.05424 12.4799L15.0514 5.48267L16.6237 7.0549Z"
-                                        fill="white" />
-                                </svg>
-                                <span class="text-[15px] font-medium">Door frames cleaned.</span>
+                            <div class="flex flex-col gap-1">
+                                <div class="text-[16px] font-bold text-white">{{ $option['title'] }}</div>
+                                <span class="text-[14px] font-medium text-white font-sf">{{ $option['description'] }}</span>
                             </div>
                         </div>
-                        <div class="pricing-card-features py-4 space-y-4">
-                            <div class="text-white text-lg font-bold mb-4">Interior</div>
-                            <div class="flex gap-3">
-                                <svg width="20" height="21" viewBox="0 0 20 21" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg" class="flex-shrink-0">
-                                    <rect x="0.5" y="1.05347" width="19" height="19" rx="6.16667" stroke="white" />
-                                    <path fill-rule="evenodd" clip-rule="evenodd"
-                                        d="M16.6237 7.0549L8.05424 15.6243L3.37646 10.9466L4.9487 9.37433L8.05424 12.4799L15.0514 5.48267L16.6237 7.0549Z"
-                                        fill="white" />
-                                </svg>
-                                <span class="text-[15px] font-medium">Vacuuming mats and seats.</span>
-                            </div>
-                            <div class="flex gap-3">
-                                <svg width="20" height="21" viewBox="0 0 20 21" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg" class="flex-shrink-0">
-                                    <rect x="0.5" y="1.05347" width="19" height="19" rx="6.16667" stroke="white" />
-                                    <path fill-rule="evenodd" clip-rule="evenodd"
-                                        d="M16.6237 7.0549L8.05424 15.6243L3.37646 10.9466L4.9487 9.37433L8.05424 12.4799L15.0514 5.48267L16.6237 7.0549Z"
-                                        fill="white" />
-                                </svg>
-                                <span class="text-[15px] font-medium">Cleaning windows (inside)</span>
-                            </div>
-                            <div class="flex gap-3">
-                                <svg width="20" height="21" viewBox="0 0 20 21" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg" class="flex-shrink-0">
-                                    <rect x="0.5" y="1.05347" width="19" height="19" rx="6.16667" stroke="white" />
-                                    <path fill-rule="evenodd" clip-rule="evenodd"
-                                        d="M16.6237 7.0549L8.05424 15.6243L3.37646 10.9466L4.9487 9.37433L8.05424 12.4799L15.0514 5.48267L16.6237 7.0549Z"
-                                        fill="white" />
-                                </svg>
-                                <span class="text-[15px] font-medium">Cleaning windows (inside)</span>
-                            </div>
-                            <div class="flex gap-3">
-                                <svg width="20" height="21" viewBox="0 0 20 21" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg" class="flex-shrink-0">
-                                    <rect x="0.5" y="1.05347" width="19" height="19" rx="6.16667" stroke="white" />
-                                    <path fill-rule="evenodd" clip-rule="evenodd"
-                                        d="M16.6237 7.0549L8.05424 15.6243L3.37646 10.9466L4.9487 9.37433L8.05424 12.4799L15.0514 5.48267L16.6237 7.0549Z"
-                                        fill="white" />
-                                </svg>
-                                <span class="text-[15px] font-medium">Dashboard cleaning</span>
-                            </div>
-                            <div class="flex gap-3">
-                                <svg width="20" height="21" viewBox="0 0 20 21" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg" class="flex-shrink-0">
-                                    <rect x="0.5" y="1.05347" width="19" height="19" rx="6.16667" stroke="white" />
-                                    <path fill-rule="evenodd" clip-rule="evenodd"
-                                        d="M16.6237 7.0549L8.05424 15.6243L3.37646 10.9466L4.9487 9.37433L8.05424 12.4799L15.0514 5.48267L16.6237 7.0549Z"
-                                        fill="white" />
-                                </svg>
-                                <span class="text-[15px] font-medium">Cleaning plastic parts</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="pricing-card-footer mt-4">
-                        <a href="#"
-                            class="text-[#230C0F] text-base font-bold rounded-[60px] px-5 py-3.5 text-center flex items-center justify-center gap-3 cursor-pointer min-w-[164px] bg-white">
-                            <span>Get started with Full Detail</span>
-
-                            <svg width="8" height="12" viewBox="0 0 8 12" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path d="M1.5 11.0535L6.5 6.05347L1.5 1.05347" stroke="#230C0F" stroke-width="1.6"
-                                    stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-
-                        </a>
-                    </div>
+                    @endforeach
                 </div>
+
             </div>
         </div>
     </div>

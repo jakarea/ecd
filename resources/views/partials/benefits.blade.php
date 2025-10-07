@@ -38,19 +38,19 @@
                 <h3 class="text-[11px] font-semibold uppercase text-[var(--color-heading)]">We Offered More
                 </h3>
             </div>
-            <h2 class="text-[34px] font-extrabold mb-8 text-[var(--color-heading)] leading-[1.2] tracking-[0.02px]">
+            <h2 class="text-[34px] font-extrabold mb-4 text-[var(--color-heading)] leading-[1.2] tracking-[0.02px]">
                 Tired of struggling to keep your car clean?
             </h2>
-            <p class="text-[16px] leading-[1.5] text-[var(--color-text)] mb-8">
+            <p class="text-[16px] leading-[1.5] text-[var(--color-text)] font-sf">
                 Enjoy complimentary amenities with every wash, including free vacuums window cleaners, and more.
             </p>
         </div>
-        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6">
+        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6 mt-10 md:mt-20">
             @foreach ($benefits as $benefit)
                 <div
                     class="h-[166px] bg-white rounded-[20px] p-[30px] flex flex-col justify-center items-center gap-8 text-center">
                     <img src="{{ asset($benefit['image']) }}" alt="{{ $benefit['title'] }}">
-                    <h3 class="text-[20px] font-semibold text-[var(--color-heading)]">{{  $benefit['title'] }}</h3>
+                    <h3 class="text-[20px] font-medium text-[var(--color-heading)] font-sf">{{  $benefit['title'] }}</h3>
                 </div>
             @endforeach
         </div>

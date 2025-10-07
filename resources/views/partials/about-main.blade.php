@@ -18,7 +18,8 @@
 
                 </div>
                 <h4 class="text-[20px] text-[var(--color-heading)] font-semibold mt-8 mb-3">What defines us</h4>
-                <p class="text-[16px] leading-[1.5] text-[var(--color-text)]">We’re more than just a car wash—we’re a
+                <p class="text-[16px] leading-[1.5] text-[var(--color-text)] font-sf">We’re more than just a car
+                    wash—we’re a
                     team driven by passion, precision, and professionalism. What
                     sets us apart is our commitment to quality at every step, from using premium products to delivering
                     flawless detailing with care.Uncompromising Quality, Customer-Centered Service, Sustainable
@@ -71,7 +72,8 @@
                     </svg>
                 </div>
                 <h4 class="text-[20px] text-[var(--color-heading)] font-semibold mt-8 mb-3">What inspires us</h4>
-                <p class="text-[16px] leading-[1.5] text-[var(--color-text)]">Our inspiration comes from the pride
+                <p class="text-[16px] leading-[1.5] text-[var(--color-text)] font-sf">Our inspiration comes from the
+                    pride
                     people feel when their car looks and feels brand new. We believe every vehicle tells a story, and
                     keeping it clean, fresh, and well-maintained helps preserve that story. <br> The Joy of Driving,
                     Customer
@@ -90,7 +92,7 @@
                 </h2>
                 <h6 class="text-[20px] md:text-[24px] font-medium text-[var(--color-heading)] mb-8">Built on Passion for
                     Shine</h6>
-                <p class="text-[16px] leading-[1.5] text-[var(--color-text)] mb-8">
+                <p class="text-[16px] leading-[1.5] text-[var(--color-text)] mb-8 font-sf">
                     ECD was founded with a simple mission—to redefine car care with professionalism, convenience, and
                     attention to detail. What started as a passion for keeping cars spotless has grown into a trusted
                     service that customers rely on for quality and reliability. <br /> <br />
