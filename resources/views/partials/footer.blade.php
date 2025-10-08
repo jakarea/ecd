@@ -24,7 +24,7 @@
                 </div>
 
             </div>
-            <a href="#" class="btn-outline">
+            <a href="#" class="btn-outline w-full md:w-auto">
                 <span>Book Now</span>
                 <svg width="25" height="11" viewBox="0 0 25 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M24 5.5H1M24 5.5L19.5 1M24 5.5L19.5 10" stroke="white" stroke-width="1.5"
@@ -68,7 +68,7 @@
                     </ul>
                 </div>
                 <div
-                    class="space-y-8 max-w-full md:max-w-[400px] flex-1 py-4 pr-4 pl-16 bg-[#2B2B2B] rounded-lg relative">
+                    class="space-y-8 max-w-full w-full md:max-w-[400px] pt-[50px] pb-6 md:py-6 pr-6 pl-5 md:pl-16 bg-[#2B2B2B] rounded-lg relative">
                     <h4 class="text-lg text-white font-bold">Quick Connect</h4>
                     <ul class="space-y-4">
                         <li>
@@ -117,7 +117,7 @@
                         </li>
                     </ul>
                     <div
-                        class="absolute top-[50%] translate-y-[-50%] left-[-36px] w-[72px] h-[72px] p-2 bg-[#6ADBD926] flex items-center justify-center rounded-full">
+                        class="absolute top-0 md:top-[50%] translate-y-[-50%] left-[50%] -translate-x-[50%] md:-translate-x-0 md:left-[-36px] w-[72px] h-[72px] p-2 bg-[#6ADBD926] flex items-center justify-center rounded-full">
                         <div class="w-[50px] h-[50px] bg-[#6ADBD9] rounded-full flex items-center justify-center">
 
                             <svg width="21" height="21" viewBox="0 0 21 21" fill="none"

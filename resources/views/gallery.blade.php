@@ -55,29 +55,29 @@
 @section('content')
     <x-hero-section title="Our Work Speaks for Itself" bg-image="assets/img/bg-hero.png" bgColor="bg-[#ededed]" />
 
-    <section class="py-8 md:py-25 bg-[#ededed]">
+    <section class="pt-8 pb-16 md:py-25 bg-[#ededed]">
         <div class="container">
             <div class="font-sf font-medium text-[24px] text-[var(--color-text)] text-center max-w-[840px] mx-auto">Explore
                 our gallery of spotless finishes, detailed interiors, and shining results that showcase the quality and care
                 we bring to every vehicle.</div>
         </div>
     </section>
-    <section class="py-8 md:py-20 relative">
+    <section class="pt-12 pb-8 md:py-20 relative">
         <div class="container">
-            <div class="flex justify-center">
-                <div class="flex justify-center absolute w-full -top-[31px]">
+            <div class="flex justify-center px-4">
+                <div class="flex justify-center absolute w-full -top-[21px] md:-top-[31px]">
                     <div id="filterButtons"
-                        class="flex items-center border border-[var(--color-brand)] rounded-[60px] py-5 px-10 filter-buttons bg-white">
+                        class="flex items-center border border-[var(--color-brand)] rounded-[60px] py-2.5 md:py-5 px-5 md:px-10 filter-buttons bg-white">
                         <button data-filter="all"
-                            class="filter-btn text-sm text-[var(--color-text)] font-semibold text-center inline-block cursor-pointer px-[28px] border-r border-[#D1D7DF] active">All</button>
+                            class="filter-btn text-sm text-[var(--color-text)] font-semibold text-center inline-block cursor-pointer pl-0 pr-[12px] md:px-[28px] border-r border-[#D1D7DF] active">All</button>
                         <button data-filter="video"
-                            class="filter-btn text-sm text-[var(--color-text)] font-semibold text-center inline-block cursor-pointer px-[28px] border-r border-[#D1D7DF]">Videos</button>
+                            class="filter-btn text-sm text-[var(--color-text)] font-semibold text-center inline-block cursor-pointer px-[12px] md:px-[28px] border-r border-[#D1D7DF]">Videos</button>
                         <button data-filter="interior"
-                            class="filter-btn text-sm text-[var(--color-text)] font-semibold text-center inline-block cursor-pointer px-[28px] border-r border-[#D1D7DF]">Interior</button>
+                            class="filter-btn text-sm text-[var(--color-text)] font-semibold text-center inline-block cursor-pointer px-[12px] md:px-[28px] border-r border-[#D1D7DF]">Interior</button>
                         <button data-filter="exterior"
-                            class="filter-btn text-sm text-[var(--color-text)] font-semibold text-center inline-block cursor-pointer px-[28px] border-r border-[#D1D7DF]">Exterior</button>
+                            class="filter-btn text-sm text-[var(--color-text)] font-semibold text-center inline-block cursor-pointer px-[12px] md:px-[28px] border-r border-[#D1D7DF]">Exterior</button>
                         <button data-filter="before&after"
-                            class="filter-btn text-sm text-[var(--color-text)] font-semibold text-center inline-block cursor-pointer px-[28px]">Before
+                            class="filter-btn text-sm text-[var(--color-text)] font-semibold text-center inline-block cursor-pointer pl-[12px] pr-0 md:px-[28px]">Before
                             & After</button>
                     </div>
                 </div>
@@ -96,12 +96,6 @@
 
 @push('styles')
     <style>
-        /* Masonry (CSS columns) */
-        /* #masonry {
-                                        column-gap: 1.25rem;
-                                        column-count: 3;
-                                    } */
-
         /* Each item should not break across columns */
         .masonry-item {
             display: inline-block;
@@ -145,10 +139,6 @@
 
         .filter-btn.active {
             color: var(--color-brand);
-        }
-
-        .filter-buttons {
-            gap: 0.5rem;
         }
     </style>
 @endpush

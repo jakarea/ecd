@@ -82,17 +82,18 @@
         </div> --}}
 
         <div class="relative">
-            <div class="swiper testimonialSwiper overflow-visible">
+            <div class="swiper testimonialSwiper pt-[100px]">
                 <div class="swiper-wrapper">
                     @foreach ($testimonials as $testimonial)
                         <div class="swiper-slide">
-                            <div class="w-[794px] mx-auto">
+                            <div class="max-w-[794px] w-full mx-auto">
                                 <div
-                                    class="bg-[#6ADBD926] w-[705px] h-[342px] py-8 pr-8 pl-[160px] rounded-[20px] shadow-sm flex flex-col justify-between relative ml-[100px]">
+                                    class="bg-[#6ADBD926] w-full max-w-[705px] h-[342px] pt-[120px] pb-[30px] md:py-8 pr-8 pl-6 md:pl-[160px] rounded-[20px] flex flex-col justify-between relative md:ml-[100px]">
                                     <div class="flex items-center gap-4">
-                                        <div class="absolute top-1/2 left-[-100px] -translate-y-1/2">
+                                        <div
+                                            class="absolute top-0 md:top-1/2 left-6 md:left-[-100px] right-6 md:right-auto -translate-y-1/2 md:-translate-y-1/2">
                                             <img src="{{ asset($testimonial['image']) }}" alt="Testimonial"
-                                                class="max-w-[225px] w-full h-[296px] object-cover rounded-[12px]">
+                                                class="max-w-full md:max-w-[225px] w-full h-[181px] md:h-[296px] object-cover rounded-[20px]">
                                         </div>
                                         <div>
                                             <div class="flex items-center gap-4 mb-5">
@@ -132,6 +133,10 @@
 </section>
 
 <style>
+    .testimonialSwiper {
+        padding-bottom: 50px;
+    }
+
     /* Make sure slides are same height */
     .testimonialSwiper .swiper-slide {
         height: auto;
@@ -164,5 +169,11 @@
 
     .testimonial-controls .swiper-pagination-bullet-active {
         background-color: var(--color-brand);
+    }
+
+    @media screen and (max-width: 768px) {
+        .testimonialSwiper {
+            padding-top: 120px;
+        }
     }
 </style>

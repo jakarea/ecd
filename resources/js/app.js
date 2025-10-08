@@ -88,45 +88,45 @@ document.addEventListener("DOMContentLoaded", function () {
     //     duration: 10,
     // });
 
-    const swiper1 = new Swiper(".marquee", {
-        slidesPerView: 1.4,
-        spaceBetween: 25,
-        grabCursor: true,
-        a11y: false,
-        freeMode: true,
-        speed: 22000,
-        loop: true,
-        autoplay: {
-            delay: 0.5,
-            disableOnInteraction: false,
-            reverseDirection: false, // default
-        },
-        breakpoints: {
-            1050: {
-                slidesPerView: 4.4,
-            },
-        },
-    });
+    // const swiper1 = new Swiper(".marquee", {
+    //     slidesPerView: 1.4,
+    //     spaceBetween: 25,
+    //     grabCursor: true,
+    //     a11y: false,
+    //     freeMode: true,
+    //     speed: 22000,
+    //     loop: true,
+    //     autoplay: {
+    //         delay: 0.5,
+    //         disableOnInteraction: false,
+    //         reverseDirection: false, // default
+    //     },
+    //     breakpoints: {
+    //         1050: {
+    //             slidesPerView: 4.4,
+    //         },
+    //     },
+    // });
 
-    const swiper2 = new Swiper(".marquee-2", {
-        slidesPerView: 1.4,
-        spaceBetween: 25,
-        grabCursor: true,
-        a11y: false,
-        freeMode: true,
-        speed: 22000,
-        loop: true,
-        autoplay: {
-            delay: 0.5,
-            disableOnInteraction: false,
-            reverseDirection: true, // default
-        },
-        breakpoints: {
-            1050: {
-                slidesPerView: 4.4,
-            },
-        },
-    });
+    // const swiper2 = new Swiper(".marquee-2", {
+    //     slidesPerView: 1.4,
+    //     spaceBetween: 25,
+    //     grabCursor: true,
+    //     a11y: false,
+    //     freeMode: true,
+    //     speed: 22000,
+    //     loop: true,
+    //     autoplay: {
+    //         delay: 0.5,
+    //         disableOnInteraction: false,
+    //         reverseDirection: true, // default
+    //     },
+    //     breakpoints: {
+    //         1050: {
+    //             slidesPerView: 4.4,
+    //         },
+    //     },
+    // });
 
     // const marquee = document.querySelector(".marquee-track-1");
 
@@ -145,6 +145,9 @@ document.addEventListener("DOMContentLoaded", function () {
     //         repeat: -1,
     //     }
     // );
+
+    initMarquee(".marquee-track-1", "right", 20); // left to right
+    initMarquee(".marquee-track-2", "left", 20);
 });
 
 function initMarquee(selector, direction = "left", speed = 30) {
@@ -180,10 +183,10 @@ function initMarquee(selector, direction = "left", speed = 30) {
     }
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-    initMarquee(".marquee-track-1", "right", 20); // left to right
-    initMarquee(".marquee-track-2", "left", 20); // right to left
-});
+// document.addEventListener("DOMContentLoaded", () => {
+//     initMarquee(".marquee-track-1", "right", 20); // left to right
+//     initMarquee(".marquee-track-2", "left", 20); // right to left
+// });
 
 window.addEventListener("resize", () => {
     initMarquee(".marquee-track-1", "right", 20);
