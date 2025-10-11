@@ -143,9 +143,9 @@
         display: flex;
     }
 
-    .testimonialSwiper .swiper-wrapper {
+    /* .testimonialSwiper .swiper-wrapper {
         align-items: stretch;
-    }
+    } */
 
     .testimonial-controls .swiper-button-prev,
     .testimonial-controls .swiper-button-next,
