@@ -250,8 +250,30 @@
                     </div>
                 @endforeach
             </div>
-            <div class="flex">
-                <a href="#">1</a>
+            <div class="flex justify-center items-center mt-[36px]">
+                <div
+                    class="flex justify-center items-center px-2.5 py-[4.5px] border border-[#D9D9D9] rounded-tl-[10px] rounded-bl-[10px]">
+                    <a href="#"
+                        class="text-[18px] font-medium text-[var(--color-text)] flex justify-center items-center border-r border-[#D9D9D9] py-[13px] px-[30px]">1</a>
+                    <a href="#"
+                        class="text-[18px] font-medium text-[var(--color-text)] flex justify-center items-center border-r border-[#D9D9D9] py-[13px] px-[30px]">2</a>
+                    <a href="#"
+                        class="text-[18px] font-medium text-[var(--color-text)] flex justify-center items-center border-r border-[#D9D9D9] py-[13px] px-[30px]">3</a>
+                    <a href="#"
+                        class="text-[18px] font-medium text-[var(--color-text)] flex justify-center items-center border-r border-[#D9D9D9] py-[13px] px-[30px]">4</a>
+                    <a href="#"
+                        class="text-[18px] font-medium text-[var(--color-text)] flex justify-center items-center py-[13px] px-[30px]">5</a>
+                </div>
+                <a href="#"
+                    class="text-[18px] font-medium text-[var(--color-text)] w-[62px] h-[62px] flex justify-center items-center bg-[var(--color-brand)] rounded-tr-[10px] rounded-br-[10px]">
+
+                    <svg width="12" height="21" viewBox="0 0 12 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M0.837772 0.708142C0.766106 0.779588 0.709246 0.864464 0.67045 0.957907C0.631654 1.05135 0.611684 1.15152 0.611684 1.25269C0.611684 1.35386 0.631654 1.45404 0.67045 1.54748C0.709246 1.64092 0.766106 1.7258 0.837772 1.79724L9.52926 10.4824L0.837772 19.1675C0.693268 19.3119 0.612087 19.5078 0.612087 19.7121C0.612087 19.9163 0.693268 20.1122 0.837772 20.2566C0.982276 20.401 1.17827 20.4822 1.38263 20.4822C1.58699 20.4822 1.78298 20.401 1.92748 20.2566L11.1623 11.0269C11.2339 10.9555 11.2908 10.8706 11.3296 10.7772C11.3684 10.6837 11.3884 10.5835 11.3884 10.4824C11.3884 10.3812 11.3684 10.281 11.3296 10.1876C11.2908 10.0942 11.2339 10.0093 11.1623 9.93783L1.92748 0.708142C1.85599 0.636514 1.77107 0.579686 1.67758 0.540911C1.58408 0.502137 1.48385 0.482178 1.38263 0.482178C1.2814 0.482178 1.18117 0.502137 1.08768 0.540911C0.994182 0.579686 0.909259 0.636514 0.837772 0.708142Z"
+                            fill="white" stroke="white" stroke-width="0.815761" />
+                    </svg>
+
+                </a>
             </div>
         </div>
     </section>
