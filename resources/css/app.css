@@ -112,6 +112,7 @@
 
 @theme {
     --font-sf: "SF Pro Display", sans-serif;
+    --font-cursive: "Waiting for the Sunrise", cursive;
 }
 
 :root {
@@ -175,12 +176,12 @@ body {
     overflow: visible;
 } */
 .swiper-wrapper {
-    align-items: stretch;
+    height: auto !important;
+    /* align-items: stretch */
 }
 .swiper-slide {
     display: flex;
-    align-self: stretch;
-    height: 320px;
+    /* height: 320px; */
 }
 
 .swiper-button-prev,

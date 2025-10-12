@@ -1,5 +1,6 @@
 import "./bootstrap";
 import gsap from "gsap";
+import $ from "jquery";
 
 // Swiper core
 import Swiper from "swiper/bundle";
@@ -191,4 +192,12 @@ function initMarquee(selector, direction = "left", speed = 30) {
 window.addEventListener("resize", () => {
     initMarquee(".marquee-track-1", "right", 20);
     initMarquee(".marquee-track-2", "left", 20);
+});
+
+$(document).ready(function () {
+    $("#nextStepBtn").click(function () {
+        console.log("clicked");
+        // $("#step1").fadeOut(200);
+        // $("#step2").fadeIn(200);
+    });
 });
