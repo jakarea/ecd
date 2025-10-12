@@ -26,12 +26,47 @@
     ];
 
     $blog = $blogs[0];
+
+    $recentBlogs = [
+        [
+            'id' => '1',
+            'image' => 'assets/img/blog1.webp',
+            'title' => 'Achieving Your Property Investment Goals',
+            'date' => '10 Jul 2025',
+        ],
+        [
+            'id' => '2',
+            'image' => 'assets/img/blog2.webp',
+            'title' => 'Achieving Your Property Investment Goals',
+            'date' => '10 Jul 2025',
+        ],
+        [
+            'id' => '3',
+            'image' => 'assets/img/blog3.webp',
+            'title' => 'Achieving Your Property Investment Goals',
+            'date' => '10 Jul 2025',
+        ],
+
+        [
+            'id' => '4',
+            'image' => 'assets/img/blog4.webp',
+            'title' => 'Achieving Your Property Investment Goals',
+            'date' => '10 Jul 2025',
+        ],
+
+        [
+            'id' => '5',
+            'image' => 'assets/img/blog5.webp',
+            'title' => 'Achieving Your Property Investment Goals',
+            'date' => '10 Jul 2025',
+        ],
+    ];
 @endphp
 
 @section('content')
-    <x-hero-section title="Built on Passion for Shine" bg-image="assets/img/bg-hero.png" bgColor="bg-[#ededed]" />
+    <x-hero-section title="Built on Passion for Shine" bg-image="assets/img/bg-hero.png" />
 
-    <section class="py-8 md:py-25 bg-[#ededed]">
+    <section class="py-8 md:py-25">
         <div class="container">
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                 <div class="col-span-2">
@@ -84,7 +119,7 @@
                         </div>
                     </div>
                     <div class="p-4 md:p-5">
-                        <h3 class="text-[18px font-extrabold text-[var(--color-heading)]">{{ $blog['title'] }}</h3>
+                        <h3 class="text-[24px] font-extrabold text-[var(--color-heading)]">{{ $blog['title'] }}</h3>
                         <p class="mt-2 text-[14px] font-sf font-normal text-[var(--color-text)] leading-[1.6]">
                             {{ $blog['description'] }}
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean at facilisis turpis. Sed eget
@@ -128,8 +163,117 @@
                             condimentum. Duis dapibus bibendum odio. Curabitur cursus tristique justo, ac dictum est.
                             Maecenas non libero eros. Mauris a ornare lorem.
                         </p>
+                    </div>
+                </div>
+                <div class="col-span-1">
+                    <div class="bg-[var(--color-black)] py-10 px-5 rounded-[10px]">
+                        <h4 class="text-[26px] font-semibold text-white leading-[1.46] tracking-[0.03px]">Get your car
+                            shining today!</h4>
+                        <p class="text-[18px] text-white leading-[1.3] mt-4 mb-6.5 font-sf">Book your wash and detailing in
+                            minutes.
+                            We’ll come to you and leave your ride spotless inside and out.</p>
+                        <a href="{{ route('contact') }}" class="btn-brand"><span>Book Now</span>
+                            <svg width="25" height="11" viewBox="0 0 25 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M24 5.5H1M24 5.5L19.5 1M24 5.5L19.5 10" stroke="white" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="mt-5 bg-[#F2F2F2] p-4 rounded-[10px]">
+                        <h3 class="text-[18px] font-semibold text-[#20202A] uppercase mb-5">Recent Posts</h3>
+                        @foreach($recentBlogs as $blog)
+                            <div
+                                class="flex gap-3 {{ !$loop->first ? 'pt-5' : '' }} {{ !$loop->last ? 'pb-5 border-b border-[#d9d9d9]' : '' }}">
+                                <div class="w-[125px] h-[88px] flex-shrink-0">
+                                    <img src="{{ asset(path: $blog['image']) }}" alt="Post {{ $blog['id'] }}"
+                                        class="w-full h-full object-cover rounded-[8px]">
+                                </div>
+                                <div class="space-y-3">
+                                    <h4 class="text-[18px] font-bold text-[#20202A] leading-[1.4]">{{ $blog['title'] }}</h4>
+                                    <div class="flex items-center gap-3">
+                                        <svg width="14" height="16" viewBox="0 0 14 16" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M4 1.82739H10V0.327393H11.5V1.82739H12.25C12.6478 1.82739 13.0294 1.98543 13.3107 2.26673C13.592 2.54804 13.75 2.92957 13.75 3.32739V13.8274C13.75 14.2252 13.592 14.6067 13.3107 14.8881C13.0294 15.1694 12.6478 15.3274 12.25 15.3274H1.75C1.35218 15.3274 0.970644 15.1694 0.68934 14.8881C0.408035 14.6067 0.25 14.2252 0.25 13.8274V3.32739C0.25 2.92957 0.408035 2.54804 0.68934 2.26673C0.970644 1.98543 1.35218 1.82739 1.75 1.82739H2.5V0.327393H4V1.82739ZM1.75 4.82739V13.8274H12.25V4.82739H1.75ZM3.25 7.07739H4.75V8.57739H3.25V7.07739ZM6.25 7.07739H7.75V8.57739H6.25V7.07739ZM9.25 7.07739H10.75V8.57739H9.25V7.07739ZM9.25 10.0774H10.75V11.5774H9.25V10.0774ZM6.25 10.0774H7.75V11.5774H6.25V10.0774ZM3.25 10.0774H4.75V11.5774H3.25V10.0774Z"
+                                                fill="#124846" />
+                                        </svg>
+                                        <span class="text-[16px] font-medium text-[#20202A] leading-none">
+                                            {{ $blog['date'] }}
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        @endforeach
 
                     </div>
+                </div>
+            </div>
+
+            <div class="flex flex-wrap border-t border-b border-[#D9D9D9] py-2.5 mt-10">
+                <div
+                    class="w-full md:w-1/2 flex items-center justify-between gap-6 border-r border-[#d9d9d9] py-4 pr-[30px]">
+                    <a href="#"
+                        class="w-[65px] h-[65px] border border-[#D9D9D9] rounded-full flex justify-center items-center flex-shrink-0 [box-shadow:-1.41px_7.04px_10.56px_2.82px_rgba(186,186,186,0.19)]">
+                        <svg width="34" height="17" viewBox="0 0 34 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M32.8646 8.83678C32.8646 9.1651 32.5981 9.43156 32.2698 9.43156H2.55681L8.65776 15.4312C8.71602 15.4853 8.76282 15.5505 8.79542 15.6231C8.82801 15.6956 8.84573 15.7739 8.84753 15.8534C8.84933 15.9329 8.83516 16.012 8.80588 16.0859C8.77659 16.1599 8.73278 16.2272 8.67703 16.2839C8.62128 16.3406 8.55473 16.3855 8.48131 16.4161C8.40788 16.4466 8.32909 16.4621 8.24957 16.4616C8.17005 16.4612 8.09143 16.4448 8.01835 16.4135C7.94528 16.3821 7.87924 16.3364 7.82413 16.2791L0.692547 9.26645C0.626701 9.20371 0.576185 9.12666 0.544912 9.04126C0.513639 8.95585 0.50245 8.8644 0.512211 8.77398C0.527124 8.63089 0.593591 8.49813 0.699208 8.40046L7.82413 1.39449C7.87924 1.33717 7.94528 1.29147 8.01835 1.26012C8.09143 1.22876 8.17005 1.21237 8.24957 1.21192C8.32909 1.21148 8.40788 1.22698 8.48131 1.25752C8.55473 1.28805 8.62128 1.333 8.67703 1.3897C8.73278 1.44641 8.77659 1.51372 8.80588 1.58764C8.83516 1.66157 8.84933 1.74063 8.84753 1.82012C8.84573 1.89962 8.82801 1.97795 8.79542 2.05049C8.76282 2.12302 8.71602 2.18828 8.65776 2.2424L2.55681 8.24201H32.2698C32.5981 8.24201 32.8646 8.50847 32.8646 8.83678Z"
+                                fill="#6ADBD9" stroke="#6ADBD9" stroke-width="0.773356" />
+                        </svg>
+                    </a>
+                    <div class="flex gap-3">
+                        <div class="space-y-3 text-right flex flex-col items-end">
+                            <h4 class="text-[18px] font-bold text-[#20202A] leading-[1.4]">Achieving Your Property
+                                Investment Goals</h4>
+                            <div class="flex items-center gap-3">
+                                <svg width="14" height="16" viewBox="0 0 14 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M4 1.82739H10V0.327393H11.5V1.82739H12.25C12.6478 1.82739 13.0294 1.98543 13.3107 2.26673C13.592 2.54804 13.75 2.92957 13.75 3.32739V13.8274C13.75 14.2252 13.592 14.6067 13.3107 14.8881C13.0294 15.1694 12.6478 15.3274 12.25 15.3274H1.75C1.35218 15.3274 0.970644 15.1694 0.68934 14.8881C0.408035 14.6067 0.25 14.2252 0.25 13.8274V3.32739C0.25 2.92957 0.408035 2.54804 0.68934 2.26673C0.970644 1.98543 1.35218 1.82739 1.75 1.82739H2.5V0.327393H4V1.82739ZM1.75 4.82739V13.8274H12.25V4.82739H1.75ZM3.25 7.07739H4.75V8.57739H3.25V7.07739ZM6.25 7.07739H7.75V8.57739H6.25V7.07739ZM9.25 7.07739H10.75V8.57739H9.25V7.07739ZM9.25 10.0774H10.75V11.5774H9.25V10.0774ZM6.25 10.0774H7.75V11.5774H6.25V10.0774ZM3.25 10.0774H4.75V11.5774H3.25V10.0774Z"
+                                        fill="#124846" />
+                                </svg>
+                                <span class="text-[16px] font-medium text-[#20202A] leading-none">
+                                    10 July 2025
+                                </span>
+                            </div>
+                        </div>
+                        <div class="w-[125px] h-[88px] flex-shrink-0">
+                            <img src="{{ asset('assets/img/blog1.webp') }}" alt="blog post"
+                                class="w-full h-full object-cover rounded-[8px]">
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/2 flex items-center justify-between gap-6 py-4 pl-[30px]">
+                    <div class="flex gap-3">
+                        <div class="w-[125px] h-[88px] flex-shrink-0">
+                            <img src="{{ asset('assets/img/blog1.webp') }}" alt="blog post"
+                                class="w-full h-full object-cover rounded-[8px]">
+                        </div>
+                        <div class="space-y-3">
+                            <h4 class="text-[18px] font-bold text-[#20202A] leading-[1.4]">Achieving Your Property
+                                Investment Goals</h4>
+                            <div class="flex items-center gap-3">
+                                <svg width="14" height="16" viewBox="0 0 14 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M4 1.82739H10V0.327393H11.5V1.82739H12.25C12.6478 1.82739 13.0294 1.98543 13.3107 2.26673C13.592 2.54804 13.75 2.92957 13.75 3.32739V13.8274C13.75 14.2252 13.592 14.6067 13.3107 14.8881C13.0294 15.1694 12.6478 15.3274 12.25 15.3274H1.75C1.35218 15.3274 0.970644 15.1694 0.68934 14.8881C0.408035 14.6067 0.25 14.2252 0.25 13.8274V3.32739C0.25 2.92957 0.408035 2.54804 0.68934 2.26673C0.970644 1.98543 1.35218 1.82739 1.75 1.82739H2.5V0.327393H4V1.82739ZM1.75 4.82739V13.8274H12.25V4.82739H1.75ZM3.25 7.07739H4.75V8.57739H3.25V7.07739ZM6.25 7.07739H7.75V8.57739H6.25V7.07739ZM9.25 7.07739H10.75V8.57739H9.25V7.07739ZM9.25 10.0774H10.75V11.5774H9.25V10.0774ZM6.25 10.0774H7.75V11.5774H6.25V10.0774ZM3.25 10.0774H4.75V11.5774H3.25V10.0774Z"
+                                        fill="#124846" />
+                                </svg>
+                                <span class="text-[16px] font-medium text-[#20202A] leading-none">
+                                    10 July 2025
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#"
+                        class="w-[65px] h-[65px] border border-[#D9D9D9] rounded-full flex justify-center items-center flex-shrink-0 [box-shadow:-1.41px_7.04px_10.56px_2.82px_rgba(186,186,186,0.19)]">
+                        <svg width="41" height="18" viewBox="0 0 41 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M39.1379 9.16371H1.86208M39.1379 9.16371L31.8448 1.87061M39.1379 9.16371L31.8448 16.4568"
+                                stroke="#6ADBD9" stroke-width="2.43103" stroke-linecap="round" stroke-linejoin="round"
+                                class="group-hover:stroke-[#124846] transition-all duration-300 ease-in-out" />
+                        </svg>
+                    </a>
+
                 </div>
             </div>
         </div>

@@ -154,13 +154,14 @@
 
                         </div>
                         <a href="{{ route('blog-single', $blog['id']) }}"
-                            class="flex items-center justify-between gap-4 mt-2 py-3 px-4 md:px-5 text-[16px] font-bold text-[var(--color-heading)] uppercase leading-[2] border-t border-[#d9d9d9]">
+                            class="flex items-center justify-between gap-4 mt-2 py-3 px-4 md:px-5 text-[16px] font-bold text-[var(--color-heading)] uppercase leading-[2] border-t border-[#d9d9d9] group hover:bg-[#6ADBD915] transition-all duration-300 ease-in-out">
                             <span href="#">Read More</span>
 
                             <svg width="41" height="18" viewBox="0 0 41 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     d="M39.1379 9.16371H1.86208M39.1379 9.16371L31.8448 1.87061M39.1379 9.16371L31.8448 16.4568"
-                                    stroke="#6ADBD9" stroke-width="2.43103" stroke-linecap="round" stroke-linejoin="round" />
+                                    stroke="#6ADBD9" stroke-width="2.43103" stroke-linecap="round" stroke-linejoin="round"
+                                    class="group-hover:stroke-[#124846] transition-all duration-300 ease-in-out" />
                             </svg>
 
                         </a>
@@ -235,18 +236,22 @@
 
                         </div>
                         <a href="{{ route('blog-single', $blog['id']) }}"
-                            class="flex items-center justify-between gap-4 mt-2 py-3 px-4 md:px-5 text-[16px] font-bold text-[var(--color-heading)] uppercase leading-[2] border-t border-[#d9d9d9]">
+                            class="flex items-center justify-between gap-4 mt-2 py-3 px-4 md:px-5 text-[16px] font-bold text-[var(--color-heading)] uppercase leading-[2] border-t border-[#d9d9d9] group hover:bg-[#6ADBD915] transition-all duration-300 ease-in-out">
                             <span href="#">Read More</span>
 
                             <svg width="41" height="18" viewBox="0 0 41 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     d="M39.1379 9.16371H1.86208M39.1379 9.16371L31.8448 1.87061M39.1379 9.16371L31.8448 16.4568"
-                                    stroke="#6ADBD9" stroke-width="2.43103" stroke-linecap="round" stroke-linejoin="round" />
+                                    stroke="#6ADBD9" stroke-width="2.43103" stroke-linecap="round" stroke-linejoin="round"
+                                    class="group-hover:stroke-[#124846] transition-all duration-300 ease-in-out" />
                             </svg>
 
                         </a>
                     </div>
                 @endforeach
+            </div>
+            <div class="flex">
+                <a href="#">1</a>
             </div>
         </div>
     </section>
