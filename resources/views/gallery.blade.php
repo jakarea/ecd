@@ -7,7 +7,8 @@
         ],
         [
             'id' => '2',
-            'src' => 'assets/img/gallery2.webp',
+            'before' => 'assets/img/gallery1.webp',
+            'after' => 'assets/img/gallery2.webp',
             'category' => 'before&after',
         ],
         [
@@ -17,7 +18,8 @@
         ],
         [
             'id' => '4',
-            'src' => 'assets/img/gallery4.webp',
+            'before' => 'assets/img/gallery4.webp',
+            'after' => 'assets/img/gallery5.webp',
             'category' => 'before&after',
         ],
         [
@@ -45,7 +47,8 @@
             'src' => 'assets/img/gallery9.webp',
             'category' => 'video',
         ],
-    ]
+    ];
+
 @endphp
 
 @extends('layouts.app')
@@ -55,7 +58,7 @@
 @section('content')
     <x-hero-section title="Our Work Speaks for Itself" bg-image="assets/img/bg-hero.png" bgColor="bg-[#ededed]" />
 
-    <section class="pt-8 pb-16 md:py-25 bg-[#ededed]">
+    <section class="pt-8 pb-16 md:py-25 bg-[#ededed] border-b border-[var(--color-brand)]">
         <div class="container">
             <div class="font-sf font-medium text-[24px] text-[var(--color-text)] text-center max-w-[840px] mx-auto">Explore
                 our gallery of spotless finishes, detailed interiors, and shining results that showcase the quality and care
@@ -69,7 +72,7 @@
                     <div id="filterButtons"
                         class="flex items-center border border-[var(--color-brand)] rounded-[60px] py-2.5 md:py-5 px-5 md:px-10 filter-buttons bg-white">
                         <button data-filter="all"
-                            class="filter-btn text-sm text-[var(--color-text)] font-semibold text-center inline-block cursor-pointer pl-0 pr-[12px] md:px-[28px] border-r border-[#D1D7DF] active">All</button>
+                            class="filter-btn text-sm text-[var(--color-text)] font-semibold text-center inline-block cursor-pointer pl-0 pr-[12px] md:pr-[28px] border-r border-[#D1D7DF] active">All</button>
                         <button data-filter="video"
                             class="filter-btn text-sm text-[var(--color-text)] font-semibold text-center inline-block cursor-pointer px-[12px] md:px-[28px] border-r border-[#D1D7DF]">Videos</button>
                         <button data-filter="interior"
@@ -77,7 +80,7 @@
                         <button data-filter="exterior"
                             class="filter-btn text-sm text-[var(--color-text)] font-semibold text-center inline-block cursor-pointer px-[12px] md:px-[28px] border-r border-[#D1D7DF]">Exterior</button>
                         <button data-filter="before&after"
-                            class="filter-btn text-sm text-[var(--color-text)] font-semibold text-center inline-block cursor-pointer pl-[12px] pr-0 md:px-[28px]">Before
+                            class="filter-btn text-sm text-[var(--color-text)] font-semibold text-center inline-block cursor-pointer pl-[12px] pr-0 md:pl-[28px]">Before
                             & After</button>
                     </div>
                 </div>
@@ -85,11 +88,47 @@
             <div id="masonry" class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 @foreach ($galleryImages as $image)
                     <div class="masonry-item" data-category="{{ $image['category'] }}">
-                        <img src="{{ asset($image['src']) }}" alt="Gallery Image{{ $image['id'] }}"
-                            class="w-full h-full object-cover rounded-[15px]">
+                        @if ($image['category'] === 'before&after')
+                            {{-- Before & After slider --}}
+                            <div class="slider-container relative w-full h-full overflow-hidden rounded-[15px]">
+                                <img src="{{ asset($image['before']) }}" alt="Before Image {{ $image['id'] }}"
+                                    class="before-image absolute inset-0 w-full h-full object-cover" />
+                                <img src="{{ asset($image['after']) }}" alt="After Image {{ $image['id'] }}"
+                                    class="after-image absolute inset-0 w-full h-full object-cover" />
+                                <div class="slider-line absolute top-0 bottom-0 w-[2px] bg-[var(--color-brand)] left-1/2"></div>
+                                <div
+                                    class="slider-handle absolute top-1/2 left-1/2 w-[55px] h-[55px] bg-[var(--color-brand)] border-2 border-[var(--color-brand)] rounded-full cursor-pointer transform -translate-x-1/2 -translate-y-1/2 shadow-md flex justify-center items-center gap-1.5">
+
+                                    <svg width="12" height="9" viewBox="0 0 14 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5.50072 10.2778L1.06348 5.84053L5.50072 1.40329" stroke="white"
+                                            stroke-width="1.11598" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M1.06348 5.84039L12.7684 5.84039" stroke="white" stroke-width="1.11598"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+
+                                    <svg width="2" height="10" viewBox="0 0 2 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <line x1="0.782561" y1="0.910613" x2="0.782561" y2="10.0397" stroke="white"
+                                            stroke-width="1.01434" stroke-linecap="round" />
+                                    </svg>
+
+                                    <svg width="12" height="9" viewBox="0 0 14 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M8.05006 10.278L12.4873 5.84071L8.05006 1.40347" stroke="white"
+                                            stroke-width="1.11598" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M12.4873 5.84058L0.782391 5.84058" stroke="white" stroke-width="1.11598"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+
+                                </div>
+                            </div>
+                        @else
+                            {{-- Normal image --}}
+                            <img src="{{ asset($image['src']) }}" alt="Gallery Image {{ $image['id'] }}"
+                                class="w-full h-full object-cover rounded-[15px]" />
+                        @endif
                     </div>
                 @endforeach
             </div>
+
         </div>
     </section>
 @endsection
@@ -240,6 +279,101 @@
             filterItems(initialBtn.getAttribute('data-filter'));
 
         })();
+
+        //before after
+
+        document.addEventListener("DOMContentLoaded", function () {
+            // Target only the before&after gallery items
+            const beforeAfterItems = document.querySelectorAll('.masonry-item[data-category="before&after"]');
+
+            beforeAfterItems.forEach((item) => {
+                const sliderContainer = item.querySelector(".slider-container");
+                const sliderHandle = item.querySelector(".slider-handle");
+                const sliderLine = item.querySelector(".slider-line");
+                const beforeImage = item.querySelector(".before-image");
+                const afterImage = item.querySelector(".after-image");
+
+                if (!sliderContainer || !sliderHandle || !sliderLine || !beforeImage || !afterImage) return;
+
+                let isDragging = false;
+
+                // Function to initialize the slider at the center position
+                const initializeSlider = () => {
+                    const containerWidth = sliderContainer.offsetWidth;
+
+                    // Set slider handle and line at center with a transition for initialization
+                    sliderHandle.style.transition = "left 0.3s ease";
+                    sliderLine.style.transition = "left 0.3s ease";
+
+                    sliderHandle.style.left = "50%";
+                    sliderLine.style.left = "50%";
+
+                    // Set both images' clip-path to 50% (center)
+                    beforeImage.style.clipPath = `inset(0 50% 0 0)`;
+                    afterImage.style.clipPath = `inset(0 0 0 50%)`;
+                };
+
+                // Function to move the slider based on user interaction
+                const moveSlider = (clientX) => {
+                    const containerRect = sliderContainer.getBoundingClientRect();
+                    let offsetX = clientX - containerRect.left;
+
+                    // Limit the slider movement within the full container width (0% to 100%)
+                    if (offsetX < 0) offsetX = 0; // Prevent overflow on the left
+                    if (offsetX > containerRect.width) offsetX = containerRect.width; // Prevent overflow on the right
+
+                    const percentage = Math.round((offsetX / containerRect.width) * 100);
+
+                    // Update the slider handle position and image clipping
+                    sliderHandle.style.left = `${percentage}%`;
+                    sliderLine.style.left = `${percentage}%`;
+
+                    // Adjust the clip-path for both images
+                    beforeImage.style.clipPath = `inset(0 ${100 - percentage}% 0 0)`;
+                    afterImage.style.clipPath = `inset(0 0 0 ${percentage}%)`;
+                };
+
+                // Add event listeners for both the handle and the line (including the SVG)
+                const startDragging = () => {
+                    isDragging = true;
+
+                    // Remove transitions while dragging for instant feedback
+                    sliderHandle.style.transition = "none";
+                    sliderLine.style.transition = "none";
+                };
+
+                const stopDragging = () => {
+                    isDragging = false;
+
+                    // Reapply transitions after dragging ends
+                    sliderHandle.style.transition = "left 0.3s ease";
+                    sliderLine.style.transition = "left 0.3s ease";
+                };
+
+                sliderHandle.addEventListener("mousedown", startDragging);
+                sliderLine.addEventListener("mousedown", startDragging);
+
+                window.addEventListener("mousemove", (event) => {
+                    if (isDragging) moveSlider(event.clientX);
+                });
+
+                window.addEventListener("mouseup", stopDragging);
+
+                // Touch events for mobile
+                sliderHandle.addEventListener("touchstart", startDragging);
+                sliderLine.addEventListener("touchstart", startDragging);
+
+                window.addEventListener("touchmove", (event) => {
+                    if (isDragging) moveSlider(event.touches[0].clientX);
+                });
+
+                window.addEventListener("touchend", stopDragging);
+
+                // Initialize the slider on load
+                window.addEventListener("load", initializeSlider);
+            });
+        });
+
     </script>
 @endpush
 

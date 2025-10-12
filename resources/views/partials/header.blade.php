@@ -8,7 +8,7 @@
                         class="max-w-[80px] max-h-[40px] md:max-w-[145px] md:max-h-[70px]">
                 </a>
             </div>
-            <nav class="hidden md:flex items-center justify-center gap-6 bg-white py-4 px-8 rounded-[60px]">
+            <nav class="hidden md:flex items-center justify-center gap-7.5 bg-white py-4 px-10 rounded-[60px]">
                 <a href="{{ route('home') }}" class="nav-link active">Home</a>
                 <a href="{{ route('about') }}" class="nav-link"> About Us</a>
                 <a href="{{ route('services-subscriptions') }}" class="nav-link">Services & Subscriptions</a>

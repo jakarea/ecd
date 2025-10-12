@@ -143,7 +143,7 @@
                     </div>
                 </div>
                 <div class="tbody">
-                    <div class="tr flex border border-[#CBD6E9] rounded-tl-[16px]">
+                    <div class="tr flex border-l border-t border-b border-[#CBD6E9] rounded-tl-[16px]">
                         <div class="td max-w-[398px] w-full py-5 px-[30px] border-r border-[#CBD6E9]">
                             <span class="text-[16px] text-[var(--color-heading)] font-sf">Discount</span>
                         </div>
@@ -151,45 +151,48 @@
                             <span class="text-[16px] text-[var(--color-text)] font-sf">10% discount per
                                 treatment</span>
                         </div>
-                        <div class="td max-w-[267.33px] w-full py-5 px-[30px] border-r border-[#CBD6E9] text-center">
+                        <div class="td max-w-[267.33px] w-full py-5 px-[30px] border-r border-[#CBA328] text-center">
                             <span class="text-[16px] text-[var(--color-text)] font-sf">15% discount per
                                 treatment</span>
                         </div>
-                        <div class="td max-w-[267.33px] w-full py-5 px-[30px] text-center bg-[#CBA32810]">
+                        <div
+                            class="td max-w-[267.33px] w-full py-5 px-[30px] text-center bg-[#CBA32810] border-r border-[#CBA328]">
                             <span class="text-[16px] text-[var(--color-text)] font-sf">20% discount per
                                 treatment</span>
                         </div>
                     </div>
-                    <div class="tr flex border-l border-r border-b border-[#CBD6E9]">
+                    <div class="tr flex border-l border-b border-[#CBD6E9]">
                         <div class="td max-w-[398px] w-full py-5 px-[30px] border-r border-[#CBD6E9]">
                             <span class="text-[16px] text-[var(--color-heading)] font-sf">Service</span>
                         </div>
                         <div class="td max-w-[267.33px] w-full py-5 px-[30px] border-r border-[#CBD6E9] text-center">
                             <span class="text-[16px] text-[var(--color-text)] text-left font-sf">1x per month</span>
                         </div>
-                        <div class="td max-w-[267.33px] w-full py-5 px-[30px] border-r border-[#CBD6E9] text-center">
+                        <div class="td max-w-[267.33px] w-full py-5 px-[30px] border-r border-[#CBA328] text-center">
                             <span class="text-[16px] text-[var(--color-text)] text-left font-sf">2x per month</span>
                         </div>
-                        <div class="td max-w-[267.33px] w-full py-5 px-[30px] text-center bg-[#CBA32810]">
+                        <div
+                            class="td max-w-[267.33px] w-full py-5 px-[30px] text-center bg-[#CBA32810] border-r border-[#CBA328]">
                             <span class="text-[16px] text-[var(--color-text)] text-left font-sf">4x per month</span>
                         </div>
                     </div>
-                    <div class="tr flex border-l border-r border-b border-[#CBD6E9]">
+                    <div class="tr flex border-l border-b border-[#CBD6E9]">
                         <div class="td max-w-[398px] w-full py-5 px-[30px] border-r border-[#CBD6E9]">
                             <span class="text-[16px] text-[var(--color-heading)] font-sf">Weekly</span>
                         </div>
                         <div class="td max-w-[267.33px] w-full py-5 px-[30px] border-r border-[#CBD6E9] text-center">
                             <span class="text-[16px] text-[var(--color-text)] font-sf">-</span>
                         </div>
-                        <div class="td max-w-[267.33px] w-full py-5 px-[30px] border-r border-[#CBD6E9] text-center">
+                        <div class="td max-w-[267.33px] w-full py-5 px-[30px] border-r border-[#CBA328] text-center">
                             <span class="text-[16px] text-[var(--color-text)] font-sf">Every other
                                 week</span>
                         </div>
-                        <div class="td max-w-[267.33px] w-full py-5 px-[30px] text-center bg-[#CBA32810]">
+                        <div
+                            class="td max-w-[267.33px] w-full py-5 px-[30px] text-center bg-[#CBA32810] border-r border-[#CBA328]">
                             <span class="text-[16px] text-[var(--color-text)] font-sf">Weekly</span>
                         </div>
                     </div>
-                    <div class="tr flex border-l border-r border-b border-[#CBD6E9] bg-[#F6F9FF]">
+                    <div class="tr flex border-l border-b border-[#CBD6E9] bg-[#F6F9FF]">
                         <div class="td max-w-[398px] w-full py-2 px-[30px] border-r border-[#CBD6E9]">
                             <span
                                 class="text-[18px] font-bold text-[var(--color-text)] font-sf uppercase">Interior</span>
@@ -197,14 +200,15 @@
                         <div class="td max-w-[267.33px] w-full py-5 px-[30px] border-r border-[#CBD6E9] text-center">
                             <span class="text-[16px] text-[var(--color-text)] font-sf"></span>
                         </div>
-                        <div class="td max-w-[267.33px] w-full py-5 px-[30px] border-r border-[#CBD6E9] text-center">
+                        <div class="td max-w-[267.33px] w-full py-5 px-[30px] border-r border-[#CBA328] text-center">
                             <span class="text-[16px] text-[var(--color-text)] font-sf"></span>
                         </div>
-                        <div class="td max-w-[267.33px] w-full py-5 px-[30px] text-center bg-[#CBA32810]">
+                        <div
+                            class="td max-w-[267.33px] w-full py-5 px-[30px] text-center bg-[#CBA32810] border-r border-[#CBA328]">
                             <span class="text-[16px] text-[var(--color-text)] font-sf"></span>
                         </div>
                     </div>
-                    <div class="tr flex border-l border-r border-b border-[#CBD6E9]">
+                    <div class="tr flex border-l border-b border-[#CBD6E9]">
                         <div class="td max-w-[398px] w-full py-5 px-[30px] border-r border-[#CBD6E9]">
                             <span class="text-[16px] text-[var(--color-heading)] font-sf">Vacuuming</span>
                         </div>
@@ -221,7 +225,7 @@
                             </span>
                         </div>
                         <div
-                            class="td max-w-[267.33px] w-full py-5 px-[30px] border-r border-[#CBD6E9] text-center flex justify-center items-center">
+                            class="td max-w-[267.33px] w-full py-5 px-[30px] border-r border-[#CBA328] text-center flex justify-center items-center">
                             <span class="text-[16px] text-[var(--color-text)] font-sf">
                                 <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -233,7 +237,7 @@
                             </span>
                         </div>
                         <div
-                            class="td max-w-[267.33px] w-full py-5 px-[30px] text-center flex justify-center items-center bg-[#CBA32810]">
+                            class="td max-w-[267.33px] w-full py-5 px-[30px] text-center flex justify-center items-center bg-[#CBA32810] border-r border-[#CBA328]">
                             <span class="text-[16px] text-[var(--color-text)] font-sf">
                                 <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -245,7 +249,7 @@
                             </span>
                         </div>
                     </div>
-                    <div class="tr flex border-l border-r border-b border-[#CBD6E9]">
+                    <div class="tr flex border-l border-b border-[#CBD6E9]">
                         <div class="td max-w-[398px] w-full py-5 px-[30px] border-r border-[#CBD6E9]">
                             <span class="text-[16px] text-[var(--color-heading)] font-sf">Cleaning windows
                                 (inside)</span>
@@ -263,7 +267,7 @@
                             </span>
                         </div>
                         <div
-                            class="td max-w-[267.33px] w-full py-5 px-[30px] border-r border-[#CBD6E9] text-center flex justify-center items-center">
+                            class="td max-w-[267.33px] w-full py-5 px-[30px] border-r border-[#CBA328] text-center flex justify-center items-center">
                             <span class="text-[16px] text-[var(--color-text)] font-sf">
                                 <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -275,7 +279,7 @@
                             </span>
                         </div>
                         <div
-                            class="td max-w-[267.33px] w-full py-5 px-[30px] text-center flex justify-center items-center bg-[#CBA32810]">
+                            class="td max-w-[267.33px] w-full py-5 px-[30px] text-center flex justify-center items-center bg-[#CBA32810] border-r border-[#CBA328]">
                             <span class="text-[16px] text-[var(--color-text)] font-sf">
                                 <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -287,7 +291,7 @@
                             </span>
                         </div>
                     </div>
-                    <div class="tr flex border-l border-r border-b border-[#CBD6E9]">
+                    <div class="tr flex border-l border-b border-[#CBD6E9]">
                         <div class="td max-w-[398px] w-full py-5 px-[30px] border-r border-[#CBD6E9]">
                             <span class="text-[16px] text-[var(--color-heading)] font-sf">Cleaning compartments and
                                 trays</span>
@@ -305,7 +309,7 @@
                             </span>
                         </div>
                         <div
-                            class="td max-w-[267.33px] w-full py-5 px-[30px] border-r border-[#CBD6E9] text-center flex justify-center items-center">
+                            class="td max-w-[267.33px] w-full py-5 px-[30px] border-r border-[#CBA328] text-center flex justify-center items-center">
                             <span class="text-[16px] text-[var(--color-text)] font-sf">
                                 <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -317,7 +321,7 @@
                             </span>
                         </div>
                         <div
-                            class="td max-w-[267.33px] w-full py-5 px-[30px] text-center flex justify-center items-center bg-[#CBA32810]">
+                            class="td max-w-[267.33px] w-full py-5 px-[30px] text-center flex justify-center items-center bg-[#CBA32810] border-r border-[#CBA328]">
                             <span class="text-[16px] text-[var(--color-text)] font-sf">
                                 <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -329,7 +333,7 @@
                             </span>
                         </div>
                     </div>
-                    <div class="tr flex border-l border-r border-b border-[#CBD6E9]">
+                    <div class="tr flex border-l border-b border-[#CBD6E9]">
                         <div class="td max-w-[398px] w-full py-5 px-[30px] border-r border-[#CBD6E9]">
                             <span class="text-[16px] text-[var(--color-heading)] font-sf">Dashboard cleaning</span>
                         </div>
@@ -346,7 +350,7 @@
                             </span>
                         </div>
                         <div
-                            class="td max-w-[267.33px] w-full py-5 px-[30px] border-r border-[#CBD6E9] text-center flex justify-center items-center">
+                            class="td max-w-[267.33px] w-full py-5 px-[30px] border-r border-[#CBA328] text-center flex justify-center items-center">
                             <span class="text-[16px] text-[var(--color-text)] font-sf">
                                 <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -358,7 +362,7 @@
                             </span>
                         </div>
                         <div
-                            class="td max-w-[267.33px] w-full py-5 px-[30px] text-center flex justify-center items-center bg-[#CBA32810]">
+                            class="td max-w-[267.33px] w-full py-5 px-[30px] text-center flex justify-center items-center bg-[#CBA32810] border-r border-[#CBA328]">
                             <span class="text-[16px] text-[var(--color-text)] font-sf">
                                 <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -370,7 +374,7 @@
                             </span>
                         </div>
                     </div>
-                    <div class="tr flex border-l border-r border-b border-[#CBD6E9]">
+                    <div class="tr flex border-l border-b border-[#CBD6E9]">
                         <div class="td max-w-[398px] w-full py-5 px-[30px] border-r border-[#CBD6E9]">
                             <span class="text-[16px] text-[var(--color-heading)] font-sf">Plastic parts cleaning</span>
                         </div>
@@ -387,7 +391,7 @@
                             </span>
                         </div>
                         <div
-                            class="td max-w-[267.33px] w-full py-5 px-[30px] border-r border-[#CBD6E9] text-center flex justify-center items-center">
+                            class="td max-w-[267.33px] w-full py-5 px-[30px] border-r border-[#CBA328] text-center flex justify-center items-center">
                             <span class="text-[16px] text-[var(--color-text)] font-sf">
                                 <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -399,7 +403,7 @@
                             </span>
                         </div>
                         <div
-                            class="td max-w-[267.33px] w-full py-5 px-[30px] text-center flex justify-center items-center bg-[#CBA32810]">
+                            class="td max-w-[267.33px] w-full py-5 px-[30px] text-center flex justify-center items-center bg-[#CBA32810] border-r border-[#CBA328]">
                             <span class="text-[16px] text-[var(--color-text)] font-sf">
                                 <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -411,7 +415,7 @@
                             </span>
                         </div>
                     </div>
-                    <div class="tr flex border-l border-r border-b border-[#CBD6E9]">
+                    <div class="tr flex border-l border-b border-[#CBD6E9]">
                         <div class="td max-w-[398px] w-full py-5 px-[30px] border-r border-[#CBD6E9]">
                             <span class="text-[16px] text-[var(--color-heading)] font-sf">Plastic parts cleaning</span>
                         </div>
@@ -428,7 +432,7 @@
                             </span>
                         </div>
                         <div
-                            class="td max-w-[267.33px] w-full py-5 px-[30px] border-r border-[#CBD6E9] text-center flex justify-center items-center">
+                            class="td max-w-[267.33px] w-full py-5 px-[30px] border-r border-[#CBA328] text-center flex justify-center items-center">
                             <span class="text-[16px] text-[var(--color-text)] font-sf">
                                 <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -440,7 +444,7 @@
                             </span>
                         </div>
                         <div
-                            class="td max-w-[267.33px] w-full py-5 px-[30px] text-center flex justify-center items-center bg-[#CBA32810]">
+                            class="td max-w-[267.33px] w-full py-5 px-[30px] text-center flex justify-center items-center bg-[#CBA32810] border-r border-[#CBA328]">
                             <span class="text-[16px] text-[var(--color-text)] font-sf">
                                 <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -452,7 +456,7 @@
                             </span>
                         </div>
                     </div>
-                    <div class="tr flex border-l border-r border-b border-[#CBD6E9]">
+                    <div class="tr flex border-l border-b border-[#CBD6E9]">
                         <div class="td max-w-[398px] w-full py-5 px-[30px] border-r border-[#CBD6E9]">
                             <span class="text-[16px] text-[var(--color-heading)] font-sf">Carpet mats cleaning</span>
                         </div>
@@ -469,7 +473,7 @@
                             </span>
                         </div>
                         <div
-                            class="td max-w-[267.33px] w-full py-5 px-[30px] border-r border-[#CBD6E9] text-center flex justify-center items-center">
+                            class="td max-w-[267.33px] w-full py-5 px-[30px] border-r border-[#CBA328] text-center flex justify-center items-center">
                             <span class="text-[16px] text-[var(--color-text)] font-sf">
                                 <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -481,7 +485,7 @@
                             </span>
                         </div>
                         <div
-                            class="td max-w-[267.33px] w-full py-5 px-[30px] text-center flex justify-center items-center bg-[#CBA32810]">
+                            class="td max-w-[267.33px] w-full py-5 px-[30px] text-center flex justify-center items-center bg-[#CBA32810] border-r border-[#CBA328]">
                             <span class="text-[16px] text-[var(--color-text)] font-sf">
                                 <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -493,7 +497,7 @@
                             </span>
                         </div>
                     </div>
-                    <div class="tr flex border-l border-r border-b border-[#CBD6E9]">
+                    <div class="tr flex border-l border-b border-[#CBD6E9]">
                         <div class="td max-w-[398px] w-full py-5 px-[30px] border-r border-[#CBD6E9]">
                             <span class="text-[16px] text-[var(--color-heading)] font-sf">Steering wheel
                                 cleaning</span>
@@ -511,7 +515,7 @@
                             </span>
                         </div>
                         <div
-                            class="td max-w-[267.33px] w-full py-5 px-[30px] border-r border-[#CBD6E9] text-center flex justify-center items-center">
+                            class="td max-w-[267.33px] w-full py-5 px-[30px] border-r border-[#CBA328] text-center flex justify-center items-center">
                             <span class="text-[16px] text-[var(--color-text)] font-sf">
                                 <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -523,7 +527,7 @@
                             </span>
                         </div>
                         <div
-                            class="td max-w-[267.33px] w-full py-5 px-[30px] text-center flex justify-center items-center bg-[#CBA32810]">
+                            class="td max-w-[267.33px] w-full py-5 px-[30px] text-center flex justify-center items-center bg-[#CBA32810] border-r border-[#CBA328]">
                             <span class="text-[16px] text-[var(--color-text)] font-sf">
                                 <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -535,7 +539,7 @@
                             </span>
                         </div>
                     </div>
-                    <div class="tr flex border-l border-r border-b border-[#CBD6E9] bg-[#F6F9FF]">
+                    <div class="tr flex border-l border-b border-[#CBD6E9] bg-[#F6F9FF]">
                         <div class="td max-w-[398px] w-full py-2 px-[30px] border-r border-[#CBD6E9]">
                             <span
                                 class="text-[18px] font-bold text-[var(--color-heading)] font-sf uppercase">Exterior</span>
@@ -543,14 +547,15 @@
                         <div class="td max-w-[267.33px] w-full py-5 px-[30px] border-r border-[#CBD6E9] text-center">
                             <span class="text-[16px] text-[var(--color-text)] font-sf"></span>
                         </div>
-                        <div class="td max-w-[267.33px] w-full py-5 px-[30px] border-r border-[#CBD6E9] text-center">
+                        <div class="td max-w-[267.33px] w-full py-5 px-[30px] border-r border-[#CBA328] text-center">
                             <span class="text-[16px] text-[var(--color-text)] font-sf"></span>
                         </div>
-                        <div class="td max-w-[267.33px] w-full py-5 px-[30px] text-center bg-[#CBA32810]">
+                        <div
+                            class="td max-w-[267.33px] w-full py-5 px-[30px] text-center bg-[#CBA32810] border-r border-[#CBA328]">
                             <span class="text-[16px] text-[var(--color-text)] font-sf"></span>
                         </div>
                     </div>
-                    <div class="tr flex border-l border-r border-b border-[#CBD6E9]">
+                    <div class="tr flex border-l border-b border-[#CBD6E9]">
                         <div class="td max-w-[398px] w-full py-5 px-[30px] border-r border-[#CBD6E9]">
                             <span class="text-[16px] text-[var(--color-heading)] font-sf">Thorough wash including rims,
                                 bumpers, and windows</span>
@@ -568,7 +573,7 @@
                             </span>
                         </div>
                         <div
-                            class="td max-w-[267.33px] w-full py-5 px-[30px] border-r border-[#CBD6E9] text-center flex justify-center items-center">
+                            class="td max-w-[267.33px] w-full py-5 px-[30px] border-r border-[#CBA328] text-center flex justify-center items-center">
                             <span class="text-[16px] text-[var(--color-text)] font-sf">
                                 <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -580,7 +585,7 @@
                             </span>
                         </div>
                         <div
-                            class="td max-w-[267.33px] w-full py-5 px-[30px] text-center flex justify-center items-center bg-[#CBA32810]">
+                            class="td max-w-[267.33px] w-full py-5 px-[30px] text-center flex justify-center items-center bg-[#CBA32810] border-r border-[#CBA328]">
                             <span class="text-[16px] text-[var(--color-text)] font-sf">
                                 <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -592,7 +597,7 @@
                             </span>
                         </div>
                     </div>
-                    <div class="tr flex border-l border-r border-b border-[#CBD6E9]">
+                    <div class="tr flex border-l border-b border-[#CBD6E9]">
                         <div class="td max-w-[398px] w-full py-5 px-[30px] border-r border-[#CBD6E9]">
                             <span class="text-[16px] text-[var(--color-heading)] font-sf">Removes dirt, deposits, and
                                 insect residues</span>
@@ -610,7 +615,7 @@
                             </span>
                         </div>
                         <div
-                            class="td max-w-[267.33px] w-full py-5 px-[30px] border-r border-[#CBD6E9] text-center flex justify-center items-center">
+                            class="td max-w-[267.33px] w-full py-5 px-[30px] border-r border-[#CBA328] text-center flex justify-center items-center">
                             <span class="text-[16px] text-[var(--color-text)] font-sf">
                                 <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -622,7 +627,7 @@
                             </span>
                         </div>
                         <div
-                            class="td max-w-[267.33px] w-full py-5 px-[30px] text-center flex justify-center items-center bg-[#CBA32810]">
+                            class="td max-w-[267.33px] w-full py-5 px-[30px] text-center flex justify-center items-center bg-[#CBA32810] border-r border-[#CBA328]">
                             <span class="text-[16px] text-[var(--color-text)] font-sf">
                                 <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -634,7 +639,7 @@
                             </span>
                         </div>
                     </div>
-                    <div class="tr flex border-l border-r border-b border-[#CBD6E9] bg-[#F6F9FF]">
+                    <div class="tr flex border-l border-b border-[#CBD6E9] bg-[#F6F9FF]">
                         <div class="td max-w-[398px] w-full py-2 px-[30px] border-r border-[#CBD6E9]">
                             <span
                                 class="text-[18px] font-bold text-[var(--color-heading)] font-sf uppercase">Extra</span>
@@ -642,14 +647,15 @@
                         <div class="td max-w-[267.33px] w-full py-5 px-[30px] border-r border-[#CBD6E9] text-center">
                             <span class="text-[16px] text-[var(--color-text)] font-sf"></span>
                         </div>
-                        <div class="td max-w-[267.33px] w-full py-5 px-[30px] border-r border-[#CBD6E9] text-center">
+                        <div class="td max-w-[267.33px] w-full py-5 px-[30px] border-r border-[#CBA328] text-center">
                             <span class="text-[16px] text-[var(--color-text)] font-sf"></span>
                         </div>
-                        <div class="td max-w-[267.33px] w-full py-5 px-[30px] text-center bg-[#CBA32810]">
+                        <div
+                            class="td max-w-[267.33px] w-full py-5 px-[30px] text-center bg-[#CBA32810] border-r border-[#CBA328]">
                             <span class="text-[16px] text-[var(--color-text)] font-sf"></span>
                         </div>
                     </div>
-                    <div class="tr flex border-l border-r border-b border-[#CBD6E9]">
+                    <div class="tr flex border-l border-b border-[#CBD6E9]">
                         <div class="td max-w-[398px] w-full py-5 px-[30px] border-r border-[#CBD6E9]">
                             <span class="text-[16px] text-[var(--color-heading)] font-sf">Perfume of choice</span>
                         </div>
@@ -666,7 +672,7 @@
                             </span>
                         </div>
                         <div
-                            class="td max-w-[267.33px] w-full py-5 px-[30px] border-r border-[#CBD6E9] text-center flex justify-center items-center">
+                            class="td max-w-[267.33px] w-full py-5 px-[30px] border-r border-[#CBA328] text-center flex justify-center items-center">
                             <span class="text-[16px] text-[var(--color-text)] font-sf">
                                 <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -678,7 +684,7 @@
                             </span>
                         </div>
                         <div
-                            class="td max-w-[267.33px] w-full py-5 px-[30px] text-center flex justify-center items-center bg-[#CBA32810]">
+                            class="td max-w-[267.33px] w-full py-5 px-[30px] text-center flex justify-center items-center bg-[#CBA32810] border-r border-[#CBA328]">
                             <span class="text-[16px] text-[var(--color-text)] font-sf">
                                 <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -690,7 +696,7 @@
                             </span>
                         </div>
                     </div>
-                    <div class="tr flex border-l border-r border-b border-[#CBD6E9]">
+                    <div class="tr flex border-l border-b border-[#CBD6E9]">
                         <div class="td max-w-[398px] w-full py-5 px-[30px] border-r border-[#CBD6E9]">
                             <span class="text-[16px] text-[var(--color-heading)] font-sf">Choice of one extra
                                 option</span>
@@ -709,7 +715,7 @@
                             </span>
                         </div>
                         <div
-                            class="td max-w-[267.33px] w-full py-5 px-[30px] border-r border-[#CBD6E9] text-center flex justify-center items-center">
+                            class="td max-w-[267.33px] w-full py-5 px-[30px] border-r border-[#CBA328] text-center flex justify-center items-center">
                             <span class="text-[16px] text-[var(--color-text)] font-sf">
 
                                 <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
@@ -722,7 +728,7 @@
                             </span>
                         </div>
                         <div
-                            class="td max-w-[267.33px] w-full py-5 px-[30px] text-center flex justify-center items-center bg-[#CBA32810]">
+                            class="td max-w-[267.33px] w-full py-5 px-[30px] text-center flex justify-center items-center bg-[#CBA32810] border-r border-b border-[#CBA328] ">
                             <span class="text-[16px] text-[var(--color-text)] font-sf">
                                 <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">

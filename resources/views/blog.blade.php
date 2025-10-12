@@ -88,7 +88,7 @@
 @section('content')
     <x-hero-section title="Latest news & blog" bg-image="assets/img/bg-hero.png" bgColor="bg-[#ededed]" />
 
-    <section class="py-8 md:py-25 bg-[#ededed]">
+    <section class="py-10 md:py-20 bg-[#ededed] border-b border-[var(--color-brand)]">
         <div class="container">
             <div class="font-sf font-medium text-[24px] text-[var(--color-text)] text-center max-w-[840px] mx-auto">See What
                 Just published on our blog.</div>
@@ -110,7 +110,7 @@
                                             fill="#124846" />
                                     </svg>
 
-                                    <span class="text-[12px] font-medium text-[var(--color-text)] leading-none">
+                                    <span class="text-[16px] font-medium text-[var(--color-heading)] leading-none">
                                         {{ $blog['date'] }}
                                     </span>
                                 </div>
@@ -123,7 +123,7 @@
                                             fill="#124846" />
                                     </svg>
 
-                                    <span class="text-[12px] font-medium text-[var(--color-text)] leading-none">
+                                    <span class="text-[16px] font-medium text-[var(--color-heading)] leading-none">
                                         By {{ $blog['author'] }}
                                     </span>
                                 </div>
@@ -136,7 +136,7 @@
                                             fill="#124846" />
                                     </svg>
 
-                                    <span class="text-[12px] font-medium text-[var(--color-text)] leading-none">
+                                    <span class="text-[16px] font-medium text-[var(--color-heading)] leading-none">
                                         @foreach ($blog['category'] as $index => $cat)
                                             {{ $cat }}@if (!$loop->last), @endif
                                         @endforeach
@@ -145,10 +145,10 @@
                             </div>
                         </div>
                         <div class="p-4 md:p-5">
-                            <h3 class="text-[18px font-extrabold text-[var(--color-heading)]"><a
+                            <h3 class="text-[24px] font-extrabold text-[var(--color-heading)]"><a
                                     href="{{ route('blog-single', $blog['id']) }}"
                                     class="text-[var(--color-heading)]">{{ $blog['title'] }}</a></h3>
-                            <p class="mt-2 text-[14px] font-sf font-normal text-[var(--color-text)] leading-[1.6]">
+                            <p class="mt-2 text-[16px] font-sf font-normal text-[var(--color-text)] leading-[24px]">
                                 {{ $blog['description'] }}
                             </p>
 
@@ -170,7 +170,7 @@
             </div>
         </div>
     </section>
-    <section class="py-8 md:py-25">
+    <section class="py-10 md:py-20">
         <div class="container">
             <div class="font-sf font-medium text-[24px] text-[var(--color-text)] text-center max-w-[840px] mx-auto">More
                 article from archive</div>
@@ -227,7 +227,7 @@
                             </div>
                         </div>
                         <div class="p-4 md:p-5">
-                            <h3 class="text-[18px font-extrabold text-[var(--color-heading)]"><a
+                            <h3 class="text-[18px] font-extrabold text-[var(--color-heading)]"><a
                                     href="{{ route('blog-single', $blog['id']) }}"
                                     class="text-[var(--color-heading)]">{{ $blog['title'] }}</a></h3>
                             <p class="mt-2 text-[14px] font-sf font-normal text-[var(--color-text)] leading-[1.6]">
