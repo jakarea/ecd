@@ -1,36 +1,8 @@
 @php
-    $testimonials = [
-        [
-            'image' => 'assets/img/testimonial-1.png',
-            'name' => 'Theresa Webb',
-            'role' => 'CEO, Company XYZ',
-            'profile_img' => 'assets/img/profile-1.png',
-            'review' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ipsum lorem, tempor ut ex aliquam, fringilla lacinia quam. Sed mattis ante at massa aliquet consectetur. Nullam enim sapien, tristique sit amet lorem lacinia, luctus molestie velit. Nam nunc quam, elementum nec neque nec, ullamcorper interdum orci. Sed gravida urna eu sapien maximus molestie. ',
-        ],
-        [
-            'image' => 'assets/img/testimonial-1.png',
-            'name' => 'Theresa Webb',
-            'role' => 'CEO, Company XYZ',
-            'profile_img' => 'assets/img/profile-1.png',
-            'review' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ipsum lorem, tempor ut ex aliquam, fringilla lacinia quam. Sed mattis ante at massa aliquet consectetur. Nullam enim sapien, tristique sit amet lorem lacinia, luctus molestie velit. Nam nunc quam, elementum nec neque nec, ullamcorper interdum orci. Sed gravida urna eu sapien maximus molestie. ',
-        ],
-        [
-            'image' => 'assets/img/testimonial-1.png',
-            'name' => 'Theresa Webb',
-            'role' => 'CEO, Company XYZ',
-            'profile_img' => 'assets/img/profile-1.png',
-            'review' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ipsum lorem, tempor ut ex aliquam, fringilla lacinia quam. Sed mattis ante at massa aliquet consectetur. Nullam enim sapien, tristique sit amet lorem lacinia, luctus molestie velit. Nam nunc quam, elementum nec neque nec, ullamcorper interdum orci. Sed gravida urna eu sapien maximus molestie. ',
-        ],
-    ];
-
-    $testimonial = (object) [
-        'image' => 'assets/img/testimonial-1.png',
-        'name' => 'Theresa Webb',
-        'role' => 'CEO, Company XYZ',
-        'profile_img' => 'assets/img/profile-1.png',
-        'review' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ipsum lorem, tempor ut ex aliquam, fringilla lacinia quam. Sed mattis ante at massa aliquet consectetur. Nullam enim sapien, tristique sit amet lorem lacinia, luctus molestie velit. Nam nunc quam, elementum nec neque nec, ullamcorper interdum orci. Sed gravida urna eu sapien maximus molestie.',
-    ];
-
+    // Fetch active testimonials from database, ordered by display order
+    $testimonials = \App\Models\Testimonial::active()
+        ->ordered()
+        ->get();
 @endphp
 
 <section class="bg-[#F9F9F9] py-16 relative" id="testimonials">
@@ -84,7 +56,7 @@
         <div class="relative">
             <div class="swiper testimonialSwiper pt-[100px]">
                 <div class="swiper-wrapper">
-                    @foreach ($testimonials as $testimonial)
+                    @forelse ($testimonials as $testimonial)
                         <div class="swiper-slide">
                             <div class="max-w-[794px] w-full mx-auto">
                                 <div
@@ -92,31 +64,59 @@
                                     <div class="flex items-center gap-4">
                                         <div
                                             class="absolute top-0 md:top-1/2 left-6 md:left-[-100px] right-6 md:right-auto -translate-y-1/2 md:-translate-y-1/2">
-                                            <img src="{{ asset($testimonial['image']) }}" alt="Testimonial"
-                                                class="max-w-full md:max-w-[225px] w-full h-[181px] md:h-[296px] object-cover rounded-[20px]">
+                                            @if($testimonial->vehicle_image)
+                                                @if(str_starts_with($testimonial->vehicle_image, 'assets/'))
+                                                    <img src="{{ asset($testimonial->vehicle_image) }}" alt="Vehicle"
+                                                        class="max-w-full md:max-w-[225px] w-full h-[181px] md:h-[296px] object-cover rounded-[20px]">
+                                                @else
+                                                    <img src="{{ Storage::url($testimonial->vehicle_image) }}" alt="Vehicle"
+                                                        class="max-w-full md:max-w-[225px] w-full h-[181px] md:h-[296px] object-cover rounded-[20px]">
+                                                @endif
+                                            @endif
                                         </div>
                                         <div>
                                             <div class="flex items-center gap-4 mb-5">
-                                                <img src="{{ asset($testimonial['profile_img']) }}"
-                                                    alt="{{ $testimonial['name'] }}"
-                                                    class="w-[62px] h-[62px] rounded-full object-cover border-1 border-[var(--color-brand)] p-1">
+                                                @if($testimonial->profile_image)
+                                                    @if(str_starts_with($testimonial->profile_image, 'assets/'))
+                                                        <img src="{{ asset($testimonial->profile_image) }}"
+                                                            alt="{{ $testimonial->name }}"
+                                                            class="w-[62px] h-[62px] rounded-full object-cover border-1 border-[var(--color-brand)] p-1">
+                                                    @else
+                                                        <img src="{{ Storage::url($testimonial->profile_image) }}"
+                                                            alt="{{ $testimonial->name }}"
+                                                            class="w-[62px] h-[62px] rounded-full object-cover border-1 border-[var(--color-brand)] p-1">
+                                                    @endif
+                                                @else
+                                                    <div class="w-[62px] h-[62px] rounded-full bg-[var(--color-brand)] flex items-center justify-center border-1 border-[var(--color-brand)] p-1">
+                                                        <span class="text-white font-semibold text-xl">{{ substr($testimonial->name, 0, 1) }}</span>
+                                                    </div>
+                                                @endif
                                                 <div>
                                                     <h4 class="text-[18px] font-semibold text-[var(--color-heading)] mb-2">
-                                                        {{ $testimonial['name']  }}
+                                                        {{ $testimonial->name  }}
                                                     </h4>
-                                                    <span
-                                                        class="text-sm font-medium text-[var(--color-text)]">{{ $testimonial['role']}}</span>
+                                                    @if($testimonial->role)
+                                                        <span class="text-sm font-medium text-[var(--color-text)]">{{ $testimonial->role }}</span>
+                                                    @endif
                                                 </div>
                                             </div>
                                             <p class="text-[14px] text-[var(--color-text)] leading-[1.6] font-sf">
-                                                {{ $testimonial['review']}}
+                                                {{ $testimonial->review }}
                                             </p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    @endforeach
+                    @empty
+                        <div class="swiper-slide">
+                            <div class="max-w-[794px] w-full mx-auto">
+                                <div class="bg-[#6ADBD926] w-full max-w-[705px] h-[342px] rounded-[20px] flex items-center justify-center">
+                                    <p class="text-[var(--color-text)] text-center">No testimonials available at the moment.</p>
+                                </div>
+                            </div>
+                        </div>
+                    @endforelse
                 </div>
 
                 <!-- Swiper Navigation -->
