@@ -70,47 +70,46 @@
         <div class="container">
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                 <div class="col-span-2">
-                    <div class="w-full h-[500px] relative">
+                    <div class="w-full h-[500px] relative rounded-[10px]">
                         <img src="{{ asset(path: $blog['image']) }}" alt="{{ $blog['id'] }}"
-                            class="w-full h-full object-cover rounded-tl-[10px] rounded-tr-[10px]">
+                            class="w-full h-full object-cover rounded-[10px]">
                         <div
-                            class="absolute bottom-0 left-0 right-0 flex justify-between items-center p-[10px]  bg-[var(--color-brand)]">
+                            class="absolute bottom-0 left-0 right-0 flex justify-between items-center px-4 py-3 bg-[var(--color-brand)] rounded-bl-[10px] rounded-br-[10px]">
                             <div class="flex items-center gap-2">
-
-                                <svg width="14" height="16" viewBox="0 0 14 16" fill="none"
+                                <svg width="20" height="22" viewBox="0 0 14 16" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd" clip-rule="evenodd"
                                         d="M4 1.82739H10V0.327393H11.5V1.82739H12.25C12.6478 1.82739 13.0294 1.98543 13.3107 2.26673C13.592 2.54804 13.75 2.92957 13.75 3.32739V13.8274C13.75 14.2252 13.592 14.6067 13.3107 14.8881C13.0294 15.1694 12.6478 15.3274 12.25 15.3274H1.75C1.35218 15.3274 0.970644 15.1694 0.68934 14.8881C0.408035 14.6067 0.25 14.2252 0.25 13.8274V3.32739C0.25 2.92957 0.408035 2.54804 0.68934 2.26673C0.970644 1.98543 1.35218 1.82739 1.75 1.82739H2.5V0.327393H4V1.82739ZM1.75 4.82739V13.8274H12.25V4.82739H1.75ZM3.25 7.07739H4.75V8.57739H3.25V7.07739ZM6.25 7.07739H7.75V8.57739H6.25V7.07739ZM9.25 7.07739H10.75V8.57739H9.25V7.07739ZM9.25 10.0774H10.75V11.5774H9.25V10.0774ZM6.25 10.0774H7.75V11.5774H6.25V10.0774ZM3.25 10.0774H4.75V11.5774H3.25V10.0774Z"
                                         fill="#124846" />
                                 </svg>
 
-                                <span class="text-[12px] font-medium text-[var(--color-text)] leading-none">
+                                <span class="text-[16px] font-medium text-[var(--color-heading)] leading-none">
                                     {{ $blog['date'] }}
                                 </span>
                             </div>
                             <div class="flex items-center gap-2">
 
-                                <svg width="14" height="16" viewBox="0 0 14 16" fill="none"
+                                <svg width="17" height="19" viewBox="0 0 14 16" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
                                         d="M6.9997 7.82739C4.92841 7.82739 3.2497 6.14868 3.2497 4.07739C3.2497 2.0061 4.92841 0.327393 6.9997 0.327393C9.07098 0.327393 10.7497 2.0061 10.7497 4.07739C10.7497 6.14868 9.07098 7.82739 6.9997 7.82739ZM4.3747 8.76489H4.86395C5.51434 9.06372 6.23798 9.23364 6.9997 9.23364C7.76141 9.23364 8.48212 9.06372 9.13544 8.76489H9.6247C11.7985 8.76489 13.5622 10.5286 13.5622 12.7024V13.9211C13.5622 14.6975 12.9323 15.3274 12.1559 15.3274H1.84345C1.06708 15.3274 0.437197 14.6975 0.437197 13.9211V12.7024C0.437197 10.5286 2.20087 8.76489 4.3747 8.76489Z"
                                         fill="#124846" />
                                 </svg>
 
-                                <span class="text-[12px] font-medium text-[var(--color-text)] leading-none">
+                                <span class="text-[16px] font-medium text-[var(--color-heading)] leading-none">
                                     By {{ $blog['author'] }}
                                 </span>
                             </div>
                             <div class="flex items-center gap-2">
 
-                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                <svg width="19" height="19" viewBox="0 0 16 16" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
                                         d="M13.7659 0.327393C14.2258 0.327393 14.6669 0.510081 14.992 0.835268C15.3172 1.16045 15.4999 1.6015 15.4999 2.06139V6.27075C15.4999 6.93501 15.236 7.57205 14.7662 8.04174L8.2156 14.5947C7.74547 15.0638 7.10851 15.3272 6.44439 15.3274C5.78028 15.3275 5.1432 15.0643 4.67286 14.5955L1.23416 11.1629C0.764185 10.6935 0.499915 10.0567 0.499482 9.39242C0.499048 8.72818 0.762486 8.09097 1.23185 7.62095L7.78249 1.06261C8.01493 0.829744 8.29097 0.644959 8.59484 0.518809C8.89871 0.392659 9.22446 0.327615 9.55348 0.327393H13.7652H13.7659ZM11.6466 3.02626C11.4948 3.02626 11.3445 3.05616 11.2042 3.11425C11.064 3.17235 10.9365 3.2575 10.8292 3.36484C10.7218 3.47218 10.6367 3.59962 10.5786 3.73987C10.5205 3.88012 10.4906 4.03045 10.4906 4.18225C10.4906 4.33406 10.5205 4.48438 10.5786 4.62463C10.6367 4.76489 10.7218 4.89232 10.8292 4.99967C10.9365 5.10701 11.064 5.19216 11.2042 5.25025C11.3445 5.30835 11.4948 5.33825 11.6466 5.33825C11.9532 5.33825 12.2472 5.21646 12.464 4.99967C12.6808 4.78287 12.8026 4.48884 12.8026 4.18225C12.8026 3.87566 12.6808 3.58163 12.464 3.36484C12.2472 3.14805 11.9532 3.02626 11.6466 3.02626Z"
                                         fill="#124846" />
                                 </svg>
 
-                                <span class="text-[12px] font-medium text-[var(--color-text)] leading-none">
+                                <span class="text-[16px] font-medium text-[var(--color-heading)] leading-none">
                                     @foreach ($blog['category'] as $index => $cat)
                                         {{ $cat }}@if (!$loop->last), @endif
                                     @endforeach
@@ -167,12 +166,12 @@
                 </div>
                 <div class="col-span-1">
                     <div class="bg-[var(--color-black)] py-10 px-5 rounded-[10px]">
-                        <h4 class="text-[26px] font-semibold text-white leading-[1.46] tracking-[0.03px]">Get your car
+                        <h4 class="text-[26px] font-black text-white leading-[1.46] tracking-[-0.78px]">Get your car
                             shining today!</h4>
                         <p class="text-[18px] text-white leading-[1.3] mt-4 mb-6.5 font-sf">Book your wash and detailing in
                             minutes.
                             We’ll come to you and leave your ride spotless inside and out.</p>
-                        <a href="{{ route('contact') }}" class="btn-brand"><span>Book Now</span>
+                        <a href="{{ route('contact') }}" class="btn-brand min-w-[182px]"><span>Book Now</span>
                             <svg width="25" height="11" viewBox="0 0 25 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M24 5.5H1M24 5.5L19.5 1M24 5.5L19.5 10" stroke="white" stroke-width="1.5"
                                     stroke-linecap="round" stroke-linejoin="round" />

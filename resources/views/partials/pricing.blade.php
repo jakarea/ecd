@@ -2,7 +2,7 @@
 
 @endphp
 
-<section class="py-8 md:py-25">
+<section class="py-8 md:pt-25">
     <div class="container">
         <div class="overflow-x-auto">
             <div class="table w-full min-w-[980px]">

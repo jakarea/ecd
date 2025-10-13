@@ -1,6 +1,6 @@
 @props(['width' => $width ?? 'max-w-[566px]'])
 
-<div {{ $attributes->class(["mx-auto text-center mb-6 md:mb-20 {$width}"]) }}>
+<div {{ $attributes->class(["mx-auto text-center {$width}"]) }}>
     {{-- Pretitle badge with icon slot or default icon --}}
     <div
         class="bg-[#6ADBD926] py-2 px-4 inline-flex items-center gap-2 mb-4 rounded-[60px] text-[var(--color-heading)]">

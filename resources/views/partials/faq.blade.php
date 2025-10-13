@@ -43,7 +43,7 @@
 
             </x-slot>
         </x-section-heading>
-        <div class="faq max-w-[996px] mx-auto space-y-4 role=" list">
+        <div class="faq max-w-[996px] mx-auto space-y-4 mt-[50px]" role="list">
             @foreach ($faqs as $faq)
                 @php
                     $qid = 'faq-' . $faq['id'];
@@ -56,11 +56,20 @@
                         <div class="icon w-[30px] h-[30px] border border-[var(--color-brand)] rounded-full flex items-center justify-center flex-shrink-0 transition-transform duration-300"
                             aria-hidden="true">
                             <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M6.00011 11.3408V6.24986M6.00011 6.24986V1.15894M6.00011 6.24986H11.091M6.00011 6.24986H0.90918"
-                                    stroke="#3ACBC6" stroke-width="1.47368" stroke-linecap="round" />
+                                <!-- vertical lines (will be hidden on open) -->
+                                <path class="vertical-line" d="M6.00011 11.3408V6.24986" stroke="#3ACBC6"
+                                    stroke-width="1.47368" stroke-linecap="round" />
+                                <path class="vertical-line" d="M6.00011 6.24986V1.15894" stroke="#3ACBC6"
+                                    stroke-width="1.47368" stroke-linecap="round" />
+
+                                <!-- horizontal lines (always visible) -->
+                                <path d="M6.00011 6.24986H11.091" stroke="#3ACBC6" stroke-width="1.47368"
+                                    stroke-linecap="round" />
+                                <path d="M6.00011 6.24986H0.90918" stroke="#3ACBC6" stroke-width="1.47368"
+                                    stroke-linecap="round" />
                             </svg>
                         </div>
+
 
                         <div class="text-[18px] text-[var(--color-heading)] font-semibold">
                             {{ $faq['question'] }}
@@ -85,9 +94,18 @@
     }
 
     /* default hidden */
-    .faq>div.acc-open>.acc-header>.icon {
+    /* .faq>div.acc-open>.acc-header>.icon {
         transform: rotate(45deg) !important;
         transition: transform 0.3s ease;
+    } */
+
+    .vertical-line {
+        transition: opacity 0.3s ease;
+    }
+
+    .acc-open .vertical-line {
+        opacity: 0;
+        pointer-events: none;
     }
 </style>
 
@@ -96,6 +114,7 @@
 
 <!-- Accordion behavior -->
 <script>
+
     $(function () {
         // initially hide all
         $(".acc-content").hide();
@@ -114,7 +133,7 @@
 
         // open first item by default
         const $first = $(".faq > div").first();
-        $first.addClass("acc-open"); // only this div
+        $first.addClass("acc-open");
         $first.find(".acc-content").first().show().attr("aria-hidden", "false");
         $first.find(".acc-header").attr("aria-expanded", "true");
 

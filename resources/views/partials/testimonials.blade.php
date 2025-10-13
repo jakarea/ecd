@@ -53,7 +53,7 @@
             </div>
         </div> --}}
 
-        <div class="relative">
+        <div class="relative mt-10 md:mt-20">
             <div class="swiper testimonialSwiper pt-[100px]">
                 <div class="swiper-wrapper">
                     @forelse ($testimonials as $testimonial)
@@ -87,8 +87,10 @@
                                                             class="w-[62px] h-[62px] rounded-full object-cover border-1 border-[var(--color-brand)] p-1">
                                                     @endif
                                                 @else
-                                                    <div class="w-[62px] h-[62px] rounded-full bg-[var(--color-brand)] flex items-center justify-center border-1 border-[var(--color-brand)] p-1">
-                                                        <span class="text-white font-semibold text-xl">{{ substr($testimonial->name, 0, 1) }}</span>
+                                                    <div
+                                                        class="w-[62px] h-[62px] rounded-full bg-[var(--color-brand)] flex items-center justify-center border-1 border-[var(--color-brand)] p-1">
+                                                        <span
+                                                            class="text-white font-semibold text-xl">{{ substr($testimonial->name, 0, 1) }}</span>
                                                     </div>
                                                 @endif
                                                 <div>
@@ -96,7 +98,8 @@
                                                         {{ $testimonial->name  }}
                                                     </h4>
                                                     @if($testimonial->role)
-                                                        <span class="text-sm font-medium text-[var(--color-text)]">{{ $testimonial->role }}</span>
+                                                        <span
+                                                            class="text-sm font-medium text-[var(--color-text)]">{{ $testimonial->role }}</span>
                                                     @endif
                                                 </div>
                                             </div>
@@ -111,8 +114,10 @@
                     @empty
                         <div class="swiper-slide">
                             <div class="max-w-[794px] w-full mx-auto">
-                                <div class="bg-[#6ADBD926] w-full max-w-[705px] h-[342px] rounded-[20px] flex items-center justify-center">
-                                    <p class="text-[var(--color-text)] text-center">No testimonials available at the moment.</p>
+                                <div
+                                    class="bg-[#6ADBD926] w-full max-w-[705px] h-[342px] rounded-[20px] flex items-center justify-center">
+                                    <p class="text-[var(--color-text)] text-center">No testimonials available at the moment.
+                                    </p>
                                 </div>
                             </div>
                         </div>
