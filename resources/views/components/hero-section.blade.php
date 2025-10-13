@@ -3,7 +3,7 @@
     <div class="container mx-auto">
         <div class="flex flex-col items-center justify-center gap-4 h-[281px] md:h-[451px]">
             <div class="max-w-[692px] text-center space-y-8">
-                <h1 class="text-white text-4xl font-bold leading-[52px]">{!! nl2br(e($title)) !!}</h1>
+                <h1 class="text-white text-[45px] font-bold leading-[52px]">{!! nl2br(e($title)) !!}</h1>
             </div>
         </div>
     </div>
@@ -11,14 +11,16 @@
     {{-- Floating social icons --}}
     <div class="fixed top-[50%] -translate-y-[50%] left-10 md:right-10 md:left-auto z-10">
         <nav class="flex flex-col gap-2">
-            <a href="#" class="w-10 h-10 flex items-center justify-center bg-[#10C379] rounded-full">
+            <a href="#"
+                class="w-10 h-10 flex items-center justify-center bg-[#10C379] rounded-full [box-shadow:0px_8px_13.78px_0px_#10182826]">
                 <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
                         d="M17.2669 4.69774C16.4518 3.87472 15.4811 3.22215 14.4113 2.77806C13.3415 2.33397 12.1941 2.10723 11.0358 2.11107C6.18243 2.11107 2.22687 6.06663 2.22687 10.92C2.22687 12.4755 2.63576 13.9866 3.40021 15.32L2.15576 19.8888L6.82243 18.6622C8.11132 19.3644 9.56021 19.7377 11.0358 19.7377C15.8891 19.7377 19.8447 15.7822 19.8447 10.9288C19.8447 8.57329 18.9291 6.35996 17.2669 4.69774ZM11.0358 18.2444C9.72021 18.2444 8.43132 17.8888 7.30243 17.2222L7.03576 17.0622L4.26243 17.7911L5.00021 15.0888L4.82243 14.8133C4.09136 13.6462 3.70325 12.2971 3.70243 10.92C3.70243 6.8844 6.99132 3.59552 11.0269 3.59552C12.9824 3.59552 14.8224 4.35996 16.2002 5.74663C16.8825 6.42562 17.4232 7.23333 17.791 8.12292C18.1587 9.01251 18.3462 9.96626 18.3424 10.9288C18.3602 14.9644 15.0713 18.2444 11.0358 18.2444ZM15.0535 12.7688C14.8313 12.6622 13.7469 12.1288 13.5513 12.0488C13.3469 11.9777 13.2047 11.9422 13.0535 12.1555C12.9024 12.3777 12.4847 12.8755 12.3602 13.0177C12.2358 13.1688 12.1024 13.1866 11.8802 13.0711C11.658 12.9644 10.9469 12.7244 10.1113 11.9777C9.45354 11.3911 9.01798 10.6711 8.88465 10.4488C8.76021 10.2266 8.86687 10.1111 8.98243 9.99552C9.08021 9.89774 9.20465 9.73774 9.31132 9.61329C9.41798 9.48885 9.46243 9.39107 9.53354 9.24885C9.60465 9.09774 9.56909 8.97329 9.51576 8.86663C9.46243 8.75996 9.01798 7.67552 8.84021 7.23107C8.66243 6.8044 8.47576 6.85774 8.34243 6.84885H7.91576C7.76465 6.84885 7.53354 6.90218 7.32909 7.1244C7.13354 7.34663 6.56465 7.87996 6.56465 8.9644C6.56465 10.0488 7.35576 11.0977 7.46243 11.24C7.5691 11.3911 9.01798 13.6133 11.2224 14.5644C11.7469 14.7955 12.1558 14.9288 12.4758 15.0266C13.0002 15.1955 13.4802 15.1688 13.8624 15.1155C14.2891 15.0533 15.1691 14.5822 15.3469 14.0666C15.5335 13.5511 15.5335 13.1155 15.4713 13.0177C15.4091 12.92 15.2758 12.8755 15.0535 12.7688Z"
                         fill="white" />
                 </svg>
             </a>
-            <a href="#" class="w-10 h-10 flex items-center justify-center bg-[var(--color-brand)] rounded-full">
+            <a href="#"
+                class="w-10 h-10 flex items-center justify-center bg-[var(--color-brand)] rounded-full [box-shadow:0px_8px_13.78px_0px_#10182826]">
 
                 <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
@@ -27,7 +29,8 @@
                 </svg>
 
             </a>
-            <a href="#" class="w-10 h-10 flex items-center justify-center bg-[var(--color-brand)] rounded-full">
+            <a href="#"
+                class="w-10 h-10 flex items-center justify-center bg-[var(--color-brand)] rounded-full [box-shadow:0px_8px_13.78px_0px_#10182826]">
 
                 <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path

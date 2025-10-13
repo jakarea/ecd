@@ -8,11 +8,11 @@
                         class="max-w-[80px] max-h-[40px] md:max-w-[145px] md:max-h-[70px]">
                 </a>
             </div>
-            <nav class="hidden md:flex items-center justify-center gap-6 bg-white py-4 px-8 rounded-[60px]">
+            <nav class="hidden md:flex items-center justify-center gap-7.5 bg-white py-4 px-10 rounded-[60px]">
                 <a href="{{ route('home') }}" class="nav-link active">Home</a>
                 <a href="{{ route('about') }}" class="nav-link"> About Us</a>
-                <a href="{{ route('services-subscriptions') }}" class="nav-link">Services & Pricing</a>
-                <a href="{{ route('services-subscriptions') }}" class="nav-link flex items-center gap-2">
+                <a href="{{ route('services-subscriptions') }}" class="nav-link">Services & Subscriptions</a>
+                {{-- <a href="{{ route('services-subscriptions') }}" class="nav-link flex items-center gap-2">
                     <span>Subcriptions</span>
 
                     <svg width="13" height="7" viewBox="0 0 13 7" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -20,7 +20,7 @@
                             stroke-linejoin="round" />
                     </svg>
 
-                </a>
+                </a> --}}
                 <a href="{{ route('gallery') }}" class="nav-link">Our Works</a>
             </nav>
             <div class="hidden md:block">

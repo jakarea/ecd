@@ -17,8 +17,9 @@
                 </svg>
 
                 <div class="">
-                    <h4 class="text-lg text-white font-bold">Book your wash and detailing in minutes.</h4>
-                    <p class="text-sm text-white font-normal opacity-70">We’ll come to you and leave your ride spotless
+                    <h4 class="text-[20px] text-white font-bold">Book your wash and detailing in minutes.</h4>
+                    <p class="text-sm text-white font-normal opacity-70 font-sf leading-[1.3]">We’ll come to you and
+                        leave your ride spotless
                         inside
                         and out.</p>
                 </div>
@@ -27,7 +28,7 @@
             <a href="#" class="btn-outline w-full md:w-auto">
                 <span>Book Now</span>
                 <svg width="25" height="11" viewBox="0 0 25 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M24 5.5H1M24 5.5L19.5 1M24 5.5L19.5 10" stroke="white" stroke-width="1.5"
+                    <path d="M24 5.5H1M24 5.5L19.5 1M24 5.5L19.5 10" stroke="var(--color-brand)" stroke-width="1.5"
                         stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
             </a>
@@ -68,7 +69,7 @@
                     </ul>
                 </div>
                 <div
-                    class="space-y-8 max-w-full w-full md:max-w-[400px] pt-[50px] pb-6 md:py-6 pr-6 pl-5 md:pl-16 bg-[#2B2B2B] rounded-lg relative">
+                    class="space-y-8 max-w-full w-full md:max-w-[400px] pt-[50px] pb-6 md:py-6 pr-6 pl-5 md:pl-16 bg-[#2B2B2B] rounded-[16px] relative">
                     <h4 class="text-lg text-white font-bold">Quick Connect</h4>
                     <ul class="space-y-4">
                         <li>
@@ -135,7 +136,7 @@
     </div>
     <div class="py-10 border-t border-b border-[#474747]">
         <div class="container mx-auto">
-            <div class="flex justify-center items-center gap-4">
+            <div class="flex justify-center items-center gap-[26px]">
                 <a href="#">
                     <svg width="14" height="25" viewBox="0 0 14 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path

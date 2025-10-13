@@ -25,7 +25,7 @@
                                     stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
                         </a>
-                        <a href="#" class="btn-outline"><span>Our Services</span>
+                        <a href={{ route('services-subscriptions') }} class="btn-outline"><span>Our Services</span>
                             <svg width="25" height="11" viewBox="0 0 25 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M24 5.5H1M24 5.5L19.5 1M24 5.5L19.5 10" stroke="white" stroke-width="1.5"
                                     stroke-linecap="round" stroke-linejoin="round" />
@@ -33,9 +33,11 @@
                         </a>
                     </div>
                 </div>
-                <div class="fixed top-[50%] -translate-y-[50%] left-6 md:right-6 md:left-auto z-100">
+                <div id="socialIcons"
+                    class="absolute top-1/2 -translate-y-1/2 left-6 md:right-6 md:left-auto z-[100] transition-all duration-500">
                     <nav class="flex flex-col gap-2">
-                        <a href="#" class="w-10 h-10 flex items-center justify-center bg-[#10C379] rounded-full">
+                        <a href="#"
+                            class="w-10 h-10 flex items-center justify-center bg-[#10C379] rounded-full [box-shadow:0px_8px_13.78px_0px_#10182826]">
                             <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     d="M17.2669 4.69774C16.4518 3.87472 15.4811 3.22215 14.4113 2.77806C13.3415 2.33397 12.1941 2.10723 11.0358 2.11107C6.18243 2.11107 2.22687 6.06663 2.22687 10.92C2.22687 12.4755 2.63576 13.9866 3.40021 15.32L2.15576 19.8888L6.82243 18.6622C8.11132 19.3644 9.56021 19.7377 11.0358 19.7377C15.8891 19.7377 19.8447 15.7822 19.8447 10.9288C19.8447 8.57329 18.9291 6.35996 17.2669 4.69774ZM11.0358 18.2444C9.72021 18.2444 8.43132 17.8888 7.30243 17.2222L7.03576 17.0622L4.26243 17.7911L5.00021 15.0888L4.82243 14.8133C4.09136 13.6462 3.70325 12.2971 3.70243 10.92C3.70243 6.8844 6.99132 3.59552 11.0269 3.59552C12.9824 3.59552 14.8224 4.35996 16.2002 5.74663C16.8825 6.42562 17.4232 7.23333 17.791 8.12292C18.1587 9.01251 18.3462 9.96626 18.3424 10.9288C18.3602 14.9644 15.0713 18.2444 11.0358 18.2444ZM15.0535 12.7688C14.8313 12.6622 13.7469 12.1288 13.5513 12.0488C13.3469 11.9777 13.2047 11.9422 13.0535 12.1555C12.9024 12.3777 12.4847 12.8755 12.3602 13.0177C12.2358 13.1688 12.1024 13.1866 11.8802 13.0711C11.658 12.9644 10.9469 12.7244 10.1113 11.9777C9.45354 11.3911 9.01798 10.6711 8.88465 10.4488C8.76021 10.2266 8.86687 10.1111 8.98243 9.99552C9.08021 9.89774 9.20465 9.73774 9.31132 9.61329C9.41798 9.48885 9.46243 9.39107 9.53354 9.24885C9.60465 9.09774 9.56909 8.97329 9.51576 8.86663C9.46243 8.75996 9.01798 7.67552 8.84021 7.23107C8.66243 6.8044 8.47576 6.85774 8.34243 6.84885H7.91576C7.76465 6.84885 7.53354 6.90218 7.32909 7.1244C7.13354 7.34663 6.56465 7.87996 6.56465 8.9644C6.56465 10.0488 7.35576 11.0977 7.46243 11.24C7.5691 11.3911 9.01798 13.6133 11.2224 14.5644C11.7469 14.7955 12.1558 14.9288 12.4758 15.0266C13.0002 15.1955 13.4802 15.1688 13.8624 15.1155C14.2891 15.0533 15.1691 14.5822 15.3469 14.0666C15.5335 13.5511 15.5335 13.1155 15.4713 13.0177C15.4091 12.92 15.2758 12.8755 15.0535 12.7688Z"
@@ -129,20 +131,16 @@
             right: 0;
             bottom: 0;
             background-color: rgba(0, 0, 0, 0.6);
-            display: flex;
+            display: none;
+            /* Hidden by default */
             align-items: center;
             justify-content: center;
-            opacity: 0;
-            pointer-events: none;
-            transform: scale(1.05);
-            transition: opacity 0.3s ease, transform 0.3s ease;
             z-index: 9999;
         }
 
         .modal.show {
-            opacity: 1;
-            pointer-events: auto;
-            transform: scale(1);
+            display: flex;
+            /* Show when active */
         }
 
         .modal-content {
@@ -151,12 +149,6 @@
             max-width: 1200px;
             width: 100%;
             padding: 30px;
-            transform: translateY(20px);
-            transition: transform 0.3s ease;
-        }
-
-        .modal.show .modal-content {
-            transform: translateY(0);
         }
 
         /* Disable body scroll when modal is open */
@@ -164,6 +156,49 @@
             overflow: hidden;
         }
     </style>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const el = document.getElementById("socialIcons");
+
+            function handleScroll() {
+                const scrollTop = window.scrollY || document.documentElement.scrollTop;
+
+                if (scrollTop > 100) {
+                    // User started scrolling
+                    el.classList.remove(
+                        "absolute",
+                        "top-1/2",
+                        "-translate-y-1/2",
+                        "left-6",
+                        "md:right-6",
+                        "md:left-auto"
+                    );
+                    el.classList.add("fixed", "bottom-6", "right-6");
+                } else {
+                    // Back to top
+                    el.classList.remove("fixed", "bottom-6", "right-6");
+                    el.classList.add(
+                        "absolute",
+                        "top-1/2",
+                        "-translate-y-1/2",
+                        "left-6",
+                        "md:right-6",
+                        "md:left-auto"
+                    );
+                }
+            }
+
+            // Initial check + scroll listener
+            handleScroll();
+            window.addEventListener("scroll", handleScroll);
+        });
+    </script>
+
+
+
+
+
 
     @php
         $plans = [
@@ -215,7 +250,7 @@
                 'borderColor' => '#E6BA30',
                 'buttonText' => 'Get started with Full Detail',
                 'icon' => '<svg width="31" height="34" viewBox="0 0 31 34" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_707_5176)"><path fill-rule="evenodd" clip-rule="evenodd" d="M15.6697 5.93946C15.1018 4.38053 12.8983 4.38053 12.3304 5.93946L9.75361 13.0234L2.66968 15.6002C1.11076 16.168 1.11076 18.3716 2.66968 18.9395L9.75361 21.5162L12.3304 28.6002C12.8983 30.1591 15.1018 30.1591 15.6697 28.6002L18.2465 21.5162L25.3304 18.9395C26.8893 18.3716 26.8893 16.168 25.3304 15.6002L18.2465 13.0234L15.6697 5.93946Z" fill="#CBA328" /></g><g clip-path="url(#clip1_707_5176)"><path d="M19.2089 6.11152L22.7952 4.80609L24.0998 1.22067C24.1297 1.13853 24.1842 1.06758 24.2558 1.01745C24.3274 0.96732 24.4127 0.94043 24.5001 0.94043C24.5875 0.94043 24.6728 0.96732 24.7444 1.01745C24.816 1.06758 24.8705 1.13853 24.9004 1.22067L26.2058 4.80695L29.7921 6.11152C29.8742 6.14143 29.9452 6.19589 29.9953 6.26749C30.0454 6.3391 30.0723 6.4244 30.0723 6.51181C30.0723 6.59922 30.0454 6.68452 29.9953 6.75612C29.9452 6.82773 29.8742 6.88218 29.7921 6.91209L26.2049 8.21752L24.9004 11.8038C24.8705 11.8859 24.816 11.9569 24.7444 12.007C24.6728 12.0572 24.5875 12.084 24.5001 12.084C24.4127 12.084 24.3274 12.0572 24.2558 12.007C24.1842 11.9569 24.1297 11.8859 24.0998 11.8038L22.7944 8.21667L19.2089 6.91209C19.1268 6.88218 19.0559 6.82773 19.0057 6.75612C18.9556 6.68452 18.9287 6.59922 18.9287 6.51181C18.9287 6.4244 18.9556 6.3391 19.0057 6.26749C19.0559 6.19589 19.1268 6.14143 19.2089 6.11152Z" fill="#CBA328" /></g> <g clip-path="url(#clip2_707_5176)"><path d="M0.913471 26.2665L3.00547 25.505L3.76647 23.4135C3.78392 23.3656 3.81568 23.3242 3.85745 23.2949C3.89922 23.2657 3.94898 23.25 3.99997 23.25C4.05096 23.25 4.10072 23.2657 4.14249 23.2949C4.18426 23.3242 4.21602 23.3656 4.23347 23.4135L4.99497 25.5055L7.08697 26.2665C7.13488 26.2839 7.17627 26.3157 7.20551 26.3575C7.23476 26.3992 7.25044 26.449 7.25044 26.5C7.25044 26.551 7.23476 26.6007 7.20551 26.6425C7.17627 26.6843 7.13488 26.716 7.08697 26.7335L4.99447 27.495L4.23347 29.587C4.21602 29.6349 4.18426 29.6763 4.14249 29.7055C4.10072 29.7348 4.05096 29.7504 3.99997 29.7504C3.94898 29.7504 3.89922 29.7348 3.85745 29.7055C3.81568 29.6763 3.78392 29.6349 3.76647 29.587L3.00497 27.4945L0.913471 26.7335C0.865558 26.716 0.824173 26.6843 0.794929 26.6425C0.765686 26.6007 0.75 26.551 0.75 26.5C0.75 26.449 0.765686 26.3992 0.794929 26.3575C0.824173 26.3157 0.865558 26.2839 0.913471 26.2665Z"
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             fill="#CBA328" /></g><g clip-path="url(#clip3_707_5176)"> <path d="M18.8545 30.7999L20.6476 30.1472L21.2999 28.3545C21.3149 28.3134 21.3421 28.2779 21.3779 28.2529C21.4137 28.2278 21.4563 28.2144 21.5 28.2144C21.5438 28.2144 21.5864 28.2278 21.6222 28.2529C21.658 28.2779 21.6852 28.3134 21.7002 28.3545L22.3529 30.1476L24.146 30.7999C24.1871 30.8149 24.2226 30.8421 24.2477 30.8779C24.2727 30.9137 24.2862 30.9563 24.2862 31C24.2862 31.0438 24.2727 31.0864 24.2477 31.1222C24.2226 31.158 24.1871 31.1852 24.146 31.2002L22.3525 31.8529L21.7002 33.646C21.6852 33.6871 21.658 33.7226 21.6222 33.7477C21.5864 33.7727 21.5438 33.7862 21.5 33.7862C21.4563 33.7862 21.4137 33.7727 21.3779 33.7477C21.3421 33.7226 21.3149 33.6871 21.2999 33.646L20.6472 31.8525L18.8545 31.2002C18.8134 31.1852 18.7779 31.158 18.7529 31.1222C18.7278 31.0864 18.7144 31.0438 18.7144 31C18.7144 30.9563 18.7278 30.9137 18.7529 30.8779C18.7779 30.8421 18.8134 30.8149 18.8545 30.7999Z" fill="#CBA328" /></g> <defs><clipPath id="clip0_707_5176"><rect width="25" height="25" fill="white" transform="translate(1.5 4.76978)" /></clipPath><clipPath id="clip1_707_5176"> <rect width="12" height="12" fill="white" transform="translate(18.5 0.511719)" /></clipPath><clipPath id="clip2_707_5176"><rect width="7" height="7" fill="white" transform="translate(0.5 23)" /></clipPath><clipPath id="clip3_707_5176"><rect width="6" height="6" fill="white" transform="translate(18.5 28)" /></clipPath></defs></svg>',
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             fill="#CBA328" /></g><g clip-path="url(#clip3_707_5176)"> <path d="M18.8545 30.7999L20.6476 30.1472L21.2999 28.3545C21.3149 28.3134 21.3421 28.2779 21.3779 28.2529C21.4137 28.2278 21.4563 28.2144 21.5 28.2144C21.5438 28.2144 21.5864 28.2278 21.6222 28.2529C21.658 28.2779 21.6852 28.3134 21.7002 28.3545L22.3529 30.1476L24.146 30.7999C24.1871 30.8149 24.2226 30.8421 24.2477 30.8779C24.2727 30.9137 24.2862 30.9563 24.2862 31C24.2862 31.0438 24.2727 31.0864 24.2477 31.1222C24.2226 31.158 24.1871 31.1852 24.146 31.2002L22.3525 31.8529L21.7002 33.646C21.6852 33.6871 21.658 33.7226 21.6222 33.7477C21.5864 33.7727 21.5438 33.7862 21.5 33.7862C21.4563 33.7862 21.4137 33.7727 21.3779 33.7477C21.3421 33.7226 21.3149 33.6871 21.2999 33.646L20.6472 31.8525L18.8545 31.2002C18.8134 31.1852 18.7779 31.158 18.7529 31.1222C18.7278 31.0864 18.7144 31.0438 18.7144 31C18.7144 30.9563 18.7278 30.9137 18.7529 30.8779C18.7779 30.8421 18.8134 30.8149 18.8545 30.7999Z" fill="#CBA328" /></g> <defs><clipPath id="clip0_707_5176"><rect width="25" height="25" fill="white" transform="translate(1.5 4.76978)" /></clipPath><clipPath id="clip1_707_5176"> <rect width="12" height="12" fill="white" transform="translate(18.5 0.511719)" /></clipPath><clipPath id="clip2_707_5176"><rect width="7" height="7" fill="white" transform="translate(0.5 23)" /></clipPath><clipPath id="clip3_707_5176"><rect width="6" height="6" fill="white" transform="translate(18.5 28)" /></clipPath></defs></svg>',
                 'features' => [
                     'extra' => 'Everything in the Premium Package, plus:',
                     'exterior' => [
@@ -519,8 +554,6 @@
 
 <script>
 
-
-
     document.addEventListener('DOMContentLoaded', function () {
         const step1 = document.querySelector('.step-1');
         const step2 = document.querySelector('.step-2');
@@ -556,8 +589,6 @@
             nextBtn.classList.add('bg-[#230C0F]');
         }
 
-        // Debug helpers (useful while diagnosing)
-        console.log('Next button element:', nextBtn);
         // pointerdown will fire even if something blocks the click handler chain in some cases
         nextBtn.addEventListener('pointerdown', () => {
             console.log('pointerdown on Next button');

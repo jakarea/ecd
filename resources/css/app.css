@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
 @source '../../storage/framework/views/*.php';
 @source '../**/*.blade.php';
@@ -113,6 +115,7 @@
 @theme {
     --font-sf: "SF Pro Display", sans-serif;
     --font-cursive: "Waiting for the Sunrise", cursive;
+    --font-poppins: "Poppins", sans-serif;
 }
 
 :root {
@@ -153,7 +156,7 @@ body {
 }
 
 .btn-outline {
-    @apply min-w-[164px] h-[45px] border border-[#6ADBD9] text-white text-base font-bold py-2 px-4 rounded-[60px] transition-all duration-300 ease-in-out flex items-center justify-between gap-3 hover:bg-[#6ADBD9] hover:text-[#1b1b18];
+    @apply min-w-[164px] h-[45px] border border-[#6ADBD9] text-[var(--color-brand)] text-base font-bold py-2 px-4 rounded-[60px] transition-all duration-300 ease-in-out flex items-center justify-between gap-3 hover:bg-[#6ADBD9] hover:text-[#1b1b18];
 }
 
 .btn-outline:hover svg path {
@@ -161,7 +164,7 @@ body {
 }
 
 .nav-link {
-    @apply text-sm font-medium text-[var(--color-nav)] hover:text-[#6ADBD9] transition-all duration-300 ease-in-out;
+    @apply text-sm font-medium font-sf text-[var(--color-nav)] hover:text-[#6ADBD9] transition-all duration-300 ease-in-out;
 }
 
 .nav-link.active {
@@ -213,7 +216,7 @@ body {
 }
 
 .footer-cta {
-    @apply bg-[#2B2B2B] text-white text-base font-bold py-6 px-6 rounded-lg transition-all duration-300 ease-in-out flex flex-wrap items-center justify-between gap-6;
+    @apply bg-[#2B2B2B] text-white text-base font-bold py-6 px-6 rounded-[15px] transition-all duration-300 ease-in-out flex flex-wrap items-center justify-between gap-6;
 }
 
 .hero-section {

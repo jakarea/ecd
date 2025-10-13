@@ -83,7 +83,7 @@
         ]
     @endphp
 
-    <section class="py-8 md:py-25 bg-[#ededed]">
+    <section class="py-8 md:py-20 bg-[#ededed]">
         <div class="container">
             <div class="font-sf font-medium text-[24px] text-[var(--color-text)] text-center max-w-[840px] mx-auto">From
                 quick washes to premium detailing, choose the perfect package or subscribe for regular care and keep your
