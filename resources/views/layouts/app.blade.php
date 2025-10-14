@@ -94,9 +94,14 @@
     <link rel="stylesheet" href="{{ asset('css/app.css') }}"> --}}
     @stack('styles') {{-- For page-specific styles --}}
     @vite('resources/css/app.css')
+
+    {{-- Tracking Codes (Head) --}}
+    @include('partials.tracking-codes')
 </head>
 
 <body>
+    {{-- Tracking Codes (Body - noscript) --}}
+    @include('partials.tracking-codes-body')
 
     @include('partials.header')
     {{-- Main Content --}}

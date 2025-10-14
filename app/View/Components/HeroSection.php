@@ -11,15 +11,27 @@ class HeroSection extends Component
     /**
      * Create a new component instance.
      */
+    public $pageId;
     public $title;
+    public $subtitle;
     public $bgImage;
     public $bgColor;
+    public $showSocialIcons;
 
-    public function __construct($title, $bgImage, $bgColor = 'white')
-    {
+    public function __construct(
+        $pageId = null,
+        $title = null,
+        $subtitle = null,
+        $bgImage = null,
+        $bgColor = null,
+        $showSocialIcons = false
+    ) {
+        $this->pageId = $pageId;
         $this->title = $title;
+        $this->subtitle = $subtitle;
         $this->bgImage = $bgImage;
         $this->bgColor = $bgColor;
+        $this->showSocialIcons = $showSocialIcons;
     }
 
     /**
