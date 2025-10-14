@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\GalleryController;
 
 Route::get('/', fn() => view('home'))->name('home');
 
@@ -14,4 +15,7 @@ Route::get('/blog', fn() => view('blog'))->name('blog');
 
 Route::get('/blog/{id}', fn($id) => view('blog-single', ['id' => $id]))->name('blog-single');
 
-Route::get('/gallery', fn() => view('gallery'))->name('gallery');
+Route::get('/gallery', [GalleryController::class, 'index'])->name('gallery');
+
+// Booking Form Submission
+Route::post('/book-service', [App\Http\Controllers\BookingController::class, 'store'])->name('booking.store');

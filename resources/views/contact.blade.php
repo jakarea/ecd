@@ -3,5 +3,5 @@
 @section('title', 'Contact Page')
 
 @section('content')
-    <x-hero-section title="Contact Us" bg-image="assets/img/bg-hero.png" />
+    <x-hero-section pageId="contact" />
 @endsection
