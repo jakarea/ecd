@@ -7,6 +7,8 @@ use App\Http\Controllers\Admin\SeoController;
 use App\Http\Controllers\Admin\TestimonialController;
 use App\Http\Controllers\Admin\HeroSectionController;
 use App\Http\Controllers\Admin\GalleryItemController;
+use App\Http\Controllers\Admin\SettingController;
+use App\Http\Controllers\Admin\BookingController;
 
 /*
 |--------------------------------------------------------------------------
@@ -45,6 +47,16 @@ Route::middleware('auth')->group(function () {
 
     // Gallery Management Routes
     Route::resource('gallery', GalleryItemController::class);
+
+    // Settings Routes
+    Route::get('/settings', [SettingController::class, 'index'])->name('settings.index');
+    Route::post('/settings', [SettingController::class, 'update'])->name('settings.update');
+
+    // Booking Management Routes
+    Route::get('/bookings', [BookingController::class, 'index'])->name('bookings.index');
+    Route::get('/bookings/{booking}', [BookingController::class, 'show'])->name('bookings.show');
+    Route::post('/bookings/{booking}/status', [BookingController::class, 'updateStatus'])->name('bookings.updateStatus');
+    Route::delete('/bookings/{booking}', [BookingController::class, 'destroy'])->name('bookings.destroy');
 
     // Add more admin routes here as needed
     // Route::resource('/users', UserController::class);

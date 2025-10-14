@@ -16,3 +16,6 @@ Route::get('/blog', fn() => view('blog'))->name('blog');
 Route::get('/blog/{id}', fn($id) => view('blog-single', ['id' => $id]))->name('blog-single');
 
 Route::get('/gallery', [GalleryController::class, 'index'])->name('gallery');
+
+// Booking Form Submission
+Route::post('/book-service', [App\Http\Controllers\BookingController::class, 'store'])->name('booking.store');
