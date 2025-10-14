@@ -9,6 +9,7 @@ use App\Http\Controllers\Admin\HeroSectionController;
 use App\Http\Controllers\Admin\GalleryItemController;
 use App\Http\Controllers\Admin\SettingController;
 use App\Http\Controllers\Admin\BookingController;
+use App\Http\Controllers\Admin\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -54,11 +55,12 @@ Route::middleware('auth')->group(function () {
 
     // Booking Management Routes
     Route::get('/bookings', [BookingController::class, 'index'])->name('bookings.index');
+    Route::get('/bookings/create', [BookingController::class, 'create'])->name('bookings.create');
+    Route::post('/bookings', [BookingController::class, 'store'])->name('bookings.store');
     Route::get('/bookings/{booking}', [BookingController::class, 'show'])->name('bookings.show');
     Route::post('/bookings/{booking}/status', [BookingController::class, 'updateStatus'])->name('bookings.updateStatus');
     Route::delete('/bookings/{booking}', [BookingController::class, 'destroy'])->name('bookings.destroy');
 
-    // Add more admin routes here as needed
-    // Route::resource('/users', UserController::class);
-    // Route::resource('/posts', PostController::class);
+    // User Management Routes
+    Route::resource('users', UserController::class);
 });
