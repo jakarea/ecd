@@ -7,7 +7,7 @@
         {{-- Header --}}
         <div class="mb-6">
             <div class="flex items-center mb-4">
-                <a href="{{ route('admin.bookings.index') }}" class="text-blue-600 hover:text-blue-800 mr-4">
+                <a href="{{ route('admin.bookings.index') }}" class="text-[var(--color-brand)] hover:opacity-70 mr-4">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
                     </svg>
@@ -27,7 +27,7 @@
 
                 <div class="flex gap-4 mt-6">
                     <button type="submit"
-                        class="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
+                        class="px-6 py-2 bg-[var(--color-brand)] text-white rounded-lg hover:opacity-90 transition">
                         Create Booking
                     </button>
                     <a href="{{ route('admin.bookings.index') }}"

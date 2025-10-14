@@ -124,7 +124,7 @@
                                 placeholder="Add any notes...">{{ $booking->notes }}</textarea>
                         </div>
                         <button type="submit"
-                            class="w-full px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition font-medium">
+                            class="w-full px-4 py-2 bg-[var(--color-brand)] text-white rounded-lg hover:opacity-90 transition font-medium">
                             Update Status
                         </button>
                     </form>

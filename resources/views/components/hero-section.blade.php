@@ -83,13 +83,13 @@
             </div>
         </div>
         <div class="w-full absolute bottom-0 top-0 left-0 right-0 z-[-1]">
-            <img src="{{ asset($heroData->background_image) }}" alt="Hero Background" class="w-full h-full">
+            <img src="{{ str_starts_with($heroData->background_image, 'assets/') ? asset($heroData->background_image) : Storage::url($heroData->background_image) }}" alt="Hero Background" class="w-full h-full">
         </div>
     </section>
 @else
     {{-- Image Hero Section (Other pages style) --}}
     <section class="{{ $heroData->background_color }}"
-        style="background-image: url('{{ asset($heroData->background_image) }}');"
+        style="background-image: url('{{ str_starts_with($heroData->background_image, 'assets/') ? asset($heroData->background_image) : Storage::url($heroData->background_image) }}');"
         class="bg-no-repeat bg-cover bg-center h-[281px] md:h-[451px] relative py-[50px]">
         <div class="container mx-auto">
             <div class="flex flex-col items-center justify-center gap-4 h-[281px] md:h-[451px]">

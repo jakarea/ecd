@@ -11,7 +11,7 @@
                 <p class="text-gray-600 mt-1">Manage system users</p>
             </div>
             <a href="{{ route('admin.users.create') }}"
-                class="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
+                class="inline-flex items-center px-4 py-2 bg-[var(--color-brand)] text-white rounded-lg hover:opacity-90 transition btn-animate">
                 <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
                 </svg>
@@ -34,17 +34,17 @@
         @endif
 
         {{-- Search Bar --}}
-        <div class="bg-white rounded-lg shadow p-4 mb-6">
+        <div class="bg-white rounded-lg shadow p-4 mb-6 animate-fade-in-up">
             <form action="{{ route('admin.users.index') }}" method="GET" class="flex gap-4">
                 <input type="text" name="search" value="{{ request('search') }}"
                     placeholder="Search by name or email..."
-                    class="flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
-                <button type="submit" class="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
+                    class="flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent input-focus">
+                <button type="submit" class="px-6 py-2 bg-[var(--color-brand)] text-white rounded-lg hover:opacity-90 transition btn-animate">
                     Search
                 </button>
                 @if(request('search'))
                     <a href="{{ route('admin.users.index') }}"
-                        class="px-6 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition">
+                        class="px-6 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition btn-animate">
                         Clear
                     </a>
                 @endif
@@ -52,7 +52,7 @@
         </div>
 
         {{-- Users Table --}}
-        <div class="bg-white rounded-lg shadow overflow-hidden">
+        <div class="bg-white rounded-lg shadow overflow-hidden animate-fade-in-up">
             <div class="overflow-x-auto">
                 <table class="min-w-full divide-y divide-gray-200">
                     <thead class="bg-gray-50">
@@ -73,7 +73,7 @@
                     </thead>
                     <tbody class="bg-white divide-y divide-gray-200">
                         @forelse($users as $user)
-                            <tr class="hover:bg-gray-50">
+                            <tr class="hover:bg-gray-50 table-row-animate">
                                 <td class="px-6 py-4 whitespace-nowrap">
                                     <div class="flex items-center">
                                         <div class="flex-shrink-0 h-10 w-10 bg-blue-100 rounded-full flex items-center justify-center">
@@ -95,17 +95,19 @@
                                 </td>
                                 <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
                                     <a href="{{ route('admin.users.edit', $user) }}"
-                                        class="text-blue-600 hover:text-blue-900 mr-3">
+                                        class="text-[var(--color-brand)] hover:opacity-70 mr-3 link-hover font-medium">
                                         Edit
                                     </a>
                                     @if($user->id !== auth()->id())
-                                        <form action="{{ route('admin.users.destroy', $user) }}" method="POST" class="inline"
-                                            onsubmit="return confirm('Are you sure you want to delete this user?')">
+                                        <button type="button" onclick="confirmDelete({{ $user->id }})"
+                                            class="text-red-600 hover:text-red-900 link-hover font-medium">
+                                            Delete
+                                        </button>
+                                        <form id="delete-form-{{ $user->id }}"
+                                            action="{{ route('admin.users.destroy', $user) }}"
+                                            method="POST" class="hidden">
                                             @csrf
                                             @method('DELETE')
-                                            <button type="submit" class="text-red-600 hover:text-red-900">
-                                                Delete
-                                            </button>
                                         </form>
                                     @endif
                                 </td>
@@ -135,3 +137,24 @@
         </div>
     </div>
 @endsection
+
+@push('scripts')
+<script>
+    function confirmDelete(id) {
+        Swal.fire({
+            title: 'Are you sure?',
+            text: "This user will be permanently deleted!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: 'var(--color-brand)',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, delete it!',
+            cancelButtonText: 'Cancel'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                document.getElementById('delete-form-' + id).submit();
+            }
+        });
+    }
+</script>
+@endpush
