@@ -10,6 +10,13 @@
                 <h1 class="text-3xl font-bold text-gray-900">Bookings</h1>
                 <p class="text-gray-600 mt-1">Manage customer service bookings</p>
             </div>
+            <a href="{{ route('admin.bookings.create') }}"
+                class="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
+                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+                </svg>
+                Add Booking
+            </a>
         </div>
 
         {{-- Success Message --}}

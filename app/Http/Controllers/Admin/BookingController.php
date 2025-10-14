@@ -44,6 +44,34 @@ class BookingController extends Controller
         ));
     }
 
+    public function create()
+    {
+        return view('admin.bookings.create');
+    }
+
+    public function store(Request $request)
+    {
+        $validated = $request->validate([
+            'first_name' => 'required|string|max:255',
+            'last_name' => 'required|string|max:255',
+            'address' => 'required|string|max:500',
+            'package_name' => 'required|string|max:255',
+            'package_price' => 'required|string|max:255',
+            'preferred_date' => 'required|date',
+            'status' => 'required|in:pending,confirmed,completed,cancelled',
+            'notes' => 'nullable|string',
+        ]);
+
+        // Add IP and user agent for admin-created bookings
+        $validated['ip_address'] = $request->ip();
+        $validated['user_agent'] = $request->userAgent();
+
+        $booking = Booking::create($validated);
+
+        return redirect()->route('admin.bookings.show', $booking)
+            ->with('success', 'Booking created successfully.');
+    }
+
     public function show(Booking $booking)
     {
         return view('admin.bookings.show', compact('booking'));
