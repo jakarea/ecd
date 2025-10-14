@@ -108,5 +108,7 @@
     </section>
 
     @include('partials.pricing')
+    @include('partials.showcase')
+
 
 @endsection

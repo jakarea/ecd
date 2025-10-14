@@ -35,7 +35,7 @@
                         fill="#124846" />
                 </svg>
 
-                <h3 class="text-[11px] font-semibold uppercase text-[var(--color-heading)]">We Offered More
+                <h3 class="text-[11px] font-semibold uppercase text-[var(--color-heading)] font-poppins">We Offered More
                 </h3>
             </div>
             <h2 class="text-[34px] font-extrabold mb-4 text-[var(--color-heading)] leading-[1.2] tracking-[0.02px]">

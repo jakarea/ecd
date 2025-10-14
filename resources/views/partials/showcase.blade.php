@@ -18,47 +18,73 @@
     </div>
     <div class="showcase-slider-container">
         <div class="showcase-image-slider -mx-3 px-6 mt-20" id="showcase-slider">
-            <div class="showcase-image px-3">
+            <div class="showcase-image">
                 <div class="showcase-card">
                     <img src="{{ asset('assets/img/showcase1.webp') }}" alt="Showcase 1"
                         class="w-full h-full object-cover" />
                 </div>
             </div>
 
-            <div class="showcase-image px-3">
+            <div class="showcase-image">
                 <div class="showcase-card">
                     <img src="{{ asset('assets/img/showcase2.webp') }}" alt="Showcase 2"
                         class="w-full h-full object-cover" />
                 </div>
             </div>
 
-            <div class="showcase-image px-3">
+            <div class="showcase-image">
                 <div class="showcase-card">
-                    {{-- <img src="{{ asset('assets/img/showcase3.webp') }}" alt="Showcase 3"
-                        class="w-full h-full object-cover" /> --}}
-                    <div class="beforeafterdefault">
-                        <div data-type="data-type-image">
-                            <div data-type="before"><img src="{{ asset('assets/img/showcase3.webp') }}"></div>
-                            <div data-type="after"><img src="{{ asset('assets/img/showcase3.webp') }}"></div>
-                        </div>
+                    <div class="slider-container relative w-full h-full overflow-hidden rounded-[15px]">
+                        <img src="{{ asset('assets/img/gallery3.webp') }}" alt="Before Image 1"
+                            class="before-image absolute inset-0 w-full h-full object-cover" />
+                        <img src="{{ asset('assets/img/gallery4.webp') }}" alt="After Image 1"
+                            class="after-image absolute inset-0 w-full h-full object-cover" />
+                        <span class="slider-line absolute top-0 bottom-0 w-[2px] bg-[var(--color-brand)] left-1/2">
+                        </span>
+                        <button
+                            class="slider-handle absolute top-1/2 left-1/2 w-[55px] h-[55px] bg-[var(--color-brand)] border-2 border-[var(--color-brand)] rounded-full cursor-pointer transform -translate-x-1/2 -translate-y-1/2 shadow-md flex justify-center items-center gap-1.5">
+
+                            <svg width="12" height="9" viewBox="0 0 14 11" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5.50072 10.2778L1.06348 5.84053L5.50072 1.40329" stroke="white"
+                                    stroke-width="1.11598" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M1.06348 5.84039L12.7684 5.84039" stroke="white" stroke-width="1.11598"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+
+                            <svg width="2" height="10" viewBox="0 0 2 11" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <line x1="0.782561" y1="0.910613" x2="0.782561" y2="10.0397" stroke="white"
+                                    stroke-width="1.01434" stroke-linecap="round" />
+                            </svg>
+
+                            <svg width="12" height="9" viewBox="0 0 14 11" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8.05006 10.278L12.4873 5.84071L8.05006 1.40347" stroke="white"
+                                    stroke-width="1.11598" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M12.4873 5.84058L0.782391 5.84058" stroke="white" stroke-width="1.11598"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+
+                        </button>
                     </div>
                 </div>
             </div>
 
             <!-- duplicate slides as needed -->
-            <div class="showcase-image px-3">
+            <div class="showcase-image">
                 <div class="showcase-card">
                     <img src="{{ asset('assets/img/showcase1.webp') }}" alt="Showcase 1"
                         class="w-full h-full object-cover" />
                 </div>
             </div>
-            <div class="showcase-image px-3">
+            <div class="showcase-image">
                 <div class="showcase-card">
                     <img src="{{ asset('assets/img/showcase2.webp') }}" alt="Showcase 2"
                         class="w-full h-full object-cover" />
                 </div>
             </div>
-            <div class="showcase-image px-3">
+            <div class="showcase-image">
                 <div class="showcase-card">
                     <img src="{{ asset('assets/img/showcase3.webp') }}" alt="Showcase 3"
                         class="w-full h-full object-cover" />
@@ -86,8 +112,11 @@
             speed: 300,
             centerPadding: '20px',
             infinite: true,
-            autoplaySpeed: 5000,
-            // autoplay: true
+            autoplaySpeed: 2000,
+            draggable: false,
+            swipe: false,
+            touchMove: false,
+            autoplay: true,
             appendArrows: $('.slider-controls'),
             appendDots: $('.slider-controls'),
 
@@ -129,10 +158,6 @@
             },
 
             ]
-        });
-
-        $(".beforeafterdefault").cndkbeforeafter({
-            mode: "drag"
         });
     });
 </script>
@@ -263,3 +288,64 @@
         opacity: 1;
     }
 </style>
+
+@push('scripts')
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const containers = document.querySelectorAll('.slider-container');
+
+            containers.forEach(container => {
+                const handle = container.querySelector('.slider-handle');
+                const line = container.querySelector('.slider-line');
+                const beforeImg = container.querySelector('.before-image');
+                const afterImg = container.querySelector('.after-image');
+
+                let isDragging = false;
+
+                const updateSlider = (x) => {
+                    const rect = container.getBoundingClientRect();
+                    let offsetX = x - rect.left;
+
+                    // Clamp value between 0 and container width
+                    offsetX = Math.max(0, Math.min(offsetX, rect.width));
+                    const percent = (offsetX / rect.width) * 100;
+
+                    handle.style.left = `${percent}%`;
+                    line.style.left = `${percent}%`;
+
+                    beforeImg.style.clipPath = `inset(0 ${100 - percent}% 0 0)`;
+                    afterImg.style.clipPath = `inset(0 0 0 ${percent}%)`;
+                };
+
+                const startDrag = (e) => {
+                    isDragging = true;
+                    e.preventDefault();
+                };
+
+                const stopDrag = () => {
+                    isDragging = false;
+                };
+
+                const onMove = (e) => {
+                    if (!isDragging) return;
+                    const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+                    updateSlider(clientX);
+                };
+
+                // Mouse Events
+                handle.addEventListener('mousedown', startDrag);
+                window.addEventListener('mousemove', onMove);
+                window.addEventListener('mouseup', stopDrag);
+
+                // Touch Events
+                handle.addEventListener('touchstart', startDrag, { passive: false });
+                window.addEventListener('touchmove', onMove, { passive: false });
+                window.addEventListener('touchend', stopDrag);
+
+                // Initialize to 50%
+                updateSlider(container.getBoundingClientRect().width / 2 + container.getBoundingClientRect().left);
+            });
+        });
+    </script>
+
+@endpush

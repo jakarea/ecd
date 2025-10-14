@@ -24,7 +24,7 @@
                 <a href="{{ route('gallery') }}" class="nav-link">Our Works</a>
             </nav>
             <div class="hidden md:block">
-                <a href="{{ route('contact') }}" class="btn-brand"><span>Let's Talk</span>
+                <a href="{{ route('contact') }}" class="btn-brand-sm"><span>Let's Talk</span>
                     <svg width="25" height="11" viewBox="0 0 25 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M24 5.5H1M24 5.5L19.5 1M24 5.5L19.5 10" stroke="white" stroke-width="1.5"
                             stroke-linecap="round" stroke-linejoin="round" />

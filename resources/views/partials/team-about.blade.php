@@ -40,7 +40,7 @@
                 </svg>
             </x-slot>
         </x-section-heading>
-        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 mt-6 md:mt-[70px]">
             @foreach ($teams as $team)
                 <div class="relative rounded-[20px] group transition-all duration-300">
                     <img src="{{ asset($team['image']) }}" alt="{{ $team['name'] }}"
