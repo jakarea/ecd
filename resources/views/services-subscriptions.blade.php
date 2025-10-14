@@ -4,7 +4,7 @@
 
 @section('content')
 
-    <x-hero-section title="Services & Subscriptions" bg-image="assets/img/bg-hero.png" bgColor="bg-[#ededed]" />
+    <x-hero-section pageId="services-subscriptions" />
 
     @php
         $services = [

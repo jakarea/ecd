@@ -6,6 +6,7 @@ use App\Http\Controllers\Admin\AuthController;
 use App\Http\Controllers\Admin\SeoController;
 use App\Http\Controllers\Admin\TestimonialController;
 use App\Http\Controllers\Admin\HeroSectionController;
+use App\Http\Controllers\Admin\GalleryItemController;
 
 /*
 |--------------------------------------------------------------------------
@@ -41,6 +42,9 @@ Route::middleware('auth')->group(function () {
     // Hero Sections Management Routes
     Route::resource('hero-sections', HeroSectionController::class);
     Route::post('/hero-sections/{heroSection}/toggle-status', [HeroSectionController::class, 'toggleStatus'])->name('hero-sections.toggle');
+
+    // Gallery Management Routes
+    Route::resource('gallery', GalleryItemController::class);
 
     // Add more admin routes here as needed
     // Route::resource('/users', UserController::class);
