@@ -10,6 +10,8 @@ use App\Http\Controllers\Admin\GalleryItemController;
 use App\Http\Controllers\Admin\SettingController;
 use App\Http\Controllers\Admin\BookingController;
 use App\Http\Controllers\Admin\UserController;
+use App\Http\Controllers\Admin\FaqController;
+use App\Http\Controllers\Admin\TeamMemberController;
 
 /*
 |--------------------------------------------------------------------------
@@ -63,4 +65,12 @@ Route::middleware('auth')->group(function () {
 
     // User Management Routes
     Route::resource('users', UserController::class);
+
+    // FAQ Management Routes
+    Route::resource('faqs', FaqController::class);
+    Route::post('/faqs/{faq}/toggle-status', [FaqController::class, 'toggle'])->name('faqs.toggle');
+
+    // Team Members Management Routes
+    Route::resource('team-members', TeamMemberController::class);
+    Route::post('/team-members/{teamMember}/toggle-status', [TeamMemberController::class, 'toggle'])->name('team-members.toggle');
 });

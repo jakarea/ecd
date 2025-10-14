@@ -27,7 +27,7 @@
                         Cancel
                     </a>
                     <button type="submit"
-                        class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
+                        class="px-4 py-2 bg-[var(--color-brand)] text-white rounded-lg hover:opacity-90 transition">
                         Update Gallery Item
                     </button>
                 </div>

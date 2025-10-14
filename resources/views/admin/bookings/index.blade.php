@@ -11,7 +11,7 @@
                 <p class="text-gray-600 mt-1">Manage customer service bookings</p>
             </div>
             <a href="{{ route('admin.bookings.create') }}"
-                class="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
+                class="inline-flex items-center px-4 py-2 bg-[var(--color-brand)] text-white rounded-lg hover:opacity-90 transition btn-animate">
                 <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
                 </svg>
@@ -29,7 +29,7 @@
         {{-- Status Filter Cards --}}
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
             <a href="{{ route('admin.bookings.index') }}"
-                class="bg-white p-4 rounded-lg shadow hover:shadow-md transition {{ !request('status') || request('status') === 'all' ? 'ring-2 ring-blue-500' : '' }}">
+                class="bg-white p-4 rounded-lg shadow hover:shadow-md transition card-hover stagger-item {{ !request('status') || request('status') === 'all' ? 'ring-2 ring-blue-500' : '' }}">
                 <div class="flex items-center justify-between">
                     <div>
                         <p class="text-sm text-gray-600">All Bookings</p>
@@ -42,7 +42,7 @@
             </a>
 
             <a href="{{ route('admin.bookings.index', ['status' => 'pending']) }}"
-                class="bg-white p-4 rounded-lg shadow hover:shadow-md transition {{ request('status') === 'pending' ? 'ring-2 ring-yellow-500' : '' }}">
+                class="bg-white p-4 rounded-lg shadow hover:shadow-md transition card-hover stagger-item {{ request('status') === 'pending' ? 'ring-2 ring-yellow-500' : '' }}">
                 <div class="flex items-center justify-between">
                     <div>
                         <p class="text-sm text-gray-600">Pending</p>
@@ -55,7 +55,7 @@
             </a>
 
             <a href="{{ route('admin.bookings.index', ['status' => 'confirmed']) }}"
-                class="bg-white p-4 rounded-lg shadow hover:shadow-md transition {{ request('status') === 'confirmed' ? 'ring-2 ring-blue-500' : '' }}">
+                class="bg-white p-4 rounded-lg shadow hover:shadow-md transition card-hover stagger-item {{ request('status') === 'confirmed' ? 'ring-2 ring-blue-500' : '' }}">
                 <div class="flex items-center justify-between">
                     <div>
                         <p class="text-sm text-gray-600">Confirmed</p>
@@ -68,7 +68,7 @@
             </a>
 
             <a href="{{ route('admin.bookings.index', ['status' => 'completed']) }}"
-                class="bg-white p-4 rounded-lg shadow hover:shadow-md transition {{ request('status') === 'completed' ? 'ring-2 ring-green-500' : '' }}">
+                class="bg-white p-4 rounded-lg shadow hover:shadow-md transition card-hover stagger-item {{ request('status') === 'completed' ? 'ring-2 ring-green-500' : '' }}">
                 <div class="flex items-center justify-between">
                     <div>
                         <p class="text-sm text-gray-600">Completed</p>
@@ -82,18 +82,18 @@
         </div>
 
         {{-- Search Bar --}}
-        <div class="bg-white rounded-lg shadow p-4 mb-6">
+        <div class="bg-white rounded-lg shadow p-4 mb-6 animate-fade-in-up">
             <form action="{{ route('admin.bookings.index') }}" method="GET" class="flex gap-4">
                 <input type="hidden" name="status" value="{{ request('status') }}">
                 <input type="text" name="search" value="{{ request('search') }}"
                     placeholder="Search by name or address..."
-                    class="flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
-                <button type="submit" class="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
+                    class="flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent input-focus">
+                <button type="submit" class="px-6 py-2 bg-[var(--color-brand)] text-white rounded-lg hover:opacity-90 transition btn-animate">
                     Search
                 </button>
                 @if(request('search'))
                     <a href="{{ route('admin.bookings.index', ['status' => request('status')]) }}"
-                        class="px-6 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition">
+                        class="px-6 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition btn-animate">
                         Clear
                     </a>
                 @endif
@@ -101,7 +101,7 @@
         </div>
 
         {{-- Bookings Table --}}
-        <div class="bg-white rounded-lg shadow overflow-hidden">
+        <div class="bg-white rounded-lg shadow overflow-hidden animate-fade-in-up">
             <div class="overflow-x-auto">
                 <table class="min-w-full divide-y divide-gray-200">
                     <thead class="bg-gray-50">
@@ -128,7 +128,7 @@
                     </thead>
                     <tbody class="bg-white divide-y divide-gray-200">
                         @forelse($bookings as $booking)
-                            <tr class="hover:bg-gray-50">
+                            <tr class="hover:bg-gray-50 table-row-animate">
                                 <td class="px-6 py-4 whitespace-nowrap">
                                     <div class="flex items-center">
                                         <div class="flex-shrink-0 h-10 w-10 bg-blue-100 rounded-full flex items-center justify-center">
@@ -149,7 +149,7 @@
                                     <div class="text-xs text-gray-500">{{ $booking->preferred_date->diffForHumans() }}</div>
                                 </td>
                                 <td class="px-6 py-4 whitespace-nowrap">
-                                    <span class="px-3 py-1 inline-flex text-xs leading-5 font-semibold rounded-full
+                                    <span class="px-3 py-1 inline-flex text-xs leading-5 font-semibold rounded-full badge-animate
                                         {{ $booking->status === 'pending' ? 'bg-yellow-100 text-yellow-800' : '' }}
                                         {{ $booking->status === 'confirmed' ? 'bg-blue-100 text-blue-800' : '' }}
                                         {{ $booking->status === 'completed' ? 'bg-green-100 text-green-800' : '' }}
@@ -162,16 +162,18 @@
                                 </td>
                                 <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
                                     <a href="{{ route('admin.bookings.show', $booking) }}"
-                                        class="text-blue-600 hover:text-blue-900 mr-3">
+                                        class="text-[var(--color-brand)] hover:opacity-70 mr-3 link-hover font-medium">
                                         View
                                     </a>
-                                    <form action="{{ route('admin.bookings.destroy', $booking) }}" method="POST" class="inline"
-                                        onsubmit="return confirm('Are you sure you want to delete this booking?')">
+                                    <button type="button" onclick="confirmDelete({{ $booking->id }})"
+                                        class="text-red-600 hover:text-red-900 link-hover font-medium">
+                                        Delete
+                                    </button>
+                                    <form id="delete-form-{{ $booking->id }}"
+                                        action="{{ route('admin.bookings.destroy', $booking) }}"
+                                        method="POST" class="hidden">
                                         @csrf
                                         @method('DELETE')
-                                        <button type="submit" class="text-red-600 hover:text-red-900">
-                                            Delete
-                                        </button>
                                     </form>
                                 </td>
                             </tr>
@@ -200,3 +202,24 @@
         </div>
     </div>
 @endsection
+
+@push('scripts')
+<script>
+    function confirmDelete(id) {
+        Swal.fire({
+            title: 'Are you sure?',
+            text: "You won't be able to revert this!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: 'var(--color-brand)',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, delete it!',
+            cancelButtonText: 'Cancel'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                document.getElementById('delete-form-' + id).submit();
+            }
+        });
+    }
+</script>
+@endpush

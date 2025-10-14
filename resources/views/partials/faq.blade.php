@@ -1,33 +1,3 @@
-@php
-    $faqs = [
-        [
-            'id' => '1',
-            'question' => 'Do I need to bring my car to you?',
-            'answer' => 'No! Our service is fully mobile. We come directly to your home, office, or any convenient location—saving you time and effort.'
-        ],
-        [
-            'id' => '2',
-            'question' => 'How long does a typical car wash or detailing service take?',
-            'answer' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ipsum lorem, tempor ut ex aliquam, fringilla lacinia quam. Sed mattis ante at massa aliquet consectetur.'
-        ],
-        [
-            'id' => '3',
-            'question' => 'What kind of products do you use?',
-            'answer' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ipsum lorem, tempor ut ex aliquam, fringilla lacinia quam. Sed mattis ante at massa aliquet consectetur.'
-        ],
-        [
-            'id' => '4',
-            'question' => 'Do you clean both the interior and exterior?',
-            'answer' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ipsum lorem, tempor ut ex aliquam, fringilla lacinia quam. Sed mattis ante at massa aliquet consectetur.'
-        ],
-        [
-            'id' => '4',
-            'question' => 'How often should I get my car detailed?',
-            'answer' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
-        ],
-    ]
-@endphp
-
 <section class="py-8 md:py-[50px]">
     <div class="container">
         <x-section-heading pretitle="FAQS" title="Get the answers you need to start with us"
@@ -44,10 +14,10 @@
             </x-slot>
         </x-section-heading>
         <div class="faq max-w-[996px] mx-auto space-y-4 mt-[50px]" role="list">
-            @foreach ($faqs as $faq)
+            @forelse ($faqs as $faq)
                 @php
-                    $qid = 'faq-' . $faq['id'];
-                    $hid = 'faq-header-' . $faq['id'];
+                    $qid = 'faq-' . $faq->id;
+                    $hid = 'faq-header-' . $faq->id;
                 @endphp
 
                 <div class="p-6 md:py-[37px] md:px-[31px] border border-[#D1D7DF] rounded-[10px]" role="listitem">
@@ -72,17 +42,21 @@
 
 
                         <div class="text-[18px] text-[var(--color-heading)] font-semibold">
-                            {{ $faq['question'] }}
+                            {{ $faq->question }}
                         </div>
                     </div>
 
                     <div id="{{ $qid }}"
                         class="acc-content text-base text-[var(--color-text)] pt-4 pr-4 pl-[46px] md:pl-[58px] w-full max-w-[666px] overflow-hidden font-sf"
                         aria-hidden="true" style="display:none">
-                        {!! nl2br(e($faq['answer'])) !!}
+                        {!! nl2br(e($faq->answer)) !!}
                     </div>
                 </div>
-            @endforeach
+            @empty
+                <div class="text-center py-12">
+                    <p class="text-gray-500">No FAQs available at the moment.</p>
+                </div>
+            @endforelse
         </div>
     </div>
 </section>

@@ -11,7 +11,7 @@
                 <p class="text-gray-600 mt-1">Manage gallery videos, interior, exterior, and before/after images</p>
             </div>
             <a href="{{ route('admin.gallery.create') }}"
-                class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition flex items-center gap-2">
+                class="px-4 py-2 bg-[var(--color-brand)] text-white rounded-lg hover:opacity-90 transition flex items-center gap-2">
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
                 </svg>
@@ -113,17 +113,18 @@
                             <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
                                 <div class="flex justify-end gap-2">
                                     <a href="{{ route('admin.gallery.edit', $item) }}"
-                                        class="text-blue-600 hover:text-blue-900">
+                                        class="text-[var(--color-brand)] hover:opacity-70 font-medium link-hover">
                                         Edit
                                     </a>
-                                    <form action="{{ route('admin.gallery.destroy', $item) }}" method="POST"
-                                        class="inline"
-                                        onsubmit="return confirm('Are you sure you want to delete this gallery item?')">
+                                    <button type="button" onclick="confirmDelete({{ $item->id }})"
+                                        class="text-red-600 hover:text-red-900 font-medium link-hover">
+                                        Delete
+                                    </button>
+                                    <form id="delete-form-{{ $item->id }}"
+                                        action="{{ route('admin.gallery.destroy', $item) }}"
+                                        method="POST" class="hidden">
                                         @csrf
                                         @method('DELETE')
-                                        <button type="submit" class="text-red-600 hover:text-red-900">
-                                            Delete
-                                        </button>
                                     </form>
                                 </div>
                             </td>
@@ -153,3 +154,24 @@
         </div>
     </div>
 @endsection
+
+@push('scripts')
+<script>
+    function confirmDelete(id) {
+        Swal.fire({
+            title: 'Are you sure?',
+            text: "This gallery item will be permanently deleted!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: 'var(--color-brand)',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, delete it!',
+            cancelButtonText: 'Cancel'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                document.getElementById('delete-form-' + id).submit();
+            }
+        });
+    }
+</script>
+@endpush

@@ -5,7 +5,11 @@ use App\Http\Controllers\GalleryController;
 
 Route::get('/', fn() => view('home'))->name('home');
 
-Route::get('/about', fn() => view('about'))->name('about');
+Route::get('/about', function() {
+    $faqs = \App\Models\Faq::active()->ordered()->get();
+    $teamMembers = \App\Models\TeamMember::active()->ordered()->get();
+    return view('about', compact('faqs', 'teamMembers'));
+})->name('about');
 
 Route::get('/services-subscriptions', fn() => view('services-subscriptions'))->name('services-subscriptions');
 

@@ -1,27 +1,3 @@
-@php
-    $teams = [
-        [
-            'name' => 'Jasper van Dijk',
-            'position' => 'Owner',
-            'image' => 'assets/img/team/team1.webp',
-        ],
-        [
-            'name' => 'Daniel Hamilton',
-            'position' => 'Service Man',
-            'image' => 'assets/img/team/team2.webp',
-        ],
-        [
-            'name' => 'Dennis Callis',
-            'position' => 'Service Man',
-            'image' => 'assets/img/team/team3.webp',
-        ],
-        [
-            'name' => 'Lars De Vries',
-            'position' => 'Service Man',
-            'image' => 'assets/img/team/team4.webp',
-        ],
-    ];
-@endphp
 <section class="py-8 md:py-[50px]">
     <div class="container">
         <x-section-heading pretitle="Our Teams" title="Meet Our Dedicated Team">
@@ -41,22 +17,26 @@
             </x-slot>
         </x-section-heading>
         <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 mt-6 md:mt-[70px]">
-            @foreach ($teams as $team)
+            @forelse ($teamMembers as $member)
                 <div class="relative rounded-[20px] group transition-all duration-300">
-                    <img src="{{ asset($team['image']) }}" alt="{{ $team['name'] }}"
+                    <img src="{{ Storage::url($member->image) }}" alt="{{ $member->name }}"
                         class="w-full h-full object-cover rounded-[20px]">
                     <div
                         class="flex flex-col gap-0.5 absolute bottom-2 left-2 right-2 bg-white rounded-[12px] p-3 group-hover:bg-[var(--color-brand)] transition-all duration-300">
                         <h3
                             class="text-base md:text-[20px] font-semibold text-[var(--color-heading)] group-hover:text-white transition-all duration-300">
-                            {{ $team['name'] }}
+                            {{ $member->name }}
                         </h3>
                         <p
                             class="text-[16px] font-normal text-[var(--color-heading)] group-hover:text-white transition-all duration-300 font-sf">
-                            {{ $team['position'] }}</p>
+                            {{ $member->position }}</p>
                     </div>
                 </div>
-            @endforeach
+            @empty
+                <div class="col-span-full text-center py-12">
+                    <p class="text-gray-500">No team members available at the moment.</p>
+                </div>
+            @endforelse
         </div>
     </div>
 </section>

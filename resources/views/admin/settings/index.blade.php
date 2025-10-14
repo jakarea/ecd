@@ -191,7 +191,7 @@
                     Cancel
                 </a>
                 <button type="submit"
-                    class="px-6 py-2.5 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition font-medium flex items-center gap-2">
+                    class="px-6 py-2.5 bg-[var(--color-brand)] text-white rounded-lg hover:opacity-90 transition font-medium flex items-center gap-2">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M5 13l4 4L19 7" />
