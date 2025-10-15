@@ -1,4 +1,8 @@
 @php
+    // Get WhatsApp number from settings
+    $contactPhone = \App\Models\Setting::get('contact_phone');
+    $whatsappNumber = $contactPhone ? preg_replace('/[^0-9+]/', '', $contactPhone) : null;
+
     $plans = [
         [
             'name' => 'Basic Treatment',
@@ -128,7 +132,7 @@
                 <div class="text-[20px] font-semibold text-white tracking-[0.05px] mb-6 leading-[1.5]">Not sure which
                     plan fits best?
                     Let’s talk!</div>
-                <a href="https://wa.me/6011234567" target="_blank"
+                <a href="https://wa.me/{{ $whatsappNumber }}" target="_blank"
                     class="bg-[var(--color-brand)] text-white text-base font-semibold py-2 px-4 rounded-[60px] transition-all duration-300 ease-in-out inline-flex items-center gap-2 min-w-[164px] h-[45px] tracking-[-0.08px]">
 
                     <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -140,7 +144,7 @@
                             fill="white" />
                     </svg>
 
-                    <span>+31 00 1234567</span>
+                    <span>{{ $whatsappNumber }}</span>
                 </a>
             </div>
         </div>
@@ -176,7 +180,10 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 @foreach ($plans as $plan)
                     <div class="pricing-card flex flex-col justify-between p-[30px] rounded-[20px] text-white"
-                        style="background-color: {{ $plan['color'] }}">
+                        style="background-color: {{ $plan['color'] }}"
+                        data-plan-name="{{ $plan['name'] }}"
+                        data-plan-price-single="{{ $plan['price_single'] }}"
+                        data-plan-price-monthly="{{ $plan['price_monthly'] }}">
                         {{-- Header --}}
                         <div class="pricing-card-header flex flex-col gap-4 pb-6 border-b"
                             style="border-color: {{ $plan['borderColor'] }}">
@@ -241,8 +248,10 @@
                         {{-- Footer --}}
                         <div class="pricing-card-footer mt-4">
                             <button
-                                class="text-[#230C0F] text-base font-bold rounded-[60px] px-5 py-3.5 text-center flex items-center justify-center gap-3 cursor-pointer w-full bg-white"
-                                onClick="openModal()">
+                                class="pricing-plan-btn text-[#230C0F] text-base font-bold rounded-[60px] px-5 py-3.5 text-center flex items-center justify-center gap-3 cursor-pointer w-full bg-white"
+                                data-plan-name="{{ $plan['name'] }}"
+                                data-plan-price-single="{{ $plan['price_single'] }}"
+                                data-plan-price-monthly="{{ $plan['price_monthly'] }}">
                                 <span>{{ $plan['buttonText'] }}</span>
                                 <svg width="8" height="12" viewBox="0 0 8 12" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -294,7 +303,8 @@
 {{-- Booking Form Modal --}}
 <div class="modal" id="pricingModal">
     <div class="modal-content relative h-[calc(100vh-50px)] w-full max-w-[751px]">
-        <form class="h-full">
+        <form id="bookingForm" class="h-full" method="POST" action="{{ route('booking.store') }}">
+            @csrf
             <div class="close-modal-2 bg-white w-[28px] h-[28px] rounded-full flex items-center justify-center absolute top-[-14px] right-[-14px] cursor-pointer"
                 onClick="closeModal()">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
@@ -305,9 +315,11 @@
                 </svg>
             </div>
 
-            {{-- <div id="selectedInfo" class="text-sm text-gray-600">No package selected</div> --}}
             <div class="h-full flex flex-col justify-between overflow-y-auto">
                 <div class="">
+                    <!-- Success/Error Messages -->
+                    <div id="formMessage" class="hidden mb-4 p-4 rounded-lg"></div>
+
                     <div class="flex items-center gap-4 px-5 py-5 border border-[#C8CEDD] rounded-[16px]">
                         <div class="w-[50px] h-[50px] rounded-[16px] bg-[#E7F1FF] flex items-center justify-center">
                             <svg width="26" height="26" viewBox="0 0 26 26" fill="none"
@@ -325,53 +337,66 @@
                             <p class="text-[16px] font-medium text-[var(--color-text)] leading-[1.4] font-sf">For your
                                 service,
                                 share your details,
-                                and we’ll take care of the rest.</p>
+                                and we'll take care of the rest.</p>
                         </div>
                     </div>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
                         <div class="">
                             <label class="block text-base font-medium text-[var(--color-text)] mb-2">First Name</label>
-                            <input type="text" name="name" required
+                            <input type="text" name="first_name" id="first_name" required
                                 class="block w-full rounded-lg border border-[#AEAEB2] h-12 focus:outline-none focus:border-[var(--color-brand)] px-4"
                                 placeholder="Enter first name">
                         </div>
                         <div class="">
                             <label class="block text-base font-medium text-[var(--color-text)] mb-2">Last Name</label>
-                            <input type="text" name="name" required
+                            <input type="text" name="last_name" id="last_name" required
                                 class="block w-full rounded-lg border border-[#AEAEB2] h-12 focus:outline-none focus:border-[var(--color-brand)] px-4"
                                 placeholder="Enter last name">
                         </div>
                         <div class="col-span-2">
                             <label class="block text-base font-medium text-[var(--color-text)] mb-2">Address</label>
-                            <textarea type="text" name="name" required
-                                class="block w-full rounded-lg border border-[#AEAEB2] h-24 px-4"
-                                message="Your address"></textarea>
+                            <textarea name="address" id="address" required
+                                class="block w-full rounded-lg border border-[#AEAEB2] h-24 px-4 py-2"
+                                placeholder="Your address"></textarea>
                         </div>
                         <div class="">
                             <label class="block text-base font-medium text-[var(--color-text)] mb-2">Package
                                 Choice</label>
-                            <select type="text" name="name" required
+                            <select id="packageSelect" name="package" required
                                 class="block w-full rounded-lg border border-[#AEAEB2] h-12 focus:outline-none focus:border-[var(--color-brand)] px-4">
-                                <option value="">Basic Treatment - €64.95</option>
-                                <option value="">Premium Treatment - €279.95</option>
-                                <option value="">Full Detail Treatment - €279.95</option>
+                                <option value="">Select a package</option>
+                                <option value="Basic Treatment - €79,95">Basic Treatment - €79,95</option>
+                                <option value="Basic Treatment Monthly - €74,45">Basic Treatment Monthly - €74,45</option>
+                                <option value="Premium Treatment - €149,95">Premium Treatment - €149,95</option>
+                                <option value="Premium Treatment Monthly - €144,45">Premium Treatment Monthly - €144,45</option>
+                                <option value="Full Detail Treatment - €289,95">Full Detail Treatment - €289,95</option>
+                                <option value="Full Detail Treatment Monthly - €249,45">Full Detail Treatment Monthly - €249,45</option>
                             </select>
+                            <input type="hidden" name="package_name" id="package_name">
+                            <input type="hidden" name="package_price" id="package_price">
                         </div>
                         <div class="">
                             <label class="block text-base font-medium text-[var(--color-text)] mb-2">Preferred
                                 Date</label>
-                            <input type="date" name="name" required
+                            <input type="date" name="preferred_date" id="preferred_date" required
                                 class="block w-full rounded-lg border border-[#AEAEB2] h-12 focus:outline-none focus:border-[var(--color-brand)] px-4">
                         </div>
                     </div>
                 </div>
                 <div class="flex justify-end gap-3 mt-6">
-                    <button
+                    <button type="button"
                         class="px-4 py-3 bg-[#F2F2F7] text-base text-[var(--color-text)] font-medium tracking-[0.02px] rounded-[60px] w-[110px] flex justify-center items-center cursor-pointer"
                         onclick="closeModal()">Cancel</button>
-                    <button id="bookNowBtn"
-                        class="px-4 py-3 bg-[var(--color-brand)] text-base text-white font-medium tracking-[0.02px] rounded-[60px] w-[135px] flex justify-center items-center cursor-pointer">Book
-                        Now</button>
+                    <button type="submit" id="bookNowBtn"
+                        class="px-4 py-3 bg-[var(--color-brand)] text-base text-white font-medium tracking-[0.02px] rounded-[60px] w-[135px] flex justify-center items-center cursor-pointer">
+                        <span class="btn-text">Book Now</span>
+                        <span class="btn-spinner hidden">
+                            <svg class="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                                <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                            </svg>
+                        </span>
+                    </button>
                 </div>
             </div>
         </form>
@@ -380,36 +405,70 @@
 
 
 <script>
-    function openModal() {
+    function openModal(planName = null, priceSingle = null, priceMonthly = null) {
         const modal = document.querySelector('#pricingModal');
+        const packageSelect = document.querySelector('#packageSelect');
+
+        // If plan information is provided, pre-select the package
+        if (planName && packageSelect) {
+            // Get current pricing mode (single or monthly)
+            const isPricingMonthly = document.querySelector('.pricing-opt.bg-white')?.textContent.trim().toLowerCase() === 'monthly';
+            const price = isPricingMonthly ? priceMonthly : priceSingle;
+            const packageValue = `${planName} - ${price}`;
+
+            // Try to find and select the matching option
+            const options = packageSelect.querySelectorAll('option');
+            let optionFound = false;
+
+            options.forEach(option => {
+                if (option.value.includes(planName)) {
+                    if (isPricingMonthly && option.value.toLowerCase().includes('monthly')) {
+                        packageSelect.value = option.value;
+                        optionFound = true;
+                    } else if (!isPricingMonthly && !option.value.toLowerCase().includes('monthly')) {
+                        packageSelect.value = option.value;
+                        optionFound = true;
+                    }
+                }
+            });
+        }
+
         modal.classList.add('show');
         document.body.classList.add('modal-open');
     }
 
     function closeModal() {
-        console.log("close modal");
         const modal = document.querySelector('#pricingModal');
         modal.classList.remove('show');
         document.body.classList.remove('modal-open');
     }
 
-    // Optional: close modal when clicking outside of it
-    document.querySelector('.modal').addEventListener('click', function (e) {
-        if (e.target === this) {
-            closeModal();
-        }
-    });
+    // Close modal when clicking outside of it
+    document.addEventListener('DOMContentLoaded', function() {
+        // Handle pricing plan button clicks
+        const pricingPlanButtons = document.querySelectorAll('.pricing-plan-btn');
+        pricingPlanButtons.forEach(button => {
+            button.addEventListener('click', function(e) {
+                e.preventDefault();
+                const planName = this.dataset.planName;
+                const priceSingle = this.dataset.planPriceSingle;
+                const priceMonthly = this.dataset.planPriceMonthly;
+                openModal(planName, priceSingle, priceMonthly);
+            });
+        });
 
-    // If using dynamically loaded content, ensure DOM is ready
-    document.addEventListener('DOMContentLoaded', function () {
-        document.querySelector('.close-modal-2')?.addEventListener('click', closeModal);
-        document.querySelector('[onclick="openModal()"]')?.addEventListener('click', function (e) {
-            e.preventDefault(); // Prevent link navigation
-            openModal();
+        // Close modal handlers
+        document.querySelector('.modal')?.addEventListener('click', function (e) {
+            if (e.target === this) {
+                closeModal();
+            }
+        });
+
+        document.querySelector('.close-modal-2')?.addEventListener('click', function(e) {
+            e.preventDefault();
+            closeModal();
         });
     });
-
-
 </script>
 
 <script>
@@ -451,6 +510,93 @@
             // Only call updatePrices — don't re-style
             const selectedType = defaultBtn.textContent.trim().toLowerCase();
             updatePrices(selectedType);
+        }
+
+        // Handle package select change to extract name and price
+        const packageSelect = document.querySelector('#packageSelect');
+        if (packageSelect) {
+            packageSelect.addEventListener('change', function() {
+                const selectedValue = this.value;
+                if (selectedValue) {
+                    // Split "Package Name - €Price"
+                    const parts = selectedValue.split(' - ');
+                    if (parts.length === 2) {
+                        document.querySelector('#package_name').value = parts[0].trim();
+                        document.querySelector('#package_price').value = parts[1].trim();
+                    }
+                }
+            });
+        }
+
+        // Handle form submission with AJAX
+        const bookingForm = document.querySelector('#bookingForm');
+        if (bookingForm) {
+            bookingForm.addEventListener('submit', async function(e) {
+                e.preventDefault();
+
+                const submitBtn = document.querySelector('#bookNowBtn');
+                const btnText = submitBtn.querySelector('.btn-text');
+                const btnSpinner = submitBtn.querySelector('.btn-spinner');
+                const formMessage = document.querySelector('#formMessage');
+
+                // Disable button and show spinner
+                submitBtn.disabled = true;
+                btnText.classList.add('hidden');
+                btnSpinner.classList.remove('hidden');
+
+                // Hide previous messages
+                formMessage.classList.add('hidden');
+
+                const formData = new FormData(this);
+
+                try {
+                    const response = await fetch(this.action, {
+                        method: 'POST',
+                        body: formData,
+                        headers: {
+                            'X-Requested-With': 'XMLHttpRequest'
+                        }
+                    });
+
+                    const data = await response.json();
+
+                    if (response.ok) {
+                        // Success
+                        formMessage.textContent = data.message || 'Your booking has been submitted successfully! We will contact you soon.';
+                        formMessage.className = 'mb-4 p-4 rounded-lg bg-green-100 text-green-800';
+                        formMessage.classList.remove('hidden');
+
+                        // Reset form
+                        bookingForm.reset();
+
+                        // Close modal after 2 seconds
+                        setTimeout(() => {
+                            closeModal();
+                            formMessage.classList.add('hidden');
+                        }, 2000);
+                    } else {
+                        // Error
+                        let errorMessage = 'Something went wrong. Please try again.';
+                        if (data.errors) {
+                            errorMessage = Object.values(data.errors).flat().join(', ');
+                        } else if (data.message) {
+                            errorMessage = data.message;
+                        }
+                        formMessage.textContent = errorMessage;
+                        formMessage.className = 'mb-4 p-4 rounded-lg bg-red-100 text-red-800';
+                        formMessage.classList.remove('hidden');
+                    }
+                } catch (error) {
+                    formMessage.textContent = 'Network error. Please check your connection and try again.';
+                    formMessage.className = 'mb-4 p-4 rounded-lg bg-red-100 text-red-800';
+                    formMessage.classList.remove('hidden');
+                } finally {
+                    // Re-enable button and hide spinner
+                    submitBtn.disabled = false;
+                    btnText.classList.remove('hidden');
+                    btnSpinner.classList.add('hidden');
+                }
+            });
         }
     });
 </script>

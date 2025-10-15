@@ -85,6 +85,18 @@
                     </div>
                 </div>
 
+                {{-- Selected Package Display --}}
+                <div id="selectedPackageDisplay" class="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg">
+                    <div class="flex items-center gap-2 mb-2">
+                        <svg class="w-5 h-5 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                        </svg>
+                        <span class="text-sm font-semibold text-green-800">Selected Package</span>
+                    </div>
+                    <div class="text-base font-bold text-green-900" id="packageDisplayName">—</div>
+                    <div class="text-sm text-green-700" id="packageDisplayPrice">—</div>
+                </div>
+
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div class="">
                         <label class="block text-sm md:text-base font-medium text-[var(--color-text)] mb-2">
@@ -222,6 +234,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const formPlanPrice = document.getElementById('formPlanPrice');
 
     let selectedCard = null;
+    let selectedPricingType = 'single'; // Track if 'single' or 'monthly' is selected
 
     // Helper functions
     function enableNextBtn() {
@@ -259,11 +272,41 @@ document.addEventListener('DOMContentLoaded', function() {
         if (check) check.classList.remove('hidden');
 
         const name = card.dataset.planName || '—';
-        const price = card.dataset.planPrice || '—';
-        selectedInfo.textContent = `Selected: ${name} (${price})`;
+        // Get the correct price based on selected pricing type
+        const priceKey = selectedPricingType === 'single' ? 'planPriceSingle' : 'planPriceMonthly';
+        const price = card.dataset[priceKey] || '—';
+        const pricingLabel = selectedPricingType === 'single' ? 'Single' : 'Monthly';
+        selectedInfo.textContent = `Selected: ${name} - ${price} (${pricingLabel})`;
 
         enableNextBtn();
     }
+
+    // Detect selected pricing type (single/monthly) from home-pricing buttons
+    const detectPricingType = () => {
+        const activeBtn = document.querySelector('.pricing-opt.bg-white');
+        if (activeBtn) {
+            const btnText = activeBtn.textContent.trim().toLowerCase();
+            selectedPricingType = btnText; // Will be 'single' or 'monthly'
+        }
+    };
+
+    // Watch for pricing type changes
+    document.querySelectorAll('.pricing-opt').forEach(btn => {
+        btn.addEventListener('click', () => {
+            setTimeout(detectPricingType, 100); // Small delay to ensure classes updated
+            // Update selected info if a card is already selected
+            if (selectedCard) {
+                const name = selectedCard.dataset.planName || '—';
+                const priceKey = selectedPricingType === 'single' ? 'planPriceSingle' : 'planPriceMonthly';
+                const price = selectedCard.dataset[priceKey] || '—';
+                const pricingLabel = selectedPricingType === 'single' ? 'Single' : 'Monthly';
+                selectedInfo.textContent = `Selected: ${name} - ${price} (${pricingLabel})`;
+            }
+        });
+    });
+
+    // Initial detection
+    detectPricingType();
 
     // Pricing card handlers
     document.querySelectorAll('.pricing-card').forEach(card => {
@@ -290,8 +333,21 @@ document.addEventListener('DOMContentLoaded', function() {
         if (!selectedCard) return;
 
         if (formPlanName && formPlanPrice) {
-            formPlanName.value = selectedCard.dataset.planName || '';
-            formPlanPrice.value = selectedCard.dataset.planPrice || '';
+            const name = selectedCard.dataset.planName || '';
+            const priceKey = selectedPricingType === 'single' ? 'planPriceSingle' : 'planPriceMonthly';
+            const price = selectedCard.dataset[priceKey] || '';
+            const pricingLabel = selectedPricingType === 'single' ? 'Single' : 'Monthly';
+
+            formPlanName.value = `${name} - ${pricingLabel}`;
+            formPlanPrice.value = price;
+
+            // Update the visual package display in step 2
+            const displayName = document.getElementById('packageDisplayName');
+            const displayPrice = document.getElementById('packageDisplayPrice');
+            if (displayName && displayPrice) {
+                displayName.textContent = `${name} - ${pricingLabel}`;
+                displayPrice.textContent = price;
+            }
         }
 
         step1.classList.add('hidden');

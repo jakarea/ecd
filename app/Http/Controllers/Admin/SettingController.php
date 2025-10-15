@@ -12,8 +12,10 @@ class SettingController extends Controller
     {
         $trackingSettings = Setting::byGroup('tracking')->get()->keyBy('key');
         $generalSettings = Setting::byGroup('general')->get()->keyBy('key');
+        $socialSettings = Setting::byGroup('social')->get()->keyBy('key');
+        $contactSettings = Setting::byGroup('contact')->get()->keyBy('key');
 
-        return view('admin.settings.index', compact('trackingSettings', 'generalSettings'));
+        return view('admin.settings.index', compact('trackingSettings', 'generalSettings', 'socialSettings', 'contactSettings'));
     }
 
     public function update(Request $request)
@@ -26,6 +28,14 @@ class SettingController extends Controller
             'fb_pixel_enabled' => 'nullable|boolean',
             'gtm_enabled' => 'nullable|boolean',
             'ga4_enabled' => 'nullable|boolean',
+            'contact_phone' => 'nullable|string|max:255',
+            'contact_email' => 'nullable|email|max:255',
+            'contact_address' => 'nullable|string|max:500',
+            'facebook_url' => 'nullable|url|max:255',
+            'linkedin_url' => 'nullable|url|max:255',
+            'twitter_url' => 'nullable|url|max:255',
+            'instagram_url' => 'nullable|url|max:255',
+            'youtube_url' => 'nullable|url|max:255',
         ]);
 
         // Facebook Pixel settings
@@ -80,6 +90,64 @@ class SettingController extends Controller
                 'description' => 'Enable/disable Google Analytics 4',
                 'is_active' => true,
             ]
+        );
+
+        // Contact Information
+        Setting::set(
+            'contact_phone',
+            $request->input('contact_phone'),
+            'contact',
+            'Contact phone number (used for WhatsApp)'
+        );
+
+        Setting::set(
+            'contact_email',
+            $request->input('contact_email'),
+            'contact',
+            'Contact email address'
+        );
+
+        Setting::set(
+            'contact_address',
+            $request->input('contact_address'),
+            'contact',
+            'Contact address'
+        );
+
+        // Social Media Links
+        Setting::set(
+            'facebook_url',
+            $request->input('facebook_url'),
+            'social',
+            'Facebook page URL'
+        );
+
+        Setting::set(
+            'linkedin_url',
+            $request->input('linkedin_url'),
+            'social',
+            'LinkedIn profile URL'
+        );
+
+        Setting::set(
+            'twitter_url',
+            $request->input('twitter_url'),
+            'social',
+            'Twitter/X profile URL'
+        );
+
+        Setting::set(
+            'instagram_url',
+            $request->input('instagram_url'),
+            'social',
+            'Instagram profile URL'
+        );
+
+        Setting::set(
+            'youtube_url',
+            $request->input('youtube_url'),
+            'social',
+            'YouTube channel URL'
         );
 
         // Clear all settings cache

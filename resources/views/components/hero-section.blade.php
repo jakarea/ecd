@@ -17,6 +17,10 @@
             'show_social_icons' => $showSocialIcons ?? false,
         ];
     }
+
+    // Get WhatsApp number from settings
+    $whatsappPhone = \App\Models\Setting::get('contact_phone');
+    $whatsappNumber = $whatsappPhone ? preg_replace('/[^0-9+]/', '', $whatsappPhone) : null;
 @endphp
 
 @if($heroData->media_type === 'video' && $heroData->background_video)
@@ -54,7 +58,8 @@
                     <div id="socialIcons"
                         class="fixed top-1/2 -translate-y-1/2 left-6 md:right-6 md:left-auto z-[100] transition-all duration-500">
                         <nav class="flex flex-col gap-2">
-                            <a href="https://wa.me/01728247398"
+                            @if($whatsappNumber)
+                            <a href="https://wa.me/{{ $whatsappNumber }}"
                                 class="w-10 h-10 flex items-center justify-center bg-[#10C379] rounded-full [box-shadow:0px_8px_13.78px_0px_#10182826]"
                                 target="_blank">
                                 <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -63,6 +68,7 @@
                                         fill="white" />
                                 </svg>
                             </a>
+                            @endif
                             {{-- <a href="#"
                                 class="w-10 h-10 flex items-center justify-center bg-[var(--color-brand)] rounded-full">
                                 <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -111,7 +117,8 @@
             <div id="socialIcons"
                 class="fixed top-1/2 -translate-y-1/2 left-6 md:right-6 md:left-auto z-[100] transition-all duration-500">
                 <nav class="flex flex-col gap-2">
-                    <a href="https://wa.me/01728247398"
+                    @if($whatsappNumber)
+                    <a href="https://wa.me/{{ $whatsappNumber }}"
                         class="w-10 h-10 flex items-center justify-center bg-[#10C379] rounded-full [box-shadow:0px_8px_13.78px_0px_#10182826]"
                         target="_blank">
                         <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -120,6 +127,7 @@
                                 fill="white" />
                         </svg>
                     </a>
+                    @endif
                     {{-- <a href="#"
                         class="w-10 h-10 flex items-center justify-center bg-[var(--color-brand)] rounded-full [box-shadow:0px_8px_13.78px_0px_#10182826]">
 
