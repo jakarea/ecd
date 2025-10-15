@@ -86,7 +86,7 @@
 @endphp
 
 @section('content')
-    <x-hero-section title="Latest news & blog" bg-image="assets/img/bg-hero.png" bgColor="bg-[#ededed]" />
+    <x-hero-section pageId="blog" bgColor="bg-[#ededed]" />
 
     <section class="py-10 md:py-20 bg-[#ededed] border-b border-[var(--color-brand)]">
         <div class="container">
