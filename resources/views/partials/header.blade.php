@@ -230,6 +230,7 @@
                     d="m13.537 12l3.855-3.855a1.091 1.091 0 0 0-1.542-1.541l.001-.001l-3.855 3.855l-3.855-3.855A1.091 1.091 0 0 0 6.6 8.145l-.001-.001l3.855 3.855l-3.855 3.855a1.091 1.091 0 1 0 1.541 1.542l.001-.001l3.855-3.855l3.855 3.855a1.091 1.091 0 1 0 1.542-1.541l-.001-.001z" />
             </svg>
         </div>
+        <div id="formMessage" class="hidden"></div>
         <div class="step-1 h-full overflow-y-auto grid grid-rows-[auto_auto_1fr_auto]">
             <div class="flex items-center gap-4 px-5 py-5 border border-[#C8CEDD] rounded-[16px]">
                 <div class="w-[50px] h-[50px] rounded-[16px] bg-[#E7F1FF] flex items-center justify-center">
@@ -448,8 +449,10 @@
                     <button id="backToStep1"
                         class="px-4 py-3 bg-[#F2F2F7] text-base text-[var(--color-text)] font-medium tracking-[0.02px] rounded-[60px] w-[110px] flex justify-center items-center cursor-pointer">Back</button>
                     <button id="bookNowBtn"
-                        class="px-4 py-3 bg-[var(--color-brand)] text-base text-white font-medium tracking-[0.02px] rounded-[60px] w-[135px] flex justify-center items-center cursor-pointer">Book
-                        Now</button>
+                        class="px-4 py-3 bg-[var(--color-brand)] text-base text-white font-medium tracking-[0.02px] rounded-[60px] w-[135px] flex justify-center items-center cursor-pointer">
+                        <span class="btn-text">Book Now</span>
+                        <span class="spinner hidden"></span>
+                    </button>
                 </div>
             </div>
         </div>
@@ -759,7 +762,78 @@
         if (defaultBtn) {
             // Only call updatePrices — don't re-style
             const selectedType = defaultBtn.textContent.trim().toLowerCase();
-            updatePrices(selectedType);
-        }
     });
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const heroBookingForm = document.getElementById('heroBookingForm');
+    if (heroBookingForm) {
+        heroBookingForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            console.log('heroBookingForm submission started.');
+
+            const form = this;
+            const formData = new FormData(form);
+            const submitBtn = form.querySelector('#bookNowBtn');
+            const btnText = submitBtn.querySelector('.btn-text');
+            const spinner = submitBtn.querySelector('.spinner');
+            const formMessage = heroModal.querySelector('#formMessage');
+
+            // Disable button and show spinner
+            if(submitBtn) submitBtn.disabled = true;
+            if(btnText) btnText.classList.add('hidden');
+            if(spinner) spinner.classList.remove('hidden');
+            if(formMessage) formMessage.classList.add('hidden');
+
+            fetch(form.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'X-Requested-With': 'XMLHttpRequest',
+                    'X-CSRF-TOKEN': document.querySelector('input[name="_token"]').value
+                }
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Response data:', data);
+                if (data.success) {
+                    form.reset();
+                    form.classList.add('hidden');
+                    if(formMessage) {
+                        formMessage.innerHTML = `<div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded-lg mb-4">${data.message}</div>`;
+                        formMessage.classList.remove('hidden');
+                    }
+                    setTimeout(() => {
+                        if (typeof closeHeroModal === 'function') {
+                            closeHeroModal();
+                        }
+                    }, 5000);
+                } else {
+                    let errorMessage = 'Something went wrong. Please try again.';
+                    if (data && data.message) {
+                        errorMessage = data.message;
+                    }
+                    if(formMessage) {
+                        formMessage.innerHTML = `<div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded-lg mb-4">${errorMessage}</div>`;
+                        formMessage.classList.remove('hidden');
+                    }
+                }
+            })
+            .catch(error => {
+                console.error('Error during form submission:', error);
+                if(formMessage) {
+                    formMessage.innerHTML = `<div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded-lg mb-4">An unexpected error occurred. Please try again.</div>`;
+                    formMessage.classList.remove('hidden');
+                }
+            })
+            .finally(() => {
+                console.log('Form submission finished.');
+                if(submitBtn) submitBtn.disabled = false;
+                if(btnText) btnText.classList.remove('hidden');
+                if(spinner) spinner.classList.add('hidden');
+            });
+        });
+    }
+});
 </script>

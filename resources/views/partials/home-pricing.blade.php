@@ -319,7 +319,6 @@
                 <div class="">
                     <!-- Success/Error Messages -->
                     <div id="formMessage" class="hidden mb-4 p-4 rounded-lg"></div>
-
                     <div class="flex items-center gap-4 px-5 py-5 border border-[#C8CEDD] rounded-[16px]">
                         <div class="w-[50px] h-[50px] rounded-[16px] bg-[#E7F1FF] flex items-center justify-center">
                             <svg width="26" height="26" viewBox="0 0 26 26" fill="none"
@@ -389,7 +388,7 @@
                         onclick="closeModal()">Cancel</button>
                     <button type="submit" id="bookNowBtn"
                         class="px-4 py-3 bg-[var(--color-brand)] text-base text-white font-medium tracking-[0.02px] rounded-[60px] w-[135px] flex justify-center items-center cursor-pointer">
-                        <span class="btn-text">Book Now</span>
+                        <span class="btn-text">Book Now 3</span>
                         <span class="btn-spinner hidden">
                             <svg class="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                                 <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
@@ -408,9 +407,10 @@
     function openModal(planName = null, priceSingle = null, priceMonthly = null) {
         const modal = document.querySelector('#pricingModal');
         const packageSelect = document.querySelector('#packageSelect');
-
+        console.log({packageSelect})
         // If plan information is provided, pre-select the package
         if (planName && packageSelect) {
+            console.log({planName, packageSelect})
             // Get current pricing mode (single or monthly)
             const isPricingMonthly = document.querySelector('.pricing-opt.bg-white')?.textContent.trim().toLowerCase() === 'monthly';
             const price = isPricingMonthly ? priceMonthly : priceSingle;
@@ -527,76 +527,84 @@
                 }
             });
         }
+    });
+</script>
 
-        // Handle form submission with AJAX
-        const bookingForm = document.querySelector('#bookingForm');
-        if (bookingForm) {
-            bookingForm.addEventListener('submit', async function(e) {
-                e.preventDefault();
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const bookingForm = document.getElementById('bookingForm');
+    if (bookingForm) {
+        bookingForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            console.log('bookingForm submission started.');
 
-                const submitBtn = document.querySelector('#bookNowBtn');
-                const btnText = submitBtn.querySelector('.btn-text');
-                const btnSpinner = submitBtn.querySelector('.btn-spinner');
-                const formMessage = document.querySelector('#formMessage');
+            const form = this;
+            const formData = new FormData(form);
+            const submitBtn = form.querySelector('#bookNowBtn');
+            const btnText = submitBtn.querySelector('.btn-text');
+            const spinner = submitBtn.querySelector('.btn-spinner');
 
-                // Disable button and show spinner
+            // Disable button and show spinner
+            if(submitBtn) {
                 submitBtn.disabled = true;
+            }
+            if(btnText) {
                 btnText.classList.add('hidden');
-                btnSpinner.classList.remove('hidden');
+            }
+            if(spinner) {
+                spinner.classList.remove('hidden');
+            }
 
-                // Hide previous messages
-                formMessage.classList.add('hidden');
-
-                const formData = new FormData(this);
-
-                try {
-                    const response = await fetch(this.action, {
-                        method: 'POST',
-                        body: formData,
-                        headers: {
-                            'X-Requested-With': 'XMLHttpRequest'
-                        }
-                    });
-
-                    const data = await response.json();
-
-                    if (response.ok) {
-                        // Success
-                        formMessage.textContent = data.message || 'Your booking has been submitted successfully! We will contact you soon.';
-                        formMessage.className = 'mb-4 p-4 rounded-lg bg-green-100 text-green-800';
-                        formMessage.classList.remove('hidden');
-
-                        // Reset form
-                        bookingForm.reset();
-
-                        // Close modal after 2 seconds
-                        setTimeout(() => {
-                            closeModal();
-                            formMessage.classList.add('hidden');
-                        }, 2000);
-                    } else {
-                        // Error
-                        let errorMessage = 'Something went wrong. Please try again.';
-                        if (data.errors) {
-                            errorMessage = Object.values(data.errors).flat().join(', ');
-                        } else if (data.message) {
-                            errorMessage = data.message;
-                        }
-                        formMessage.textContent = errorMessage;
-                        formMessage.className = 'mb-4 p-4 rounded-lg bg-red-100 text-red-800';
+            fetch(form.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'X-Requested-With': 'XMLHttpRequest',
+                    'X-CSRF-TOKEN': document.querySelector('input[name="_token"]').value
+                }
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Response data:', data);
+                const formMessage = form.querySelector('#formMessage');
+                if (data.success) {
+                    form.reset();
+                    if(formMessage) {
+                        formMessage.innerHTML = `<div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded-lg mb-4">${data.message}</div>`;
                         formMessage.classList.remove('hidden');
                     }
-                } catch (error) {
-                    formMessage.textContent = 'Network error. Please check your connection and try again.';
-                    formMessage.className = 'mb-4 p-4 rounded-lg bg-red-100 text-red-800';
+                    setTimeout(() => {
+                        closeModal();
+                    }, 4000);
+                } else {
+                    if(formMessage) {
+                        formMessage.innerHTML = `<div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded-lg mb-4">${data.message}</div>`;
+                        formMessage.classList.remove('hidden');
+                    }
+                }
+            })
+            .catch(error => {
+                console.error('Error during form submission:', error);
+                const formMessage = form.querySelector('#formMessage');
+                if(formMessage) {
+                    formMessage.innerHTML = `<div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded-lg mb-4">An unexpected error occurred. Please try again.</div>`;
                     formMessage.classList.remove('hidden');
-                } finally {
-                    // Re-enable button and hide spinner
+                }
+            })
+            .finally(() => {
+                console.log('Form submission finished.');
+                // Re-enable button and hide spinner
+                if(submitBtn) {
                     submitBtn.disabled = false;
+                }
+                if(btnText) {
                     btnText.classList.remove('hidden');
-                    btnSpinner.classList.add('hidden');
+                }
+                if(spinner) {
+                    spinner.classList.add('hidden');
                 }
             });
-        }
-    });
+        });
+    }
+});
 </script>
