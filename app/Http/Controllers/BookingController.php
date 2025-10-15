@@ -10,7 +10,7 @@ class BookingController extends Controller
 {
     public function store(Request $request)
     {
-        // Verify reCAPTCHA
+        // Verify reCAPTCHA (if configured)
         $recaptchaSecret = config('services.recaptcha.secret_key');
         $recaptchaResponse = $request->input('g-recaptcha-response');
 
@@ -24,6 +24,9 @@ class BookingController extends Controller
             $result = $response->json();
 
             if (!$result['success'] || $result['score'] < 0.5) {
+                if ($request->expectsJson()) {
+                    return response()->json(['message' => 'Security verification failed. Please try again.'], 422);
+                }
                 return back()->with('error', 'Security verification failed. Please try again.');
             }
         }
@@ -43,6 +46,14 @@ class BookingController extends Controller
         $validated['status'] = 'pending';
 
         Booking::create($validated);
+
+        // Return JSON for AJAX requests
+        if ($request->expectsJson()) {
+            return response()->json([
+                'success' => true,
+                'message' => 'Your booking has been submitted successfully! We will contact you soon.'
+            ]);
+        }
 
         return back()->with('success', 'Your booking has been submitted successfully! We will contact you soon.');
     }
