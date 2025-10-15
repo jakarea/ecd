@@ -1,7 +1,3 @@
-@php
-
-@endphp
-
 <section class="py-8 md:pt-25">
     <div class="container">
         <div class="overflow-x-auto">
@@ -26,10 +22,11 @@
                             <div class="flex items-center mt-[35px]">
                                 <div class="flex items-center border border-[#D1D7DF] rounded-[60px] p-1.5">
                                     <button
-                                        class="pricing-opt active text-[#8D8D8D] text-base font-bold rounded-[60px] py-2.5 text-center uppercase  inline-block cursor-pointer px-6">Single</button>
+                                        class="pricing-opt bg-[var(--color-brand)] text-white text-base font-bold rounded-[60px] py-2.5 px-6 text-center uppercase inline-block cursor-pointer">Single</button>
                                     <button
                                         class="pricing-opt text-[#8D8D8D] text-base font-bold rounded-[60px] py-2.5 px-6 text-center uppercase inline-block cursor-pointer">Monthly</button>
                                 </div>
+
                             </div>
                         </div>
                         <div class="td max-w-[267.33px] w-full p-5 bg-[#003868] rounded-tl-[16px]">
@@ -746,13 +743,6 @@
     </div>
 </section>
 
-<style>
-    .pricing-opt.active {
-        background-color: var(--color-brand);
-        color: white;
-    }
-</style>
-
 <script>
     document.addEventListener('DOMContentLoaded', function () {
         const buttons = document.querySelectorAll('.pricing-opt');
@@ -767,19 +757,31 @@
             });
         }
 
+        function setActive(button) {
+            buttons.forEach(btn => {
+                btn.classList.remove('bg-[var(--color-brand)]', 'text-white');
+                btn.classList.add('text-[#8D8D8D]');
+            });
+
+            button.classList.add('bg-[var(--color-brand)]', 'text-white');
+            button.classList.remove('text-[#8D8D8D]');
+        }
+
         buttons.forEach(button => {
             button.addEventListener('click', function () {
-                // Toggle active state
-                buttons.forEach(btn => btn.classList.remove('active', 'bg-[var(--color-brand)]', 'text-white'));
-                this.classList.add('active', 'bg-[var(--color-brand)]', 'text-white');
-
+                setActive(this);
                 const selectedType = this.textContent.trim().toLowerCase();
                 updatePrices(selectedType);
             });
         });
 
-        // ✅ Trigger default: Single
-        const defaultBtn = [...buttons].find(btn => btn.textContent.trim().toLowerCase() === 'single');
-        if (defaultBtn) defaultBtn.click(); // Simulates initial click on "Single"
+        // ✅ Detect which button is already active (via class in HTML)
+        const defaultBtn = [...buttons].find(btn => btn.classList.contains('bg-[var(--color-brand)]'));
+
+        if (defaultBtn) {
+            // Only call updatePrices — don't re-style
+            const selectedType = defaultBtn.textContent.trim().toLowerCase();
+            updatePrices(selectedType);
+        }
     });
 </script>
