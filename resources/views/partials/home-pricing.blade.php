@@ -6,7 +6,7 @@
     $plans = [
         [
             'name' => 'Basic Treatment',
-            'price_single' => '€79,95',
+            'price_single' => '€54,95',
             'price_monthly' => '€74,45',
             'frequency' => '1x per month',
             'color' => '#003868',
@@ -27,8 +27,8 @@
         ],
         [
             'name' => 'Premium Treatment',
-            'price_single' => '€149,95',
-            'price_monthly' => '€144,45',
+            'price_single' => '€84,95',
+            'price_monthly' => '€139,45',
             'frequency' => '2x per month <br /> <sub>every other week</sub>',
             'color' => 'var(--color-brand)',
             'borderColor' => '#63FFFA',
@@ -50,14 +50,14 @@
         ],
         [
             'name' => 'Full Detail Treatment',
-            'price_single' => '€289,95',
-            'price_monthly' => '€249,45',
+            'price_single' => '€274,45',
+            'price_monthly' => '€244,95',
             'frequency' => '4x per month <br /> <sub>weekly</sub>',
             'color' => '#CBA328',
             'borderColor' => '#E6BA30',
             'buttonText' => 'Get started with Full Detail',
             'icon' => '<svg width="31" height="34" viewBox="0 0 31 34" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_707_5176)"><path fill-rule="evenodd" clip-rule="evenodd" d="M15.6697 5.93946C15.1018 4.38053 12.8983 4.38053 12.3304 5.93946L9.75361 13.0234L2.66968 15.6002C1.11076 16.168 1.11076 18.3716 2.66968 18.9395L9.75361 21.5162L12.3304 28.6002C12.8983 30.1591 15.1018 30.1591 15.6697 28.6002L18.2465 21.5162L25.3304 18.9395C26.8893 18.3716 26.8893 16.168 25.3304 15.6002L18.2465 13.0234L15.6697 5.93946Z" fill="#CBA328" /></g><g clip-path="url(#clip1_707_5176)"><path d="M19.2089 6.11152L22.7952 4.80609L24.0998 1.22067C24.1297 1.13853 24.1842 1.06758 24.2558 1.01745C24.3274 0.96732 24.4127 0.94043 24.5001 0.94043C24.5875 0.94043 24.6728 0.96732 24.7444 1.01745C24.816 1.06758 24.8705 1.13853 24.9004 1.22067L26.2058 4.80695L29.7921 6.11152C29.8742 6.14143 29.9452 6.19589 29.9953 6.26749C30.0454 6.3391 30.0723 6.4244 30.0723 6.51181C30.0723 6.59922 30.0454 6.68452 29.9953 6.75612C29.9452 6.82773 29.8742 6.88218 29.7921 6.91209L26.2049 8.21752L24.9004 11.8038C24.8705 11.8859 24.816 11.9569 24.7444 12.007C24.6728 12.0572 24.5875 12.084 24.5001 12.084C24.4127 12.084 24.3274 12.0572 24.2558 12.007C24.1842 11.9569 24.1297 11.8859 24.0998 11.8038L22.7944 8.21667L19.2089 6.91209C19.1268 6.88218 19.0559 6.82773 19.0057 6.75612C18.9556 6.68452 18.9287 6.59922 18.9287 6.51181C18.9287 6.4244 18.9556 6.3391 19.0057 6.26749C19.0559 6.19589 19.1268 6.14143 19.2089 6.11152Z" fill="#CBA328" /></g> <g clip-path="url(#clip2_707_5176)"><path d="M0.913471 26.2665L3.00547 25.505L3.76647 23.4135C3.78392 23.3656 3.81568 23.3242 3.85745 23.2949C3.89922 23.2657 3.94898 23.25 3.99997 23.25C4.05096 23.25 4.10072 23.2657 4.14249 23.2949C4.18426 23.3242 4.21602 23.3656 4.23347 23.4135L4.99497 25.5055L7.08697 26.2665C7.13488 26.2839 7.17627 26.3157 7.20551 26.3575C7.23476 26.3992 7.25044 26.449 7.25044 26.5C7.25044 26.551 7.23476 26.6007 7.20551 26.6425C7.17627 26.6843 7.13488 26.716 7.08697 26.7335L4.99447 27.495L4.23347 29.587C4.21602 29.6349 4.18426 29.6763 4.14249 29.7055C4.10072 29.7348 4.05096 29.7504 3.99997 29.7504C3.94898 29.7504 3.89922 29.7348 3.85745 29.7055C3.81568 29.6763 3.78392 29.6349 3.76647 29.587L3.00497 27.4945L0.913471 26.7335C0.865558 26.716 0.824173 26.6843 0.794929 26.6425C0.765686 26.6007 0.75 26.551 0.75 26.5C0.75 26.449 0.765686 26.3992 0.794929 26.3575C0.824173 26.3157 0.865558 26.2839 0.913471 26.2665Z"
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                 fill="#CBA328" /></g><g clip-path="url(#clip3_707_5176)"> <path d="M18.8545 30.7999L20.6476 30.1472L21.2999 28.3545C21.3149 28.3134 21.3421 28.2779 21.3779 28.2529C21.4137 28.2278 21.4563 28.2144 21.5 28.2144C21.5438 28.2144 21.5864 28.2278 21.6222 28.2529C21.658 28.2779 21.6852 28.3134 21.7002 28.3545L22.3529 30.1476L24.146 30.7999C24.1871 30.8149 24.2226 30.8421 24.2477 30.8779C24.2727 30.9137 24.2862 30.9563 24.2862 31C24.2862 31.0438 24.2727 31.0864 24.2477 31.1222C24.2226 31.158 24.1871 31.1852 24.146 31.2002L22.3525 31.8529L21.7002 33.646C21.6852 33.6871 21.658 33.7226 21.6222 33.7477C21.5864 33.7727 21.5438 33.7862 21.5 33.7862C21.4563 33.7862 21.4137 33.7727 21.3779 33.7477C21.3421 33.7226 21.3149 33.6871 21.2999 33.646L20.6472 31.8525L18.8545 31.2002C18.8134 31.1852 18.7779 31.158 18.7529 31.1222C18.7278 31.0864 18.7144 31.0438 18.7144 31C18.7144 30.9563 18.7278 30.9137 18.7529 30.8779C18.7779 30.8421 18.8134 30.8149 18.8545 30.7999Z" fill="#CBA328" /></g> <defs><clipPath id="clip0_707_5176"><rect width="25" height="25" fill="white" transform="translate(1.5 4.76978)" /></clipPath><clipPath id="clip1_707_5176"> <rect width="12" height="12" fill="white" transform="translate(18.5 0.511719)" /></clipPath><clipPath id="clip2_707_5176"><rect width="7" height="7" fill="white" transform="translate(0.5 23)" /></clipPath><clipPath id="clip3_707_5176"><rect width="6" height="6" fill="white" transform="translate(18.5 28)" /></clipPath></defs></svg>',
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                     fill="#CBA328" /></g><g clip-path="url(#clip3_707_5176)"> <path d="M18.8545 30.7999L20.6476 30.1472L21.2999 28.3545C21.3149 28.3134 21.3421 28.2779 21.3779 28.2529C21.4137 28.2278 21.4563 28.2144 21.5 28.2144C21.5438 28.2144 21.5864 28.2278 21.6222 28.2529C21.658 28.2779 21.6852 28.3134 21.7002 28.3545L22.3529 30.1476L24.146 30.7999C24.1871 30.8149 24.2226 30.8421 24.2477 30.8779C24.2727 30.9137 24.2862 30.9563 24.2862 31C24.2862 31.0438 24.2727 31.0864 24.2477 31.1222C24.2226 31.158 24.1871 31.1852 24.146 31.2002L22.3525 31.8529L21.7002 33.646C21.6852 33.6871 21.658 33.7226 21.6222 33.7477C21.5864 33.7727 21.5438 33.7862 21.5 33.7862C21.4563 33.7862 21.4137 33.7727 21.3779 33.7477C21.3421 33.7226 21.3149 33.6871 21.2999 33.646L20.6472 31.8525L18.8545 31.2002C18.8134 31.1852 18.7779 31.158 18.7529 31.1222C18.7278 31.0864 18.7144 31.0438 18.7144 31C18.7144 30.9563 18.7278 30.9137 18.7529 30.8779C18.7779 30.8421 18.8134 30.8149 18.8545 30.7999Z" fill="#CBA328" /></g> <defs><clipPath id="clip0_707_5176"><rect width="25" height="25" fill="white" transform="translate(1.5 4.76978)" /></clipPath><clipPath id="clip1_707_5176"> <rect width="12" height="12" fill="white" transform="translate(18.5 0.511719)" /></clipPath><clipPath id="clip2_707_5176"><rect width="7" height="7" fill="white" transform="translate(0.5 23)" /></clipPath><clipPath id="clip3_707_5176"><rect width="6" height="6" fill="white" transform="translate(18.5 28)" /></clipPath></defs></svg>',
             'features' => [
                 'extra' => 'Everything in the Premium Package, plus:',
                 'exterior' => [
@@ -180,8 +180,7 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 @foreach ($plans as $plan)
                     <div class="pricing-card flex flex-col justify-between p-[30px] rounded-[20px] text-white"
-                        style="background-color: {{ $plan['color'] }}"
-                        data-plan-name="{{ $plan['name'] }}"
+                        style="background-color: {{ $plan['color'] }}" data-plan-name="{{ $plan['name'] }}"
                         data-plan-price-single="{{ $plan['price_single'] }}"
                         data-plan-price-monthly="{{ $plan['price_monthly'] }}">
                         {{-- Header --}}
@@ -249,8 +248,7 @@
                         <div class="pricing-card-footer mt-4">
                             <button
                                 class="pricing-plan-btn text-[#230C0F] text-base font-bold rounded-[60px] px-5 py-3.5 text-center flex items-center justify-center gap-3 cursor-pointer w-full bg-white"
-                                data-plan-name="{{ $plan['name'] }}"
-                                data-plan-price-single="{{ $plan['price_single'] }}"
+                                data-plan-name="{{ $plan['name'] }}" data-plan-price-single="{{ $plan['price_single'] }}"
                                 data-plan-price-monthly="{{ $plan['price_monthly'] }}">
                                 <span>{{ $plan['buttonText'] }}</span>
                                 <svg width="8" height="12" viewBox="0 0 8 12" fill="none"
@@ -365,11 +363,14 @@
                                 class="block w-full rounded-lg border border-[#AEAEB2] h-12 focus:outline-none focus:border-[var(--color-brand)] px-4">
                                 <option value="">Select a package</option>
                                 <option value="Basic Treatment - €79,95">Basic Treatment - €79,95</option>
-                                <option value="Basic Treatment Monthly - €74,45">Basic Treatment Monthly - €74,45</option>
+                                <option value="Basic Treatment Monthly - €74,45">Basic Treatment Monthly - €74,45
+                                </option>
                                 <option value="Premium Treatment - €149,95">Premium Treatment - €149,95</option>
-                                <option value="Premium Treatment Monthly - €144,45">Premium Treatment Monthly - €144,45</option>
+                                <option value="Premium Treatment Monthly - €144,45">Premium Treatment Monthly - €144,45
+                                </option>
                                 <option value="Full Detail Treatment - €289,95">Full Detail Treatment - €289,95</option>
-                                <option value="Full Detail Treatment Monthly - €249,45">Full Detail Treatment Monthly - €249,45</option>
+                                <option value="Full Detail Treatment Monthly - €249,45">Full Detail Treatment Monthly -
+                                    €249,45</option>
                             </select>
                             <input type="hidden" name="package_name" id="package_name">
                             <input type="hidden" name="package_price" id="package_price">
@@ -390,9 +391,13 @@
                         class="px-4 py-3 bg-[var(--color-brand)] text-base text-white font-medium tracking-[0.02px] rounded-[60px] w-[135px] flex justify-center items-center cursor-pointer">
                         <span class="btn-text">Book Now 3</span>
                         <span class="btn-spinner hidden">
-                            <svg class="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-                                <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                            <svg class="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                viewBox="0 0 24 24">
+                                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor"
+                                    stroke-width="4"></circle>
+                                <path class="opacity-75" fill="currentColor"
+                                    d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z">
+                                </path>
                             </svg>
                         </span>
                     </button>
@@ -407,10 +412,10 @@
     function openModal(planName = null, priceSingle = null, priceMonthly = null) {
         const modal = document.querySelector('#pricingModal');
         const packageSelect = document.querySelector('#packageSelect');
-        console.log({packageSelect})
+        console.log({ packageSelect })
         // If plan information is provided, pre-select the package
         if (planName && packageSelect) {
-            console.log({planName, packageSelect})
+            console.log({ planName, packageSelect })
             // Get current pricing mode (single or monthly)
             const isPricingMonthly = document.querySelector('.pricing-opt.bg-white')?.textContent.trim().toLowerCase() === 'monthly';
             const price = isPricingMonthly ? priceMonthly : priceSingle;
@@ -444,11 +449,11 @@
     }
 
     // Close modal when clicking outside of it
-    document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', function () {
         // Handle pricing plan button clicks
         const pricingPlanButtons = document.querySelectorAll('.pricing-plan-btn');
         pricingPlanButtons.forEach(button => {
-            button.addEventListener('click', function(e) {
+            button.addEventListener('click', function (e) {
                 e.preventDefault();
                 const planName = this.dataset.planName;
                 const priceSingle = this.dataset.planPriceSingle;
@@ -464,7 +469,7 @@
             }
         });
 
-        document.querySelector('.close-modal-2')?.addEventListener('click', function(e) {
+        document.querySelector('.close-modal-2')?.addEventListener('click', function (e) {
             e.preventDefault();
             closeModal();
         });
@@ -515,7 +520,7 @@
         // Handle package select change to extract name and price
         const packageSelect = document.querySelector('#packageSelect');
         if (packageSelect) {
-            packageSelect.addEventListener('change', function() {
+            packageSelect.addEventListener('change', function () {
                 const selectedValue = this.value;
                 if (selectedValue) {
                     // Split "Package Name - €Price"
@@ -531,80 +536,80 @@
 </script>
 
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-    const bookingForm = document.getElementById('bookingForm');
-    if (bookingForm) {
-        bookingForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            console.log('bookingForm submission started.');
+    document.addEventListener('DOMContentLoaded', function () {
+        const bookingForm = document.getElementById('bookingForm');
+        if (bookingForm) {
+            bookingForm.addEventListener('submit', function (e) {
+                e.preventDefault();
+                console.log('bookingForm submission started.');
 
-            const form = this;
-            const formData = new FormData(form);
-            const submitBtn = form.querySelector('#bookNowBtn');
-            const btnText = submitBtn.querySelector('.btn-text');
-            const spinner = submitBtn.querySelector('.btn-spinner');
+                const form = this;
+                const formData = new FormData(form);
+                const submitBtn = form.querySelector('#bookNowBtn');
+                const btnText = submitBtn.querySelector('.btn-text');
+                const spinner = submitBtn.querySelector('.btn-spinner');
 
-            // Disable button and show spinner
-            if(submitBtn) {
-                submitBtn.disabled = true;
-            }
-            if(btnText) {
-                btnText.classList.add('hidden');
-            }
-            if(spinner) {
-                spinner.classList.remove('hidden');
-            }
-
-            fetch(form.action, {
-                method: 'POST',
-                body: formData,
-                headers: {
-                    'X-Requested-With': 'XMLHttpRequest',
-                    'X-CSRF-TOKEN': document.querySelector('input[name="_token"]').value
+                // Disable button and show spinner
+                if (submitBtn) {
+                    submitBtn.disabled = true;
                 }
-            })
-            .then(response => response.json())
-            .then(data => {
-                console.log('Response data:', data);
-                const formMessage = form.querySelector('#formMessage');
-                if (data.success) {
-                    form.reset();
-                    if(formMessage) {
-                        formMessage.innerHTML = `<div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded-lg mb-4">${data.message}</div>`;
-                        formMessage.classList.remove('hidden');
+                if (btnText) {
+                    btnText.classList.add('hidden');
+                }
+                if (spinner) {
+                    spinner.classList.remove('hidden');
+                }
+
+                fetch(form.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'X-Requested-With': 'XMLHttpRequest',
+                        'X-CSRF-TOKEN': document.querySelector('input[name="_token"]').value
                     }
-                    setTimeout(() => {
-                        closeModal();
-                    }, 4000);
-                } else {
-                    if(formMessage) {
-                        formMessage.innerHTML = `<div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded-lg mb-4">${data.message}</div>`;
-                        formMessage.classList.remove('hidden');
-                    }
-                }
-            })
-            .catch(error => {
-                console.error('Error during form submission:', error);
-                const formMessage = form.querySelector('#formMessage');
-                if(formMessage) {
-                    formMessage.innerHTML = `<div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded-lg mb-4">An unexpected error occurred. Please try again.</div>`;
-                    formMessage.classList.remove('hidden');
-                }
-            })
-            .finally(() => {
-                console.log('Form submission finished.');
-                // Re-enable button and hide spinner
-                if(submitBtn) {
-                    submitBtn.disabled = false;
-                }
-                if(btnText) {
-                    btnText.classList.remove('hidden');
-                }
-                if(spinner) {
-                    spinner.classList.add('hidden');
-                }
+                })
+                    .then(response => response.json())
+                    .then(data => {
+                        console.log('Response data:', data);
+                        const formMessage = form.querySelector('#formMessage');
+                        if (data.success) {
+                            form.reset();
+                            if (formMessage) {
+                                formMessage.innerHTML = `<div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded-lg mb-4">${data.message}</div>`;
+                                formMessage.classList.remove('hidden');
+                            }
+                            setTimeout(() => {
+                                closeModal();
+                            }, 4000);
+                        } else {
+                            if (formMessage) {
+                                formMessage.innerHTML = `<div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded-lg mb-4">${data.message}</div>`;
+                                formMessage.classList.remove('hidden');
+                            }
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error during form submission:', error);
+                        const formMessage = form.querySelector('#formMessage');
+                        if (formMessage) {
+                            formMessage.innerHTML = `<div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded-lg mb-4">An unexpected error occurred. Please try again.</div>`;
+                            formMessage.classList.remove('hidden');
+                        }
+                    })
+                    .finally(() => {
+                        console.log('Form submission finished.');
+                        // Re-enable button and hide spinner
+                        if (submitBtn) {
+                            submitBtn.disabled = false;
+                        }
+                        if (btnText) {
+                            btnText.classList.remove('hidden');
+                        }
+                        if (spinner) {
+                            spinner.classList.add('hidden');
+                        }
+                    });
             });
-        });
-    }
-});
+        }
+    });
 </script>
