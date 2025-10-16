@@ -5,6 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('title', 'Admin Panel') - ECD Admin</title>
+    @php
+        $faviconPath = App\Models\Setting::get('favicon_path');
+    @endphp
+    @if ($faviconPath)
+        <link rel="icon" href="{{ asset($faviconPath) }}">
+    @endif
     @vite('resources/css/app.css')
     <link rel="stylesheet" href="{{ asset('assets/css/admin-animations.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/admin-professional.css') }}">

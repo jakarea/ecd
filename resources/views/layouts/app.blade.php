@@ -5,6 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    @php
+        $faviconPath = App\Models\Setting::get('favicon_path');
+    @endphp
+    @if ($faviconPath)
+        <link rel="icon" href="{{ asset($faviconPath) }}">
+    @endif
+
     {{-- Dynamic SEO Meta Tags --}}
     @if(isset($seoMeta) && $seoMeta)
         {{-- Basic Meta Tags --}}
