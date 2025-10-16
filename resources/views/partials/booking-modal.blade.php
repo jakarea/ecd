@@ -32,6 +32,7 @@
 
         <form action="{{ route('booking.store') }}" method="POST" id="heroBookingForm">
             @csrf
+            <h1>Hello heroModal 1</h1>
             <div class="flex items-center gap-4 px-5 py-5 border border-[#C8CEDD] rounded-[16px] mb-6">
                 <div class="w-[50px] h-[50px] rounded-[16px] bg-[#E7F1FF] flex items-center justify-center flex-shrink-0">
                     <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -40,7 +41,7 @@
                 </div>
                 <div class="space-y-2">
                     <h4 class="text-[20px] md:text-[24px] font-bold text-[var(--color-heading)] leading-[1.4]">Book your service</h4>
-                    <p class="text-[14px] md:text-[16px] font-medium text-[var(--color-text)] leading-[1.4] font-sf">
+                    <p class="text-[14px] md:text-[16px] font-medium text-[var(--color-text)] leading-[1.4] font-sans">
                         For your service, share your details, and we'll take care of the rest.
                     </p>
                 </div>
@@ -101,7 +102,7 @@
                 </button>
                 <button type="submit" id="bookNowBtn"
                     class="px-4 py-3 bg-[var(--color-brand)] text-sm md:text-base text-white font-medium tracking-[0.02px] rounded-[60px] w-[120px] md:w-[135px] flex justify-center items-center cursor-pointer">
-                    <span class="btn-text">Book Now 1</span>
+                    <span class="btn-text bg-[var(--color-brand)]">Book Now 1</span>
                     <span class="spinner hidden"></span>
                 </button>
             </div>

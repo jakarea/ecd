@@ -152,8 +152,15 @@
                 </nav>
             </div>
         @endif
+        @php
+            if (Request::is('about')) {
+                $hero_shape = 'hero_shape_white_inner_page.png';
+            } else {
+                $hero_shape = 'hero_shape_inner_page.png';
+            }
+        @endphp
         <div class="w-full absolute -bottom-[5px] top-0 left-0 right-0 z-[20]">
-            <img src="{{ asset('assets/img/hero_shape_inner_page.png') }}" alt="Hero Shape"
+            <img src="{{ asset('assets/img/'.$hero_shape) }}" alt="Hero Shape"
                 class="w-full h-full object-cover object-bottom">
         </div>
     </section>

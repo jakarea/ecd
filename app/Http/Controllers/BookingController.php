@@ -35,9 +35,12 @@ class BookingController extends Controller
             'first_name' => 'required|string|max:255',
             'last_name' => 'required|string|max:255',
             'address' => 'required|string',
-            'package_name' => 'required|string',
-            'package_price' => 'required|string',
+            'number_of_cars' => 'required|integer',
+            'licence_plate' => 'required|string|max:255',
+            'whatsapp' => 'required|string|max:255',
             'preferred_date' => 'required|date|after:today',
+            'package_name' => 'nullable|string|max:255',
+            'package_price' => 'nullable|string|max:255',
         ]);
 
         // Add IP and User Agent for security
