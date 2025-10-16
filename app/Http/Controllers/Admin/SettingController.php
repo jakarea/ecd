@@ -36,7 +36,20 @@ class SettingController extends Controller
             'twitter_url' => 'nullable|url|max:255',
             'instagram_url' => 'nullable|url|max:255',
             'youtube_url' => 'nullable|url|max:255',
+            'favicon_path' => 'nullable|image|mimes:ico,png,svg|max:2048',
         ]);
+
+        // Favicon handling logic
+        if ($request->hasFile('favicon_path')) {
+            $path = $request->file('favicon_path')->store('favicons', 'public');
+            Setting::set('favicon_path', 'storage/' . $path, 'general', 'Website favicon path');
+        } else if ($request->input('favicon_path_clear')) {
+            // If a hidden field indicates to clear the favicon
+            Setting::set('favicon_path', null, 'general', 'Website favicon path');
+        } else if ($request->input('existing_favicon_path')) {
+            // If there's an existing favicon and no new one is uploaded, keep the old one
+            Setting::set('favicon_path', $request->input('existing_favicon_path'), 'general', 'Website favicon path');
+        }
 
         // Facebook Pixel settings
         Setting::set(
