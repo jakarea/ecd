@@ -101,7 +101,7 @@
 
 
 
-<section class="bg-[var(--color-black)] py-25 relative" id="pricing">
+<section class="bg-gray-900 py-20 sm:py-32 relative" id="pricing">
     <div class="container">
         <div class="flex flex-wrap items-center justify-between gap-4 mb-[60px]">
             <div class="max-w-[664px]">
@@ -287,7 +287,7 @@
                             </svg>
                             <div class="flex flex-col gap-1">
                                 <div class="text-[16px] font-bold text-white">{{ $option['title'] }}</div>
-                                <span class="text-[14px] font-medium text-white font-sf">{{ $option['description'] }}</span>
+                                <span class="text-[14px] font-medium text-white font-sans">{{ $option['description'] }}</span>
                             </div>
                         </div>
                     @endforeach
@@ -301,23 +301,27 @@
 {{-- Booking Form Modal --}}
 <div class="modal" id="pricingModal">
     <div class="modal-content relative h-[calc(100vh-50px)] w-full max-w-[751px]">
-        <form id="bookingForm" class="h-full" method="POST" action="{{ route('booking.store') }}">
+        <form id="pricingBookingForm" class="h-full" method="POST" action="{{ route('booking.store') }}">
             @csrf
+
+            <!-- Close Button -->
             <div class="close-modal-2 bg-white w-[28px] h-[28px] rounded-full flex items-center justify-center absolute top-[-14px] right-[-14px] cursor-pointer"
                 onClick="closeModal()">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                     <path fill="#EA6216"
                         d="M20.48 3.512a11.97 11.97 0 0 0-8.486-3.514C5.366-.002-.007 5.371-.007 11.999c0 3.314 1.344 6.315 3.516 8.487A11.97 11.97 0 0 0 11.995 24c6.628 0 12.001-5.373 12.001-12.001c0-3.314-1.344-6.315-3.516-8.487m-1.542 15.427a9.8 9.8 0 0 1-6.943 2.876c-5.423 0-9.819-4.396-9.819-9.819a9.8 9.8 0 0 1 2.876-6.943a9.8 9.8 0 0 1 6.942-2.876c5.422 0 9.818 4.396 9.818 9.818a9.8 9.8 0 0 1-2.876 6.942z" />
                     <path fill="#EA6216"
-                        d="m13.537 12l3.855-3.855a1.091 1.091 0 0 0-1.542-1.541l.001-.001l-3.855 3.855l-3.855-3.855A1.091 1.091 0 0 0 6.6 8.145l-.001-.001l3.855 3.855l-3.855 3.855a1.091 1.091 0 1 0 1.541 1.542l.001-.001l3.855-3.855l3.855 3.855a1.091 1.091 0 1 0 1.542-1.541l-.001-.001z" />
+                        d="m13.537 12l3.855-3.855a1.091 1.091 0 0 0-1.542-1.541l-.001-.001-3.855 3.855-3.855-3.855A1.091 1.091 0 0 0 6.6 8.145l-.001-.001 3.855 3.855-3.855 3.855a1.091 1.091 0 1 0 1.541 1.542l.001-.001 3.855-3.855 3.855 3.855a1.091 1.091 0 1 0 1.542-1.541l-.001-.001z" />
                 </svg>
             </div>
 
             <div class="h-full flex flex-col justify-between overflow-y-auto">
-                <div class="">
-                    <!-- Success/Error Messages -->
-                    <div id="formMessage" class="hidden mb-4 p-4 rounded-lg"></div>
-                    <div class="flex items-center gap-4 px-5 py-5 border border-[#C8CEDD] rounded-[16px]">
+
+                <!-- Success/Error Message -->
+                <div id="formMessage" class="hidden mb-4 p-4 rounded-lg"></div>
+
+                <!-- Header -->
+                <div class="flex items-center gap-4 px-5 py-5 border border-[#C8CEDD] rounded-[16px]">
                         <div class="w-[50px] h-[50px] rounded-[16px] bg-[#E7F1FF] flex items-center justify-center">
                             <svg width="26" height="26" viewBox="0 0 26 26" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -331,65 +335,90 @@
                             <h4 class="text-[24px] font-bold text-[var(--color-heading)] leading-[1.4]">Book your
                                 service
                             </h4>
-                            <p class="text-[16px] font-medium text-[var(--color-text)] leading-[1.4] font-sf">For your
+                            <p class="text-[16px] font-medium text-[var(--color-text)] leading-[1.4] font-sans">For your
                                 service,
                                 share your details,
                                 and we'll take care of the rest.</p>
                         </div>
                     </div>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
-                        <div class="">
-                            <label class="block text-base font-medium text-[var(--color-text)] mb-2">First Name</label>
-                            <input type="text" name="first_name" id="first_name" required
-                                class="block w-full rounded-lg border border-[#AEAEB2] h-12 focus:outline-none focus:border-[var(--color-brand)] px-4"
-                                placeholder="Enter first name">
-                        </div>
-                        <div class="">
-                            <label class="block text-base font-medium text-[var(--color-text)] mb-2">Last Name</label>
-                            <input type="text" name="last_name" id="last_name" required
-                                class="block w-full rounded-lg border border-[#AEAEB2] h-12 focus:outline-none focus:border-[var(--color-brand)] px-4"
-                                placeholder="Enter last name">
-                        </div>
-                        <div class="col-span-2">
-                            <label class="block text-base font-medium text-[var(--color-text)] mb-2">Address</label>
-                            <textarea name="address" id="address" required
-                                class="block w-full rounded-lg border border-[#AEAEB2] h-24 px-4 py-2"
-                                placeholder="Your address"></textarea>
-                        </div>
-                        <div class="">
-                            <label class="block text-base font-medium text-[var(--color-text)] mb-2">Package
-                                Choice</label>
-                            <select id="packageSelect" name="package" required
-                                class="block w-full rounded-lg border border-[#AEAEB2] h-12 focus:outline-none focus:border-[var(--color-brand)] px-4">
-                                <option value="">Select a package</option>
-                                <option value="Basic Treatment - €79,95">Basic Treatment - €79,95</option>
-                                <option value="Basic Treatment Monthly - €74,45">Basic Treatment Monthly - €74,45
-                                </option>
-                                <option value="Premium Treatment - €149,95">Premium Treatment - €149,95</option>
-                                <option value="Premium Treatment Monthly - €144,45">Premium Treatment Monthly - €144,45
-                                </option>
-                                <option value="Full Detail Treatment - €289,95">Full Detail Treatment - €289,95</option>
-                                <option value="Full Detail Treatment Monthly - €249,45">Full Detail Treatment Monthly -
-                                    €249,45</option>
-                            </select>
-                            <input type="hidden" name="package_name" id="package_name">
-                            <input type="hidden" name="package_price" id="package_price">
-                        </div>
-                        <div class="">
-                            <label class="block text-base font-medium text-[var(--color-text)] mb-2">Preferred
-                                Date</label>
-                            <input type="date" name="preferred_date" id="preferred_date" required
-                                class="block w-full rounded-lg border border-[#AEAEB2] h-12 focus:outline-none focus:border-[var(--color-brand)] px-4">
-                        </div>
+
+                <!-- Form Fields -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+                    <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">First Name</label>
+                    <input type="text" name="first_name" id="first_name" required
+                        class="block w-full rounded-lg border border-gray-300 h-12 focus:outline-none focus:ring-[var(--color-brand)] focus:ring-[var(--color-brand)] focus:border-[var(--color-brand)] px-4"
+                        placeholder="Enter first name">
+                </div>
+
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Last Name</label>
+                    <input type="text" name="last_name" id="last_name" required
+                        class="block w-full rounded-lg border border-gray-300 h-12 focus:outline-none focus:ring-[var(--color-brand)] focus:ring-[var(--color-brand)] focus:border-[var(--color-brand)] px-4"
+                        placeholder="Enter last name">
+                </div>
+
+
+                    <div class="col-span-2">
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Address</label>
+                        <textarea name="address" id="address" required
+                            class="block w-full px-4 py-3 text-base text-gray-900 placeholder-gray-500 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-[var(--color-brand)] focus:ring-offset-2 focus:border-[var(--color-brand)]"
+                            rows="3" placeholder="Your address"></textarea>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Number of Cars</label>
+                        <input type="number" name="number_of_cars" id="number_of_cars" required
+                            class="block w-full px-4 py-3 text-base text-gray-900 placeholder-gray-500 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-[var(--color-brand)] focus:ring-offset-2 focus:border-[var(--color-brand)]"
+                            placeholder="Enter number of cars">
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Licence Plate</label>
+                        <input type="text" name="licence_plate" id="licence_plate" required
+                            class="block w-full px-4 py-3 text-base text-gray-900 placeholder-gray-500 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-[var(--color-brand)] focus:ring-offset-2 focus:border-[var(--color-brand)]"
+                            placeholder="Enter licence plate">
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">WhatsApp Number</label>
+                        <input type="text" name="whatsapp" id="whatsapp" required
+                            class="block w-full px-4 py-3 text-base text-gray-900 placeholder-gray-500 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-[var(--color-brand)] focus:ring-offset-2 focus:border-[var(--color-brand)]"
+                            placeholder="Enter WhatsApp number">
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Package Choice</label>
+                        <select id="packageSelect" name="package" required
+                            class="block w-full px-4 py-3 text-base text-gray-900 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-[var(--color-brand)] focus:ring-offset-2 focus:border-[var(--color-brand)]">
+                            <option value="">Select a package</option>
+                            <option value="Basic Treatment - €79,95">Basic Treatment - €79,95</option>
+                            <option value="Basic Treatment Monthly - €74,45">Basic Treatment Monthly - €74,45</option>
+                            <option value="Premium Treatment - €149,95">Premium Treatment - €149,95</option>
+                            <option value="Premium Treatment Monthly - €144,45">Premium Treatment Monthly - €144,45</option>
+                            <option value="Full Detail Treatment - €289,95">Full Detail Treatment - €289,95</option>
+                            <option value="Full Detail Treatment Monthly - €249,45">Full Detail Treatment Monthly - €249,45</option>
+                        </select>
+                        <input type="hidden" name="package_name" id="package_name">
+                        <input type="hidden" name="package_price" id="package_price">
+                    </div>
+
+                    <div>
+                        <label class="block text-base font-medium text-[var(--color-text)] mb-2">Preferred Date</label>
+                        <input type="date" name="preferred_date" id="preferred_date" required
+                            class="block w-full px-4 py-3 text-base text-gray-900 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-[var(--color-brand)] focus:ring-offset-2 focus:border-[var(--color-brand)]">
                     </div>
                 </div>
+
+                <!-- Buttons -->
                 <div class="flex justify-end gap-3 mt-6">
                     <button type="button"
-                        class="px-4 py-3 bg-[#F2F2F7] text-base text-[var(--color-text)] font-medium tracking-[0.02px] rounded-[60px] w-[110px] flex justify-center items-center cursor-pointer"
+                        class="inline-flex justify-center px-4 py-3 text-base font-medium text-gray-700 bg-gray-200 border border-transparent rounded-md shadow-sm hover:bg-gray-300 focus:outline-none focus:ring-[var(--color-brand)] focus:ring-offset-2 focus:border-[var(--color-brand)]"
                         onclick="closeModal()">Cancel</button>
+
                     <button type="submit" id="bookNowBtn"
-                        class="px-4 py-3 bg-[var(--color-brand)] text-base text-white font-medium tracking-[0.02px] rounded-[60px] w-[135px] flex justify-center items-center cursor-pointer">
-                        <span class="btn-text">Book Now 3</span>
+                        class="inline-flex justify-center px-4 py-3 text-base font-medium text-white bg-[var(--color-brand)] border border-transparent rounded-md shadow-sm hover:bg-[var(--color-brand)] focus:outline-none focus:ring-[var(--color-brand)] focus:ring-offset-2 focus:border-[var(--color-brand)]">
+                        <span class="btn-text">Book Now</span>
                         <span class="btn-spinner hidden">
                             <svg class="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none"
                                 viewBox="0 0 24 24">
@@ -402,10 +431,12 @@
                         </span>
                     </button>
                 </div>
+
             </div>
         </form>
     </div>
 </div>
+
 
 
 <script>
@@ -537,7 +568,7 @@
 
 <script>
     document.addEventListener('DOMContentLoaded', function () {
-        const bookingForm = document.getElementById('bookingForm');
+        const bookingForm = document.getElementById('pricingBookingForm');
         if (bookingForm) {
             bookingForm.addEventListener('submit', function (e) {
                 e.preventDefault();
