@@ -37,7 +37,18 @@ class SettingController extends Controller
             'instagram_url' => 'nullable|url|max:255',
             'youtube_url' => 'nullable|url|max:255',
             'favicon_path' => 'nullable|image|mimes:ico,png,svg|max:2048',
+            'logo' => 'nullable|image|mimes:png,jpg,jpeg,svg|max:2048',
         ]);
+
+        // Logo handling logic
+        if ($request->hasFile('logo')) {
+            $path = $request->file('logo')->store('logos', 'public');
+            Setting::set('logo', 'storage/' . $path, 'general', 'Website logo');
+        } else if ($request->input('logo_clear')) {
+            Setting::set('logo', null, 'general', 'Website logo');
+        } else if ($request->input('existing_logo')) {
+            Setting::set('logo', $request->input('existing_logo'), 'general', 'Website logo');
+        }
 
         // Favicon handling logic
         if ($request->hasFile('favicon_path')) {

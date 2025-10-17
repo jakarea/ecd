@@ -56,6 +56,33 @@
                         </div>
                     @endif
                 </div>
+
+                <div class="mb-6">
+                    <label for="logo" class="block text-sm font-medium text-gray-700 mb-2">
+                        Logo
+                    </label>
+                    <input type="file" name="logo" id="logo" accept="image/*"
+                        class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-purple-500 focus:border-transparent @error('logo') border-red-500 @enderror">
+                    <p class="text-xs text-gray-500 mt-1">Upload a .png, .jpg, .jpeg, or .svg file for your logo.</p>
+                    @error('logo')
+                        <p class="text-red-500 text-sm mt-1">{{ $message }}</p>
+                    @enderror
+
+                    @if ($generalSettings->get('logo')->value ?? false)
+                        <div class="mt-4 flex items-center gap-4">
+                            <div>
+                                <p class="block text-sm font-medium text-gray-700 mb-2">Current Logo:</p>
+                                <img src="{{ asset($generalSettings->get('logo')->value) }}" alt="Logo"
+                                    class="w-32 h-auto object-contain border border-gray-200 p-2 rounded-md">
+                            </div>
+                            <label class="flex items-center cursor-pointer">
+                                <input type="checkbox" name="logo_clear" value="1" class="mr-2">
+                                <span class="text-sm font-medium text-gray-700">Clear Logo</span>
+                            </label>
+                            <input type="hidden" name="existing_logo" value="{{ $generalSettings->get('logo')->value }}">
+                        </div>
+                    @endif
+                </div>
             </div>
 
             {{-- Social Media & Contact Settings --}}

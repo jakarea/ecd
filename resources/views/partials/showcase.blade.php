@@ -212,6 +212,38 @@
         </div>
         <div class="slider-controls"></div>
     </div>
+
+    {{-- Mobile Only Showcase --}}
+    <div class="mobile-showcase hidden">
+        <div class="showcase-card">
+            <div class="slider-container relative w-full h-full overflow-hidden rounded-[15px]">
+                <img src="{{ asset('assets/img/gallery3.webp') }}" alt="Before Image 3"
+                    class="before-image absolute inset-0 w-full h-full object-cover" />
+                <img src="{{ asset('assets/img/gallery4.webp') }}" alt="After Image 3"
+                    class="after-image absolute inset-0 w-full h-full object-cover" />
+                <span class="slider-line absolute top-0 bottom-0 w-[2px] bg-[var(--color-brand)] left-1/2"></span>
+                <button
+                    class="slider-handle absolute top-1/2 left-1/2 w-[55px] h-[55px] bg-[var(--color-brand)] border-2 border-[var(--color-brand)] rounded-full cursor-pointer transform -translate-x-1/2 -translate-y-1/2 shadow-md flex justify-center items-center gap-1.5">
+                    <svg width="12" height="9" viewBox="0 0 14 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5.50072 10.2778L1.06348 5.84053L5.50072 1.40329" stroke="white"
+                            stroke-width="1.11598" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M1.06348 5.84039L12.7684 5.84039" stroke="white" stroke-width="1.11598"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    <svg width="2" height="10" viewBox="0 0 2 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <line x1="0.782561" y1="0.910613" x2="0.782561" y2="10.0397" stroke="white"
+                            stroke-width="1.01434" stroke-linecap="round" />
+                    </svg>
+                    <svg width="12" height="9" viewBox="0 0 14 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.05006 10.278L12.4873 5.84071L8.05006 1.40347" stroke="white"
+                            stroke-width="1.11598" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M12.4873 5.84058L0.782391 5.84058" stroke="white" stroke-width="1.11598"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
 </section>
 
 
@@ -222,139 +254,159 @@
 
 <script>
     $(document).ready(function () {
-        var sliderInstance = $('#showcase-slider').slick({
-            slidesToShow: 3,
-            slidesToScroll: 1,
-            centerMode: true,
-            arrows: true,
-            dots: true,
-            speed: 300,
-            centerPadding: '20px',
-            infinite: true,
-            autoplaySpeed: 2000,
-            draggable: false,
-            swipe: false,
-            touchMove: false,
-            autoplay: true,
-            appendArrows: $('.slider-controls'),
-            appendDots: $('.slider-controls'),
+        if (window.innerWidth > 767) {
+            var sliderInstance = $('#showcase-slider').slick({
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                centerMode: true,
+                arrows: true,
+                dots: true,
+                speed: 300,
+                centerPadding: '20px',
+                infinite: true,
+                autoplaySpeed: 2000,
+                draggable: false,
+                swipe: false,
+                touchMove: false,
+                autoplay: true,
+                appendArrows: $('.slider-controls'),
+                appendDots: $('.slider-controls'),
 
-            prevArrow: `<button type="button" class="slick-prev custom-arrow">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M15 18L9 12L15 6" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-            </button>`,
-            nextArrow: `<button type="button" class="slick-next custom-arrow">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M9 6L15 12L9 18" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-            </button>`,
+                prevArrow: `<button type="button" class="slick-prev custom-arrow">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15 18L9 12L15 6" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>`,
+                nextArrow: `<button type="button" class="slick-next custom-arrow">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9 6L15 12L9 18" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>`,
 
-            responsive: [{
-                breakpoint: 1024,
-                settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 1,
-                    infinite: true,
-                    dots: true
-                }
-            },
-            {
-                breakpoint: 768,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 1,
-                    centerMode: false,
-                }
-            },
-            {
-                breakpoint: 600,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    centerMode: false,
-                }
-            },
+                responsive: [{
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 1,
+                        infinite: true,
+                        dots: true
+                    }
+                },
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1,
+                        centerMode: false,
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        centerMode: false,
+                    }
+                },
 
-            ]
-        });
-
-        // Pause autoplay when hovering over center slide
-        $('#showcase-slider').on('mouseenter', '.slick-center .showcase-card', function() {
-            sliderInstance.slick('slickPause');
-        });
-
-        // Resume autoplay when mouse leaves center slide
-        $('#showcase-slider').on('mouseleave', '.slick-center .showcase-card', function() {
-            sliderInstance.slick('slickPlay');
-        });
-
-        // Function to update slide images based on position
-        function updateSlideImages() {
-            const $slides = $('#showcase-slider .slick-slide');
-            const $centerSlide = $('#showcase-slider .slick-center');
-
-            if ($centerSlide.length === 0) return;
-
-            const centerIndex = $centerSlide.index();
-
-            $slides.each(function(index) {
-                const $slide = $(this);
-                const $beforeImg = $slide.find('.before-image');
-                const $afterImg = $slide.find('.after-image');
-
-                // Skip cloned slides
-                if ($slide.hasClass('slick-cloned')) return;
-
-                const slideIndex = $slide.attr('data-slick-index');
-
-                if ($slide.hasClass('slick-center')) {
-                    // Center slide: show 50/50 comparison with both images visible
-                    $beforeImg.css({
-                        'clip-path': 'inset(0 50% 0 0)',
-                        'opacity': '1'
-                    });
-                    $afterImg.css({
-                        'clip-path': 'inset(0 0 0 50%)',
-                        'opacity': '1'
-                    });
-
-                    // Reset handle and line to center position
-                    const $handle = $slide.find('.slider-handle');
-                    const $line = $slide.find('.slider-line');
-                    $handle.css('left', '50%');
-                    $line.css('left', '50%');
-                } else if (index < centerIndex) {
-                    // LEFT of center: show AFTER image with fade
-                    $beforeImg.css({
-                        'clip-path': 'inset(0 100% 0 0)',
-                        'opacity': '0'
-                    });
-                    $afterImg.css({
-                        'clip-path': 'inset(0 0 0 0)',
-                        'opacity': '1'
-                    });
-                } else {
-                    // RIGHT of center: show BEFORE image with fade
-                    $beforeImg.css({
-                        'clip-path': 'inset(0 0 0 0)',
-                        'opacity': '1'
-                    });
-                    $afterImg.css({
-                        'clip-path': 'inset(0 100% 0 0)',
-                        'opacity': '0'
-                    });
-                }
+                ]
             });
-        }
 
-        // Update on init, after change, and after swipe
-        sliderInstance.on('init afterChange', updateSlideImages);
-        updateSlideImages();
+            // Pause autoplay when hovering over center slide
+            $('#showcase-slider').on('mouseenter', '.slick-center .showcase-card', function() {
+                sliderInstance.slick('slickPause');
+            });
+
+            // Resume autoplay when mouse leaves center slide
+            $('#showcase-slider').on('mouseleave', '.slick-center .showcase-card', function() {
+                sliderInstance.slick('slickPlay');
+            });
+
+            // Function to update slide images based on position
+            function updateSlideImages() {
+                const $slides = $('#showcase-slider .slick-slide');
+                const $centerSlide = $('#showcase-slider .slick-center');
+
+                if ($centerSlide.length === 0) return;
+
+                const centerIndex = $centerSlide.index();
+
+                $slides.each(function(index) {
+                    const $slide = $(this);
+                    const $beforeImg = $slide.find('.before-image');
+                    const $afterImg = $slide.find('.after-image');
+
+                    // Skip cloned slides
+                    if ($slide.hasClass('slick-cloned')) return;
+
+                    const slideIndex = $slide.attr('data-slick-index');
+
+                    if ($slide.hasClass('slick-center')) {
+                        // Center slide: show 50/50 comparison with both images visible
+                        $beforeImg.css({
+                            'clip-path': 'inset(0 50% 0 0)',
+                            'opacity': '1'
+                        });
+                        $afterImg.css({
+                            'clip-path': 'inset(0 0 0 50%)',
+                            'opacity': '1'
+                        });
+
+                        // Reset handle and line to center position
+                        const $handle = $slide.find('.slider-handle');
+                        const $line = $slide.find('.slider-line');
+                        $handle.css('left', '50%');
+                        $line.css('left', '50%');
+                    } else if (index < centerIndex) {
+                        // LEFT of center: show AFTER image with fade
+                        $beforeImg.css({
+                            'clip-path': 'inset(0 100% 0 0)',
+                            'opacity': '0'
+                        });
+                        $afterImg.css({
+                            'clip-path': 'inset(0 0 0 0)',
+                            'opacity': '1'
+                        });
+                    } else {
+                        // RIGHT of center: show BEFORE image with fade
+                        $beforeImg.css({
+                            'clip-path': 'inset(0 0 0 0)',
+                            'opacity': '1'
+                        });
+                        $afterImg.css({
+                            'clip-path': 'inset(0 100% 0 0)',
+                            'opacity': '0'
+                        });
+                    }
+                });
+            }
+
+            // Update on init, after change, and after swipe
+            sliderInstance.on('init afterChange', updateSlideImages);
+            updateSlideImages();
+        }
     });
 </script>
 
 <style>
+    @media (max-width: 767px) {
+        .showcase-slider-container {
+            display: none;
+        }
+        .mobile-showcase {
+            display: block;
+            width: 100%;
+            max-width: 500px; /* Adjust as needed */
+            margin: 0 auto;
+            height: 384px; /* Match slider height */
+        }
+    }
+    @media (min-width: 768px) {
+        .mobile-showcase {
+            display: none;
+        }
+    }
+
     .showcase-image-slider .slick-track {
         padding: 50px 0;
     }
@@ -541,7 +593,7 @@
                 const startDrag = (e) => {
                     // Only allow dragging if this container is in the center slide
                     const parentSlide = container.closest('.slick-slide');
-                    if (!parentSlide || !parentSlide.classList.contains('slick-center')) {
+                    if (parentSlide && !parentSlide.classList.contains('slick-center') && window.innerWidth > 767) {
                         return;
                     }
 
@@ -550,7 +602,7 @@
                     // Disable transitions while dragging for instant response
                     beforeImg.style.transition = 'none';
                     afterImg.style.transition = 'none';
-                    handle.style.transition = 'none';
+                    handle.style.transition = 'none
                     line.style.transition = 'none';
 
                     e.preventDefault();
@@ -571,7 +623,7 @@
 
                     // Double-check we're still on center slide
                     const parentSlide = container.closest('.slick-slide');
-                    if (!parentSlide || !parentSlide.classList.contains('slick-center')) {
+                    if (parentSlide && !parentSlide.classList.contains('slick-center') && window.innerWidth > 767) {
                         isDragging = false;
                         return;
                     }
