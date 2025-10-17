@@ -160,7 +160,7 @@
             }
         @endphp
         <div class="w-full absolute -bottom-[5px] top-0 left-0 right-0 z-[20]">
-            <img src="{{ asset('assets/img/'.$hero_shape) }}" alt="Hero Shape"
+            <img src="{{ asset('assets/img/' . $hero_shape) }}" alt="Hero Shape"
                 class="w-full h-full object-cover object-bottom">
         </div>
     </section>
