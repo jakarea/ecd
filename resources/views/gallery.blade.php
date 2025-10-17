@@ -75,6 +75,7 @@
         .masonry-item {
             display: inline-block;
             width: 100%;
+            height: 280px;
             break-inside: avoid;
             -webkit-column-break-inside: avoid;
             -moz-column-break-inside: avoid;

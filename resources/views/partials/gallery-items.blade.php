@@ -2,11 +2,11 @@
 
     <div class="masonry-item" data-category="{{ $item->type }}" data-item-id="{{ $item->id }}">
         @if ($item->isBeforeAfter())
-       {{ $item->before_image }}
+            {{-- {{ $item->before_image }} --}}
             {{-- Before & After slider --}}
             <div class="slider-container relative w-full h-full overflow-hidden rounded-[15px]">
                 @if ($item->before_image)
-                
+
                     <img src="{{ Storage::url($item->before_image) }}" alt="Before - {{ $item->title ?? 'Gallery Item' }}"
                         class="before-image absolute inset-0 w-full h-full object-cover" />
                 @endif
@@ -18,26 +18,23 @@
                 <div
                     class="slider-handle absolute top-1/2 left-1/2 w-[55px] h-[55px] bg-[var(--color-brand)] border-2 border-[var(--color-brand)] rounded-full cursor-pointer transform -translate-x-1/2 -translate-y-1/2 shadow-md flex justify-center items-center gap-1.5">
 
-                    <svg width="12" height="9" viewBox="0 0 14 11" fill="none"
-                        xmlns="http://www.w3.org/2000/svg">
+                    <svg width="12" height="9" viewBox="0 0 14 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M5.50072 10.2778L1.06348 5.84053L5.50072 1.40329" stroke="white" stroke-width="1.11598"
                             stroke-linecap="round" stroke-linejoin="round" />
-                        <path d="M1.06348 5.84039L12.7684 5.84039" stroke="white" stroke-width="1.11598"
-                            stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M1.06348 5.84039L12.7684 5.84039" stroke="white" stroke-width="1.11598" stroke-linecap="round"
+                            stroke-linejoin="round" />
                     </svg>
 
-                    <svg width="2" height="10" viewBox="0 0 2 11" fill="none"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <line x1="0.782561" y1="0.910613" x2="0.782561" y2="10.0397" stroke="white"
-                            stroke-width="1.01434" stroke-linecap="round" />
+                    <svg width="2" height="10" viewBox="0 0 2 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <line x1="0.782561" y1="0.910613" x2="0.782561" y2="10.0397" stroke="white" stroke-width="1.01434"
+                            stroke-linecap="round" />
                     </svg>
 
-                    <svg width="12" height="9" viewBox="0 0 14 11" fill="none"
-                        xmlns="http://www.w3.org/2000/svg">
+                    <svg width="12" height="9" viewBox="0 0 14 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M8.05006 10.278L12.4873 5.84071L8.05006 1.40347" stroke="white" stroke-width="1.11598"
                             stroke-linecap="round" stroke-linejoin="round" />
-                        <path d="M12.4873 5.84058L0.782391 5.84058" stroke="white" stroke-width="1.11598"
-                            stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M12.4873 5.84058L0.782391 5.84058" stroke="white" stroke-width="1.11598" stroke-linecap="round"
+                            stroke-linejoin="round" />
                     </svg>
 
                 </div>
@@ -47,8 +44,7 @@
             <div class="relative w-full h-full rounded-[15px] overflow-hidden group cursor-pointer video-item"
                 data-video-url="{{ $item->getVideoEmbedUrl() }}">
                 @if ($item->video_thumbnail)
-                    <img src="{{ Storage::url($item->video_thumbnail) }}"
-                        alt="{{ $item->title ?? 'Video Thumbnail' }}"
+                    <img src="{{ Storage::url($item->video_thumbnail) }}" alt="{{ $item->title ?? 'Video Thumbnail' }}"
                         class="w-full h-full object-cover" />
                 @else
                     <div class="w-full h-full bg-gray-200 flex items-center justify-center min-h-[300px]">
@@ -63,7 +59,8 @@
                     class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center group-hover:bg-opacity-50 transition-all">
                     <div class="w-16 h-16 bg-[var(--color-brand)] rounded-full flex items-center justify-center">
                         <svg class="w-8 h-8 text-white ml-1" fill="currentColor" viewBox="0 0 20 20">
-                            <path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z"/>
+                            <path
+                                d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z" />
                         </svg>
                     </div>
                 </div>
