@@ -13,12 +13,12 @@
                 <a href="{{ route('about') }}" class="nav-link"> About Us</a>
                 <a href="{{ route('services-subscriptions') }}" class="nav-link">Services & Subscriptions</a>
                 {{-- <a href="{{ route('services-subscriptions') }}" class="nav-link flex items-center gap-2">
-                <span>Subcriptions</span>
+                    <span>Subcriptions</span>
 
-                <svg width="13" height="7" viewBox="0 0 13 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M1.5 1L6.5 6L11.5 1" stroke="#212529" stroke-width="1.67" stroke-linecap="round"
-                        stroke-linejoin="round" />
-                </svg>
+                    <svg width="13" height="7" viewBox="0 0 13 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.5 1L6.5 6L11.5 1" stroke="#212529" stroke-width="1.67" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
 
                 </a> --}}
                 <a href="{{ route('gallery') }}" class="nav-link">Our Works</a>
@@ -76,7 +76,7 @@
 
 
 <script>
-    document.addEventListener("DOMContentLoaded", function() {
+    document.addEventListener("DOMContentLoaded", function () {
         const el = document.getElementById("socialIcons");
 
         function handleScroll() {
@@ -166,138 +166,135 @@
 </style>
 
 @php
-$plans = [
-[
-'name' => 'Basic Treatment',
-'price_single' => '€79,95',
-'price_monthly' => '€74,45',
-'frequency' => '1x per month',
-'color' => '#003868',
-'borderColor' => '#0C5798',
-'buttonText' => 'Get started with Basic',
-'icon' => '<svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <g clip-path="url(#clip0_425_15641)">
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M14.6697 1.93946C14.1018 0.380531 11.8983 0.380531 11.3304 1.93946L8.75361 9.02339L1.66968 11.6002C0.110756 12.168 0.110756 14.3716 1.66968 14.9395L8.75361 17.5162L11.3304 24.6002C11.8983 26.1591 14.1018 26.1591 14.6697 24.6002L17.2465 17.5162L24.3304 14.9395C25.8893 14.3716 25.8893 12.168 24.3304 11.6002L17.2465 9.02339L14.6697 1.93946Z" fill="#003868" />
-    </g>
-    <defs>
-        <clipPath id="clip0_425_15641)">
-            <rect width="25" height="25" fill="white" transform="translate(0.5 0.769775)" />
-        </clipPath>
-    </defs>
-</svg>',
-'features' => [
-'extra' => null,
-'exterior' => [
-'Thorough wash of the exterior including rims, bumpers, and windows.',
-'Removes dirt, deposits, and insect residues for a fresh appearance.',
-'Door frames cleaned.'
-],
-'interior' => [
-'Vacuuming mats and seats.'
-]
-]
-],
-[
-'name' => 'Premium Treatment',
-'price_single' => '€149,95',
-'price_monthly' => '€144,45',
-'frequency' => '2x per month <br /> <sub>every other week</sub>',
-'color' => 'var(--color-brand)',
-'borderColor' => '#63FFFA',
-'buttonText' => 'Get started with Premium',
-'icon' => '<svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <g clip-path="url(#clip0_706_5175)">
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M14.6697 3.93946C14.1018 2.38053 11.8983 2.38053 11.3304 3.93946L8.75361 11.0234L1.66968 13.6002C0.110756 14.168 0.110756 16.3716 1.66968 16.9395L8.75361 19.5162L11.3304 26.6002C11.8983 28.1591 14.1018 28.1591 14.6697 26.6002L17.2465 19.5162L24.3304 16.9395C25.8893 16.3716 25.8893 14.168 24.3304 13.6002L17.2465 11.0234L14.6697 3.93946Z" fill="#6ADBD9" />
-    </g>
-    <g clip-path="url(#clip1_706_5175)">
-        <path d="M18.0905 5.17814L21.079 4.09028L22.1662 1.10243C22.1911 1.03398 22.2365 0.974858 22.2962 0.933081C22.3558 0.891305 22.4269 0.868896 22.4997 0.868896C22.5726 0.868896 22.6437 0.891305 22.7033 0.933081C22.763 0.974858 22.8084 1.03398 22.8333 1.10243L23.9212 4.091L26.9097 5.17814C26.9782 5.20307 27.0373 5.24844 27.0791 5.30812C27.1209 5.36779 27.1433 5.43887 27.1433 5.51171C27.1433 5.58456 27.1209 5.65563 27.0791 5.71531C27.0373 5.77498 26.9782 5.82036 26.9097 5.84528L23.9205 6.93314L22.8333 9.92171C22.8084 9.99016 22.763 10.0493 22.7033 10.0911C22.6437 10.1328 22.5726 10.1552 22.4997 10.1552C22.4269 10.1552 22.3558 10.1328 22.2962 10.0911C22.2365 10.0493 22.1911 9.99016 22.1662 9.92171L21.0783 6.93243L18.0905 5.84528C18.022 5.82036 17.9629 5.77498 17.9211 5.71531C17.8793 5.65563 17.8569 5.58456 17.8569 5.51171C17.8569 5.43887 17.8793 5.36779 17.9211 5.30812C17.9629 5.24844 18.022 5.20307 18.0905 5.17814Z" fill="#6ADBD9" />
-    </g>
-    <defs>
-        <clipPath id="clip0_706_5175)">
-            <rect width="25" height="25" fill="white" transform="translate(0.5 2.76978)" />
-        </clipPath>
-        <clipPath id="clip1_706_5175)">
-            <rect width="10" height="10" fill="white" transform="translate(17.5 0.511719)" />
-        </clipPath>
-    </defs>
-</svg>',
-'features' => [
-'extra' => 'Everything in the Basic Package, plus:',
-'exterior' => [
-'Exterior cleaning',
-'Door frames cleaned.'
-],
-'interior' => [
-'Vacuuming mats and seats.',
-'Cleaning windows (inside)',
-'Dashboard cleaning',
-'Cleaning plastic parts'
-]
-]
-],
-[
-'name' => 'Full Detail Treatment',
-'price_single' => '€289,95',
-'price_monthly' => '€249,45',
-'frequency' => '4x per month <br /> <sub>weekly</sub>',
-'color' => '#CBA328',
-'borderColor' => '#E6BA30',
-'buttonText' => 'Get started with Full Detail',
-'icon' => '<svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <g clip-path="url(#clip0_706_5175)">
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M14.6697 3.93946C14.1018 2.38053 11.8983 2.38053 11.3304 3.93946L8.75361 11.0234L1.66968 13.6002C0.110756 14.168 0.110756 16.3716 1.66968 16.9395L8.75361 19.5162L11.3304 26.6002C11.8983 28.1591 14.1018 28.1591 14.6697 26.6002L17.2465 19.5162L24.3304 16.9395C25.8893 16.3716 25.8893 14.168 24.3304 13.6002L17.2465 11.0234L14.6697 3.93946Z" fill="#6ADBD9" />
-    </g>
-    <g clip-path="url(#clip1_706_5175)">
-        <path d="M18.0905 5.17814L21.079 4.09028L22.1662 1.10243C22.1911 1.03398 22.2365 0.974858 22.2962 0.933081C22.3558 0.891305 22.4269 0.868896 22.4997 0.868896C22.5726 0.868896 22.6437 0.891305 22.7033 0.933081C22.763 0.974858 22.8084 1.03398 22.8333 1.10243L23.9212 4.091L26.9097 5.17814C26.9782 5.20307 27.0373 5.24844 27.0791 5.30812C27.1209 5.36779 27.1433 5.43887 27.1433 5.51171C27.1433 5.58456 27.1209 5.65563 27.0791 5.71531C27.0373 5.77498 26.9782 5.82036 26.9097 5.84528L23.9205 6.93314L22.8333 9.92171C22.8084 9.99016 22.763 10.0493 22.7033 10.0911C22.6437 10.1328 22.5726 10.1552 22.4997 10.1552C22.4269 10.1552 22.3558 10.1328 22.2962 10.0911C22.2365 10.0493 22.1911 9.99016 22.1662 9.92171L21.0783 6.93243L18.0905 5.84528C18.022 5.82036 17.9629 5.77498 17.9211 5.71531C17.8793 5.65563 17.8569 5.58456 17.8569 5.51171C17.8569 5.43887 17.8793 5.36779 17.9211 5.30812C17.9629 5.24844 18.022 5.20307 18.0905 5.17814Z" fill="#6ADBD9" />
-    </g>
-    <defs>
-        <clipPath id="clip0_706_5175)">
-            <rect width="25" height="25" fill="white" transform="translate(0.5 2.76978)" />
-        </clipPath>
-        <clipPath id="clip1_706_5175)">
-            <rect width="10" height="10" fill="white" transform="translate(17.5 0.511719)" />
-        </clipPath>
-    </defs>
-</svg>',
-'features' => [
-'extra' => 'Everything in the Premium Package, plus:',
-'exterior' => [
-'Exterior cleaning',
-'Door frames cleaned.'
-],
-'interior' => [
-'Vacuuming mats and seats.',
-'Cleaning windows (inside)',
-'Dashboard cleaning',
-'Cleaning plastic parts'
-]
-]
-]
-];
+    $plans = [
+        [
+            'name' => 'Basic Treatment',
+            'price_single' => '€79,95',
+            'price_monthly' => '€74,45',
+            'frequency' => '1x per month',
+            'color' => '#003868',
+            'borderColor' => '#0C5798',
+            'buttonText' => 'Get started with Basic',
+            'icon' => '<svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_425_15641)">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M14.6697 1.93946C14.1018 0.380531 11.8983 0.380531 11.3304 1.93946L8.75361 9.02339L1.66968 11.6002C0.110756 12.168 0.110756 14.3716 1.66968 14.9395L8.75361 17.5162L11.3304 24.6002C11.8983 26.1591 14.1018 26.1591 14.6697 24.6002L17.2465 17.5162L24.3304 14.9395C25.8893 14.3716 25.8893 12.168 24.3304 11.6002L17.2465 9.02339L14.6697 1.93946Z" fill="#003868" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_425_15641)">
+                                        <rect width="25" height="25" fill="white" transform="translate(0.5 0.769775)" />
+                                    </clipPath>
+                                </defs>
+                            </svg>',
+            'features' => [
+                'extra' => null,
+                'exterior' => [
+                    'Thorough wash of the exterior including rims, bumpers, and windows.',
+                    'Removes dirt, deposits, and insect residues for a fresh appearance.',
+                    'Door frames cleaned.'
+                ],
+                'interior' => [
+                    'Vacuuming mats and seats.'
+                ]
+            ]
+        ],
+        [
+            'name' => 'Premium Treatment',
+            'price_single' => '€149,95',
+            'price_monthly' => '€144,45',
+            'frequency' => '2x per month <br /> <sub>every other week</sub>',
+            'color' => 'var(--color-brand)',
+            'borderColor' => '#63FFFA',
+            'buttonText' => 'Get started with Premium',
+            'icon' => '<svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_706_5175)">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M14.6697 3.93946C14.1018 2.38053 11.8983 2.38053 11.3304 3.93946L8.75361 11.0234L1.66968 13.6002C0.110756 14.168 0.110756 16.3716 1.66968 16.9395L8.75361 19.5162L11.3304 26.6002C11.8983 28.1591 14.1018 28.1591 14.6697 26.6002L17.2465 19.5162L24.3304 16.9395C25.8893 16.3716 25.8893 14.168 24.3304 13.6002L17.2465 11.0234L14.6697 3.93946Z" fill="#6ADBD9" />
+                                </g>
+                                <g clip-path="url(#clip1_706_5175)">
+                                    <path d="M18.0905 5.17814L21.079 4.09028L22.1662 1.10243C22.1911 1.03398 22.2365 0.974858 22.2962 0.933081C22.3558 0.891305 22.4269 0.868896 22.4997 0.868896C22.5726 0.868896 22.6437 0.891305 22.7033 0.933081C22.763 0.974858 22.8084 1.03398 22.8333 1.10243L23.9212 4.091L26.9097 5.17814C26.9782 5.20307 27.0373 5.24844 27.0791 5.30812C27.1209 5.36779 27.1433 5.43887 27.1433 5.51171C27.1433 5.58456 27.1209 5.65563 27.0791 5.71531C27.0373 5.77498 26.9782 5.82036 26.9097 5.84528L23.9205 6.93314L22.8333 9.92171C22.8084 9.99016 22.763 10.0493 22.7033 10.0911C22.6437 10.1328 22.5726 10.1552 22.4997 10.1552C22.4269 10.1552 22.3558 10.1328 22.2962 10.0911C22.2365 10.0493 22.1911 9.99016 22.1662 9.92171L21.0783 6.93243L18.0905 5.84528C18.022 5.82036 17.9629 5.77498 17.9211 5.71531C17.8793 5.65563 17.8569 5.58456 17.8569 5.51171C17.8569 5.43887 17.8793 5.36779 17.9211 5.30812C17.9629 5.24844 18.022 5.20307 18.0905 5.17814Z" fill="#6ADBD9" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_706_5175)">
+                                        <rect width="25" height="25" fill="white" transform="translate(0.5 2.76978)" />
+                                    </clipPath>
+                                    <clipPath id="clip1_706_5175)">
+                                        <rect width="10" height="10" fill="white" transform="translate(17.5 0.511719)" />
+                                    </clipPath>
+                                </defs>
+                            </svg>',
+            'features' => [
+                'extra' => 'Everything in the Basic Package, plus:',
+                'exterior' => [
+                    'Exterior cleaning',
+                    'Door frames cleaned.'
+                ],
+                'interior' => [
+                    'Vacuuming mats and seats.',
+                    'Cleaning windows (inside)',
+                    'Dashboard cleaning',
+                    'Cleaning plastic parts'
+                ]
+            ]
+        ],
+        [
+            'name' => 'Full Detail Treatment',
+            'price_single' => '€289,95',
+            'price_monthly' => '€249,45',
+            'frequency' => '4x per month <br /> <sub>weekly</sub>',
+            'color' => '#CBA328',
+            'borderColor' => '#E6BA30',
+            'buttonText' => 'Get started with Full Detail',
+            'icon' => '<svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_706_5175)">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M14.6697 3.93946C14.1018 2.38053 11.8983 2.38053 11.3304 3.93946L8.75361 11.0234L1.66968 13.6002C0.110756 14.168 0.110756 16.3716 1.66968 16.9395L8.75361 19.5162L11.3304 26.6002C11.8983 28.1591 14.1018 28.1591 14.6697 26.6002L17.2465 19.5162L24.3304 16.9395C25.8893 16.3716 25.8893 14.168 24.3304 13.6002L17.2465 11.0234L14.6697 3.93946Z" fill="#6ADBD9" />
+                                </g>
+                                <g clip-path="url(#clip1_706_5175)">
+                                    <path d="M18.0905 5.17814L21.079 4.09028L22.1662 1.10243C22.1911 1.03398 22.2365 0.974858 22.2962 0.933081C22.3558 0.891305 22.4269 0.868896 22.4997 0.868896C22.5726 0.868896 22.6437 0.891305 22.7033 0.933081C22.763 0.974858 22.8084 1.03398 22.8333 1.10243L23.9212 4.091L26.9097 5.17814C26.9782 5.20307 27.0373 5.24844 27.0791 5.30812C27.1209 5.36779 27.1433 5.43887 27.1433 5.51171C27.1433 5.58456 27.1209 5.65563 27.0791 5.71531C27.0373 5.77498 26.9782 5.82036 26.9097 5.84528L23.9205 6.93314L22.8333 9.92171C22.8084 9.99016 22.763 10.0493 22.7033 10.0911C22.6437 10.1328 22.5726 10.1552 22.4997 10.1552C22.4269 10.1552 22.3558 10.1328 22.2962 10.0911C22.2365 10.0493 22.1911 9.99016 22.1662 9.92171L21.0783 6.93243L18.0905 5.84528C18.022 5.82036 17.9629 5.77498 17.9211 5.71531C17.8793 5.65563 17.8569 5.58456 17.8569 5.51171C17.8569 5.43887 17.8793 5.36779 17.9211 5.30812C17.9629 5.24844 18.022 5.20307 18.0905 5.17814Z" fill="#6ADBD9" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_706_5175)">
+                                        <rect width="25" height="25" fill="white" transform="translate(0.5 2.76978)" />
+                                    </clipPath>
+                                    <clipPath id="clip1_706_5175)">
+                                        <rect width="10" height="10" fill="white" transform="translate(17.5 0.511719)" />
+                                    </clipPath>
+                                </defs>
+                            </svg>',
+            'features' => [
+                'extra' => 'Everything in the Premium Package, plus:',
+                'exterior' => [
+                    'Exterior cleaning',
+                    'Door frames cleaned.'
+                ],
+                'interior' => [
+                    'Vacuuming mats and seats.',
+                    'Cleaning windows (inside)',
+                    'Dashboard cleaning',
+                    'Cleaning plastic parts'
+                ]
+            ]
+        ]
+    ];
 @endphp
 
-<div class="modal" id="heroModal">
-    <!-- Close Button -->
-    <div
-        class="close-modal bg-white w-8 h-8 rounded-full flex items-center justify-center absolute top-4 right-4 shadow-md cursor-pointer hover:scale-105 transition-transform z-50"
-        onclick="closeHeroModal()"
-        role="button"
-        aria-label="Close modal">
-        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
-            <path fill="#EA6216" d="M20.48 3.512a11.97 11.97 0 0 0-8.486-3.514C5.366-.002-.007 5.371-.007 11.999c0 3.314 1.344 6.315 3.516 8.487A11.97 11.97 0 0 0 11.995 24c6.628 0 12.001-5.373 12.001-12.001c0-3.314-1.344-6.315-3.516-8.487m-1.542 15.427a9.8 9.8 0 0 1-6.943 2.876c-5.423 0-9.819-4.396-9.819-9.819a9.8 9.8 0 0 1 2.876-6.943a9.8 9.8 0 0 1 6.942-2.876c5.422 0 9.818 4.396 9.818 9.818a9.8 9.8 0 0 1-2.876 6.942z"></path>
-            <path fill="#EA6216" d="m13.537 12l3.855-3.855a1.091 1.091 0 0 0-1.542-1.541l-.001-.001l-3.855 3.855l-3.855-3.855A1.091 1.091 0 0 0 6.6 8.145l.001-.001l3.855 3.855l-3.855 3.855a1.091 1.091 0 1 0 1.541 1.542l.001-.001l3.855-3.855l3.855 3.855a1.091 1.091 0 1 0 1.542-1.541l-.001-.001z"></path>
-        </svg>
-    </div>
+<div class="modal px-5" id="heroModal">
 
     <!-- Modal Content -->
     <div
-        class="modal-content relative h-[calc(100vh-50px)] max-w-[600px] mx-auto bg-gray-50 p-8 rounded-2xl shadow-2xl overflow-hidden">
-
+        class="modal-content relative h-[calc(100vh-50px)] max-w-[751px] mx-auto bg-gray-50 p-8 rounded-2xl shadow-2xl">
+        <!-- Close Button -->
+        <div class="close-modal bg-white w-8 h-8 rounded-full flex items-center justify-center absolute top-[-14px] right-[-14px] shadow-md cursor-pointer hover:scale-105 transition-transform z-50"
+            onclick="closeHeroModal()" role="button" aria-label="Close modal">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+                <path fill="#EA6216"
+                    d="M20.48 3.512a11.97 11.97 0 0 0-8.486-3.514C5.366-.002-.007 5.371-.007 11.999c0 3.314 1.344 6.315 3.516 8.487A11.97 11.97 0 0 0 11.995 24c6.628 0 12.001-5.373 12.001-12.001c0-3.314-1.344-6.315-3.516-8.487m-1.542 15.427a9.8 9.8 0 0 1-6.943 2.876c-5.423 0-9.819-4.396-9.819-9.819a9.8 9.8 0 0 1 2.876-6.943a9.8 9.8 0 0 1 6.942-2.876c5.422 0 9.818 4.396 9.818 9.818a9.8 9.8 0 0 1-2.876 6.942z">
+                </path>
+                <path fill="#EA6216"
+                    d="m13.537 12l3.855-3.855a1.091 1.091 0 0 0-1.542-1.541l-.001-.001l-3.855 3.855l-3.855-3.855A1.091 1.091 0 0 0 6.6 8.145l.001-.001l3.855 3.855l-3.855 3.855a1.091 1.091 0 1 0 1.541 1.542l.001-.001l3.855-3.855l3.855 3.855a1.091 1.091 0 1 0 1.542-1.541l-.001-.001z">
+                </path>
+            </svg>
+        </div>
         <!-- Booking Form -->
-        <form
-            id="bookingForm"
-            method="POST"
-            action="{{ route('booking.store') }}"
+        <form id="bookingForm" method="POST" action="{{ route('booking.store') }}"
             class="step-1 h-full overflow-y-auto">
             @csrf
 
@@ -306,35 +303,31 @@ $plans = [
             <div class="grid grid-rows-[auto_1fr_auto] h-full space-y-6">
                 <!-- Header -->
                 <div class="flex items-center gap-4 px-5 py-5 border border-[#C8CEDD] rounded-[16px]">
-                        <div class="w-[50px] h-[50px] rounded-[16px] bg-[#E7F1FF] flex items-center justify-center">
-                            <svg width="26" height="26" viewBox="0 0 26 26" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M7.37473 0.8125C7.62337 0.8125 7.86182 0.911272 8.03764 1.08709C8.21345 1.2629 8.31223 1.50136 8.31223 1.75V2.06625C8.74139 2.06292 9.20764 2.06167 9.71098 2.0625H16.2885C16.7918 2.0625 17.2581 2.06375 17.6872 2.06625V1.75C17.6872 1.50136 17.786 1.2629 17.9618 1.08709C18.1376 0.911272 18.3761 0.8125 18.6247 0.8125C18.8734 0.8125 19.1118 0.911272 19.2876 1.08709C19.4635 1.2629 19.5622 1.50136 19.5622 1.75V2.12625C19.5772 2.12625 19.5918 2.1275 19.606 2.13C20.4935 2.1975 21.2422 2.34125 21.926 2.67C23.0316 3.1961 23.9428 4.05791 24.5297 5.1325C24.8885 5.7975 25.0422 6.52375 25.116 7.37375C25.1872 8.20125 25.1872 9.22625 25.1872 10.5112V16.7375C25.1872 18.0238 25.1872 19.05 25.116 19.8762C25.041 20.7262 24.8885 21.4525 24.5297 22.1162C23.943 23.1913 23.0318 24.0536 21.926 24.58C21.2422 24.9088 20.4935 25.0525 19.606 25.12C18.736 25.1875 17.656 25.1875 16.2885 25.1875H9.71223C8.34473 25.1875 7.26473 25.1875 6.39473 25.12C5.50723 25.0512 4.75848 24.9088 4.07473 24.58C2.96911 24.0539 2.05787 23.1921 1.47098 22.1175C1.11223 21.4525 0.958477 20.7262 0.884727 19.8762C0.813477 19.0487 0.813477 18.0238 0.813477 16.7388V10.5125C0.813477 9.22625 0.813477 8.2 0.884727 7.37375C0.959727 6.52375 1.11223 5.7975 1.47098 5.13375C2.05766 4.0587 2.96892 3.19643 4.07473 2.67C4.75848 2.34125 5.50723 2.1975 6.39473 2.13L6.43723 2.125V1.75C6.43723 1.50136 6.536 1.2629 6.71181 1.08709C6.88763 0.911272 7.12609 0.8125 7.37473 0.8125ZM6.43723 4.0075C5.71598 4.07 5.25473 4.1825 4.88723 4.36C4.13774 4.71428 3.51919 5.29609 3.11973 6.0225C2.97723 6.2875 2.87473 6.605 2.80723 7.0625H23.1935C23.1247 6.605 23.0222 6.2875 22.8797 6.02375C22.4808 5.29706 21.8627 4.71483 21.1135 4.36C20.7447 4.1825 20.2835 4.07 19.5622 4.0075V4.25C19.5622 4.49864 19.4635 4.7371 19.2876 4.91291C19.1118 5.08873 18.8734 5.1875 18.6247 5.1875C18.3761 5.1875 18.1376 5.08873 17.9618 4.91291C17.786 4.7371 17.6872 4.49864 17.6872 4.25V3.94125C17.2614 3.93792 16.7822 3.93667 16.2497 3.9375H9.74973C9.21723 3.9375 8.73806 3.93875 8.31223 3.94125V4.25C8.31223 4.49864 8.21345 4.7371 8.03764 4.91291C7.86182 5.08873 7.62337 5.1875 7.37473 5.1875C7.12609 5.1875 6.88763 5.08873 6.71181 4.91291C6.536 4.7371 6.43723 4.49864 6.43723 4.25V4.0075Z"
-                                    fill="var(--color-brand)" />
-                            </svg>
+                    <div class="w-[50px] h-[50px] rounded-[16px] bg-[#E7F1FF] flex items-center justify-center">
+                        <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M7.37473 0.8125C7.62337 0.8125 7.86182 0.911272 8.03764 1.08709C8.21345 1.2629 8.31223 1.50136 8.31223 1.75V2.06625C8.74139 2.06292 9.20764 2.06167 9.71098 2.0625H16.2885C16.7918 2.0625 17.2581 2.06375 17.6872 2.06625V1.75C17.6872 1.50136 17.786 1.2629 17.9618 1.08709C18.1376 0.911272 18.3761 0.8125 18.6247 0.8125C18.8734 0.8125 19.1118 0.911272 19.2876 1.08709C19.4635 1.2629 19.5622 1.50136 19.5622 1.75V2.12625C19.5772 2.12625 19.5918 2.1275 19.606 2.13C20.4935 2.1975 21.2422 2.34125 21.926 2.67C23.0316 3.1961 23.9428 4.05791 24.5297 5.1325C24.8885 5.7975 25.0422 6.52375 25.116 7.37375C25.1872 8.20125 25.1872 9.22625 25.1872 10.5112V16.7375C25.1872 18.0238 25.1872 19.05 25.116 19.8762C25.041 20.7262 24.8885 21.4525 24.5297 22.1162C23.943 23.1913 23.0318 24.0536 21.926 24.58C21.2422 24.9088 20.4935 25.0525 19.606 25.12C18.736 25.1875 17.656 25.1875 16.2885 25.1875H9.71223C8.34473 25.1875 7.26473 25.1875 6.39473 25.12C5.50723 25.0512 4.75848 24.9088 4.07473 24.58C2.96911 24.0539 2.05787 23.1921 1.47098 22.1175C1.11223 21.4525 0.958477 20.7262 0.884727 19.8762C0.813477 19.0487 0.813477 18.0238 0.813477 16.7388V10.5125C0.813477 9.22625 0.813477 8.2 0.884727 7.37375C0.959727 6.52375 1.11223 5.7975 1.47098 5.13375C2.05766 4.0587 2.96892 3.19643 4.07473 2.67C4.75848 2.34125 5.50723 2.1975 6.39473 2.13L6.43723 2.125V1.75C6.43723 1.50136 6.536 1.2629 6.71181 1.08709C6.88763 0.911272 7.12609 0.8125 7.37473 0.8125ZM6.43723 4.0075C5.71598 4.07 5.25473 4.1825 4.88723 4.36C4.13774 4.71428 3.51919 5.29609 3.11973 6.0225C2.97723 6.2875 2.87473 6.605 2.80723 7.0625H23.1935C23.1247 6.605 23.0222 6.2875 22.8797 6.02375C22.4808 5.29706 21.8627 4.71483 21.1135 4.36C20.7447 4.1825 20.2835 4.07 19.5622 4.0075V4.25C19.5622 4.49864 19.4635 4.7371 19.2876 4.91291C19.1118 5.08873 18.8734 5.1875 18.6247 5.1875C18.3761 5.1875 18.1376 5.08873 17.9618 4.91291C17.786 4.7371 17.6872 4.49864 17.6872 4.25V3.94125C17.2614 3.93792 16.7822 3.93667 16.2497 3.9375H9.74973C9.21723 3.9375 8.73806 3.93875 8.31223 3.94125V4.25C8.31223 4.49864 8.21345 4.7371 8.03764 4.91291C7.86182 5.08873 7.62337 5.1875 7.37473 5.1875C7.12609 5.1875 6.88763 5.08873 6.71181 4.91291C6.536 4.7371 6.43723 4.49864 6.43723 4.25V4.0075Z"
+                                fill="var(--color-brand)" />
+                        </svg>
 
-                        </div>
-                        <div class="space-y-2">
-                            <h4 class="text-[24px] font-bold text-[var(--color-heading)] leading-[1.4]">Book your
-                                service
-                            </h4>
-                            <p class="text-[16px] font-medium text-[var(--color-text)] leading-[1.4] font-sans">For your
-                                service,
-                                share your details,
-                                and we'll take care of the rest.</p>
-                        </div>
                     </div>
+                    <div class="space-y-2">
+                        <h4 class="text-[24px] font-bold text-[var(--color-heading)] leading-[1.4]">Book your
+                            service
+                        </h4>
+                        <p class="text-[16px] font-medium text-[var(--color-text)] leading-[1.4] font-sans">For your
+                            service,
+                            share your details,
+                            and we'll take care of the rest.</p>
+                    </div>
+                </div>
 
                 <!-- Input Fields -->
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-2">
                     <!-- First Name -->
                     <div>
                         <label class="block text-sm font-medium text-gray-700 mb-1">First Name</label>
-                        <input
-                            type="text"
-                            name="first_name"
-                            required
+                        <input type="text" name="first_name" required
                             class="block w-full px-4 py-3 text-base text-gray-900 placeholder-gray-500 border border-gray-300 rounded-md shadow-sm 
                                 focus:outline-none focus:ring-2 focus:ring-[var(--color-brand)] focus:ring-offset-2 focus:border-[var(--color-brand)]"
                             placeholder="Enter first name" />
@@ -343,22 +336,16 @@ $plans = [
                     <!-- Last Name -->
                     <div>
                         <label class="block text-sm font-medium text-gray-700 mb-1">Last Name</label>
-                        <input
-                            type="text"
-                            name="last_name"
-                            required
+                        <input type="text" name="last_name" required
                             class="block w-full px-4 py-3 text-base text-gray-900 placeholder-gray-500 border border-gray-300 rounded-md shadow-sm 
                                 focus:outline-none focus:ring-2 focus:ring-[var(--color-brand)] focus:ring-offset-2 focus:border-[var(--color-brand)]"
                             placeholder="Enter last name" />
                     </div>
 
                     <!-- Address -->
-                    <div class="col-span-2">
+                    <div class="md:col-span-2">
                         <label class="block text-sm font-medium text-gray-700 mb-1">Address</label>
-                        <textarea
-                            name="address"
-                            required
-                            rows="3"
+                        <textarea name="address" required rows="3"
                             class="block w-full px-4 py-3 text-base text-gray-900 placeholder-gray-500 border border-gray-300 rounded-md shadow-sm 
                                 focus:outline-none focus:ring-2 focus:ring-[var(--color-brand)] focus:ring-offset-2 focus:border-[var(--color-brand)]"
                             placeholder="Your address"></textarea>
@@ -367,10 +354,7 @@ $plans = [
                     <!-- Number of Cars -->
                     <div>
                         <label class="block text-sm font-medium text-gray-700 mb-1">Number of Cars</label>
-                        <input
-                            type="text"
-                            name="number_of_cars"
-                            required
+                        <input type="text" name="number_of_cars" required
                             class="block w-full px-4 py-3 text-base text-gray-900 placeholder-gray-500 border border-gray-300 rounded-md shadow-sm 
                                 focus:outline-none focus:ring-2 focus:ring-[var(--color-brand)] focus:ring-offset-2 focus:border-[var(--color-brand)]"
                             placeholder="Enter number of cars" />
@@ -379,10 +363,7 @@ $plans = [
                     <!-- Licence Plate -->
                     <div>
                         <label class="block text-sm font-medium text-gray-700 mb-1">Licence Plate</label>
-                        <input
-                            type="text"
-                            name="licence_plate"
-                            required
+                        <input type="text" name="licence_plate" required
                             class="block w-full px-4 py-3 text-base text-gray-900 placeholder-gray-500 border border-gray-300 rounded-md shadow-sm 
                                 focus:outline-none focus:ring-2 focus:ring-[var(--color-brand)] focus:ring-offset-2 focus:border-[var(--color-brand)]"
                             placeholder="Enter licence plate" />
@@ -391,10 +372,7 @@ $plans = [
                     <!-- WhatsApp Number -->
                     <div>
                         <label class="block text-sm font-medium text-gray-700 mb-1">WhatsApp Number</label>
-                        <input
-                            type="text"
-                            name="whatsapp"
-                            required
+                        <input type="text" name="whatsapp" required
                             class="block w-full px-4 py-3 text-base text-gray-900 placeholder-gray-500 border border-gray-300 rounded-md shadow-sm 
                                 focus:outline-none focus:ring-2 focus:ring-[var(--color-brand)] focus:ring-offset-2 focus:border-[var(--color-brand)]"
                             placeholder="Enter WhatsApp number" />
@@ -403,10 +381,7 @@ $plans = [
                     <!-- Preferred Date -->
                     <div>
                         <label class="block text-sm font-medium text-gray-700 mb-1">Preferred Date</label>
-                        <input
-                            type="date"
-                            name="preferred_date"
-                            required
+                        <input type="date" name="preferred_date" required
                             class="block w-full px-4 py-3 text-base text-gray-900 placeholder-gray-500 border border-gray-300 rounded-md shadow-sm 
                                 focus:outline-none focus:ring-2 focus:ring-[var(--color-brand)] focus:ring-offset-2 focus:border-[var(--color-brand)]" />
                     </div>
@@ -415,9 +390,7 @@ $plans = [
 
                 <!-- Submit Button -->
                 <div class="flex justify-end mt-6">
-                    <button
-                        type="submit"
-                        id="bookNowBtn"
+                    <button type="submit" id="bookNowBtn"
                         class="inline-flex items-center justify-center w-full md:w-auto px-6 py-3 text-base font-medium text-white bg-[var(--color-brand)] rounded-lg shadow-md hover:bg-[var(--color-brand)] transition focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
                         <span class="btn-text">Book Now</span>
                         <span class="spinner hidden ml-2"></span>
@@ -431,7 +404,7 @@ $plans = [
 
 
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', function () {
 
         //mobile menu #212529
 
@@ -479,23 +452,23 @@ $plans = [
         document.body.classList.remove('modal-open');
     }
     // If using dynamically loaded content, ensure DOM is ready
-    document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', function () {
 
         // Optional: close modal when clicking outside of it
-        document.querySelector('#heroModal').addEventListener('click', function(e) {
+        document.querySelector('#heroModal').addEventListener('click', function (e) {
             if (e.target === this) {
                 closeHeroModal();
             }
         });
         document.querySelector('.close-modal')?.addEventListener('click', closeHeroModal);
-        document.querySelector('[onclick="openHeroModal()"]')?.addEventListener('click', function(e) {
+        document.querySelector('[onclick="openHeroModal()"]')?.addEventListener('click', function (e) {
             e.preventDefault(); // Prevent link navigation
             openHeroModal();
         });
     });
 </script>
 <script>
-    document.getElementById('bookingForm').addEventListener('submit', function(e) {
+    document.getElementById('bookingForm').addEventListener('submit', function (e) {
         e.preventDefault();
 
         const form = e.target;
@@ -518,13 +491,13 @@ $plans = [
         submitButton.disabled = true;
 
         fetch(form.action, {
-                method: 'POST',
-                headers: {
-                    'X-Requested-With': 'XMLHttpRequest',
-                    'X-CSRF-TOKEN': document.querySelector('input[name="_token"]').value
-                },
-                body: formData
-            })
+            method: 'POST',
+            headers: {
+                'X-Requested-With': 'XMLHttpRequest',
+                'X-CSRF-TOKEN': document.querySelector('input[name="_token"]').value
+            },
+            body: formData
+        })
             .then(response => response.json())
             .then(data => {
                 if (data.success) {
@@ -563,7 +536,7 @@ $plans = [
     });
 </script>
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', function () {
         const dateInput = document.querySelector('input[name="preferred_date"]');
         if (dateInput) {
             const today = new Date();

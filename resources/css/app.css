@@ -1,5 +1,5 @@
 /* === IMPORTS (must be at the very top) === */
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Waiting+for+the+Sunrise&display=swap");
 
 @import "tailwindcss";
 
@@ -60,6 +60,7 @@
 :root {
     --font-sf: "SF Pro Display", sans-serif;
     --font-poppins: "Poppins", sans-serif;
+    --font-cursive: "Waiting for the Sunrise", cursive;
 
     --color-brand: #6adbd9;
     --color-nav: #212529;
@@ -67,6 +68,10 @@
     --color-heading: #124846;
     --color-white: #ffffff;
     --color-black: #1e1e1e;
+}
+
+@theme {
+    --font-cursive: "Waiting for the Sunrise", cursive;
 }
 
 /* === GLOBAL STYLES === */
