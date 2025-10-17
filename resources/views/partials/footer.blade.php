@@ -40,7 +40,7 @@
                 <div class="space-y-8 max-w-full md:max-w-[380px]">
                     <div class="logo">
                         <a href="/">
-                            <img src="{{ asset('assets/img/logo.png') }}" alt="ECD Logo"
+                            <img src="{{ asset(\App\Models\Setting::get('logo', 'assets/img/logo.png')) }}" alt="ECD Logo"
                                 class="max-w-[145px] max-h-[70px]">
                         </a>
                     </div>
