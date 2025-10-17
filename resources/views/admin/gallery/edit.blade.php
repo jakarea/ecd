@@ -16,22 +16,31 @@
 
         {{-- Form --}}
         <div class="bg-white rounded-lg shadow p-6">
-            <form action="{{ route('admin.gallery.update', $galleryItem) }}" method="POST" enctype="multipart/form-data">
-                @csrf
-                @method('PUT')
-                @include('admin.gallery.form')
+            @if ($galleryItem)
+            
+                <form action="{{ route('admin.gallery.update', ['galleryItem' => $galleryItem->id]) }}" method="POST" enctype="multipart/form-data">
+ 
+                    @csrf
+                    @method('PUT')
+                    @include('admin.gallery.form')
 
-                <div class="flex justify-end gap-3 mt-6">
-                    <a href="{{ route('admin.gallery.index') }}"
-                        class="px-4 py-2 border border-gray-300 rounded-lg text-gray-700 hover:bg-gray-50 transition">
-                        Cancel
-                    </a>
-                    <button type="submit"
-                        class="px-4 py-2 bg-[var(--color-brand)] text-white rounded-lg hover:opacity-90 transition">
-                        Update Gallery Item
-                    </button>
+                    <div class="flex justify-end gap-3 mt-6">
+                        <a href="{{ route('admin.gallery.index') }}"
+                            class="px-4 py-2 border border-gray-300 rounded-lg text-gray-700 hover:bg-gray-50 transition">
+                            Cancel
+                        </a>
+                        <button type="submit"
+                            class="px-4 py-2 bg-[var(--color-brand)] text-white rounded-lg hover:opacity-90 transition">
+                            Update Gallery Item
+                        </button>
+                    </div>
+                </form>
+            @else
+                <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded-lg" role="alert">
+                    <p>Error: Gallery item not found.</p>
+                    <p>Please ensure the gallery item exists and try again.</p>
                 </div>
-            </form>
+            @endif
         </div>
     </div>
 @endsection

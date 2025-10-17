@@ -49,7 +49,9 @@ Route::middleware('auth')->group(function () {
     Route::post('/hero-sections/{heroSection}/toggle-status', [HeroSectionController::class, 'toggleStatus'])->name('hero-sections.toggle');
 
     // Gallery Management Routes
-    Route::resource('gallery', GalleryItemController::class);
+    Route::resource('gallery', GalleryItemController::class)->parameters([
+        'gallery' => 'galleryItem'
+    ]);
 
     // Settings Routes
     Route::get('/settings', [SettingController::class, 'index'])->name('settings.index');
