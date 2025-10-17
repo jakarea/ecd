@@ -3,7 +3,10 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\GalleryController;
 
-Route::get('/', fn() => view('home'))->name('home');
+Route::get('/', function() {
+    $galleryItems = \App\Models\GalleryItem::active()->ofType('before&after')->ordered()->get();
+    return view('home', compact('galleryItems'));
+})->name('home');
 
 Route::get('/about', function() {
     $faqs = \App\Models\Faq::active()->ordered()->get();

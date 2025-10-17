@@ -1,3 +1,7 @@
+@php
+use Illuminate\Support\Facades\Storage;
+@endphp
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css" />
 <link rel="stylesheet" href="{{ asset('assets/css/cndk.beforeafter.css') }}">
@@ -16,15 +20,16 @@
             </x-slot>
         </x-section-heading>
     </div>
+    @if(isset($galleryItems) && $galleryItems->count() > 0)
     <div class="showcase-slider-container">
         <div class="showcase-image-slider -mx-3 px-6 mt-20" id="showcase-slider">
-            {{-- Slide 1 --}}
+                @foreach($galleryItems as $index => $item)
             <div class="showcase-image">
                 <div class="showcase-card">
                     <div class="slider-container relative w-full h-full overflow-hidden rounded-[15px]">
-                        <img src="{{ asset('assets/img/showcase1.webp') }}" alt="Before Image 1"
+                                <img src="{{ Storage::url($item->before_image) }}" alt="{{ $item->title ?? 'Before Image ' . ($index + 1) }}"
                             class="before-image absolute inset-0 w-full h-full object-cover" />
-                        <img src="{{ asset('assets/img/showcase2.webp') }}" alt="After Image 1"
+                                <img src="{{ Storage::url($item->after_image) }}" alt="{{ $item->title ?? 'After Image ' . ($index + 1) }}"
                             class="after-image absolute inset-0 w-full h-full object-cover" />
                         <span class="slider-line absolute top-0 bottom-0 w-[2px] bg-[var(--color-brand)] left-1/2"></span>
                         <button
@@ -49,177 +54,21 @@
                     </div>
                 </div>
             </div>
-
-            {{-- Slide 2 --}}
-            <div class="showcase-image">
-                <div class="showcase-card">
-                    <div class="slider-container relative w-full h-full overflow-hidden rounded-[15px]">
-                        <img src="{{ asset('assets/img/showcase2.webp') }}" alt="Before Image 2"
-                            class="before-image absolute inset-0 w-full h-full object-cover" />
-                        <img src="{{ asset('assets/img/showcase3.webp') }}" alt="After Image 2"
-                            class="after-image absolute inset-0 w-full h-full object-cover" />
-                        <span class="slider-line absolute top-0 bottom-0 w-[2px] bg-[var(--color-brand)] left-1/2"></span>
-                        <button
-                            class="slider-handle absolute top-1/2 left-1/2 w-[55px] h-[55px] bg-[var(--color-brand)] border-2 border-[var(--color-brand)] rounded-full cursor-pointer transform -translate-x-1/2 -translate-y-1/2 shadow-md flex justify-center items-center gap-1.5">
-                            <svg width="12" height="9" viewBox="0 0 14 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M5.50072 10.2778L1.06348 5.84053L5.50072 1.40329" stroke="white"
-                                    stroke-width="1.11598" stroke-linecap="round" stroke-linejoin="round" />
-                                <path d="M1.06348 5.84039L12.7684 5.84039" stroke="white" stroke-width="1.11598"
-                                    stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                            <svg width="2" height="10" viewBox="0 0 2 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <line x1="0.782561" y1="0.910613" x2="0.782561" y2="10.0397" stroke="white"
-                                    stroke-width="1.01434" stroke-linecap="round" />
-                            </svg>
-                            <svg width="12" height="9" viewBox="0 0 14 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M8.05006 10.278L12.4873 5.84071L8.05006 1.40347" stroke="white"
-                                    stroke-width="1.11598" stroke-linecap="round" stroke-linejoin="round" />
-                                <path d="M12.4873 5.84058L0.782391 5.84058" stroke="white" stroke-width="1.11598"
-                                    stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                        </button>
-                    </div>
-                </div>
+                @endforeach
             </div>
-
-            {{-- Slide 3 --}}
-            <div class="showcase-image">
-                <div class="showcase-card">
-                    <div class="slider-container relative w-full h-full overflow-hidden rounded-[15px]">
-                        <img src="{{ asset('assets/img/gallery3.webp') }}" alt="Before Image 3"
-                            class="before-image absolute inset-0 w-full h-full object-cover" />
-                        <img src="{{ asset('assets/img/gallery4.webp') }}" alt="After Image 3"
-                            class="after-image absolute inset-0 w-full h-full object-cover" />
-                        <span class="slider-line absolute top-0 bottom-0 w-[2px] bg-[var(--color-brand)] left-1/2"></span>
-                        <button
-                            class="slider-handle absolute top-1/2 left-1/2 w-[55px] h-[55px] bg-[var(--color-brand)] border-2 border-[var(--color-brand)] rounded-full cursor-pointer transform -translate-x-1/2 -translate-y-1/2 shadow-md flex justify-center items-center gap-1.5">
-                            <svg width="12" height="9" viewBox="0 0 14 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M5.50072 10.2778L1.06348 5.84053L5.50072 1.40329" stroke="white"
-                                    stroke-width="1.11598" stroke-linecap="round" stroke-linejoin="round" />
-                                <path d="M1.06348 5.84039L12.7684 5.84039" stroke="white" stroke-width="1.11598"
-                                    stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                            <svg width="2" height="10" viewBox="0 0 2 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <line x1="0.782561" y1="0.910613" x2="0.782561" y2="10.0397" stroke="white"
-                                    stroke-width="1.01434" stroke-linecap="round" />
-                            </svg>
-                            <svg width="12" height="9" viewBox="0 0 14 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M8.05006 10.278L12.4873 5.84071L8.05006 1.40347" stroke="white"
-                                    stroke-width="1.11598" stroke-linecap="round" stroke-linejoin="round" />
-                                <path d="M12.4873 5.84058L0.782391 5.84058" stroke="white" stroke-width="1.11598"
-                                    stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            {{-- Slide 4 --}}
-            <div class="showcase-image">
-                <div class="showcase-card">
-                    <div class="slider-container relative w-full h-full overflow-hidden rounded-[15px]">
-                        <img src="{{ asset('assets/img/showcase1.webp') }}" alt="Before Image 4"
-                            class="before-image absolute inset-0 w-full h-full object-cover" />
-                        <img src="{{ asset('assets/img/showcase2.webp') }}" alt="After Image 4"
-                            class="after-image absolute inset-0 w-full h-full object-cover" />
-                        <span class="slider-line absolute top-0 bottom-0 w-[2px] bg-[var(--color-brand)] left-1/2"></span>
-                        <button
-                            class="slider-handle absolute top-1/2 left-1/2 w-[55px] h-[55px] bg-[var(--color-brand)] border-2 border-[var(--color-brand)] rounded-full cursor-pointer transform -translate-x-1/2 -translate-y-1/2 shadow-md flex justify-center items-center gap-1.5">
-                            <svg width="12" height="9" viewBox="0 0 14 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M5.50072 10.2778L1.06348 5.84053L5.50072 1.40329" stroke="white"
-                                    stroke-width="1.11598" stroke-linecap="round" stroke-linejoin="round" />
-                                <path d="M1.06348 5.84039L12.7684 5.84039" stroke="white" stroke-width="1.11598"
-                                    stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                            <svg width="2" height="10" viewBox="0 0 2 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <line x1="0.782561" y1="0.910613" x2="0.782561" y2="10.0397" stroke="white"
-                                    stroke-width="1.01434" stroke-linecap="round" />
-                            </svg>
-                            <svg width="12" height="9" viewBox="0 0 14 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M8.05006 10.278L12.4873 5.84071L8.05006 1.40347" stroke="white"
-                                    stroke-width="1.11598" stroke-linecap="round" stroke-linejoin="round" />
-                                <path d="M12.4873 5.84058L0.782391 5.84058" stroke="white" stroke-width="1.11598"
-                                    stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            {{-- Slide 5 --}}
-            <div class="showcase-image">
-                <div class="showcase-card">
-                    <div class="slider-container relative w-full h-full overflow-hidden rounded-[15px]">
-                        <img src="{{ asset('assets/img/showcase2.webp') }}" alt="Before Image 5"
-                            class="before-image absolute inset-0 w-full h-full object-cover" />
-                        <img src="{{ asset('assets/img/showcase3.webp') }}" alt="After Image 5"
-                            class="after-image absolute inset-0 w-full h-full object-cover" />
-                        <span class="slider-line absolute top-0 bottom-0 w-[2px] bg-[var(--color-brand)] left-1/2"></span>
-                        <button
-                            class="slider-handle absolute top-1/2 left-1/2 w-[55px] h-[55px] bg-[var(--color-brand)] border-2 border-[var(--color-brand)] rounded-full cursor-pointer transform -translate-x-1/2 -translate-y-1/2 shadow-md flex justify-center items-center gap-1.5">
-                            <svg width="12" height="9" viewBox="0 0 14 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M5.50072 10.2778L1.06348 5.84053L5.50072 1.40329" stroke="white"
-                                    stroke-width="1.11598" stroke-linecap="round" stroke-linejoin="round" />
-                                <path d="M1.06348 5.84039L12.7684 5.84039" stroke="white" stroke-width="1.11598"
-                                    stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                            <svg width="2" height="10" viewBox="0 0 2 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <line x1="0.782561" y1="0.910613" x2="0.782561" y2="10.0397" stroke="white"
-                                    stroke-width="1.01434" stroke-linecap="round" />
-                            </svg>
-                            <svg width="12" height="9" viewBox="0 0 14 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M8.05006 10.278L12.4873 5.84071L8.05006 1.40347" stroke="white"
-                                    stroke-width="1.11598" stroke-linecap="round" stroke-linejoin="round" />
-                                <path d="M12.4873 5.84058L0.782391 5.84058" stroke="white" stroke-width="1.11598"
-                                    stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            {{-- Slide 6 --}}
-            <div class="showcase-image">
-                <div class="showcase-card">
-                    <div class="slider-container relative w-full h-full overflow-hidden rounded-[15px]">
-                        <img src="{{ asset('assets/img/showcase3.webp') }}" alt="Before Image 6"
-                            class="before-image absolute inset-0 w-full h-full object-cover" />
-                        <img src="{{ asset('assets/img/gallery4.webp') }}" alt="After Image 6"
-                            class="after-image absolute inset-0 w-full h-full object-cover" />
-                        <span class="slider-line absolute top-0 bottom-0 w-[2px] bg-[var(--color-brand)] left-1/2"></span>
-                        <button
-                            class="slider-handle absolute top-1/2 left-1/2 w-[55px] h-[55px] bg-[var(--color-brand)] border-2 border-[var(--color-brand)] rounded-full cursor-pointer transform -translate-x-1/2 -translate-y-1/2 shadow-md flex justify-center items-center gap-1.5">
-                            <svg width="12" height="9" viewBox="0 0 14 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M5.50072 10.2778L1.06348 5.84053L5.50072 1.40329" stroke="white"
-                                    stroke-width="1.11598" stroke-linecap="round" stroke-linejoin="round" />
-                                <path d="M1.06348 5.84039L12.7684 5.84039" stroke="white" stroke-width="1.11598"
-                                    stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                            <svg width="2" height="10" viewBox="0 0 2 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <line x1="0.782561" y1="0.910613" x2="0.782561" y2="10.0397" stroke="white"
-                                    stroke-width="1.01434" stroke-linecap="round" />
-                            </svg>
-                            <svg width="12" height="9" viewBox="0 0 14 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M8.05006 10.278L12.4873 5.84071L8.05006 1.40347" stroke="white"
-                                    stroke-width="1.11598" stroke-linecap="round" stroke-linejoin="round" />
-                                <path d="M12.4873 5.84058L0.782391 5.84058" stroke="white" stroke-width="1.11598"
-                                    stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-            </div>
+            <div class="slider-controls"></div>
         </div>
-        <div class="slider-controls"></div>
-    </div>
+    @endif
 
     {{-- Mobile Only Showcase --}}
-    <div class="mobile-showcase hidden">
+    @if(isset($galleryItems) && $galleryItems->count() > 0)
+        <div class="mobile-showcase">
         <div class="showcase-card">
             <div class="slider-container relative w-full h-full overflow-hidden rounded-[15px]">
-                <img src="{{ asset('assets/img/gallery3.webp') }}" alt="Before Image 3"
+                    @php $firstItem = $galleryItems->first(); @endphp
+                    <img src="{{ Storage::url($firstItem->before_image) }}" alt="{{ $firstItem->title ?? 'Before Image' }}"
                     class="before-image absolute inset-0 w-full h-full object-cover" />
-                <img src="{{ asset('assets/img/gallery4.webp') }}" alt="After Image 3"
+                    <img src="{{ Storage::url($firstItem->after_image) }}" alt="{{ $firstItem->title ?? 'After Image' }}"
                     class="after-image absolute inset-0 w-full h-full object-cover" />
                 <span class="slider-line absolute top-0 bottom-0 w-[2px] bg-[var(--color-brand)] left-1/2"></span>
                 <button
@@ -244,6 +93,7 @@
             </div>
         </div>
     </div>
+    @endif
 </section>
 
 
@@ -399,6 +249,9 @@
             max-width: 500px; /* Adjust as needed */
             margin: 0 auto;
             height: 384px; /* Match slider height */
+        }
+        .mobile-showcase .showcase-card {
+            height: 384px; /* Ensure inner container has explicit height for h-full children */
         }
     }
     @media (min-width: 768px) {
@@ -602,7 +455,7 @@
                     // Disable transitions while dragging for instant response
                     beforeImg.style.transition = 'none';
                     afterImg.style.transition = 'none';
-                    handle.style.transition = 'none
+                    handle.style.transition = 'none';
                     line.style.transition = 'none';
 
                     e.preventDefault();
