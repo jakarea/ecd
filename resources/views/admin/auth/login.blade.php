@@ -13,7 +13,7 @@
         {{-- Logo Section --}}
         <div class="text-center mb-6 sm:mb-8">
             <div class="flex justify-center mb-4 sm:mb-6">
-                <img src="{{ asset('assets/img/color-logo.png') }}" alt="ECD Logo" class="h-14 sm:h-16 lg:h-20 w-auto">
+                <img src="{{ asset(\App\Models\Setting::get('logo', 'assets/img/color-logo.png')) }}" alt="ECD Logo" class="h-14 sm:h-16 lg:h-20 w-auto">
             </div>
             <h1 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-2">Admin Login</h1>
             <p class="text-gray-600 text-sm sm:text-base">Enter your credentials to access the admin panel</p>
