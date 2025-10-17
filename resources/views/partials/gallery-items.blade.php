@@ -1,9 +1,12 @@
 @foreach ($galleryItems as $item)
+
     <div class="masonry-item" data-category="{{ $item->type }}" data-item-id="{{ $item->id }}">
         @if ($item->isBeforeAfter())
+       {{ $item->before_image }}
             {{-- Before & After slider --}}
             <div class="slider-container relative w-full h-full overflow-hidden rounded-[15px]">
                 @if ($item->before_image)
+                
                     <img src="{{ Storage::url($item->before_image) }}" alt="Before - {{ $item->title ?? 'Gallery Item' }}"
                         class="before-image absolute inset-0 w-full h-full object-cover" />
                 @endif
