@@ -4,7 +4,7 @@
         <div class="flex items-center justify-between gap-4">
             <div>
                 <a href="/">
-                    <img src="{{ asset('assets/img/logo.png') }}" alt="ECD Logo"
+                    <img src="{{ asset(\App\Models\Setting::get('logo', 'assets/img/logo.png')) }}" alt="ECD Logo"
                         class="max-w-[80px] max-h-[40px] md:max-w-[145px] md:max-h-[70px]">
                 </a>
             </div>
@@ -52,7 +52,7 @@
     <div class="container mx-auto py-6 px-4">
         <div class="flex justify-between items-center mb-6">
             <a href="/">
-                <img src="{{ asset('assets/img/logo.png') }}" alt="ECD Logo" class="max-w-[80px] max-h-[40px]">
+                <img src="{{ asset(\App\Models\Setting::get('logo', 'assets/img/logo.png')) }}" alt="ECD Logo" class="max-w-[80px] max-h-[40px]">
             </a>
             <button id="mobile-menu-close" class="text-white text-opacity-80">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none">

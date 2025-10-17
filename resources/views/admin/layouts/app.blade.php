@@ -26,7 +26,7 @@
             {{-- Sidebar Header --}}
             <div class="flex items-center justify-between h-16 px-6 border-b border-gray-200">
                 <div class="flex items-center gap-3">
-                    <img src="{{ asset('assets/img/color-logo.png') }}" alt="ECD Logo" class="h-8 w-auto">
+                    <img src="{{ asset(\App\Models\Setting::get('logo', 'assets/img/color-logo.png')) }}" alt="ECD Logo" class="h-8 w-auto">
                     <span class="text-xl font-bold text-[var(--color-brand)]">ECD Admin</span>
                 </div>
                 <button id="closeSidebar" class="lg:hidden text-gray-500 hover:text-gray-700">

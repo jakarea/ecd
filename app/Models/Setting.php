@@ -13,6 +13,7 @@ class Setting extends Model
         'group',
         'description',
         'is_active',
+        'logo',
     ];
 
     protected $casts = [
