@@ -30,7 +30,7 @@
         </div>
         @endif
 
-        <form action="{{ route('booking.store') }}" method="POST" id="heroBookingForm">
+        <form action="{{ route('booking.store', ['locale' => app()->getLocale()]) }}" method="POST" id="heroBookingForm">
             @csrf
             <h1>Hello heroModal 1</h1>
             <div class="flex items-center gap-4 px-5 py-5 border border-[#C8CEDD] rounded-[16px] mb-6">

@@ -2,8 +2,25 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\GalleryController;
+use App\Http\Controllers\BookingController;
 
-Route::group(['prefix' => '{locale?}', 'where' => ['locale' => '[a-zA-Z]{2}']], function () {
+// Redirect root "/" to default locale
+Route::get('/', function () {
+    return redirect('/' . config('app.locale', 'nl'));
+});
+
+// Catch non-localized routes (like /about, /contact)
+Route::get('{any}', function ($any) {
+    $defaultLocale = config('app.locale', 'nl');
+    return redirect("/{$defaultLocale}/{$any}");
+})->where('any', '^(?!en|nl)(.*)$'); // only if not already localized
+
+// Localized routes
+Route::group([
+    'prefix' => '{locale}',
+    'where' => ['locale' => 'en|nl'],
+    'middleware' => \App\Http\Middleware\SetLocale::class,
+], function () {
     Route::get('/', function() {
         $galleryItems = \App\Models\GalleryItem::active()->ofType('before&after')->ordered()->get();
         return view('home', compact('galleryItems'));
@@ -16,15 +33,9 @@ Route::group(['prefix' => '{locale?}', 'where' => ['locale' => '[a-zA-Z]{2}']], 
     })->name('about');
 
     Route::get('/services-subscriptions', fn() => view('services-subscriptions'))->name('services-subscriptions');
-
     Route::get('/contact', fn() => view('contact'))->name('contact');
-
     Route::get('/blog', fn() => view('blog'))->name('blog');
-
     Route::get('/blog/{id}', fn($id) => view('blog-single', ['id' => $id]))->name('blog-single');
-
     Route::get('/gallery', [GalleryController::class, 'index'])->name('gallery');
-
-    // Booking Form Submission
-    Route::post('/book-service', [App\Http\Controllers\BookingController::class, 'store'])->name('booking.store');
+    Route::post('/book-service', [BookingController::class, 'store'])->name('booking.store');
 });
