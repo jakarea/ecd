@@ -69,7 +69,8 @@
                                                     <img src="{{ asset($testimonial->vehicle_image) }}" alt="{{ __('Vehicle') }}"
                                                         class="max-w-full md:max-w-[225px] w-full h-[181px] md:h-[296px] object-cover rounded-[20px]">
                                                 @else
-                                                    <img src="{{ Storage::url($testimonial->vehicle_image) }}" alt="{{ __('Vehicle') }}"
+                                                    <img src="{{ Storage::url($testimonial->vehicle_image) }}"
+                                                        alt="{{ __('Vehicle') }}"
                                                         class="max-w-full md:max-w-[225px] w-full h-[181px] md:h-[296px] object-cover rounded-[20px]">
                                                 @endif
                                             @endif
@@ -116,7 +117,8 @@
                             <div class="max-w-[794px] w-full mx-auto">
                                 <div
                                     class="bg-[#6ADBD926] w-full max-w-[705px] h-[342px] rounded-[20px] flex items-center justify-center">
-                                    <p class="text-[var(--color-text)] text-center">{{ __('No testimonials available at the moment.') }}
+                                    <p class="text-[var(--color-text)] text-center">
+                                        {{ __('No testimonials available at the moment.') }}
                                     </p>
                                 </div>
                             </div>
@@ -129,9 +131,9 @@
 
             </div>
             <div class="testimonial-controls flex justify-center items-center gap-6 mt-10">
-                <div class="swiper-button-prev testimonial-nav"></div>
+                {{-- <div class="swiper-button-prev testimonial-nav"></div> --}}
                 <div class="swiper-pagination"></div>
-                <div class="swiper-button-next testimonial-nav"></div>
+                {{-- <div class="swiper-button-next testimonial-nav"></div> --}}
             </div>
         </div>
     </div>
