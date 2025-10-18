@@ -17,16 +17,13 @@
                 </svg>
 
                 <div class="">
-                    <h4 class="text-[20px] text-white font-bold">Book your wash and detailing in minutes.</h4>
-                    <p class="text-sm text-white font-normal opacity-70 font-sans leading-[1.3]">We’ll come to you and
-                        leave your ride spotless
-                        inside
-                        and out.</p>
+                    <h4 class="text-[20px] text-white font-bold">{{ __('Book your wash and detailing in minutes.') }}</h4>
+                    <p class="text-sm text-white font-normal opacity-70 font-sans leading-[1.3]">{{ __('We’ll come to you and leave your ride spotless inside and out.') }}</p>
                 </div>
 
             </div>
             <button class="btn-outline w-full md:w-auto" onclick="openHeroModal()">
-                <span>Book Now</span>
+                <span>{{ __('Book Now') }}</span>
                 <svg width="25" height="11" viewBox="0 0 25 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M24 5.5H1M24 5.5L19.5 1M24 5.5L19.5 10" stroke="var(--color-brand)" stroke-width="1.5"
                         stroke-linecap="round" stroke-linejoin="round" />
@@ -39,38 +36,35 @@
             <div class="flex flex-wrap justify-between items-start gap-8">
                 <div class="space-y-8 max-w-full md:max-w-[380px]">
                     <div class="logo">
-                        <a href="/">
+                        <a href="{{ route('home', ['locale' => app()->getLocale()]) }}">
                             <img src="{{ asset(\App\Models\Setting::get('logo', 'assets/img/logo.png')) }}" alt="ECD Logo"
                                 class="max-w-[145px] max-h-[70px]">
                         </a>
                     </div>
                     <div class="text-white opacity-90 text-[15px] leading-[1.65]">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ipsum lorem, tempor ut ex
-                        aliquam, fringilla lacinia quam. Sed mattis ante at massa aliquet consectetur. Nullam enim
-                        sapien, tristique sit amet lorem lacinia, luctus molestie velit. Nam nunc quam, elementum nec
-                        neque nec.
+                        {{ __('footer_text') }}
                     </div>
                 </div>
                 <div class="space-y-8 max-w-full md:max-w-[180px]">
-                    <h4 class="text-lg text-white font-bold">Navigation</h4>
+                    <h4 class="text-lg text-white font-bold">{{ __('Navigation') }}</h4>
                     <ul class="space-y-2">
-                        <li><a href="{{ route('home') }}"
-                                class="text-white opacity-90 text-[15px] leading-[1.65]">Home</a></li>
-                        <li><a href="{{ route('about') }}"
-                                class="text-white opacity-90 text-[15px] leading-[1.65]">About Us</a></li>
-                        <li><a href="{{ route('services-subscriptions') }}"
-                                class="text-white opacity-90 text-[15px] leading-[1.65]">Services & Pricing</a></li>
-                        <li><a href="{{ route('services-subscriptions') }}"
-                                class="text-white opacity-90 text-[15px] leading-[1.65]">Subscriptions</a></li>
-                        <li><a href="{{ route('gallery') }}"
-                                class="text-white opacity-90 text-[15px] leading-[1.65]">Our Works</a></li>
-                        <li><a href="{{ route('blog') }}"
-                                class="text-white opacity-90 text-[15px] leading-[1.65]">Blog</a></li>
+                        <li><a href="{{ route('home', ['locale' => app()->getLocale()]) }}"
+                                class="text-white opacity-90 text-[15px] leading-[1.65]">{{ __('Home') }}</a></li>
+                        <li><a href="{{ route('about', ['locale' => app()->getLocale()]) }}"
+                                class="text-white opacity-90 text-[15px] leading-[1.65]">{{ __('About Us') }}</a></li>
+                        <li><a href="{{ route('services-subscriptions', ['locale' => app()->getLocale()]) }}"
+                                class="text-white opacity-90 text-[15px] leading-[1.65]">{{ __('Services & Pricing') }}</a></li>
+                        <li><a href="{{ route('services-subscriptions', ['locale' => app()->getLocale()]) }}"
+                                class="text-white opacity-90 text-[15px] leading-[1.65]">{{ __('Subscriptions') }}</a></li>
+                        <li><a href="{{ route('gallery', ['locale' => app()->getLocale()]) }}"
+                                class="text-white opacity-90 text-[15px] leading-[1.65]">{{ __('Our Works') }}</a></li>
+                        <li><a href="{{ route('blog', ['locale' => app()->getLocale()]) }}"
+                                class="text-white opacity-90 text-[15px] leading-[1.65]">{{ __('Blog') }}</a></li>
                     </ul>
                 </div>
                 <div
                     class="space-y-8 max-w-full w-full md:max-w-[400px] pt-[50px] pb-6 md:py-6 pr-6 pl-5 md:pl-16 bg-[#2B2B2B] rounded-[16px] relative">
-                    <h4 class="text-lg text-white font-bold">Quick Connect</h4>
+                    <h4 class="text-lg text-white font-bold">{{ __('Quick Connect') }}</h4>
                     @php
                         $contactPhone = \App\Models\Setting::get('contact_phone');
                         $contactEmail = \App\Models\Setting::get('contact_email');
@@ -214,23 +208,20 @@
     <div class="footer-bottom text-white pt-12">
         <div class="container mx-auto">
             <div class="flex flex-wrap justify-between gap-4">
-                <p class="text-base font-normal tracking-[0.03px] text-white opacity-80">&copy; Copyright
-                    {{ date('Y') }} ECD. All rights reserved.
+                <p class="text-base font-normal tracking-[0.03px] text-white opacity-80">{!! __('&copy; Copyright :year ECD. All rights reserved.', ['year' => date('Y')]) !!}
                 </p>
-                <p class="text-base font-normal tracking-[0.03px] text-white opacity-80">Designed and Developed
-                    by
+                <p class="text-base font-normal tracking-[0.03px] text-white opacity-80">{{ __('Designed and Developed by') }}
                     <a href="https://www.giopio.com/" target="_blank" class="text-[#FF8D28]">Giopio</a>
                 </p>
                 <div class="flex items-center gap-2">
                     <a href="#" target="_blank"
-                        class="text-base font-normal tracking-[0.03px] text-white opacity-80">Terms</a>
+                        class="text-base font-normal tracking-[0.03px] text-white opacity-80">{{ __('Terms') }}</a>
                     <span>|</span>
                     <a href="#" target="_blank"
-                        class="text-base font-normal tracking-[0.03px] text-white opacity-80">Privacy</a>
+                        class="text-base font-normal tracking-[0.03px] text-white opacity-80">{{ __('Privacy') }}</a>
                     <span>|</span>
                     <a href="#" target="_blank"
-                        class="text-base font-normal tracking-[0.03px] text-white opacity-80">Security
-                        Statement</a>
+                        class="text-base font-normal tracking-[0.03px] text-white opacity-80">{{ __('Security Statement') }}</a>
                 </div>
             </div>
         </div>

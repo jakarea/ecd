@@ -12,6 +12,7 @@ use App\Http\Controllers\Admin\BookingController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\FaqController;
 use App\Http\Controllers\Admin\TeamMemberController;
+use App\Http\Controllers\Admin\TranslationController;
 
 /*
 |--------------------------------------------------------------------------
@@ -75,4 +76,8 @@ Route::middleware('auth')->group(function () {
     // Team Members Management Routes
     Route::resource('team-members', TeamMemberController::class);
     Route::post('/team-members/{teamMember}/toggle-status', [TeamMemberController::class, 'toggle'])->name('team-members.toggle');
+
+    // Translations Management Routes
+    Route::get('/translations', [TranslationController::class, 'index'])->name('translations.index');
+    Route::put('/translations', [TranslationController::class, 'update'])->name('translations.update');
 });

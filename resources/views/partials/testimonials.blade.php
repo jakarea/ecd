@@ -8,8 +8,8 @@
 <section class="bg-[#F9F9F9] py-16 relative" id="testimonials">
     <div class="container mx-auto px-4">
         <!-- Section Header -->
-        <x-section-heading pretitle="Testimonials" title="Our Reviews"
-            description="Hear what our satisfied customers have to say!." width="max-w-[948px]">
+        <x-section-heading pretitle="{{ __('Testimonials') }}" title="{{ __('Our Reviews') }}"
+            description="{{ __('Hear what our satisfied customers have to say!') }}." width="max-w-[948px]">
             <x-slot name="icon">
                 <svg width="11" height="13" viewBox="0 0 11 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
@@ -66,10 +66,10 @@
                                             class="absolute top-0 md:top-1/2 left-6 md:left-[-100px] right-6 md:right-auto -translate-y-1/2 md:-translate-y-1/2">
                                             @if($testimonial->vehicle_image)
                                                 @if(str_starts_with($testimonial->vehicle_image, 'assets/'))
-                                                    <img src="{{ asset($testimonial->vehicle_image) }}" alt="Vehicle"
+                                                    <img src="{{ asset($testimonial->vehicle_image) }}" alt="{{ __('Vehicle') }}"
                                                         class="max-w-full md:max-w-[225px] w-full h-[181px] md:h-[296px] object-cover rounded-[20px]">
                                                 @else
-                                                    <img src="{{ Storage::url($testimonial->vehicle_image) }}" alt="Vehicle"
+                                                    <img src="{{ Storage::url($testimonial->vehicle_image) }}" alt="{{ __('Vehicle') }}"
                                                         class="max-w-full md:max-w-[225px] w-full h-[181px] md:h-[296px] object-cover rounded-[20px]">
                                                 @endif
                                             @endif
@@ -116,7 +116,7 @@
                             <div class="max-w-[794px] w-full mx-auto">
                                 <div
                                     class="bg-[#6ADBD926] w-full max-w-[705px] h-[342px] rounded-[20px] flex items-center justify-center">
-                                    <p class="text-[var(--color-text)] text-center">No testimonials available at the moment.
+                                    <p class="text-[var(--color-text)] text-center">{{ __('No testimonials available at the moment.') }}
                                     </p>
                                 </div>
                             </div>

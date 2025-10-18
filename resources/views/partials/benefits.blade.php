@@ -35,24 +35,23 @@
                         fill="#124846" />
                 </svg>
 
-                <h3 class="text-[11px] font-semibold uppercase text-[var(--color-heading)] font-poppins">We Offered More
-                </h3>
-            </div>
-            <h2 class="text-[34px] font-extrabold mb-4 text-[var(--color-heading)] leading-[1.2] tracking-[0.02px]">
-                Tired of struggling to keep your car clean?
-            </h2>
-            <p class="text-[16px] leading-[1.5] text-[var(--color-text)] font-sf">
-                Enjoy complimentary amenities with every wash, including free vacuums window cleaners, and more.
-            </p>
-        </div>
-        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6 mt-10 md:mt-20">
-            @foreach ($benefits as $benefit)
-                <div
-                    class="h-[166px] bg-white rounded-[20px] p-[30px] flex flex-col justify-center items-center gap-8 text-center">
-                    <img src="{{ asset($benefit['image']) }}" alt="{{ $benefit['title'] }}">
-                    <h3 class="text-[20px] font-medium text-[var(--color-heading)] font-sf">{{  $benefit['title'] }}</h3>
-                </div>
-            @endforeach
-        </div>
-    </div>
+                                    <h3 class="text-[11px] font-semibold uppercase text-[var(--color-heading)] font-poppins">{{ __('We Offered More') }}
+                                </h3>
+                            </div>
+                            <h2 class="text-[34px] font-extrabold mb-4 text-[var(--color-heading)] leading-[1.2] tracking-[0.02px]">
+                                {{ __('Tired of struggling to keep your car clean?') }}
+                            </h2>
+                            <p class="text-[16px] leading-[1.5] text-[var(--color-text)] font-sf">
+                                {{ __('Enjoy complimentary amenities with every wash, including free vacuums window cleaners, and more.') }}
+                            </p>
+                        </div>
+                        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6 mt-10 md:mt-20">
+                            @foreach ($benefits as $benefit)
+                                <div
+                                    class="h-[166px] bg-white rounded-[20px] p-[30px] flex flex-col justify-center items-center gap-8 text-center">
+                                    <img src="{{ asset($benefit['image']) }}" alt="{{ $benefit['title'] }}">
+                                    <h3 class="text-[20px] font-medium text-[var(--color-heading)] font-sf">{{  __($benefit['title']) }}</h3>
+                                </div>
+                            @endforeach
+                        </div>    </div>
 </section>

@@ -7,11 +7,11 @@
             <div class="slider-container relative w-full h-full overflow-hidden rounded-[15px]">
                 @if ($item->before_image)
 
-                    <img src="{{ Storage::url($item->before_image) }}" alt="Before - {{ $item->title ?? 'Gallery Item' }}"
+                    <img src="{{ Storage::url($item->before_image) }}" alt="{{ __('Before - ') . ($item->title ?? __('Gallery Item')) }}"
                         class="before-image absolute inset-0 w-full h-full object-cover" />
                 @endif
                 @if ($item->after_image)
-                    <img src="{{ Storage::url($item->after_image) }}" alt="After - {{ $item->title ?? 'Gallery Item' }}"
+                    <img src="{{ Storage::url($item->after_image) }}" alt="{{ __('After - ') . ($item->title ?? __('Gallery Item')) }}"
                         class="after-image absolute inset-0 w-full h-full object-cover" />
                 @endif
                 <div class="slider-line absolute top-0 bottom-0 w-[2px] bg-[var(--color-brand)] left-1/2"></div>
@@ -44,7 +44,7 @@
             <div class="relative w-full h-full rounded-[15px] overflow-hidden group cursor-pointer video-item"
                 data-video-url="{{ $item->getVideoEmbedUrl() }}">
                 @if ($item->video_thumbnail)
-                    <img src="{{ Storage::url($item->video_thumbnail) }}" alt="{{ $item->title ?? 'Video Thumbnail' }}"
+                    <img src="{{ Storage::url($item->video_thumbnail) }}" alt="{{ $item->title ?? __('Video Thumbnail') }}"
                         class="w-full h-full object-cover" />
                 @else
                     <div class="w-full h-full bg-gray-200 flex items-center justify-center min-h-[300px]">
@@ -73,7 +73,7 @@
         @else
             {{-- Normal image (Interior/Exterior) --}}
             @if ($item->image)
-                <img src="{{ Storage::url($item->image) }}" alt="{{ $item->title ?? 'Gallery Image' }}"
+                <img src="{{ Storage::url($item->image) }}" alt="{{ $item->title ?? __('Gallery Image') }}"
                     class="w-full h-full object-cover rounded-[15px]" />
             @else
                 <div class="w-full h-full bg-gray-200 rounded-[15px] flex items-center justify-center min-h-[300px]">

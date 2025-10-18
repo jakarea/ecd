@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Homepage')
+@section('title', __('Homepage'))
 
 @section('content')
 
@@ -137,20 +137,18 @@ document.addEventListener('DOMContentLoaded', function() {
                         }
                     }, 5000);
                 } else {
-                    let errorMessage = 'Something went wrong. Please try again.';
+                    let errorMessage = '{{ __('Something went wrong. Please try again.') }}';
                     if (data && data.message) {
                         errorMessage = data.message;
-                    }
-                    if(formMessage) {
+                    }                   if(formMessage) {
                         formMessage.innerHTML = `<div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded-lg mb-4">${errorMessage}</div>`;
                         formMessage.classList.remove('hidden');
                     }
-                }
-            })
+                })
             .catch(error => {
                 console.error('Error during form submission:', error);
                 if(formMessage) {
-                    formMessage.innerHTML = `<div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded-lg mb-4">An unexpected error occurred. Please try again.</div>`;
+                    formMessage.innerHTML = `<div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded-lg mb-4">{{ __('An unexpected error occurred. Please try again.') }}</div>`;
                     formMessage.classList.remove('hidden');
                 }
             })

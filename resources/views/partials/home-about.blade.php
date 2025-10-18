@@ -3,52 +3,52 @@
     $features = [
         [
             'icon' => 'assets/img/about-icon1.svg',
-            'title' => 'Expert Team',
+            'title' => __('Expert Team'),
             'description' =>
-                'Our skilled professionals bring years of hands-on experience, delivering precise, high-quality results every single time.',
+                __('Our skilled professionals bring years of hands-on experience, delivering precise, high-quality results every single time.'),
         ],
         [
             'icon' => 'assets/img/about-icon2.svg',
-            'title' => 'Premium-Grade Products',
+            'title' => __('Premium-Grade Products'),
             'description' =>
-                'We use only top-tier, industry-approved products to ensure a spotless shine and long-lasting protection for your vehicle.',
+                __('We use only top-tier, industry-approved products to ensure a spotless shine and long-lasting protection for your vehicle.'),
         ],
         [
             'icon' => 'assets/img/about-icon3.svg',
-            'title' => 'Eco-Friendly Cleaning',
+            'title' => __('Eco-Friendly Cleaning'),
             'description' =>
-                'We care about both your car and the planet. That’s why we use eco-friendly solutions that are tough on dirt but gentle on the environment.',
+                __('We care about both your car and the planet. That’s why we use eco-friendly solutions that are tough on dirt but gentle on the environment.'),
         ],
         [
             'icon' => 'assets/img/about-icon4.svg',
-            'title' => 'Service at Your Doorstep',
+            'title' => __('Service at Your Doorstep'),
             'description' =>
-                'Skip the hassle of driving to a car wash—our mobile service brings premium car care directly to your home or workplace.',
+                __('Skip the hassle of driving to a car wash—our mobile service brings premium car care directly to your home or workplace.'),
         ],
 
         [
             'icon' => 'assets/img/about-icon1.svg',
-            'title' => 'Expert Team',
+            'title' => __('Expert Team'),
             'description' =>
-                'Our skilled professionals bring years of hands-on experience, delivering precise, high-quality results every single time.',
+                __('Our skilled professionals bring years of hands-on experience, delivering precise, high-quality results every single time.'),
         ],
         [
             'icon' => 'assets/img/about-icon2.svg',
-            'title' => 'Premium-Grade Products',
+            'title' => __('Premium-Grade Products'),
             'description' =>
-                'We use only top-tier, industry-approved products to ensure a spotless shine and long-lasting protection for your vehicle.',
+                __('We use only top-tier, industry-approved products to ensure a spotless shine and long-lasting protection for your vehicle.'),
         ],
         [
             'icon' => 'assets/img/about-icon3.svg',
-            'title' => 'Eco-Friendly Cleaning',
+            'title' => __('Eco-Friendly Cleaning'),
             'description' =>
-                'We care about both your car and the planet. That’s why we use eco-friendly solutions that are tough on dirt but gentle on the environment.',
+                __('We care about both your car and the planet. That’s why we use eco-friendly solutions that are tough on dirt but gentle on the environment.'),
         ],
         [
             'icon' => 'assets/img/about-icon4.svg',
-            'title' => 'Service at Your Doorstep',
+            'title' => __('Service at Your Doorstep'),
             'description' =>
-                'Skip the hassle of driving to a car wash—our mobile service brings premium car care directly to your home or workplace.',
+                __('Skip the hassle of driving to a car wash—our mobile service brings premium car care directly to your home or workplace.'),
         ],
     ];
 @endphp
@@ -66,26 +66,20 @@
                             fill="#124846" />
                     </svg>
 
-                    <h3 class="text-[11px] font-semibold uppercase text-[var(--color-heading)] font-poppins">Super
-                        Staff. Super
-                        Service.
+                    <h3 class="text-[11px] font-semibold uppercase text-[var(--color-heading)] font-poppins">{{ __('Super Staff. Super Service.') }}
                     </h3>
                 </div>
                 <h2 class="text-[32px] font-extrabold mb-9 text-[var(--color-heading)] leading-[1.2] tracking-[0.02px]">
-                    Premium car care expert
-                    <br />detailing
-                    straight to your door
+                    {{ __('Premium car care expert') }}
+                    <br />{{ __('detailing') }}
+                    {{ __('straight to your door') }}
                 </h2>
                 <p class="text-base leading-[1.5] text-[var(--color-text)] mb-10 font-sf">
-                    We believe every vehicle deserves the highest standard of care. With years of experience in
-                    professional car washing and detailing, our mission is to provide a seamless, reliable, and premium
-                    service that restores both the look and value of your vehicle. <br />
-                    Our team of trained specialists uses advanced techniques, industry-grade products, and eco-friendly
-                    solutions to deliver exceptional results—whether it’s a quick wash, deep interior cleaning, or full
-                    detailing service.
+                    {{ __('We believe every vehicle deserves the highest standard of care. With years of experience in professional car washing and detailing, our mission is to provide a seamless, reliable, and premium service that restores both the look and value of your vehicle.') }} <br />
+                    {{ __('Our team of trained specialists uses advanced techniques, industry-grade products, and eco-friendly solutions to deliver exceptional results—whether it’s a quick wash, deep interior cleaning, or full detailing service.') }}
                 </p>
                 <div class="inline-flex">
-                    <a href="{{ route('about') }}" class="btn-brand"><span>About Us</span>
+                    <a href="{{ route('about') }}" class="btn-brand"><span>{{ __('About Us') }}</span>
                         <svg width="25" height="11" viewBox="0 0 25 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M24 5.5H1M24 5.5L19.5 1M24 5.5L19.5 10" stroke="white" stroke-width="1.5"
                                 stroke-linecap="round" stroke-linejoin="round" />

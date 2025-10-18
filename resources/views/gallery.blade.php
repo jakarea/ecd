@@ -1,15 +1,15 @@
 @extends('layouts.app')
 
-@section('title', 'Gallery Page')
+@section('title', __('Gallery Page'))
 
 @section('content')
     <x-hero-section pageId="gallery" />
 
     <section class="pt-8 pb-16 md:py-25 bg-[#ededed] border-b border-[var(--color-brand)]">
         <div class="container">
-            <div class="font-sf font-medium text-[24px] text-[var(--color-text)] text-center max-w-[840px] mx-auto">Explore
+            <div class="font-sf font-medium text-[24px] text-[var(--color-text)] text-center max-w-[840px] mx-auto">{{ __('Explore
                 our gallery of spotless finishes, detailed interiors, and shining results that showcase the quality and care
-                we bring to every vehicle.</div>
+                we bring to every vehicle.') }}</div>
         </div>
     </section>
     <section class="pt-12 pb-8 md:py-20 relative">
@@ -19,16 +19,16 @@
                     <div id="filterButtons"
                         class="flex items-center border border-[var(--color-brand)] rounded-[60px] py-2.5 md:py-5 px-5 md:px-10 filter-buttons bg-white">
                         <button data-filter="all"
-                            class="filter-btn text-sm text-[var(--color-text)] font-semibold text-center inline-block cursor-pointer pl-0 pr-[12px] md:pr-[28px] border-r border-[#D1D7DF] active">All</button>
+                            class="filter-btn text-sm text-[var(--color-text)] font-semibold text-center inline-block cursor-pointer pl-0 pr-[12px] md:pr-[28px] border-r border-[#D1D7DF] active">{{ __('All') }}</button>
                         <button data-filter="video"
-                            class="filter-btn text-sm text-[var(--color-text)] font-semibold text-center inline-block cursor-pointer px-[12px] md:px-[28px] border-r border-[#D1D7DF]">Videos</button>
+                            class="filter-btn text-sm text-[var(--color-text)] font-semibold text-center inline-block cursor-pointer px-[12px] md:px-[28px] border-r border-[#D1D7DF]">{{ __('Videos') }}</button>
                         <button data-filter="interior"
-                            class="filter-btn text-sm text-[var(--color-text)] font-semibold text-center inline-block cursor-pointer px-[12px] md:px-[28px] border-r border-[#D1D7DF]">Interior</button>
+                            class="filter-btn text-sm text-[var(--color-text)] font-semibold text-center inline-block cursor-pointer px-[12px] md:px-[28px] border-r border-[#D1D7DF]">{{ __('Interior') }}</button>
                         <button data-filter="exterior"
-                            class="filter-btn text-sm text-[var(--color-text)] font-semibold text-center inline-block cursor-pointer px-[12px] md:px-[28px] border-r border-[#D1D7DF]">Exterior</button>
+                            class="filter-btn text-sm text-[var(--color-text)] font-semibold text-center inline-block cursor-pointer px-[12px] md:px-[28px] border-r border-[#D1D7DF]">{{ __('Exterior') }}</button>
                         <button data-filter="before&after"
-                            class="filter-btn text-sm text-[var(--color-text)] font-semibold text-center inline-block cursor-pointer pl-[12px] pr-0 md:pl-[28px]">Before
-                            & After</button>
+                            class="filter-btn text-sm text-[var(--color-text)] font-semibold text-center inline-block cursor-pointer pl-[12px] pr-0 md:pl-[28px]">{{ __('Before
+                            & After') }}</button>
                     </div>
                 </div>
             </div>
@@ -39,12 +39,12 @@
             {{-- Loading indicator --}}
             <div id="loading-indicator" class="hidden text-center py-8">
                 <div class="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-[var(--color-brand)]"></div>
-                <p class="mt-4 text-gray-600">Loading more items...</p>
+                <p class="mt-4 text-gray-600">{{ __('Loading more items...') }}</p>
             </div>
 
             {{-- End of content message --}}
             <div id="end-message" class="hidden text-center py-8">
-                <p class="text-gray-600">You've reached the end of the gallery</p>
+                <p class="text-gray-600">{{ __('You\'ve reached the end of the gallery') }}</p>
             </div>
 
         </div>
