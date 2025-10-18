@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Services & Subscriptions')
+@section('title', __('Services & Subscriptions'))
 
 @section('content')
 
@@ -9,49 +9,49 @@
     @php
         $services = [
             [
-                'title' => 'Vacuuming',
+                'title' => __('Vacuuming'),
             ],
             [
-                'title' => 'Cleaning windows',
+                'title' => __('Cleaning windows'),
             ],
             [
-                'title' => 'Cleaning compartments and trays',
+                'title' => __('Cleaning compartments and trays'),
             ],
             [
-                'title' => 'Dashboard cleaning',
+                'title' => __('Dashboard cleaning'),
             ],
             [
-                'title' => 'Plastic parts cleaning',
+                'title' => __('Plastic parts cleaning'),
             ],
             [
-                'title' => 'Carpet mats cleaning',
+                'title' => __('Carpet mats cleaning'),
             ],
             [
-                'title' => 'Steering wheel cleaning',
+                'title' => __('Steering wheel cleaning'),
             ],
             [
-                'title' => 'Thorough wash rims',
+                'title' => __('Thorough wash rims'),
             ],
             [
-                'title' => 'Thorough wash bumpers',
+                'title' => __('Thorough wash bumpers'),
             ],
             [
-                'title' => 'Thorough wash windows',
+                'title' => __('Thorough wash windows'),
             ],
             [
-                'title' => 'Removes dirt',
+                'title' => __('Removes dirt'),
             ],
             [
-                'title' => 'Removes, deposits',
+                'title' => __('Removes, deposits'),
             ],
             [
-                'title' => 'Removes, insect residues',
+                'title' => __('Removes, insect residues'),
             ],
             [
-                'title' => 'Perfume of choice',
+                'title' => __('Perfume of choice'),
             ],
             [
-                'title' => 'Thorough wash rims',
+                'title' => __('Thorough wash rims'),
             ],
         ];
 
@@ -85,9 +85,9 @@
 
     <section class="py-8 md:py-20 bg-[#ededed]">
         <div class="container">
-            <div class="font-sf font-medium text-[24px] text-[var(--color-text)] text-center max-w-[840px] mx-auto">From
+            <div class="font-sf font-medium text-[24px] text-[var(--color-text)] text-center max-w-[840px] mx-auto">{{ __('From
                 quick washes to premium detailing, choose the perfect package or subscribe for regular care and keep your
-                car shining all year round.</div>
+                car shining all year round.') }}</div>
         </div>
         <div class="flex flex-wrap gap-2 justify-center mt-8 md:mt-25">
             @foreach ($services as $service)

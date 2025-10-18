@@ -9,9 +9,10 @@
                 </a>
             </div>
             <nav class="hidden md:flex items-center justify-center gap-7.5 bg-white py-4 px-10 rounded-[60px]">
-                <a href="{{ route('home') }}" class="nav-link active">Home</a>
-                <a href="{{ route('about') }}" class="nav-link"> About Us</a>
-                <a href="{{ route('services-subscriptions') }}" class="nav-link">Services & Subscriptions</a>
+                <a href="{{ route('home') }}" class="nav-link active">{{ __('Home') }}</a>
+                <a href="{{ route('about') }}" class="nav-link">{{ __('About Us') }}</a>
+                <a href="{{ route('services-subscriptions') }}"
+                    class="nav-link">{{ __('Services & Subscriptions') }}</a>
                 {{-- <a href="{{ route('services-subscriptions') }}" class="nav-link flex items-center gap-2">
                     <span>Subcriptions</span>
 
@@ -21,10 +22,10 @@
                     </svg>
 
                 </a> --}}
-                <a href="{{ route('gallery') }}" class="nav-link">Our Works</a>
+                <a href="{{ route('gallery') }}" class="nav-link">{{ __('Our Works') }}</a>
             </nav>
             <div class="hidden md:block">
-                <button class="btn-brand-sm" onClick="openHeroModal()"><span>Let's Talk</span>
+                <button class="btn-brand-sm" onClick="openHeroModal()"><span>{{ __('Let\'s Talk') }}</span>
                     <svg width="25" height="11" viewBox="0 0 25 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M24 5.5H1M24 5.5L19.5 1M24 5.5L19.5 10" stroke="white" stroke-width="1.5"
                             stroke-linecap="round" stroke-linejoin="round" />
@@ -65,10 +66,10 @@
 
         <!-- Navigation Links -->
         <div class="flex flex-col gap-6 text-lg font-medium">
-            <a href="{{ route('home') }}" class="nav-link">Home</a>
-            <a href="{{ route('about') }}" class="nav-link">About Us</a>
-            <a href="{{ route('services-subscriptions') }}" class="nav-link">Services & Pricing</a>
-            <a href="{{ route('gallery') }}" class="nav-link">Our Works</a>
+            <a href="{{ route('home') }}" class="nav-link">{{ __('Home') }}</a>
+            <a href="{{ route('about') }}" class="nav-link">{{ __('About Us') }}</a>
+            <a href="{{ route('services-subscriptions') }}" class="nav-link">{{ __('Services & Pricing') }}</a>
+            <a href="{{ route('gallery') }}" class="nav-link">{{ __('Our Works') }}</a>
             {{-- <a href="{{ route('contact') }}" class="btn-brand inline-block w-fit">Let's Talk</a> --}}
         </div>
     </div>
@@ -183,15 +184,15 @@
             'borderColor' => '#0C5798',
             'buttonText' => 'Get started with Basic',
             'icon' => '<svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                                                                    <g clip-path="url(#clip0_425_15641)">
-                                                                                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M14.6697 1.93946C14.1018 0.380531 11.8983 0.380531 11.3304 1.93946L8.75361 9.02339L1.66968 11.6002C0.110756 12.168 0.110756 14.3716 1.66968 14.9395L8.75361 17.5162L11.3304 24.6002C11.8983 26.1591 14.1018 26.1591 14.6697 24.6002L17.2465 17.5162L24.3304 14.9395C25.8893 14.3716 25.8893 12.168 24.3304 11.6002L17.2465 9.02339L14.6697 1.93946Z" fill="#003868" />
-                                                                                                                    </g>
-                                                                                                                    <defs>
-                                                                                                                        <clipPath id="clip0_425_15641)">
-                                                                                                                            <rect width="25" height="25" fill="white" transform="translate(0.5 0.769775)" />
-                                                                                                                        </clipPath>
-                                                                                                                    </defs>
-                                                                                                                </svg>',
+                                                                                                                        <g clip-path="url(#clip0_425_15641)">
+                                                                                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.6697 1.93946C14.1018 0.380531 11.8983 0.380531 11.3304 1.93946L8.75361 9.02339L1.66968 11.6002C0.110756 12.168 0.110756 14.3716 1.66968 14.9395L8.75361 17.5162L11.3304 24.6002C11.8983 26.1591 14.1018 26.1591 14.6697 24.6002L17.2465 17.5162L24.3304 14.9395C25.8893 14.3716 25.8893 12.168 24.3304 11.6002L17.2465 9.02339L14.6697 1.93946Z" fill="#003868" />
+                                                                                                                        </g>
+                                                                                                                        <defs>
+                                                                                                                            <clipPath id="clip0_425_15641)">
+                                                                                                                                <rect width="25" height="25" fill="white" transform="translate(0.5 0.769775)" />
+                                                                                                                            </clipPath>
+                                                                                                                        </defs>
+                                                                                                                    </svg>',
             'features' => [
                 'extra' => null,
                 'exterior' => [
@@ -213,21 +214,21 @@
             'borderColor' => '#63FFFA',
             'buttonText' => 'Get started with Premium',
             'icon' => '<svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                                                                    <g clip-path="url(#clip0_706_5175)">
-                                                                                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M14.6697 3.93946C14.1018 2.38053 11.8983 2.38053 11.3304 3.93946L8.75361 11.0234L1.66968 13.6002C0.110756 14.168 0.110756 16.3716 1.66968 16.9395L8.75361 19.5162L11.3304 26.6002C11.8983 28.1591 14.1018 28.1591 14.6697 26.6002L17.2465 19.5162L24.3304 16.9395C25.8893 16.3716 25.8893 14.168 24.3304 13.6002L17.2465 11.0234L14.6697 3.93946Z" fill="#6ADBD9" />
-                                                                                                                    </g>
-                                                                                                                    <g clip-path="url(#clip1_706_5175)">
-                                                                                                                        <path d="M18.0905 5.17814L21.079 4.09028L22.1662 1.10243C22.1911 1.03398 22.2365 0.974858 22.2962 0.933081C22.3558 0.891305 22.4269 0.868896 22.4997 0.868896C22.5726 0.868896 22.6437 0.891305 22.7033 0.933081C22.763 0.974858 22.8084 1.03398 22.8333 1.10243L23.9212 4.091L26.9097 5.17814C26.9782 5.20307 27.0373 5.24844 27.0791 5.30812C27.1209 5.36779 27.1433 5.43887 27.1433 5.51171C27.1433 5.58456 27.1209 5.65563 27.0791 5.71531C27.0373 5.77498 26.9782 5.82036 26.9097 5.84528L23.9205 6.93314L22.8333 9.92171C22.8084 9.99016 22.763 10.0493 22.7033 10.0911C22.6437 10.1328 22.5726 10.1552 22.4997 10.1552C22.4269 10.1552 22.3558 10.1328 22.2962 10.0911C22.2365 10.0493 22.1911 9.99016 22.1662 9.92171L21.0783 6.93243L18.0905 5.84528C18.022 5.82036 17.9629 5.77498 17.9211 5.71531C17.8793 5.65563 17.8569 5.58456 17.8569 5.51171C17.8569 5.43887 17.8793 5.36779 17.9211 5.30812C17.9629 5.24844 18.022 5.20307 18.0905 5.17814Z" fill="#6ADBD9" />
-                                                                                                                    </g>
-                                                                                                                    <defs>
-                                                                                                                        <clipPath id="clip0_706_5175)">
-                                                                                                                            <rect width="25" height="25" fill="white" transform="translate(0.5 2.76978)" />
-                                                                                                                        </clipPath>
-                                                                                                                        <clipPath id="clip1_706_5175)">
-                                                                                                                            <rect width="10" height="10" fill="white" transform="translate(17.5 0.511719)" />
-                                                                                                                        </clipPath>
-                                                                                                                    </defs>
-                                                                                                                </svg>',
+                                                                                                                        <g clip-path="url(#clip0_706_5175)">
+                                                                                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.6697 3.93946C14.1018 2.38053 11.8983 2.38053 11.3304 3.93946L8.75361 11.0234L1.66968 13.6002C0.110756 14.168 0.110756 16.3716 1.66968 16.9395L8.75361 19.5162L11.3304 26.6002C11.8983 28.1591 14.1018 28.1591 14.6697 26.6002L17.2465 19.5162L24.3304 16.9395C25.8893 16.3716 25.8893 14.168 24.3304 13.6002L17.2465 11.0234L14.6697 3.93946Z" fill="#6ADBD9" />
+                                                                                                                        </g>
+                                                                                                                        <g clip-path="url(#clip1_706_5175)">
+                                                                                                                            <path d="M18.0905 5.17814L21.079 4.09028L22.1662 1.10243C22.1911 1.03398 22.2365 0.974858 22.2962 0.933081C22.3558 0.891305 22.4269 0.868896 22.4997 0.868896C22.5726 0.868896 22.6437 0.891305 22.7033 0.933081C22.763 0.974858 22.8084 1.03398 22.8333 1.10243L23.9212 4.091L26.9097 5.17814C26.9782 5.20307 27.0373 5.24844 27.0791 5.30812C27.1209 5.36779 27.1433 5.43887 27.1433 5.51171C27.1433 5.58456 27.1209 5.65563 27.0791 5.71531C27.0373 5.77498 26.9782 5.82036 26.9097 5.84528L23.9205 6.93314L22.8333 9.92171C22.8084 9.99016 22.763 10.0493 22.7033 10.0911C22.6437 10.1328 22.5726 10.1552 22.4997 10.1552C22.4269 10.1552 22.3558 10.1328 22.2962 10.0911C22.2365 10.0493 22.1911 9.99016 22.1662 9.92171L21.0783 6.93243L18.0905 5.84528C18.022 5.82036 17.9629 5.77498 17.9211 5.71531C17.8793 5.65563 17.8569 5.58456 17.8569 5.51171C17.8569 5.43887 17.8793 5.36779 17.9211 5.30812C17.9629 5.24844 18.022 5.20307 18.0905 5.17814Z" fill="#6ADBD9" />
+                                                                                                                        </g>
+                                                                                                                        <defs>
+                                                                                                                            <clipPath id="clip0_706_5175)">
+                                                                                                                                <rect width="25" height="25" fill="white" transform="translate(0.5 2.76978)" />
+                                                                                                                            </clipPath>
+                                                                                                                            <clipPath id="clip1_706_5175)">
+                                                                                                                                <rect width="10" height="10" fill="white" transform="translate(17.5 0.511719)" />
+                                                                                                                            </clipPath>
+                                                                                                                        </defs>
+                                                                                                                    </svg>',
             'features' => [
                 'extra' => 'Everything in the Basic Package, plus:',
                 'exterior' => [
@@ -251,21 +252,21 @@
             'borderColor' => '#E6BA30',
             'buttonText' => 'Get started with Full Detail',
             'icon' => '<svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                                                                    <g clip-path="url(#clip0_706_5175)">
-                                                                                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M14.6697 3.93946C14.1018 2.38053 11.8983 2.38053 11.3304 3.93946L8.75361 11.0234L1.66968 13.6002C0.110756 14.168 0.110756 16.3716 1.66968 16.9395L8.75361 19.5162L11.3304 26.6002C11.8983 28.1591 14.1018 28.1591 14.6697 26.6002L17.2465 19.5162L24.3304 16.9395C25.8893 16.3716 25.8893 14.168 24.3304 13.6002L17.2465 11.0234L14.6697 3.93946Z" fill="#6ADBD9" />
-                                                                                                                    </g>
-                                                                                                                    <g clip-path="url(#clip1_706_5175)">
-                                                                                                                        <path d="M18.0905 5.17814L21.079 4.09028L22.1662 1.10243C22.1911 1.03398 22.2365 0.974858 22.2962 0.933081C22.3558 0.891305 22.4269 0.868896 22.4997 0.868896C22.5726 0.868896 22.6437 0.891305 22.7033 0.933081C22.763 0.974858 22.8084 1.03398 22.8333 1.10243L23.9212 4.091L26.9097 5.17814C26.9782 5.20307 27.0373 5.24844 27.0791 5.30812C27.1209 5.36779 27.1433 5.43887 27.1433 5.51171C27.1433 5.58456 27.1209 5.65563 27.0791 5.71531C27.0373 5.77498 26.9782 5.82036 26.9097 5.84528L23.9205 6.93314L22.8333 9.92171C22.8084 9.99016 22.763 10.0493 22.7033 10.0911C22.6437 10.1328 22.5726 10.1552 22.4997 10.1552C22.4269 10.1552 22.3558 10.1328 22.2962 10.0911C22.2365 10.0493 22.1911 9.99016 22.1662 9.92171L21.0783 6.93243L18.0905 5.84528C18.022 5.82036 17.9629 5.77498 17.9211 5.71531C17.8793 5.65563 17.8569 5.58456 17.8569 5.51171C17.8569 5.43887 17.8793 5.36779 17.9211 5.30812C17.9629 5.24844 18.022 5.20307 18.0905 5.17814Z" fill="#6ADBD9" />
-                                                                                                                    </g>
-                                                                                                                    <defs>
-                                                                                                                        <clipPath id="clip0_706_5175)">
-                                                                                                                            <rect width="25" height="25" fill="white" transform="translate(0.5 2.76978)" />
-                                                                                                                        </clipPath>
-                                                                                                                        <clipPath id="clip1_706_5175)">
-                                                                                                                            <rect width="10" height="10" fill="white" transform="translate(17.5 0.511719)" />
-                                                                                                                        </clipPath>
-                                                                                                                    </defs>
-                                                                                                                </svg>',
+                                                                                                                        <g clip-path="url(#clip0_706_5175)">
+                                                                                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.6697 3.93946C14.1018 2.38053 11.8983 2.38053 11.3304 3.93946L8.75361 11.0234L1.66968 13.6002C0.110756 14.168 0.110756 16.3716 1.66968 16.9395L8.75361 19.5162L11.3304 26.6002C11.8983 28.1591 14.1018 28.1591 14.6697 26.6002L17.2465 19.5162L24.3304 16.9395C25.8893 16.3716 25.8893 14.168 24.3304 13.6002L17.2465 11.0234L14.6697 3.93946Z" fill="#6ADBD9" />
+                                                                                                                        </g>
+                                                                                                                        <g clip-path="url(#clip1_706_5175)">
+                                                                                                                            <path d="M18.0905 5.17814L21.079 4.09028L22.1662 1.10243C22.1911 1.03398 22.2365 0.974858 22.2962 0.933081C22.3558 0.891305 22.4269 0.868896 22.4997 0.868896C22.5726 0.868896 22.6437 0.891305 22.7033 0.933081C22.763 0.974858 22.8084 1.03398 22.8333 1.10243L23.9212 4.091L26.9097 5.17814C26.9782 5.20307 27.0373 5.24844 27.0791 5.30812C27.1209 5.36779 27.1433 5.43887 27.1433 5.51171C27.1433 5.58456 27.1209 5.65563 27.0791 5.71531C27.0373 5.77498 26.9782 5.82036 26.9097 5.84528L23.9205 6.93314L22.8333 9.92171C22.8084 9.99016 22.763 10.0493 22.7033 10.0911C22.6437 10.1328 22.5726 10.1552 22.4997 10.1552C22.4269 10.1552 22.3558 10.1328 22.2962 10.0911C22.2365 10.0493 22.1911 9.99016 22.1662 9.92171L21.0783 6.93243L18.0905 5.84528C18.022 5.82036 17.9629 5.77498 17.9211 5.71531C17.8793 5.65563 17.8569 5.58456 17.8569 5.51171C17.8569 5.43887 17.8793 5.36779 17.9211 5.30812C17.9629 5.24844 18.022 5.20307 18.0905 5.17814Z" fill="#6ADBD9" />
+                                                                                                                        </g>
+                                                                                                                        <defs>
+                                                                                                                            <clipPath id="clip0_706_5175)">
+                                                                                                                                <rect width="25" height="25" fill="white" transform="translate(0.5 2.76978)" />
+                                                                                                                            </clipPath>
+                                                                                                                            <clipPath id="clip1_706_5175)">
+                                                                                                                                <rect width="10" height="10" fill="white" transform="translate(17.5 0.511719)" />
+                                                                                                                            </clipPath>
+                                                                                                                        </defs>
+                                                                                                                    </svg>',
             'features' => [
                 'extra' => 'Everything in the Premium Package, plus:',
                 'exterior' => [
@@ -320,13 +321,13 @@
 
                     </div>
                     <div class="space-y-2">
-                        <h4 class="text-[24px] font-bold text-[var(--color-heading)] leading-[1.4]">Book your
-                            service
+                        <h4 class="text-[24px] font-bold text-[var(--color-heading)] leading-[1.4]">{{ __('Book your
+                            service') }}
                         </h4>
-                        <p class="text-[16px] font-medium text-[var(--color-text)] leading-[1.4] font-sans">For your
+                        <p class="text-[16px] font-medium text-[var(--color-text)] leading-[1.4] font-sans">{{ __('For your
                             service,
                             share your details,
-                            and we'll take care of the rest.</p>
+                            and we\'ll take care of the rest.') }}</p>
                     </div>
                 </div>
 
@@ -334,61 +335,61 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-2">
                     <!-- First Name -->
                     <div>
-                        <label class="block text-sm font-medium text-gray-700 mb-1">First Name</label>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">{{ __('First Name') }}</label>
                         <input type="text" name="first_name" required
                             class="block w-full px-4 py-3 text-base text-gray-900 placeholder-gray-500 border border-gray-300 rounded-md shadow-sm 
                                 focus:outline-none focus:ring-2 focus:ring-[var(--color-brand)] focus:ring-offset-2 focus:border-[var(--color-brand)]"
-                            placeholder="Enter first name" />
+                            placeholder="{{ __('Enter first name') }}" />
                     </div>
 
                     <!-- Last Name -->
                     <div>
-                        <label class="block text-sm font-medium text-gray-700 mb-1">Last Name</label>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">{{ __('Last Name') }}</label>
                         <input type="text" name="last_name" required
                             class="block w-full px-4 py-3 text-base text-gray-900 placeholder-gray-500 border border-gray-300 rounded-md shadow-sm 
                                 focus:outline-none focus:ring-2 focus:ring-[var(--color-brand)] focus:ring-offset-2 focus:border-[var(--color-brand)]"
-                            placeholder="Enter last name" />
+                            placeholder="{{ __('Enter last name') }}" />
                     </div>
 
                     <!-- Address -->
                     <div class="md:col-span-2">
-                        <label class="block text-sm font-medium text-gray-700 mb-1">Address</label>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">{{ __('Address') }}</label>
                         <textarea name="address" required rows="3"
                             class="block w-full px-4 py-3 text-base text-gray-900 placeholder-gray-500 border border-gray-300 rounded-md shadow-sm 
                                 focus:outline-none focus:ring-2 focus:ring-[var(--color-brand)] focus:ring-offset-2 focus:border-[var(--color-brand)]"
-                            placeholder="Your address"></textarea>
+                            placeholder="{{ __('Your address') }}"></textarea>
                     </div>
 
                     <!-- Number of Cars -->
                     <div>
-                        <label class="block text-sm font-medium text-gray-700 mb-1">Number of Cars</label>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">{{ __('Number of Cars') }}</label>
                         <input type="text" name="number_of_cars" required
                             class="block w-full px-4 py-3 text-base text-gray-900 placeholder-gray-500 border border-gray-300 rounded-md shadow-sm 
                                 focus:outline-none focus:ring-2 focus:ring-[var(--color-brand)] focus:ring-offset-2 focus:border-[var(--color-brand)]"
-                            placeholder="Enter number of cars" />
+                            placeholder="{{ __('Enter number of cars') }}" />
                     </div>
 
                     <!-- Licence Plate -->
                     <div>
-                        <label class="block text-sm font-medium text-gray-700 mb-1">Licence Plate</label>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">{{ __('Licence Plate') }}</label>
                         <input type="text" name="licence_plate" required
                             class="block w-full px-4 py-3 text-base text-gray-900 placeholder-gray-500 border border-gray-300 rounded-md shadow-sm 
                                 focus:outline-none focus:ring-2 focus:ring-[var(--color-brand)] focus:ring-offset-2 focus:border-[var(--color-brand)]"
-                            placeholder="Enter licence plate" />
+                            placeholder="{{ __('Enter licence plate') }}" />
                     </div>
 
                     <!-- WhatsApp Number -->
                     <div>
-                        <label class="block text-sm font-medium text-gray-700 mb-1">WhatsApp Number</label>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">{{ __('WhatsApp Number') }}</label>
                         <input type="text" name="whatsapp" required
                             class="block w-full px-4 py-3 text-base text-gray-900 placeholder-gray-500 border border-gray-300 rounded-md shadow-sm 
                                 focus:outline-none focus:ring-2 focus:ring-[var(--color-brand)] focus:ring-offset-2 focus:border-[var(--color-brand)]"
-                            placeholder="Enter WhatsApp number" />
+                            placeholder="{{ __('Enter WhatsApp number') }}" />
                     </div>
 
                     <!-- Preferred Date -->
                     <div>
-                        <label class="block text-sm font-medium text-gray-700 mb-1">Preferred Date</label>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">{{ __('Preferred Date') }}</label>
                         <input type="date" name="preferred_date" required
                             class="block w-full px-4 py-3 text-base text-gray-900 placeholder-gray-500 border border-gray-300 rounded-md shadow-sm 
                                 focus:outline-none focus:ring-2 focus:ring-[var(--color-brand)] focus:ring-offset-2 focus:border-[var(--color-brand)]" />

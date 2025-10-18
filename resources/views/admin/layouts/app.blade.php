@@ -119,6 +119,15 @@
                     <span class="font-medium">Team Members</span>
                 </a>
 
+                <a href="{{ route('admin.translations.index') }}"
+                    class="flex items-center gap-3 px-4 py-3 text-gray-700 rounded-lg transition-all duration-200 hover:bg-gray-50 sidebar-item {{ request()->routeIs('admin.translations.*') ? 'bg-[var(--color-brand)] !text-white hover:!bg-[var(--color-brand)]' : '' }}">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M3 5h12M9 3v2m4 0v2M3 10h12M3 15h12M4 19h10M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                    <span class="font-medium">Translations</span>
+                </a>
+
                 <a href="{{ route('home') }}" target="_blank"
                     class="flex items-center gap-3 px-4 py-3 text-gray-700 rounded-lg transition-all duration-200 hover:bg-gray-50 sidebar-item">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

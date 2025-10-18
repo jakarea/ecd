@@ -1,30 +1,29 @@
-@php
     $workingSteps = [
         [
             'step' => '01',
             'icon' => 'assets/img/step-1.png',
-            'title' => 'Book Online',
-            'description' => 'Schedule your service in just a few clicks—fast, easy, and hassle-free',
+            'title' => __('Book Online'),
+            'description' => __('Schedule your service in just a few clicks—fast, easy, and hassle-free'),
         ],
         [
             'step' => '02',
             'icon' => 'assets/img/step-2.png',
-            'title' => 'We come to you',
-            'description' => 'Our team arrives at your location, fully equipped and ready to get to work.',
+            'title' => __('We come to you'),
+            'description' => __('Our team arrives at your location, fully equipped and ready to get to work.'),
         ],
         [
             'step' => '03',
             'icon' => 'assets/img/step-3.png',
-            'title' => 'Enjoy the shine',
-            'description' => 'Sit back, relax, and admire your spotless, sparkling results.',
+            'title' => __('Enjoy the shine'),
+            'description' => __('Sit back, relax, and admire your spotless, sparkling results.'),
         ],
     ];
 @endphp
 
 <section class="py-12">
     <div class="container">
-        <x-section-heading pretitle="How it works" title="Sparkling clean in 3 easy steps"
-            description="Our team of trained specialists uses advanced techniques, industry-grade products, and eco-friendly solutions to deliver exceptional results—whether it’s a quick wash, deep interior cleaning, or full detailing service."
+        <x-section-heading pretitle="{{ __('How it works') }}" title="{{ __('Sparkling clean in 3 easy steps') }}"
+            description="{{ __('Our team of trained specialists uses advanced techniques, industry-grade products, and eco-friendly solutions to deliver exceptional results—whether it’s a quick wash, deep interior cleaning, or full detailing service.') }}"
             width="max-w-[900px]">
             <x-slot name="icon">
                 <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -40,9 +39,8 @@
                 <div class="max-w-[284px] w-full relative mb-10">
                     <span
                         class="text-[50px] font-black text-[#6ADBD926] block absolute left-0 top-[-30px] w-full ">01</span>
-                    <h4 class="text-[28px] font-semibold text-white mb-4">Book online</h4>
-                    <p class="text-sm leading-[1.5] text-[#787878]">Schedule your service in just a few clicks—fast,
-                        easy, and hassle-free.</p>
+                    <h4 class="text-[28px] font-semibold text-white mb-4">{{ __('Book online') }}</h4>
+                    <p class="text-sm leading-[1.5] text-[#787878]">{{ __('Schedule your service in just a few clicks—fast, easy, and hassle-free') }}</p>
                 </div>
                 <img src="{{ asset('assets/img/step-1.png') }}" alt="step-1" class="h-[253px] object-cover block">
                 <div
@@ -66,9 +64,8 @@
                 <div class="max-w-[284px] w-full relative mb-10">
                     <span
                         class="text-[50px] font-black text-[#6ADBD926] block absolute left-0 top-[-30px] w-full ">02</span>
-                    <h4 class="text-[28px] font-semibold text-white mb-4">We come to you</h4>
-                    <p class="text-sm leading-[1.5] text-[#787878]">Our team arrives at your location, fully equipped
-                        and ready to get to work.</p>
+                    <h4 class="text-[28px] font-semibold text-white mb-4">{{ __('We come to you') }}</h4>
+                    <p class="text-sm leading-[1.5] text-[#787878]">{{ __('Our team arrives at your location, fully equipped and ready to get to work.') }}</p>
                 </div>
                 <img src="{{ asset('assets/img/step-2.png') }}" alt="step-1" class="h-[253px] object-cover block">
                 <div
@@ -91,9 +88,8 @@
                 <div class="max-w-[284px] w-full relative mb-10">
                     <span
                         class="text-[50px] font-black text-[#6ADBD926] block absolute left-0 top-[-30px] w-full ">03</span>
-                    <h4 class="text-[28px] font-semibold text-white mb-4">Enjoy the shine</h4>
-                    <p class="text-sm leading-[1.5] text-[#787878]">Sit back, relax, and admire your spotless, sparkling
-                        results.</p>
+                    <h4 class="text-[28px] font-semibold text-white mb-4">{{ __('Enjoy the shine') }}</h4>
+                    <p class="text-sm leading-[1.5] text-[#787878]">{{ __('Sit back, relax, and admire your spotless, sparkling results.') }}</p>
                 </div>
                 <img src="{{ asset('assets/img/step-3.png') }}" alt="step-1" class="h-[253px] object-cover block">
             </div>

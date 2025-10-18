@@ -40,9 +40,9 @@
                     </svg>
                 </div>
                 <div class="space-y-2">
-                    <h4 class="text-[20px] md:text-[24px] font-bold text-[var(--color-heading)] leading-[1.4]">Book your service</h4>
+                    <h4 class="text-[20px] md:text-[24px] font-bold text-[var(--color-heading)] leading-[1.4]">{{ __('Book your service') }}</h4>
                     <p class="text-[14px] md:text-[16px] font-medium text-[var(--color-text)] leading-[1.4] font-sans">
-                        For your service, share your details, and we'll take care of the rest.
+                        {{ __('For your service, share your details, and we\'ll take care of the rest.') }}
                     </p>
                 </div>
             </div>
@@ -50,40 +50,40 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div class="">
                     <label class="block text-sm md:text-base font-medium text-[var(--color-text)] mb-2">
-                        First Name <span class="text-red-500">*</span>
+                        {{ __('First Name') }} <span class="text-red-500">*</span>
                     </label>
                     <input type="text" name="first_name" required
                         class="block w-full rounded-lg border border-[#AEAEB2] h-10 md:h-12 focus:outline-none focus:border-[#0088FF] px-3 md:px-4 text-sm md:text-base @error('first_name') border-red-500 @enderror"
-                        placeholder="Enter first name" value="{{ old('first_name') }}">
+                        placeholder="{{ __('Enter first name') }}" value="{{ old('first_name') }}">
                     @error('first_name')
                         <p class="text-red-500 text-xs mt-1">{{ $message }}</p>
                     @enderror
                 </div>
                 <div class="">
                     <label class="block text-sm md:text-base font-medium text-[var(--color-text)] mb-2">
-                        Last Name <span class="text-red-500">*</span>
+                        {{ __('Last Name') }} <span class="text-red-500">*</span>
                     </label>
                     <input type="text" name="last_name" required
                         class="block w-full rounded-lg border border-[#AEAEB2] h-10 md:h-12 focus:outline-none focus:border-[#0088FF] px-3 md:px-4 text-sm md:text-base @error('last_name') border-red-500 @enderror"
-                        placeholder="Enter last name" value="{{ old('last_name') }}">
+                        placeholder="{{ __('Enter last name') }}" value="{{ old('last_name') }}">
                     @error('last_name')
                         <p class="text-red-500 text-xs mt-1">{{ $message }}</p>
                     @enderror
                 </div>
                 <div class="md:col-span-2">
                     <label class="block text-sm md:text-base font-medium text-[var(--color-text)] mb-2">
-                        Address <span class="text-red-500">*</span>
+                        {{ __('Address') }} <span class="text-red-500">*</span>
                     </label>
                     <textarea name="address" required rows="3"
                         class="block w-full rounded-lg border border-[#AEAEB2] focus:outline-none focus:border-[#0088FF] px-3 md:px-4 py-2 text-sm md:text-base @error('address') border-red-500 @enderror"
-                        placeholder="Enter your address">{{ old('address') }}</textarea>
+                        placeholder="{{ __('Enter your address') }}">{{ old('address') }}</textarea>
                     @error('address')
                         <p class="text-red-500 text-xs mt-1">{{ $message }}</p>
                     @enderror
                 </div>
                 <div class="md:col-span-2">
                     <label class="block text-sm md:text-base font-medium text-[var(--color-text)] mb-2">
-                        Preferred Date <span class="text-red-500">*</span>
+                        {{ __('Preferred Date') }} <span class="text-red-500">*</span>
                     </label>
                     <input type="date" name="preferred_date" required
                         min="{{ date('Y-m-d', strtotime('+1 day')) }}"
@@ -98,11 +98,11 @@
             <div class="flex justify-end gap-3 mt-6">
                 <button type="button" id="backToStep1"
                     class="px-4 py-3 bg-[#F2F2F7] text-sm md:text-base text-[var(--color-text)] font-medium tracking-[0.02px] rounded-[60px] w-[100px] md:w-[110px] flex justify-center items-center cursor-pointer">
-                    Back
+                    {{ __('Back') }}
                 </button>
                 <button type="submit" id="bookNowBtn"
                     class="px-4 py-3 bg-[var(--color-brand)] text-sm md:text-base text-white font-medium tracking-[0.02px] rounded-[60px] w-[120px] md:w-[135px] flex justify-center items-center cursor-pointer">
-                    <span class="btn-text bg-[var(--color-brand)]">Book Now 1</span>
+                    <span class="btn-text bg-[var(--color-brand)]">{{ __('Book Now 1') }}</span>
                     <span class="spinner hidden"></span>
                 </button>
             </div>

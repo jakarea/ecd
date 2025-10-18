@@ -1,7 +1,7 @@
 <section class="py-8 md:py-[50px]">
     <div class="container">
-        <x-section-heading pretitle="FAQS" title="Get the answers you need to start with us"
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ipsum lorem, tempor ut ex aliquam, fringilla lacinia quam. Sed mattis ante at massa aliquet consectetur."
+        <x-section-heading pretitle="{{ __('FAQS') }}" title="{{ __('Get the answers you need to start with us') }}"
+            description="{{ __('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ipsum lorem, tempor ut ex aliquam, fringilla lacinia quam. Sed mattis ante at massa aliquet consectetur.') }}"
             width="max-w-[660px]">
             <x-slot name="icon">
 
