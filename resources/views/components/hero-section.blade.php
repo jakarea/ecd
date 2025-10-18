@@ -154,7 +154,7 @@
             </div>
         @endif
         @php
-            if (Request::is('about')) {
+            if (Request::is('*/about')) {
                 $hero_shape = 'hero_shape_white_inner_page.png';
             } else {
                 $hero_shape = 'hero_shape_inner_page.png';
