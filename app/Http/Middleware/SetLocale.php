@@ -5,28 +5,30 @@ namespace App\Http\Middleware;
 use Closure;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
-use Illuminate\Support\Facades\URL;
 
 class SetLocale
 {
-    /**
-     * Handle an incoming request.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \Closure(\Illuminate\Http\Request): (\Illuminate\Http\Response|\Illuminate\Http\RedirectResponse)  $next
-     * @return \Illuminate\Http\Response|\Illuminate\Http\RedirectResponse
-     */
     public function handle(Request $request, Closure $next)
     {
-        $locale = $request->route('locale');
+        $locales = ['en', 'nl'];
+        $firstSegment = $request->segment(1);
 
-        if ($locale && in_array($locale, ['en', 'nl'])) {
-            App::setLocale($locale);
-        } else {
-            App::setLocale('nl');
+        // If URL doesn’t start with a locale
+        if (!in_array($firstSegment, $locales)) {
+            $defaultLocale = config('app.locale', 'nl');
+            $path = $request->path(); // e.g. 'about', 'contact'
+
+            // Redirect root "/" to /{defaultLocale}
+            if ($path === '/') {
+                return redirect("/{$defaultLocale}");
+            }
+
+            // Redirect any other path to /{defaultLocale}/{path}
+            return redirect("/{$defaultLocale}/{$path}");
         }
 
-        URL::defaults(['locale' => App::getLocale()]);
+        // Set application locale
+        App::setLocale($firstSegment);
 
         return $next($request);
     }

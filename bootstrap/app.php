@@ -23,7 +23,6 @@ return Application::configure(basePath: dirname(__DIR__))
         // Add SEO meta injection middleware to web routes
         $middleware->web(append: [
             \App\Http\Middleware\InjectSeoMeta::class,
-            \App\Http\Middleware\SetLocale::class,
         ]);
     })
     ->withExceptions(function (Exceptions $exceptions): void {
