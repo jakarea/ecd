@@ -56,7 +56,7 @@
         <div class="marquee-track-1 flex gap-6">
             @foreach ($images as $image)
                 <div class="w-auto flex-shrink-0">
-                    <img src="{{ asset(path: $image['image']) }}" alt="Showcase Image {{ $image['id'] }}"
+                    <img src="{{ asset(path: $image['image']) }}" alt="{{ __('Showcase Image') }} {{ $image['id'] }}"
                         class="h-[180px] md:h-[337px] w-auto rounded-[15px]" />
                 </div>
             @endforeach
@@ -64,7 +64,7 @@
             {{-- Duplicate for seamless loop --}}
             @foreach ($images as $image)
                 <div class="w-auto flex-shrink-0">
-                    <img src="{{ asset(path: $image['image']) }}" alt="Showcase Image {{ $image['id'] }}"
+                    <img src="{{ asset(path: $image['image']) }}" alt="{{ __('Showcase Image') }} {{ $image['id'] }}"
                         class="h-[180px] md:h-[337px] w-auto" />
                 </div>
             @endforeach
@@ -77,7 +77,7 @@
         <div class="marquee-track-2 flex gap-6">
             @foreach ($images as $image)
                 <div class="w-auto flex-shrink-0">
-                    <img src="{{ asset(path: $image['image']) }}" alt="Showcase Image {{ $image['id'] }}"
+                    <img src="{{ asset(path: $image['image']) }}" alt="{{ __('Showcase Image') }} {{ $image['id'] }}"
                         class="h-[180px] md:h-[337px] w-auto rounded-[15px]" />
                 </div>
             @endforeach
@@ -85,7 +85,7 @@
             {{-- Duplicate for seamless loop --}}
             @foreach ($images as $image)
                 <div class="w-auto flex-shrink-0">
-                    <img src="{{ asset(path: $image['image']) }}" alt="Showcase Image {{ $image['id'] }}"
+                    <img src="{{ asset(path: $image['image']) }}" alt="{{ __('Showcase Image') }} {{ $image['id'] }}"
                         class="h-[337px] w-auto" />
                 </div>
             @endforeach

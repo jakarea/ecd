@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'About Page')
+@section('title', __('About Page'))
 
 @section('content')
     <x-hero-section pageId="about" />

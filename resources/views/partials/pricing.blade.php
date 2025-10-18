@@ -17,14 +17,14 @@
                                         fill="#3ACBC6" fill-opacity="0.6" />
                                 </svg>
 
-                                Compare our plans
+                                {{ __('Compare our plans') }}
                             </h3>
                             <div class="flex items-center mt-[35px]">
                                 <div class="flex items-center border border-[#D1D7DF] rounded-[60px] p-1.5">
                                     <button
-                                        class="pricing-opt bg-[var(--color-brand)] text-white text-base font-bold rounded-[60px] py-2.5 px-6 text-center uppercase inline-block cursor-pointer">Single</button>
+                                        class="pricing-opt bg-[var(--color-brand)] text-white text-base font-bold rounded-[60px] py-2.5 px-6 text-center uppercase inline-block cursor-pointer">{{ __('Single') }}</button>
                                     <button
-                                        class="pricing-opt text-[#8D8D8D] text-base font-bold rounded-[60px] py-2.5 px-6 text-center uppercase inline-block cursor-pointer">Monthly</button>
+                                        class="pricing-opt text-[#8D8D8D] text-base font-bold rounded-[60px] py-2.5 px-6 text-center uppercase inline-block cursor-pointer">{{ __('Monthly') }}</button>
                                 </div>
 
                             </div>
@@ -47,8 +47,8 @@
                                         </defs>
                                     </svg>
                                 </div>
-                                <h3 class="text-[22px] font-medium text-white tracking-[-0.44px]">Regular
-                                    Subscription</h3>
+                                <h3 class="text-[22px] font-medium text-white tracking-[-0.44px]">{{ __('Regular
+                                    Subscription') }}</h3>
                                 <span class="price text-[36px] font-extrabold text-white" data-monthly="€74,45"
                                     data-single="€79,95">€79,95</span>
                             </div>
@@ -80,8 +80,8 @@
                                         </defs>
                                     </svg>
                                 </div>
-                                <h3 class="text-[22px] font-medium text-white tracking-[-0.44px]">Premium
-                                    Subscription</h3>
+                                <h3 class="text-[22px] font-medium text-white tracking-[-0.44px]">{{ __('Premium
+                                    Subscription') }}</h3>
                                 <span class="price text-[36px] font-extrabold text-white" data-single="€149,95"
                                     data-monthly="€144,95">€149,95</span>
                             </div>
@@ -131,8 +131,8 @@
                                         </defs>
                                     </svg>
                                 </div>
-                                <h3 class="text-[22px] font-medium text-white tracking-[-0.44px]">Full Detail
-                                    Subscription</h3>
+                                <h3 class="text-[22px] font-medium text-white tracking-[-0.44px]">{{ __('Full Detail
+                                    Subscription') }}</h3>
                                 <span class="price text-[36px] font-extrabold text-white" data-single="€289,95"
                                     data-monthly="€249.45">€289,45</span>
                             </div>
@@ -142,57 +142,57 @@
                 <div class="tbody">
                     <div class="tr flex border-l border-t border-b border-[#CBD6E9] rounded-tl-[16px]">
                         <div class="td max-w-[398px] w-full py-5 px-[30px] border-r border-[#CBD6E9]">
-                            <span class="text-[16px] text-[var(--color-heading)] font-sf">Discount</span>
+                            <span class="text-[16px] text-[var(--color-heading)] font-sf">{{ __('Discount') }}</span>
                         </div>
                         <div class="td max-w-[267.33px] w-full py-5 px-[30px] border-r border-[#CBD6E9] text-center">
-                            <span class="text-[16px] text-[var(--color-text)] font-sf">10% discount per
-                                treatment</span>
+                            <span class="text-[16px] text-[var(--color-text)] font-sf">{{ __('10% discount per
+                                treatment') }}</span>
                         </div>
                         <div class="td max-w-[267.33px] w-full py-5 px-[30px] border-r border-[#CBA328] text-center">
-                            <span class="text-[16px] text-[var(--color-text)] font-sf">15% discount per
-                                treatment</span>
+                            <span class="text-[16px] text-[var(--color-text)] font-sf">{{ __('15% discount per
+                                treatment') }}</span>
                         </div>
                         <div
                             class="td max-w-[267.33px] w-full py-5 px-[30px] text-center bg-[#CBA32810] border-r border-[#CBA328]">
-                            <span class="text-[16px] text-[var(--color-text)] font-sf">20% discount per
-                                treatment</span>
+                            <span class="text-[16px] text-[var(--color-text)] font-sf">{{ __('20% discount per
+                                treatment') }}</span>
                         </div>
                     </div>
                     <div class="tr flex border-l border-b border-[#CBD6E9]">
                         <div class="td max-w-[398px] w-full py-5 px-[30px] border-r border-[#CBD6E9]">
-                            <span class="text-[16px] text-[var(--color-heading)] font-sf">Service</span>
+                            <span class="text-[16px] text-[var(--color-heading)] font-sf">{{ __('Service') }}</span>
                         </div>
                         <div class="td max-w-[267.33px] w-full py-5 px-[30px] border-r border-[#CBD6E9] text-center">
-                            <span class="text-[16px] text-[var(--color-text)] text-left font-sf">1x per month</span>
+                            <span class="text-[16px] text-[var(--color-text)] text-left font-sf">{{ __('1x per month') }}</span>
                         </div>
                         <div class="td max-w-[267.33px] w-full py-5 px-[30px] border-r border-[#CBA328] text-center">
-                            <span class="text-[16px] text-[var(--color-text)] text-left font-sf">2x per month</span>
+                            <span class="text-[16px] text-[var(--color-text)] text-left font-sf">{{ __('2x per month') }}</span>
                         </div>
                         <div
                             class="td max-w-[267.33px] w-full py-5 px-[30px] text-center bg-[#CBA32810] border-r border-[#CBA328]">
-                            <span class="text-[16px] text-[var(--color-text)] text-left font-sf">4x per month</span>
+                            <span class="text-[16px] text-[var(--color-text)] text-left font-sf">{{ __('4x per month') }}</span>
                         </div>
                     </div>
                     <div class="tr flex border-l border-b border-[#CBD6E9]">
                         <div class="td max-w-[398px] w-full py-5 px-[30px] border-r border-[#CBD6E9]">
-                            <span class="text-[16px] text-[var(--color-heading)] font-sf">Weekly</span>
+                            <span class="text-[16px] text-[var(--color-heading)] font-sf">{{ __('Weekly') }}</span>
                         </div>
                         <div class="td max-w-[267.33px] w-full py-5 px-[30px] border-r border-[#CBD6E9] text-center">
                             <span class="text-[16px] text-[var(--color-text)] font-sf">-</span>
                         </div>
                         <div class="td max-w-[267.33px] w-full py-5 px-[30px] border-r border-[#CBA328] text-center">
-                            <span class="text-[16px] text-[var(--color-text)] font-sf">Every other
-                                week</span>
+                            <span class="text-[16px] text-[var(--color-text)] font-sf">{{ __('Every other
+                                week') }}</span>
                         </div>
                         <div
                             class="td max-w-[267.33px] w-full py-5 px-[30px] text-center bg-[#CBA32810] border-r border-[#CBA328]">
-                            <span class="text-[16px] text-[var(--color-text)] font-sf">Weekly</span>
+                            <span class="text-[16px] text-[var(--color-text)] font-sf">{{ __('Weekly') }}</span>
                         </div>
                     </div>
                     <div class="tr flex border-l border-b border-[#CBD6E9] bg-[#F6F9FF]">
                         <div class="td max-w-[398px] w-full py-2 px-[30px] border-r border-[#CBD6E9]">
                             <span
-                                class="text-[18px] font-bold text-[var(--color-text)] font-sf uppercase">Interior</span>
+                                class="text-[18px] font-bold text-[var(--color-text)] font-sf uppercase">{{ __('Interior') }}</span>
                         </div>
                         <div class="td max-w-[267.33px] w-full py-5 px-[30px] border-r border-[#CBD6E9] text-center">
                             <span class="text-[16px] text-[var(--color-text)] font-sf"></span>
@@ -207,7 +207,7 @@
                     </div>
                     <div class="tr flex border-l border-b border-[#CBD6E9]">
                         <div class="td max-w-[398px] w-full py-5 px-[30px] border-r border-[#CBD6E9]">
-                            <span class="text-[16px] text-[var(--color-heading)] font-sf">Vacuuming</span>
+                            <span class="text-[16px] text-[var(--color-heading)] font-sf">{{ __('Vacuuming') }}</span>
                         </div>
                         <div
                             class="td max-w-[267.33px] w-full py-5 px-[30px] border-r border-[#CBD6E9] text-center flex justify-center items-center">
@@ -248,8 +248,8 @@
                     </div>
                     <div class="tr flex border-l border-b border-[#CBD6E9]">
                         <div class="td max-w-[398px] w-full py-5 px-[30px] border-r border-[#CBD6E9]">
-                            <span class="text-[16px] text-[var(--color-heading)] font-sf">Cleaning windows
-                                (inside)</span>
+                            <span class="text-[16px] text-[var(--color-heading)] font-sf">{{ __('Cleaning windows
+                                (inside)') }}</span>
                         </div>
                         <div
                             class="td max-w-[267.33px] w-full py-5 px-[30px] border-r border-[#CBD6E9] text-center flex justify-center items-center">
@@ -290,8 +290,8 @@
                     </div>
                     <div class="tr flex border-l border-b border-[#CBD6E9]">
                         <div class="td max-w-[398px] w-full py-5 px-[30px] border-r border-[#CBD6E9]">
-                            <span class="text-[16px] text-[var(--color-heading)] font-sf">Cleaning compartments and
-                                trays</span>
+                            <span class="text-[16px] text-[var(--color-heading)] font-sf">{{ __('Cleaning compartments and
+                                trays') }}</span>
                         </div>
                         <div
                             class="td max-w-[267.33px] w-full py-5 px-[30px] border-r border-[#CBD6E9] text-center flex justify-center items-center">
@@ -332,7 +332,7 @@
                     </div>
                     <div class="tr flex border-l border-b border-[#CBD6E9]">
                         <div class="td max-w-[398px] w-full py-5 px-[30px] border-r border-[#CBD6E9]">
-                            <span class="text-[16px] text-[var(--color-heading)] font-sf">Dashboard cleaning</span>
+                            <span class="text-[16px] text-[var(--color-heading)] font-sf">{{ __('Dashboard cleaning') }}</span>
                         </div>
                         <div
                             class="td max-w-[267.33px] w-full py-5 px-[30px] border-r border-[#CBD6E9] text-center flex justify-center items-center">
@@ -455,7 +455,7 @@
                     </div>
                     <div class="tr flex border-l border-b border-[#CBD6E9]">
                         <div class="td max-w-[398px] w-full py-5 px-[30px] border-r border-[#CBD6E9]">
-                            <span class="text-[16px] text-[var(--color-heading)] font-sf">Carpet mats cleaning</span>
+                            <span class="text-[16px] text-[var(--color-heading)] font-sf">{{ __('Carpet mats cleaning') }}</span>
                         </div>
                         <div
                             class="td max-w-[267.33px] w-full py-5 px-[30px] border-r border-[#CBD6E9] text-center flex justify-center items-center">
@@ -496,108 +496,8 @@
                     </div>
                     <div class="tr flex border-l border-b border-[#CBD6E9]">
                         <div class="td max-w-[398px] w-full py-5 px-[30px] border-r border-[#CBD6E9]">
-                            <span class="text-[16px] text-[var(--color-heading)] font-sf">Steering wheel
-                                cleaning</span>
-                        </div>
-                        <div
-                            class="td max-w-[267.33px] w-full py-5 px-[30px] border-r border-[#CBD6E9] text-center flex justify-center items-center">
-                            <span class="text-[16px] text-[var(--color-text)] font-sf">
-                                <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <ellipse cx="12.667" cy="12.4999" rx="12" ry="12.0001" fill="#34C759" />
-                                    <path
-                                        d="M10.7052 14.6448L8.12057 12.0602L7.01074 13.17L10.7052 16.8645L18.3241 9.24557L17.2142 8.13574L10.7052 14.6448Z"
-                                        fill="white" />
-                                </svg>
-                            </span>
-                        </div>
-                        <div
-                            class="td max-w-[267.33px] w-full py-5 px-[30px] border-r border-[#CBA328] text-center flex justify-center items-center">
-                            <span class="text-[16px] text-[var(--color-text)] font-sf">
-                                <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <ellipse cx="12.667" cy="12.4999" rx="12" ry="12.0001" fill="#34C759" />
-                                    <path
-                                        d="M10.7052 14.6448L8.12057 12.0602L7.01074 13.17L10.7052 16.8645L18.3241 9.24557L17.2142 8.13574L10.7052 14.6448Z"
-                                        fill="white" />
-                                </svg>
-                            </span>
-                        </div>
-                        <div
-                            class="td max-w-[267.33px] w-full py-5 px-[30px] text-center flex justify-center items-center bg-[#CBA32810] border-r border-[#CBA328]">
-                            <span class="text-[16px] text-[var(--color-text)] font-sf">
-                                <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <ellipse cx="12.667" cy="12.4999" rx="12" ry="12.0001" fill="#34C759" />
-                                    <path
-                                        d="M10.7052 14.6448L8.12057 12.0602L7.01074 13.17L10.7052 16.8645L18.3241 9.24557L17.2142 8.13574L10.7052 14.6448Z"
-                                        fill="white" />
-                                </svg>
-                            </span>
-                        </div>
-                    </div>
-                    <div class="tr flex border-l border-b border-[#CBD6E9] bg-[#F6F9FF]">
-                        <div class="td max-w-[398px] w-full py-2 px-[30px] border-r border-[#CBD6E9]">
-                            <span
-                                class="text-[18px] font-bold text-[var(--color-heading)] font-sf uppercase">Exterior</span>
-                        </div>
-                        <div class="td max-w-[267.33px] w-full py-5 px-[30px] border-r border-[#CBD6E9] text-center">
-                            <span class="text-[16px] text-[var(--color-text)] font-sf"></span>
-                        </div>
-                        <div class="td max-w-[267.33px] w-full py-5 px-[30px] border-r border-[#CBA328] text-center">
-                            <span class="text-[16px] text-[var(--color-text)] font-sf"></span>
-                        </div>
-                        <div
-                            class="td max-w-[267.33px] w-full py-5 px-[30px] text-center bg-[#CBA32810] border-r border-[#CBA328]">
-                            <span class="text-[16px] text-[var(--color-text)] font-sf"></span>
-                        </div>
-                    </div>
-                    <div class="tr flex border-l border-b border-[#CBD6E9]">
-                        <div class="td max-w-[398px] w-full py-5 px-[30px] border-r border-[#CBD6E9]">
-                            <span class="text-[16px] text-[var(--color-heading)] font-sf">Thorough wash including rims,
-                                bumpers, and windows</span>
-                        </div>
-                        <div
-                            class="td max-w-[267.33px] w-full py-5 px-[30px] border-r border-[#CBD6E9] text-center flex justify-center items-center">
-                            <span class="text-[16px] text-[var(--color-text)] font-sf">
-                                <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <ellipse cx="12.667" cy="12.4999" rx="12" ry="12.0001" fill="#34C759" />
-                                    <path
-                                        d="M10.7052 14.6448L8.12057 12.0602L7.01074 13.17L10.7052 16.8645L18.3241 9.24557L17.2142 8.13574L10.7052 14.6448Z"
-                                        fill="white" />
-                                </svg>
-                            </span>
-                        </div>
-                        <div
-                            class="td max-w-[267.33px] w-full py-5 px-[30px] border-r border-[#CBA328] text-center flex justify-center items-center">
-                            <span class="text-[16px] text-[var(--color-text)] font-sf">
-                                <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <ellipse cx="12.667" cy="12.4999" rx="12" ry="12.0001" fill="#34C759" />
-                                    <path
-                                        d="M10.7052 14.6448L8.12057 12.0602L7.01074 13.17L10.7052 16.8645L18.3241 9.24557L17.2142 8.13574L10.7052 14.6448Z"
-                                        fill="white" />
-                                </svg>
-                            </span>
-                        </div>
-                        <div
-                            class="td max-w-[267.33px] w-full py-5 px-[30px] text-center flex justify-center items-center bg-[#CBA32810] border-r border-[#CBA328]">
-                            <span class="text-[16px] text-[var(--color-text)] font-sf">
-                                <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <ellipse cx="12.667" cy="12.4999" rx="12" ry="12.0001" fill="#34C759" />
-                                    <path
-                                        d="M10.7052 14.6448L8.12057 12.0602L7.01074 13.17L10.7052 16.8645L18.3241 9.24557L17.2142 8.13574L10.7052 14.6448Z"
-                                        fill="white" />
-                                </svg>
-                            </span>
-                        </div>
-                    </div>
-                    <div class="tr flex border-l border-b border-[#CBD6E9]">
-                        <div class="td max-w-[398px] w-full py-5 px-[30px] border-r border-[#CBD6E9]">
-                            <span class="text-[16px] text-[var(--color-heading)] font-sf">Removes dirt, deposits, and
-                                insect residues</span>
+                            <span class="text-[16px] text-[var(--color-heading)] font-sf">{{ __('Steering wheel
+                                cleaning') }}</span>
                         </div>
                         <div
                             class="td max-w-[267.33px] w-full py-5 px-[30px] border-r border-[#CBD6E9] text-center flex justify-center items-center">
@@ -639,7 +539,7 @@
                     <div class="tr flex border-l border-b border-[#CBD6E9] bg-[#F6F9FF]">
                         <div class="td max-w-[398px] w-full py-2 px-[30px] border-r border-[#CBD6E9]">
                             <span
-                                class="text-[18px] font-bold text-[var(--color-heading)] font-sf uppercase">Extra</span>
+                                class="text-[18px] font-bold text-[var(--color-heading)] font-sf uppercase">{{ __('Exterior') }}</span>
                         </div>
                         <div class="td max-w-[267.33px] w-full py-5 px-[30px] border-r border-[#CBD6E9] text-center">
                             <span class="text-[16px] text-[var(--color-text)] font-sf"></span>
@@ -654,7 +554,8 @@
                     </div>
                     <div class="tr flex border-l border-b border-[#CBD6E9]">
                         <div class="td max-w-[398px] w-full py-5 px-[30px] border-r border-[#CBD6E9]">
-                            <span class="text-[16px] text-[var(--color-heading)] font-sf">Perfume of choice</span>
+                            <span class="text-[16px] text-[var(--color-heading)] font-sf">{{ __('Thorough wash including rims,
+                                bumpers, and windows') }}</span>
                         </div>
                         <div
                             class="td max-w-[267.33px] w-full py-5 px-[30px] border-r border-[#CBD6E9] text-center flex justify-center items-center">
@@ -695,8 +596,107 @@
                     </div>
                     <div class="tr flex border-l border-b border-[#CBD6E9]">
                         <div class="td max-w-[398px] w-full py-5 px-[30px] border-r border-[#CBD6E9]">
-                            <span class="text-[16px] text-[var(--color-heading)] font-sf">Choice of one extra
-                                option</span>
+                            <span class="text-[16px] text-[var(--color-heading)] font-sf">{{ __('Removes dirt, deposits, and
+                                insect residues') }}</span>
+                        </div>
+                        <div
+                            class="td max-w-[267.33px] w-full py-5 px-[30px] border-r border-[#CBD6E9] text-center flex justify-center items-center">
+                            <span class="text-[16px] text-[var(--color-text)] font-sf">
+                                <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <ellipse cx="12.667" cy="12.4999" rx="12" ry="12.0001" fill="#34C759" />
+                                    <path
+                                        d="M10.7052 14.6448L8.12057 12.0602L7.01074 13.17L10.7052 16.8645L18.3241 9.24557L17.2142 8.13574L10.7052 14.6448Z"
+                                        fill="white" />
+                                </svg>
+                            </span>
+                        </div>
+                        <div
+                            class="td max-w-[267.33px] w-full py-5 px-[30px] border-r border-[#CBA328] text-center flex justify-center items-center">
+                            <span class="text-[16px] text-[var(--color-text)] font-sf">
+                                <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <ellipse cx="12.667" cy="12.4999" rx="12" ry="12.0001" fill="#34C759" />
+                                    <path
+                                        d="M10.7052 14.6448L8.12057 12.0602L7.01074 13.17L10.7052 16.8645L18.3241 9.24557L17.2142 8.13574L10.7052 14.6448Z"
+                                        fill="white" />
+                                </svg>
+                            </span>
+                        </div>
+                        <div
+                            class="td max-w-[267.33px] w-full py-5 px-[30px] text-center flex justify-center items-center bg-[#CBA32810] border-r border-[#CBA328]">
+                            <span class="text-[16px] text-[var(--color-text)] font-sf">
+                                <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <ellipse cx="12.667" cy="12.4999" rx="12" ry="12.0001" fill="#34C759" />
+                                    <path
+                                        d="M10.7052 14.6448L8.12057 12.0602L7.01074 13.17L10.7052 16.8645L18.3241 9.24557L17.2142 8.13574L10.7052 14.6448Z"
+                                        fill="white" />
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="tr flex border-l border-b border-[#CBD6E9] bg-[#F6F9FF]">
+                        <div class="td max-w-[398px] w-full py-2 px-[30px] border-r border-[#CBD6E9]">
+                            <span
+                                class="text-[18px] font-bold text-[var(--color-heading)] font-sf uppercase">{{ __('Extra') }}</span>
+                        </div>
+                        <div class="td max-w-[267.33px] w-full py-5 px-[30px] border-r border-[#CBD6E9] text-center">
+                            <span class="text-[16px] text-[var(--color-text)] font-sf"></span>
+                        </div>
+                        <div class="td max-w-[267.33px] w-full py-5 px-[30px] border-r border-[#CBA328] text-center">
+                            <span class="text-[16px] text-[var(--color-text)] font-sf"></span>
+                        </div>
+                        <div
+                            class="td max-w-[267.33px] w-full py-5 px-[30px] text-center bg-[#CBA32810] border-r border-[#CBA328]">
+                            <span class="text-[16px] text-[var(--color-text)] font-sf"></span>
+                        </div>
+                    </div>
+                    <div class="tr flex border-l border-b border-[#CBD6E9]">
+                        <div class="td max-w-[398px] w-full py-5 px-[30px] border-r border-[#CBD6E9]">
+                            <span class="text-[16px] text-[var(--color-heading)] font-sf">{{ __('Perfume of choice') }}</span>
+                        </div>
+                        <div
+                            class="td max-w-[267.33px] w-full py-5 px-[30px] border-r border-[#CBD6E9] text-center flex justify-center items-center">
+                            <span class="text-[16px] text-[var(--color-text)] font-sf">
+                                <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <ellipse cx="12.667" cy="12.4999" rx="12" ry="12.0001" fill="#34C759" />
+                                    <path
+                                        d="M10.7052 14.6448L8.12057 12.0602L7.01074 13.17L10.7052 16.8645L18.3241 9.24557L17.2142 8.13574L10.7052 14.6448Z"
+                                        fill="white" />
+                                </svg>
+                            </span>
+                        </div>
+                        <div
+                            class="td max-w-[267.33px] w-full py-5 px-[30px] border-r border-[#CBA328] text-center flex justify-center items-center">
+                            <span class="text-[16px] text-[var(--color-text)] font-sf">
+                                <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <ellipse cx="12.667" cy="12.4999" rx="12" ry="12.0001" fill="#34C759" />
+                                    <path
+                                        d="M10.7052 14.6448L8.12057 12.0602L7.01074 13.17L10.7052 16.8645L18.3241 9.24557L17.2142 8.13574L10.7052 14.6448Z"
+                                        fill="white" />
+                                </svg>
+                            </span>
+                        </div>
+                        <div
+                            class="td max-w-[267.33px] w-full py-5 px-[30px] text-center flex justify-center items-center bg-[#CBA32810] border-r border-[#CBA328]">
+                            <span class="text-[16px] text-[var(--color-text)] font-sf">
+                                <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <ellipse cx="12.667" cy="12.4999" rx="12" ry="12.0001" fill="#34C759" />
+                                    <path
+                                        d="M10.7052 14.6448L8.12057 12.0602L7.01074 13.17L10.7052 16.8645L18.3241 9.24557L17.2142 8.13574L10.7052 14.6448Z"
+                                        fill="white" />
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="tr flex border-l border-b border-[#CBD6E9]">
+                        <div class="td max-w-[398px] w-full py-5 px-[30px] border-r border-[#CBD6E9]">
+                            <span class="text-[16px] text-[var(--color-heading)] font-sf">{{ __('Choice of one extra
+                                option') }}</span>
                         </div>
                         <div
                             class="td max-w-[267.33px] w-full py-5 px-[30px] border-r border-[#CBD6E9] text-center flex justify-center items-center">

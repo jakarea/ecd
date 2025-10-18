@@ -5,70 +5,70 @@
 
     $plans = [
         [
-            'name' => 'Basic Treatment',
+            'name' => __('Basic Treatment'),
             'price_single' => '€54,95',
             'price_monthly' => '€74,45',
-            'frequency' => '1x per month',
+            'frequency' => __('1x per month'),
             'color' => '#003868',
             'borderColor' => '#0C5798',
-            'buttonText' => 'Get started with Basic',
+            'buttonText' => __('Get started with Basic'),
             'icon' => '<svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_425_15641)"><path fill-rule="evenodd" clip-rule="evenodd"d="M14.6697 1.93946C14.1018 0.380531 11.8983 0.380531 11.3304 1.93946L8.75361 9.02339L1.66968 11.6002C0.110756 12.168 0.110756 14.3716 1.66968 14.9395L8.75361 17.5162L11.3304 24.6002C11.8983 26.1591 14.1018 26.1591 14.6697 24.6002L17.2465 17.5162L24.3304 14.9395C25.8893 14.3716 25.8893 12.168 24.3304 11.6002L17.2465 9.02339L14.6697 1.93946Z" fill="#003868" /></g><defs><clipPath id="clip0_425_15641"><rect width="25" height="25" fill="white" transform="translate(0.5 0.769775)" /></clipPath></defs></svg>',
             'features' => [
                 'extra' => null,
                 'exterior' => [
-                    'Thorough wash of the exterior including rims, bumpers, and windows.',
-                    'Removes dirt, deposits, and insect residues for a fresh appearance.',
-                    'Door frames cleaned.'
+                    __('Thorough wash of the exterior including rims, bumpers, and windows.'),
+                    __('Removes dirt, deposits, and insect residues for a fresh appearance.'),
+                    __('Door frames cleaned.')
                 ],
                 'interior' => [
-                    'Vacuuming mats and seats.'
+                    __('Vacuuming mats and seats.')
                 ]
             ]
         ],
         [
-            'name' => 'Premium Treatment',
+            'name' => __('Premium Treatment'),
             'price_single' => '€84,95',
             'price_monthly' => '€139,45',
-            'frequency' => '2x per month <br /> <sub>every other week</sub>',
+            'frequency' => __('2x per month') . ' <br /> <sub>' . __('every other week') . '</sub>',
             'color' => 'var(--color-brand)',
             'borderColor' => '#63FFFA',
-            'buttonText' => 'Get started with Premium',
+            'buttonText' => __('Get started with Premium'),
             'icon' => '<svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"> <g clip-path="url(#clip0_706_5175)"> <path fill-rule="evenodd" clip-rule="evenodd" d="M14.6697 3.93946C14.1018 2.38053 11.8983 2.38053 11.3304 3.93946L8.75361 11.0234L1.66968 13.6002C0.110756 14.168 0.110756 16.3716 1.66968 16.9395L8.75361 19.5162L11.3304 26.6002C11.8983 28.1591 14.1018 28.1591 14.6697 26.6002L17.2465 19.5162L24.3304 16.9395C25.8893 16.3716 25.8893 14.168 24.3304 13.6002L17.2465 11.0234L14.6697 3.93946Z" fill="#6ADBD9" /></g><g clip-path="url(#clip1_706_5175)"><path d="M18.0905 5.17814L21.079 4.09028L22.1662 1.10243C22.1911 1.03398 22.2365 0.974858 22.2962 0.933081C22.3558 0.891305 22.4269 0.868896 22.4997 0.868896C22.5726 0.868896 22.6437 0.891305 22.7033 0.933081C22.763 0.974858 22.8084 1.03398 22.8333 1.10243L23.9212 4.091L26.9097 5.17814C26.9782 5.20307 27.0373 5.24844 27.0791 5.30812C27.1209 5.36779 27.1433 5.43887 27.1433 5.51171C27.1433 5.58456 27.1209 5.65563 27.0791 5.71531C27.0373 5.77498 26.9782 5.82036 26.9097 5.84528L23.9205 6.93314L22.8333 9.92171C22.8084 9.99016 22.763 10.0493 22.7033 10.0911C22.6437 10.1328 22.5726 10.1552 22.4997 10.1552C22.4269 10.1552 22.3558 10.1328 22.2962 10.0911C22.2365 10.0493 22.1911 9.99016 22.1662 9.92171L21.0783 6.93243L18.0905 5.84528C18.022 5.82036 17.9629 5.77498 17.9211 5.71531C17.8793 5.65563 17.8569 5.58456 17.8569 5.51171C17.8569 5.43887 17.8793 5.36779 17.9211 5.30812C17.9629 5.24844 18.022 5.20307 18.0905 5.17814Z" fill="#6ADBD9" /></g><defs><clipPath id="clip0_706_5175"><rect width="25" height="25" fill="white" transform="translate(0.5 2.76978)" /></clipPath><clipPath id="clip1_706_5175"><rect width="10" height="10" fill="white" transform="translate(17.5 0.511719)" /></clipPath></defs></svg>',
             'features' => [
-                'extra' => 'Everything in the Basic Package, plus:',
+                'extra' => __('Everything in the Basic Package, plus:'),
                 'exterior' => [
-                    'Exterior cleaning',
-                    'Door frames cleaned.'
+                    __('Exterior cleaning'),
+                    __('Door frames cleaned.')
                 ],
                 'interior' => [
-                    'Vacuuming mats and seats.',
-                    'Cleaning windows (inside)',
-                    'Dashboard cleaning',
-                    'Cleaning plastic parts'
+                    __('Vacuuming mats and seats.'),
+                    __('Cleaning windows (inside)'),
+                    __('Dashboard cleaning'),
+                    __('Cleaning plastic parts')
                 ]
             ]
         ],
         [
-            'name' => 'Full Detail Treatment',
+            'name' => __('Full Detail Treatment'),
             'price_single' => '€274,45',
             'price_monthly' => '€244,95',
-            'frequency' => '4x per month <br /> <sub>weekly</sub>',
+            'frequency' => __('4x per month') . ' <br /> <sub>' . __('weekly') . '</sub>',
             'color' => '#CBA328',
             'borderColor' => '#E6BA30',
-            'buttonText' => 'Get started with Full Detail',
+            'buttonText' => __('Get started with Full Detail'),
             'icon' => '<svg width="31" height="34" viewBox="0 0 31 34" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_707_5176)"><path fill-rule="evenodd" clip-rule="evenodd" d="M15.6697 5.93946C15.1018 4.38053 12.8983 4.38053 12.3304 5.93946L9.75361 13.0234L2.66968 15.6002C1.11076 16.168 1.11076 18.3716 2.66968 18.9395L9.75361 21.5162L12.3304 28.6002C12.8983 30.1591 15.1018 30.1591 15.6697 28.6002L18.2465 21.5162L25.3304 18.9395C26.8893 18.3716 26.8893 16.168 25.3304 15.6002L18.2465 13.0234L15.6697 5.93946Z" fill="#CBA328" /></g><g clip-path="url(#clip1_707_5176)"><path d="M19.2089 6.11152L22.7952 4.80609L24.0998 1.22067C24.1297 1.13853 24.1842 1.06758 24.2558 1.01745C24.3274 0.96732 24.4127 0.94043 24.5001 0.94043C24.5875 0.94043 24.6728 0.96732 24.7444 1.01745C24.816 1.06758 24.8705 1.13853 24.9004 1.22067L26.2058 4.80695L29.7921 6.11152C29.8742 6.14143 29.9452 6.19589 29.9953 6.26749C30.0454 6.3391 30.0723 6.4244 30.0723 6.51181C30.0723 6.59922 30.0454 6.68452 29.9953 6.75612C29.9452 6.82773 29.8742 6.88218 29.7921 6.91209L26.2049 8.21752L24.9004 11.8038C24.8705 11.8859 24.816 11.9569 24.7444 12.007C24.6728 12.0572 24.5875 12.084 24.5001 12.084C24.4127 12.084 24.3274 12.0572 24.2558 12.007C24.1842 11.9569 24.1297 11.8859 24.0998 11.8038L22.7944 8.21667L19.2089 6.91209C19.1268 6.88218 19.0559 6.82773 19.0057 6.75612C18.9556 6.68452 18.9287 6.59922 18.9287 6.51181C18.9287 6.4244 18.9556 6.3391 19.0057 6.26749C19.0559 6.19589 19.1268 6.14143 19.2089 6.11152Z" fill="#CBA328" /></g> <g clip-path="url(#clip2_707_5176)"><path d="M0.913471 26.2665L3.00547 25.505L3.76647 23.4135C3.78392 23.3656 3.81568 23.3242 3.85745 23.2949C3.89922 23.2657 3.94898 23.25 3.99997 23.25C4.05096 23.25 4.10072 23.2657 4.14249 23.2949C4.18426 23.3242 4.21602 23.3656 4.23347 23.4135L4.99497 25.5055L7.08697 26.2665C7.13488 26.2839 7.17627 26.3157 7.20551 26.3575C7.23476 26.3992 7.25044 26.449 7.25044 26.5C7.25044 26.551 7.23476 26.6007 7.20551 26.6425C7.17627 26.6843 7.13488 26.716 7.08697 26.7335L4.99447 27.495L4.23347 29.587C4.21602 29.6349 4.18426 29.6763 4.14249 29.7055C4.10072 29.7348 4.05096 29.7504 3.99997 29.7504C3.94898 29.7504 3.89922 29.7348 3.85745 29.7055C3.81568 29.6763 3.78392 29.6349 3.76647 29.587L3.00497 27.4945L0.913471 26.7335C0.865558 26.716 0.824173 26.6843 0.794929 26.6425C0.765686 26.6007 0.75 26.551 0.75 26.5C0.75 26.449 0.765686 26.3992 0.794929 26.3575C0.824173 26.3157 0.865558 26.2839 0.913471 26.2665Z"
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              fill="#CBA328" /></g><g clip-path="url(#clip3_707_5176)"> <path d="M18.8545 30.7999L20.6476 30.1472L21.2999 28.3545C21.3149 28.3134 21.3421 28.2779 21.3779 28.2529C21.4137 28.2278 21.4563 28.2144 21.5 28.2144C21.5438 28.2144 21.5864 28.2278 21.6222 28.2529C21.658 28.2779 21.6852 28.3134 21.7002 28.3545L22.3529 30.1476L24.146 30.7999C24.1871 30.8149 24.2226 30.8421 24.2477 30.8779C24.2727 30.9137 24.2862 30.9563 24.2862 31C24.2862 31.0438 24.2727 31.0864 24.2477 31.1222C24.2226 31.158 24.1871 31.1852 24.146 31.2002L22.3525 31.8529L21.7002 33.646C21.6852 33.6871 21.658 33.7226 21.6222 33.7477C21.5864 33.7727 21.5438 33.7862 21.5 33.7862C21.4563 33.7862 21.4137 33.7727 21.3779 33.7477C21.3421 33.7226 21.3149 33.6871 21.2999 33.646L20.6472 31.8525L18.8545 31.2002C18.8134 31.1852 18.7779 31.158 18.7529 31.1222C18.7278 31.0864 18.7144 31.0438 18.7144 31C18.7144 30.9563 18.7278 30.9137 18.7529 30.8779C18.7779 30.8421 18.8134 30.8149 18.8545 30.7999Z" fill="#CBA328" /></g> <defs><clipPath id="clip0_707_5176"><rect width="25" height="25" fill="white" transform="translate(1.5 4.76978)" /></clipPath><clipPath id="clip1_707_5176"> <rect width="12" height="12" fill="white" transform="translate(18.5 0.511719)" /></clipPath><clipPath id="clip2_707_5176"><rect width="7" height="7" fill="white" transform="translate(0.5 23)" /></clipPath><clipPath id="clip3_707_5176"><rect width="6" height="6" fill="white" transform="translate(18.5 28)" /></clipPath></defs></svg>',
             'features' => [
-                'extra' => 'Everything in the Premium Package, plus:',
+                'extra' => __('Everything in the Premium Package, plus:'),
                 'exterior' => [
-                    'Exterior cleaning',
-                    'Door frames cleaned.'
+                    __('Exterior cleaning'),
+                    __('Door frames cleaned.')
                 ],
                 'interior' => [
-                    'Vacuuming mats and seats.',
-                    'Cleaning windows (inside)',
-                    'Dashboard cleaning',
-                    'Cleaning plastic parts'
+                    __('Vacuuming mats and seats.'),
+                    __('Cleaning windows (inside)'),
+                    __('Dashboard cleaning'),
+                    __('Cleaning plastic parts')
                 ]
             ]
         ]
@@ -76,24 +76,24 @@
 
     $extraOptions = [
         [
-            'title' => 'Undercarriage cleaning – €20',
-            'description' => 'Removes dirt and deposits from the underside of the car'
+            'title' => __('Undercarriage cleaning – €20'),
+            'description' => __('Removes dirt and deposits from the underside of the car')
         ],
         [
-            'title' => 'Paint sealing (2–3 months protection) – €50',
-            'description' => 'Protective paint layer against dirt and UV'
+            'title' => __('Paint sealing (2–3 months protection) – €50'),
+            'description' => __('Protective paint layer against dirt and UV')
         ],
         [
-            'title' => 'Engine bay cleaning – €20',
-            'description' => 'Cleaning and care of the engine compartment'
+            'title' => __('Engine bay cleaning – €20'),
+            'description' => __('Cleaning and care of the engine compartment')
         ],
         [
-            'title' => 'Hybrid Ceramic Coating (5–6 months) – €80',
-            'description' => 'Premium coating for long-lasting shine and protection'
+            'title' => __('Hybrid Ceramic Coating (5–6 months) – €80'),
+            'description' => __('Premium coating for long-lasting shine and protection')
         ],
         [
-            'title' => 'Leather or fabric upholstery cleaning – €60',
-            'description' => 'Deep cleaning of seats and upholstery'
+            'title' => __('Leather or fabric upholstery cleaning – €60'),
+            'description' => __('Deep cleaning of seats and upholstery')
         ],
     ];
 
@@ -117,21 +117,19 @@
                             fill="#6ADBD9" />
                     </svg>
 
-                    <h3 class="text-[11px] font-semibold uppercase font-poppins">SUPER PLANS & subscriptions</h3>
+                    <h3 class="text-[11px] font-semibold uppercase font-poppins">{{ __('SUPER PLANS & subscriptions') }}</h3>
                 </div>
                 <h2 class="text-[34px] font-extrabold leading-[1.2] tracking-[0.02px] text-white mb-4">
-                    Our Pricelist, Exceptional value
+                    {{ __('Our Pricelist, Exceptional value') }}
                 </h2>
                 <p class="text-[16px] text-white leading-[1.5]">
-                    We believe premium car care should come with clear and honest pricing. <br />
-                    No hidden fees, no surprises just flexible packages designed to fit your car’s needs and your
-                    budget.
+                    {{ __('We believe premium car care should come with clear and honest pricing.') }} <br />
+                    {{ __('No hidden fees, no surprises just flexible packages designed to fit your car’s needs and your budget.') }}
                 </p>
             </div>
             <div class="max-w-[413px] p-5 rounded-[12px] bg-[#2b2b2b]">
-                <div class="text-[20px] font-semibold text-white tracking-[0.05px] mb-6 leading-[1.5]">Not sure which
-                    plan fits best?
-                    Let’s talk!</div>
+                <div class="text-[20px] font-semibold text-white tracking-[0.05px] mb-6 leading-[1.5]">{{ __('Not sure which plan fits best?') }}
+                    {{ __('Let’s talk!') }}</div>
                 <a href="https://wa.me/{{ $whatsappNumber }}" target="_blank"
                     class="bg-[var(--color-brand)] text-white text-base font-semibold py-2 px-4 rounded-[60px] transition-all duration-300 ease-in-out inline-flex items-center gap-2 min-w-[164px] h-[45px] tracking-[-0.08px]">
 
@@ -152,11 +150,11 @@
             <div class="flex items-center border border-[#5E5E5E] rounded-[60px] p-1.5">
                 <button
                     class="pricing-opt bg-white text-[#454852] text-base font-bold rounded-[60px] p-2.5 text-center uppercase inline-block cursor-pointer min-w-[164px] ">
-                    Single
+                    {{ __('Single') }}
                 </button>
                 <button
                     class="pricing-opt text-[#8D8D8D] text-base font-bold rounded-[60px] p-2.5 text-center uppercase inline-block cursor-pointer min-w-[164px]">
-                    Monthly
+                    {{ __('Monthly') }}
                 </button>
             </div>
 
@@ -171,9 +169,8 @@
                         d="M45.1053 33.7188C54.5885 29.5922 62.0254 21.262 68.2212 7.83068C68.3616 7.44942 68.2004 7.09906 67.9278 6.99571C67.5435 6.85015 67.1893 7.01185 67.0851 7.28623L67.0735 7.31286L66.506 8.52153C60.5994 20.8634 53.5811 28.6646 44.5699 32.5794C35.2815 36.6146 23.9536 36.4861 9.70248 33.0867C9.31185 33.0232 8.9821 33.2552 8.90418 33.5211C8.84906 33.9113 9.08774 34.2385 9.35566 34.3074L9.35517 34.3087C23.9903 37.8035 35.6116 37.85 45.1053 33.7188Z"
                         fill="#6ADBD9" stroke="#6ADBD9" stroke-width="0.8125" />
                 </svg>
-                <div class="text-[18px] text-[var(--color-brand)] tracking-[0.8px] font-cursive">Save
-                    <span class="text-[22px] text-white">25%</span> on <br /> Monthly
-                    Subscriptions</span>
+                <div class="text-[18px] text-[var(--color-brand)] tracking-[0.8px] font-cursive">{{ __('Save') }}
+                    <span class="text-[22px] text-white">{{ __('25%') }}</span> {{ __('on') }} <br /> {{ __('Monthly Subscriptions') }}
                 </div>
             </div>
         </div>
@@ -213,7 +210,7 @@
                                     </div>
                                 @endif
 
-                                <div class="text-white text-lg font-bold mb-4">Exterior Dealing</div>
+                                <div class="text-white text-lg font-bold mb-4">{{ __('Exterior Dealing') }}</div>
                                 @foreach ($plan['features']['exterior'] as $feature)
                                     <div class="flex gap-3">
                                         <svg width="20" height="21" viewBox="0 0 20 21" fill="none"
@@ -229,7 +226,7 @@
                             </div>
 
                             <div class="pricing-card-features py-4 space-y-4">
-                                <div class="text-white text-lg font-bold mb-4">Interior</div>
+                                <div class="text-white text-lg font-bold mb-4">{{ __('Interior') }}</div>
                                 @foreach ($plan['features']['interior'] as $feature)
                                     <div class="flex gap-3">
                                         <svg width="20" height="21" viewBox="0 0 20 21" fill="none"
@@ -274,7 +271,7 @@
                             d="M20.125 20.6785V8.49097H23.875V20.6785H36.0625V24.4285H23.875V36.616H20.125V24.4285H7.9375V20.6785H20.125Z"
                             fill="white" />
                     </svg>
-                    <div class="text-[22px] text-white font-medium">Extra options</div>
+                    <div class="text-[22px] text-white font-medium">{{ __('Extra options') }}</div>
                 </div>
                 <div class="flex flex-wrap md:pl-[45px] gap-x-[30px] gap-y-4 w-full md:w-[calc(100%-200px)]">
                     @foreach ($extraOptions as $option)
@@ -334,73 +331,71 @@
 
                     </div>
                     <div class="space-y-2">
-                        <h4 class="text-[24px] font-bold text-[var(--color-heading)] leading-[1.4]">Book your
-                            service
+                        <h4 class="text-[24px] font-bold text-[var(--color-heading)] leading-[1.4]">{{ __('Book your service') }}
                         </h4>
-                        <p class="text-[16px] font-medium text-[var(--color-text)] leading-[1.4] font-sans">For your
-                            service,
-                            share your details,
-                            and we'll take care of the rest.</p>
+                        <p class="text-[16px] font-medium text-[var(--color-text)] leading-[1.4] font-sans">{{ __('For your') }}
+                            {{ __('service, share your details,') }}
+                            {{ __('and we\'ll take care of the rest.') }}</p>
                     </div>
                 </div>
 
                 <!-- Form Fields -->
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
                     <div>
-                        <label class="block text-sm font-medium text-gray-700 mb-1">First Name</label>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">{{ __('First Name') }}</label>
                         <input type="text" name="first_name" id="first_name" required
                             class="block w-full rounded-lg border border-gray-300 h-12 focus:outline-none focus:ring-[var(--color-brand)] focus:border-[var(--color-brand)] px-4"
-                            placeholder="Enter first name">
+                            placeholder="{{ __('Enter first name') }}">
                     </div>
 
                     <div>
-                        <label class="block text-sm font-medium text-gray-700 mb-1">Last Name</label>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">{{ __('Last Name') }}</label>
                         <input type="text" name="last_name" id="last_name" required
                             class="block w-full rounded-lg border border-gray-300 h-12 focus:outline-none focus:ring-[var(--color-brand)] focus:border-[var(--color-brand)] px-4"
-                            placeholder="Enter last name">
+                            placeholder="{{ __('Enter last name') }}">
                     </div>
 
 
                     <div class="md:col-span-2">
-                        <label class="block text-sm font-medium text-gray-700 mb-1">Address</label>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">{{ __('Address') }}</label>
                         <textarea name="address" id="address" required
                             class="block w-full px-4 py-3 text-base text-gray-900 placeholder-gray-500 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-[var(--color-brand)] focus:ring-offset-2 focus:border-[var(--color-brand)]"
-                            rows="3" placeholder="Your address"></textarea>
+                            rows="3" placeholder="{{ __('Your address') }}"></textarea>
                     </div>
 
                     <div>
-                        <label class="block text-sm font-medium text-gray-700 mb-1">Number of Cars</label>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">{{ __('Number of Cars') }}</label>
                         <input type="number" name="number_of_cars" id="number_of_cars" required
                             class="block w-full px-4 py-3 text-base text-gray-900 placeholder-gray-500 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-[var(--color-brand)] focus:ring-offset-2 focus:border-[var(--color-brand)]"
-                            placeholder="Enter number of cars">
+                            placeholder="{{ __('Enter number of cars') }}">
                     </div>
 
                     <div>
-                        <label class="block text-sm font-medium text-gray-700 mb-1">Licence Plate</label>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">{{ __('Licence Plate') }}</label>
                         <input type="text" name="licence_plate" id="licence_plate" required
                             class="block w-full px-4 py-3 text-base text-gray-900 placeholder-gray-500 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-[var(--color-brand)] focus:ring-offset-2 focus:border-[var(--color-brand)]"
-                            placeholder="Enter licence plate">
+                            placeholder="{{ __('Enter licence plate') }}">
                     </div>
 
                     <div>
-                        <label class="block text-sm font-medium text-gray-700 mb-1">WhatsApp Number</label>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">{{ __('WhatsApp Number') }}</label>
                         <input type="text" name="whatsapp" id="whatsapp" required
                             class="block w-full px-4 py-3 text-base text-gray-900 placeholder-gray-500 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-[var(--color-brand)] focus:ring-offset-2 focus:border-[var(--color-brand)]"
-                            placeholder="Enter WhatsApp number">
+                            placeholder="{{ __('Enter WhatsApp number') }}">
                     </div>
 
                     <div>
-                        <label class="block text-sm font-medium text-gray-700 mb-1">Package Choice</label>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">{{ __('Package Choice') }}</label>
                         <select id="packageSelect" name="package" required
                             class="block w-full px-4 py-3 text-base text-gray-900 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-[var(--color-brand)] focus:ring-offset-2 focus:border-[var(--color-brand)]">
-                            <option value="">Select a package</option>
-                            <option value="Basic Treatment - €79,95">Basic Treatment - €79,95</option>
-                            <option value="Basic Treatment Monthly - €74,45">Basic Treatment Monthly - €74,45</option>
-                            <option value="Premium Treatment - €149,95">Premium Treatment - €149,95</option>
-                            <option value="Premium Treatment Monthly - €144,45">Premium Treatment Monthly - €144,45
+                            <option value="">{{ __('Select a package') }}</option>
+                            <option value="Basic Treatment - €79,95">{{ __('Basic Treatment - €79,95') }}</option>
+                            <option value="Basic Treatment Monthly - €74,45">{{ __('Basic Treatment Monthly - €74,45') }}</option>
+                            <option value="Premium Treatment - €149,95">{{ __('Premium Treatment - €149,95') }}</option>
+                            <option value="Premium Treatment Monthly - €144,45">{{ __('Premium Treatment Monthly - €144,45') }}
                             </option>
-                            <option value="Full Detail Treatment - €289,95">Full Detail Treatment - €289,95</option>
-                            <option value="Full Detail Treatment Monthly - €249,45">Full Detail Treatment Monthly -
+                            <option value="Full Detail Treatment - €289,95">{{ __('Full Detail Treatment - €289,95') }}</option>
+                            <option value="Full Detail Treatment Monthly - €249,45">{{ __('Full Detail Treatment Monthly -') }}
                                 €249,45</option>
                         </select>
                         <input type="hidden" name="package_name" id="package_name">
@@ -408,7 +403,7 @@
                     </div>
 
                     <div>
-                        <label class="block text-base font-medium text-[var(--color-text)] mb-2">Preferred Date</label>
+                        <label class="block text-base font-medium text-[var(--color-text)] mb-2">{{ __('Preferred Date') }}</label>
                         <input type="date" name="preferred_date" id="preferred_date" required
                             class="block w-full px-4 py-3 text-base text-gray-900 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-[var(--color-brand)] focus:ring-offset-2 focus:border-[var(--color-brand)]">
                     </div>
@@ -418,11 +413,11 @@
                 <div class="flex justify-end gap-3 mt-6">
                     <button type="button"
                         class="inline-flex justify-center px-4 py-3 text-base font-medium text-gray-700 bg-gray-200 border border-transparent rounded-md shadow-sm hover:bg-gray-300 focus:outline-none focus:ring-[var(--color-brand)] focus:ring-offset-2 focus:border-[var(--color-brand)]"
-                        onclick="closeModal()">Cancel</button>
+                        onclick="closeModal()">{{ __('Cancel') }}</button>
 
                     <button type="submit" id="bookNowBtn"
                         class="inline-flex justify-center px-4 py-3 text-base font-medium text-white bg-[var(--color-brand)] border border-transparent rounded-md shadow-sm hover:bg-[var(--color-brand)] focus:outline-none focus:ring-[var(--color-brand)] focus:ring-offset-2 focus:border-[var(--color-brand)]">
-                        <span class="btn-text">Book Now</span>
+                        <span class="btn-text">{{ __('Book Now') }}</span>
                         <span class="btn-spinner hidden">
                             <svg class="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none"
                                 viewBox="0 0 24 24">

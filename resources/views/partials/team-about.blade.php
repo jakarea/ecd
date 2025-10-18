@@ -1,6 +1,6 @@
 <section class="py-8 md:py-[50px]">
     <div class="container">
-        <x-section-heading pretitle="Our Teams" title="Meet Our Dedicated Team">
+        <x-section-heading pretitle="{{ __('Our Teams') }}" title="{{ __('Meet Our Dedicated Team') }}">
             <x-slot name="icon">
                 <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g clip-path="url(#clip0_310_8500)">
@@ -34,7 +34,7 @@
                 </div>
             @empty
                 <div class="col-span-full text-center py-12">
-                    <p class="text-gray-500">No team members available at the moment.</p>
+                    <p class="text-gray-500">{{ __('No team members available at the moment.') }}</p>
                 </div>
             @endforelse
         </div>

@@ -9,9 +9,9 @@
                 </a>
             </div>
             <nav class="hidden md:flex items-center justify-center gap-7.5 bg-white py-4 px-10 rounded-[60px]">
-                <a href="{{ route('home') }}" class="nav-link active">Home</a>
-                <a href="{{ route('about') }}" class="nav-link"> About Us</a>
-                <a href="{{ route('services-subscriptions') }}" class="nav-link">Services & Subscriptions</a>
+                <a href="{{ route('home') }}" class="nav-link active">{{ __('Home') }}</a>
+                <a href="{{ route('about') }}" class="nav-link">{{ __('About Us') }}</a>
+                <a href="{{ route('services-subscriptions') }}" class="nav-link">{{ __('Services & Subscriptions') }}</a>
                 {{-- <a href="{{ route('services-subscriptions') }}" class="nav-link flex items-center gap-2">
                     <span>Subcriptions</span>
 
@@ -21,10 +21,10 @@
                     </svg>
 
                 </a> --}}
-                <a href="{{ route('gallery') }}" class="nav-link">Our Works</a>
+                <a href="{{ route('gallery') }}" class="nav-link">{{ __('Our Works') }}</a>
             </nav>
             <div class="hidden md:block">
-                <button class="btn-brand-sm" onClick="openHeroModal()"><span>Let's Talk</span>
+                <button class="btn-brand-sm" onClick="openHeroModal()"><span>{{ __('Let\'s Talk') }}</span>
                     <svg width="25" height="11" viewBox="0 0 25 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M24 5.5H1M24 5.5L19.5 1M24 5.5L19.5 10" stroke="white" stroke-width="1.5"
                             stroke-linecap="round" stroke-linejoin="round" />
@@ -65,10 +65,10 @@
 
         <!-- Navigation Links -->
         <div class="flex flex-col gap-6 text-lg font-medium">
-            <a href="{{ route('home') }}" class="nav-link">Home</a>
-            <a href="{{ route('about') }}" class="nav-link">About Us</a>
-            <a href="{{ route('services-subscriptions') }}" class="nav-link">Services & Pricing</a>
-            <a href="{{ route('gallery') }}" class="nav-link">Our Works</a>
+            <a href="{{ route('home') }}" class="nav-link">{{ __('Home') }}</a>
+            <a href="{{ route('about') }}" class="nav-link">{{ __('About Us') }}</a>
+            <a href="{{ route('services-subscriptions') }}" class="nav-link">{{ __('Services & Pricing') }}</a>
+            <a href="{{ route('gallery') }}" class="nav-link">{{ __('Our Works') }}</a>
             {{-- <a href="{{ route('contact') }}" class="btn-brand inline-block w-fit">Let's Talk</a> --}}
         </div>
     </div>
@@ -320,13 +320,13 @@
 
                     </div>
                     <div class="space-y-2">
-                        <h4 class="text-[24px] font-bold text-[var(--color-heading)] leading-[1.4]">Book your
-                            service
+                        <h4 class="text-[24px] font-bold text-[var(--color-heading)] leading-[1.4]">{{ __('Book your
+                            service') }}
                         </h4>
-                        <p class="text-[16px] font-medium text-[var(--color-text)] leading-[1.4] font-sans">For your
+                        <p class="text-[16px] font-medium text-[var(--color-text)] leading-[1.4] font-sans">{{ __('For your
                             service,
                             share your details,
-                            and we'll take care of the rest.</p>
+                            and we\'ll take care of the rest.') }}</p>
                     </div>
                 </div>
 
@@ -334,61 +334,61 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-2">
                     <!-- First Name -->
                     <div>
-                        <label class="block text-sm font-medium text-gray-700 mb-1">First Name</label>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">{{ __('First Name') }}</label>
                         <input type="text" name="first_name" required
                             class="block w-full px-4 py-3 text-base text-gray-900 placeholder-gray-500 border border-gray-300 rounded-md shadow-sm 
                                 focus:outline-none focus:ring-2 focus:ring-[var(--color-brand)] focus:ring-offset-2 focus:border-[var(--color-brand)]"
-                            placeholder="Enter first name" />
+                            placeholder="{{ __('Enter first name') }}" />
                     </div>
 
                     <!-- Last Name -->
                     <div>
-                        <label class="block text-sm font-medium text-gray-700 mb-1">Last Name</label>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">{{ __('Last Name') }}</label>
                         <input type="text" name="last_name" required
                             class="block w-full px-4 py-3 text-base text-gray-900 placeholder-gray-500 border border-gray-300 rounded-md shadow-sm 
                                 focus:outline-none focus:ring-2 focus:ring-[var(--color-brand)] focus:ring-offset-2 focus:border-[var(--color-brand)]"
-                            placeholder="Enter last name" />
+                            placeholder="{{ __('Enter last name') }}" />
                     </div>
 
                     <!-- Address -->
                     <div class="md:col-span-2">
-                        <label class="block text-sm font-medium text-gray-700 mb-1">Address</label>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">{{ __('Address') }}</label>
                         <textarea name="address" required rows="3"
                             class="block w-full px-4 py-3 text-base text-gray-900 placeholder-gray-500 border border-gray-300 rounded-md shadow-sm 
                                 focus:outline-none focus:ring-2 focus:ring-[var(--color-brand)] focus:ring-offset-2 focus:border-[var(--color-brand)]"
-                            placeholder="Your address"></textarea>
+                            placeholder="{{ __('Your address') }}"></textarea>
                     </div>
 
                     <!-- Number of Cars -->
                     <div>
-                        <label class="block text-sm font-medium text-gray-700 mb-1">Number of Cars</label>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">{{ __('Number of Cars') }}</label>
                         <input type="text" name="number_of_cars" required
                             class="block w-full px-4 py-3 text-base text-gray-900 placeholder-gray-500 border border-gray-300 rounded-md shadow-sm 
                                 focus:outline-none focus:ring-2 focus:ring-[var(--color-brand)] focus:ring-offset-2 focus:border-[var(--color-brand)]"
-                            placeholder="Enter number of cars" />
+                            placeholder="{{ __('Enter number of cars') }}" />
                     </div>
 
                     <!-- Licence Plate -->
                     <div>
-                        <label class="block text-sm font-medium text-gray-700 mb-1">Licence Plate</label>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">{{ __('Licence Plate') }}</label>
                         <input type="text" name="licence_plate" required
                             class="block w-full px-4 py-3 text-base text-gray-900 placeholder-gray-500 border border-gray-300 rounded-md shadow-sm 
                                 focus:outline-none focus:ring-2 focus:ring-[var(--color-brand)] focus:ring-offset-2 focus:border-[var(--color-brand)]"
-                            placeholder="Enter licence plate" />
+                            placeholder="{{ __('Enter licence plate') }}" />
                     </div>
 
                     <!-- WhatsApp Number -->
                     <div>
-                        <label class="block text-sm font-medium text-gray-700 mb-1">WhatsApp Number</label>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">{{ __('WhatsApp Number') }}</label>
                         <input type="text" name="whatsapp" required
                             class="block w-full px-4 py-3 text-base text-gray-900 placeholder-gray-500 border border-gray-300 rounded-md shadow-sm 
                                 focus:outline-none focus:ring-2 focus:ring-[var(--color-brand)] focus:ring-offset-2 focus:border-[var(--color-brand)]"
-                            placeholder="Enter WhatsApp number" />
+                            placeholder="{{ __('Enter WhatsApp number') }}" />
                     </div>
 
                     <!-- Preferred Date -->
                     <div>
-                        <label class="block text-sm font-medium text-gray-700 mb-1">Preferred Date</label>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">{{ __('Preferred Date') }}</label>
                         <input type="date" name="preferred_date" required
                             class="block w-full px-4 py-3 text-base text-gray-900 placeholder-gray-500 border border-gray-300 rounded-md shadow-sm 
                                 focus:outline-none focus:ring-2 focus:ring-[var(--color-brand)] focus:ring-offset-2 focus:border-[var(--color-brand)]" />
@@ -400,7 +400,7 @@
                 <div class="flex justify-end mt-6">
                     <button type="submit" id="bookNowBtn"
                         class="inline-flex items-center justify-center w-full md:w-auto px-6 py-3 text-base font-medium text-white bg-[var(--color-brand)] rounded-lg shadow-md hover:bg-[var(--color-brand)] transition focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                        <span class="btn-text">Book Now</span>
+                        <span class="btn-text">{{ __('Book Now') }}</span>
                         <span class="spinner hidden ml-2"></span>
                     </button>
                 </div>

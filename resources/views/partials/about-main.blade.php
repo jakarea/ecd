@@ -17,14 +17,14 @@
                     </svg>
 
                 </div>
-                <h4 class="text-[20px] text-[var(--color-heading)] font-semibold mt-8 mb-3">What defines us</h4>
-                <p class="text-[16px] leading-[1.5] text-[var(--color-text)] font-sf">We’re more than just a car
+                <h4 class="text-[20px] text-[var(--color-heading)] font-semibold mt-8 mb-3">{{ __('What defines us') }}</h4>
+                <p class="text-[16px] leading-[1.5] text-[var(--color-text)] font-sf">{{ __('We’re more than just a car
                     wash—we’re a
                     team driven by passion, precision, and professionalism. What
                     sets us apart is our commitment to quality at every step, from using premium products to delivering
                     flawless detailing with care.Uncompromising Quality, Customer-Centered Service, Sustainable
                     Practices, Trusted Expertise. This is what makes us unique—and why our customers trust us to keep
-                    their vehicles looking their very best.</p>
+                    their vehicles looking their very best.') }}</p>
             </div>
             <div class="border border-[#D1D7DF] rounded-[20px] p-6 md:p-8">
                 <div class="icon">
@@ -71,14 +71,14 @@
                         </defs>
                     </svg>
                 </div>
-                <h4 class="text-[20px] text-[var(--color-heading)] font-semibold mt-8 mb-3">What inspires us</h4>
-                <p class="text-[16px] leading-[1.5] text-[var(--color-text)] font-sf">Our inspiration comes from the
+                <h4 class="text-[20px] text-[var(--color-heading)] font-semibold mt-8 mb-3">{{ __('What inspires us') }}</h4>
+                <p class="text-[16px] leading-[1.5] text-[var(--color-text)] font-sf">{{ __('Our inspiration comes from the
                     pride
                     people feel when their car looks and feels brand new. We believe every vehicle tells a story, and
                     keeping it clean, fresh, and well-maintained helps preserve that story. <br> The Joy of Driving,
                     Customer
                     Satisfaction, Innovation in Car Care, Passion for Perfection. This passion and inspiration us to
-                    deliver more than just a clean car.</p>
+                    deliver more than just a clean car.') }}</p>
             </div>
         </div>
 
@@ -88,21 +88,21 @@
 
                 <h2
                     class="text-[28px] md:text-[32px] font-extrabold mb-1 text-[var(--color-heading)] leading-[1.2] tracking-[0.02px]">
-                    Our Story
+                    {{ __('Our Story') }}
                 </h2>
-                <h6 class="text-[20px] md:text-[24px] font-medium text-[var(--color-heading)] mb-8">Built on Passion for
-                    Shine</h6>
+                <h6 class="text-[20px] md:text-[24px] font-medium text-[var(--color-heading)] mb-8">{{ __('Built on Passion for
+                    Shine') }}</h6>
                 <p class="text-[16px] leading-[1.5] text-[var(--color-text)] mb-8 font-sf">
-                    ECD was founded with a simple mission—to redefine car care with professionalism, convenience, and
+                    {{ __('ECD was founded with a simple mission—to redefine car care with professionalism, convenience, and
                     attention to detail. What started as a passion for keeping cars spotless has grown into a trusted
-                    service that customers rely on for quality and reliability. <br /> <br />
+                    service that customers rely on for quality and reliability.') }} <br /> <br />
 
-                    From day one, we set out to make car washing and detailing easier, greener, and more effective. By
+                    {{ __('From day one, we set out to make car washing and detailing easier, greener, and more effective. By
                     combining premium products, skilled experts, and mobile convenience, we’ve built a service that fits
-                    seamlessly into your lifestyle. <br /> <br />
+                    seamlessly into your lifestyle.') }} <br /> <br />
 
-                    Today, our story continues with every vehicle we transform—delivering not just a clean car, but an
-                    elevated driving experience."
+                    {{ __('Today, our story continues with every vehicle we transform—delivering not just a clean car, but an
+                    elevated driving experience.') }}"
                 </p>
             </div>
             <div class="w-full md:w-1/2 flex justify-center">
