@@ -1,7 +1,7 @@
 import "./bootstrap";
 import gsap from "gsap";
 import $ from "jquery";
-
+import Swal from "sweetalert2";
 // Swiper core
 import Swiper from "swiper/bundle";
 import "swiper/css/bundle"; // includes core + navigation + pagination
@@ -24,6 +24,8 @@ function equalizeSlideHeights() {
         slide.style.height = adjustedHeight + "px";
     });
 }
+
+window.Swal = Swal;
 
 let resizeTimeout;
 window.addEventListener("resize", () => {
