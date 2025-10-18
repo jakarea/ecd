@@ -15,7 +15,7 @@
     "Terms": "Terms",
     "Privacy": "Privacy",
     "Security Statement": "Security Statement",
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ipsum lorem, tempor ut ex aliquam, fringilla lacinia quam. Sed mattis ante at massa aliquet consectetur. Nullam enim sapien, tristique sit amet lorem lacinia, luctus molestie velit. Nam nunc quam, elementum nec neque nec.": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ipsum lorem, tempor ut ex aliquam, fringilla lacinia quam. Sed mattis ante at massa aliquet consectetur. Nullam enim sapien, tristique sit amet lorem lacinia, luctus molestie velit. Nam nunc quam, elementum nec neque nec.",
+    "footer_text": "Exclusive Car Detailing — Perfection in Every Detail Give your car the care it deserves. From deep exterior shine to flawless interior restoration, our experts use premium products and precision techniques to revive and protect your vehicle. Based in the Netherlands, we’re passionate about excellence, reliability, and lasting results. Contact us today — your car deserves nothing less.",
     "Our Services": "Our Services",
     "Super Staff. Super Service.": "Super Staff. Super Service.",
     "Premium car care expert": "Premium car care expert",
@@ -84,7 +84,6 @@
     "Leather or fabric upholstery cleaning – €60": "Leather or fabric upholstery cleaning – €60",
     "Deep cleaning of seats and upholstery": "Deep cleaning of seats and upholstery",
     "Book your service": "Book your service",
-    "For your service, share your details, and we'll take care of the rest.": "For your service, share your details, and we'll take care of the rest.",
     "First Name": "First Name",
     "Enter first name": "Enter first name",
     "Last Name": "Last Name",
@@ -185,9 +184,7 @@
     "Removes dirt": "Removes dirt",
     "Removes, deposits": "Removes, deposits",
     "Removes, insect residues": "Removes, insect residues",
-    "Book your service": "Book your service",
     "For your service, share your details, and we'll take care of the rest.": "For your service, share your details, and we'll take care of the rest.",
     "Enter your address": "Enter your address",
-    "Back": "Back",
-    "Book Now 1": "Book Now 1"
+    "Back": "Back"
 }

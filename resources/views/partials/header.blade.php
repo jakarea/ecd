@@ -9,11 +9,10 @@
                 </a>
             </div>
             <nav class="hidden md:flex items-center justify-center gap-7.5 bg-white py-4 px-10 rounded-[60px]">
-                <a href="{{ route('home') }}" class="nav-link active">{{ __('Home') }}</a>
-                <a href="{{ route('about') }}" class="nav-link">{{ __('About Us') }}</a>
-                <a href="{{ route('services-subscriptions') }}"
-                    class="nav-link">{{ __('Services & Subscriptions') }}</a>
-                {{-- <a href="{{ route('services-subscriptions') }}" class="nav-link flex items-center gap-2">
+                <a href="{{ route('home', ['locale' => app()->getLocale()]) }}" class="nav-link active">{{ __('Home') }}</a>
+                <a href="{{ route('about', ['locale' => app()->getLocale()]) }}" class="nav-link">{{ __('About Us') }}</a>
+                <a href="{{ route('services-subscriptions', ['locale' => app()->getLocale()]) }}" class="nav-link">{{ __('Services & Subscriptions') }}</a>
+                {{-- <a href="{{ route('services-subscriptions', ['locale' => app()->getLocale()]) }}" class="nav-link flex items-center gap-2">
                     <span>Subcriptions</span>
 
                     <svg width="13" height="7" viewBox="0 0 13 7" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -22,7 +21,7 @@
                     </svg>
 
                 </a> --}}
-                <a href="{{ route('gallery') }}" class="nav-link">{{ __('Our Works') }}</a>
+                <a href="{{ route('gallery', ['locale' => app()->getLocale()]) }}" class="nav-link">{{ __('Our Works') }}</a>
             </nav>
             <div class="hidden md:block">
                 <button class="btn-brand-sm" onClick="openHeroModal()"><span>{{ __('Let\'s Talk') }}</span>
@@ -66,11 +65,11 @@
 
         <!-- Navigation Links -->
         <div class="flex flex-col gap-6 text-lg font-medium">
-            <a href="{{ route('home') }}" class="nav-link">{{ __('Home') }}</a>
-            <a href="{{ route('about') }}" class="nav-link">{{ __('About Us') }}</a>
-            <a href="{{ route('services-subscriptions') }}" class="nav-link">{{ __('Services & Pricing') }}</a>
-            <a href="{{ route('gallery') }}" class="nav-link">{{ __('Our Works') }}</a>
-            {{-- <a href="{{ route('contact') }}" class="btn-brand inline-block w-fit">Let's Talk</a> --}}
+            <a href="{{ route('home', ['locale' => app()->getLocale()]) }}" class="nav-link">{{ __('Home') }}</a>
+            <a href="{{ route('about', ['locale' => app()->getLocale()]) }}" class="nav-link">{{ __('About Us') }}</a>
+            <a href="{{ route('services-subscriptions', ['locale' => app()->getLocale()]) }}" class="nav-link">{{ __('Services & Pricing') }}</a>
+            <a href="{{ route('gallery', ['locale' => app()->getLocale()]) }}" class="nav-link">{{ __('Our Works') }}</a>
+            {{-- <a href="{{ route('contact', ['locale' => app()->getLocale()]) }}" class="btn-brand inline-block w-fit">Let's Talk</a> --}}
         </div>
     </div>
 </nav>
@@ -302,7 +301,7 @@
             </svg>
         </div>
         <!-- Booking Form -->
-        <form id="bookingForm" method="POST" action="{{ route('booking.store') }}"
+        <form id="bookingForm" method="POST" action="{{  route('booking.store', ['locale' => app()->getLocale()]) }}"
             class="step-1 h-full overflow-y-auto">
             @csrf
 

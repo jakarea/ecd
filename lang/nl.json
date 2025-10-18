@@ -15,7 +15,7 @@
     "Terms": "Voorwaarden",
     "Privacy": "Privacy",
     "Security Statement": "Veiligheidsverklaring",
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ipsum lorem, tempor ut ex aliquam, fringilla lacinia quam. Sed mattis ante at massa aliquet consectetur. Nullam enim sapien, tristique sit amet lorem lacinia, luctus molestie velit. Nam nunc quam, elementum nec neque nec.": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ipsum lorem, tempor ut ex aliquam, fringilla lacinia quam. Sed mattis ante at massa aliquet consectetur. Nullam enim sapien, tristique sit amet lorem lacinia, luctus molestie velit. Nam nunc quam, elementum nec neque nec.",
+    "footer_text": "Exclusive Car Detailing — Perfectie tot in elk detail Geef uw auto de zorg die het verdient. Van een diepe glans aan de buitenkant tot een vlekkeloze interieurreiniging — onze experts gebruiken hoogwaardige producten en precieze technieken om uw voertuig te herstellen en te beschermen. Gevestigd in Nederland, staan wij voor vakmanschap, betrouwbaarheid en duurzame resultaten. Neem vandaag nog contact met ons op — uw auto verdient het beste.",
     "Our Services": "Onze diensten",
     "Super Staff. Super Service.": "Super personeel. Super dienst.",
     "Premium car care expert": "Premium autoverzorgingsexpert",
@@ -83,8 +83,6 @@
     "Premium coating for long-lasting shine and protection": "Premium coating voor langdurige glans en bescherming",
     "Leather or fabric upholstery cleaning – €60": "Lederen of stoffen bekleding reinigen – € 60",
     "Deep cleaning of seats and upholstery": "Dieptereiniging van stoelen en bekleding",
-    "Book your service": "Boek uw service",
-    "For your service, share your details, and we'll take care of the rest.": "Deel voor uw service uw gegevens, en wij zorgen voor de rest.",
     "First Name": "Voornaam",
     "Enter first name": "Voer voornaam in",
     "Last Name": "Achternaam",
@@ -188,6 +186,5 @@
     "Book your service": "Boek uw service",
     "For your service, share your details, and we'll take care of the rest.": "Deel voor uw service uw gegevens, en wij zorgen voor de rest.",
     "Enter your address": "Voer uw adres in",
-    "Back": "Terug",
-    "Book Now 1": "Boek nu 1"
-}
+    "Back": "Terug"
+    }

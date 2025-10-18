@@ -213,7 +213,8 @@
                 loadingIndicator.classList.remove('hidden');
 
                 const nextPage = currentPage + 1;
-                const url = `{{ route('gallery') }}?page=${nextPage}&type=${currentFilter}`;
+                const url = `{{ route('gallery', ['locale' => app()->getLocale()]) }}?page=${nextPage}&type=${currentFilter}`;
+
 
                 fetch(url, {
                         headers: {

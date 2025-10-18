@@ -300,7 +300,7 @@
 {{-- Booking Form Modal --}}
 <div class="modal px-5" id="pricingModal">
     <div class="modal-content relative h-[calc(100vh-50px)] w-full max-w-[751px]">
-        <form id="pricingBookingForm" class="h-full" method="POST" action="{{ route('booking.store') }}">
+        <form id="pricingBookingForm" class="h-full" method="POST" action="{{ route('booking.store', ['locale' => app()->getLocale()]) }}">
             @csrf
 
             <!-- Close Button -->
