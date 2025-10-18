@@ -197,7 +197,7 @@
                             <input type="url" name="twitter_url" id="twitter_url"
                                 value="{{ old('twitter_url', $socialSettings->get('twitter_url')->value ?? '') }}"
                                 class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-purple-500 focus:border-transparent @error('twitter_url') border-red-500 @enderror"
-                                placeholder="https://twitter.com/yourhandle">
+                                placeholder="https://tiktok.com/yourhandle">
                             @error('twitter_url')
                                 <p class="text-red-500 text-sm mt-1">{{ $message }}</p>
                             @enderror

@@ -183,15 +183,15 @@
             'borderColor' => '#0C5798',
             'buttonText' => 'Get started with Basic',
             'icon' => '<svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                            <g clip-path="url(#clip0_425_15641)">
-                                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M14.6697 1.93946C14.1018 0.380531 11.8983 0.380531 11.3304 1.93946L8.75361 9.02339L1.66968 11.6002C0.110756 12.168 0.110756 14.3716 1.66968 14.9395L8.75361 17.5162L11.3304 24.6002C11.8983 26.1591 14.1018 26.1591 14.6697 24.6002L17.2465 17.5162L24.3304 14.9395C25.8893 14.3716 25.8893 12.168 24.3304 11.6002L17.2465 9.02339L14.6697 1.93946Z" fill="#003868" />
-                                                            </g>
-                                                            <defs>
-                                                                <clipPath id="clip0_425_15641)">
-                                                                    <rect width="25" height="25" fill="white" transform="translate(0.5 0.769775)" />
-                                                                </clipPath>
-                                                            </defs>
-                                                        </svg>',
+                                                                                                                    <g clip-path="url(#clip0_425_15641)">
+                                                                                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M14.6697 1.93946C14.1018 0.380531 11.8983 0.380531 11.3304 1.93946L8.75361 9.02339L1.66968 11.6002C0.110756 12.168 0.110756 14.3716 1.66968 14.9395L8.75361 17.5162L11.3304 24.6002C11.8983 26.1591 14.1018 26.1591 14.6697 24.6002L17.2465 17.5162L24.3304 14.9395C25.8893 14.3716 25.8893 12.168 24.3304 11.6002L17.2465 9.02339L14.6697 1.93946Z" fill="#003868" />
+                                                                                                                    </g>
+                                                                                                                    <defs>
+                                                                                                                        <clipPath id="clip0_425_15641)">
+                                                                                                                            <rect width="25" height="25" fill="white" transform="translate(0.5 0.769775)" />
+                                                                                                                        </clipPath>
+                                                                                                                    </defs>
+                                                                                                                </svg>',
             'features' => [
                 'extra' => null,
                 'exterior' => [
@@ -213,21 +213,21 @@
             'borderColor' => '#63FFFA',
             'buttonText' => 'Get started with Premium',
             'icon' => '<svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                            <g clip-path="url(#clip0_706_5175)">
-                                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M14.6697 3.93946C14.1018 2.38053 11.8983 2.38053 11.3304 3.93946L8.75361 11.0234L1.66968 13.6002C0.110756 14.168 0.110756 16.3716 1.66968 16.9395L8.75361 19.5162L11.3304 26.6002C11.8983 28.1591 14.1018 28.1591 14.6697 26.6002L17.2465 19.5162L24.3304 16.9395C25.8893 16.3716 25.8893 14.168 24.3304 13.6002L17.2465 11.0234L14.6697 3.93946Z" fill="#6ADBD9" />
-                                                            </g>
-                                                            <g clip-path="url(#clip1_706_5175)">
-                                                                <path d="M18.0905 5.17814L21.079 4.09028L22.1662 1.10243C22.1911 1.03398 22.2365 0.974858 22.2962 0.933081C22.3558 0.891305 22.4269 0.868896 22.4997 0.868896C22.5726 0.868896 22.6437 0.891305 22.7033 0.933081C22.763 0.974858 22.8084 1.03398 22.8333 1.10243L23.9212 4.091L26.9097 5.17814C26.9782 5.20307 27.0373 5.24844 27.0791 5.30812C27.1209 5.36779 27.1433 5.43887 27.1433 5.51171C27.1433 5.58456 27.1209 5.65563 27.0791 5.71531C27.0373 5.77498 26.9782 5.82036 26.9097 5.84528L23.9205 6.93314L22.8333 9.92171C22.8084 9.99016 22.763 10.0493 22.7033 10.0911C22.6437 10.1328 22.5726 10.1552 22.4997 10.1552C22.4269 10.1552 22.3558 10.1328 22.2962 10.0911C22.2365 10.0493 22.1911 9.99016 22.1662 9.92171L21.0783 6.93243L18.0905 5.84528C18.022 5.82036 17.9629 5.77498 17.9211 5.71531C17.8793 5.65563 17.8569 5.58456 17.8569 5.51171C17.8569 5.43887 17.8793 5.36779 17.9211 5.30812C17.9629 5.24844 18.022 5.20307 18.0905 5.17814Z" fill="#6ADBD9" />
-                                                            </g>
-                                                            <defs>
-                                                                <clipPath id="clip0_706_5175)">
-                                                                    <rect width="25" height="25" fill="white" transform="translate(0.5 2.76978)" />
-                                                                </clipPath>
-                                                                <clipPath id="clip1_706_5175)">
-                                                                    <rect width="10" height="10" fill="white" transform="translate(17.5 0.511719)" />
-                                                                </clipPath>
-                                                            </defs>
-                                                        </svg>',
+                                                                                                                    <g clip-path="url(#clip0_706_5175)">
+                                                                                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M14.6697 3.93946C14.1018 2.38053 11.8983 2.38053 11.3304 3.93946L8.75361 11.0234L1.66968 13.6002C0.110756 14.168 0.110756 16.3716 1.66968 16.9395L8.75361 19.5162L11.3304 26.6002C11.8983 28.1591 14.1018 28.1591 14.6697 26.6002L17.2465 19.5162L24.3304 16.9395C25.8893 16.3716 25.8893 14.168 24.3304 13.6002L17.2465 11.0234L14.6697 3.93946Z" fill="#6ADBD9" />
+                                                                                                                    </g>
+                                                                                                                    <g clip-path="url(#clip1_706_5175)">
+                                                                                                                        <path d="M18.0905 5.17814L21.079 4.09028L22.1662 1.10243C22.1911 1.03398 22.2365 0.974858 22.2962 0.933081C22.3558 0.891305 22.4269 0.868896 22.4997 0.868896C22.5726 0.868896 22.6437 0.891305 22.7033 0.933081C22.763 0.974858 22.8084 1.03398 22.8333 1.10243L23.9212 4.091L26.9097 5.17814C26.9782 5.20307 27.0373 5.24844 27.0791 5.30812C27.1209 5.36779 27.1433 5.43887 27.1433 5.51171C27.1433 5.58456 27.1209 5.65563 27.0791 5.71531C27.0373 5.77498 26.9782 5.82036 26.9097 5.84528L23.9205 6.93314L22.8333 9.92171C22.8084 9.99016 22.763 10.0493 22.7033 10.0911C22.6437 10.1328 22.5726 10.1552 22.4997 10.1552C22.4269 10.1552 22.3558 10.1328 22.2962 10.0911C22.2365 10.0493 22.1911 9.99016 22.1662 9.92171L21.0783 6.93243L18.0905 5.84528C18.022 5.82036 17.9629 5.77498 17.9211 5.71531C17.8793 5.65563 17.8569 5.58456 17.8569 5.51171C17.8569 5.43887 17.8793 5.36779 17.9211 5.30812C17.9629 5.24844 18.022 5.20307 18.0905 5.17814Z" fill="#6ADBD9" />
+                                                                                                                    </g>
+                                                                                                                    <defs>
+                                                                                                                        <clipPath id="clip0_706_5175)">
+                                                                                                                            <rect width="25" height="25" fill="white" transform="translate(0.5 2.76978)" />
+                                                                                                                        </clipPath>
+                                                                                                                        <clipPath id="clip1_706_5175)">
+                                                                                                                            <rect width="10" height="10" fill="white" transform="translate(17.5 0.511719)" />
+                                                                                                                        </clipPath>
+                                                                                                                    </defs>
+                                                                                                                </svg>',
             'features' => [
                 'extra' => 'Everything in the Basic Package, plus:',
                 'exterior' => [
@@ -251,21 +251,21 @@
             'borderColor' => '#E6BA30',
             'buttonText' => 'Get started with Full Detail',
             'icon' => '<svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                            <g clip-path="url(#clip0_706_5175)">
-                                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M14.6697 3.93946C14.1018 2.38053 11.8983 2.38053 11.3304 3.93946L8.75361 11.0234L1.66968 13.6002C0.110756 14.168 0.110756 16.3716 1.66968 16.9395L8.75361 19.5162L11.3304 26.6002C11.8983 28.1591 14.1018 28.1591 14.6697 26.6002L17.2465 19.5162L24.3304 16.9395C25.8893 16.3716 25.8893 14.168 24.3304 13.6002L17.2465 11.0234L14.6697 3.93946Z" fill="#6ADBD9" />
-                                                            </g>
-                                                            <g clip-path="url(#clip1_706_5175)">
-                                                                <path d="M18.0905 5.17814L21.079 4.09028L22.1662 1.10243C22.1911 1.03398 22.2365 0.974858 22.2962 0.933081C22.3558 0.891305 22.4269 0.868896 22.4997 0.868896C22.5726 0.868896 22.6437 0.891305 22.7033 0.933081C22.763 0.974858 22.8084 1.03398 22.8333 1.10243L23.9212 4.091L26.9097 5.17814C26.9782 5.20307 27.0373 5.24844 27.0791 5.30812C27.1209 5.36779 27.1433 5.43887 27.1433 5.51171C27.1433 5.58456 27.1209 5.65563 27.0791 5.71531C27.0373 5.77498 26.9782 5.82036 26.9097 5.84528L23.9205 6.93314L22.8333 9.92171C22.8084 9.99016 22.763 10.0493 22.7033 10.0911C22.6437 10.1328 22.5726 10.1552 22.4997 10.1552C22.4269 10.1552 22.3558 10.1328 22.2962 10.0911C22.2365 10.0493 22.1911 9.99016 22.1662 9.92171L21.0783 6.93243L18.0905 5.84528C18.022 5.82036 17.9629 5.77498 17.9211 5.71531C17.8793 5.65563 17.8569 5.58456 17.8569 5.51171C17.8569 5.43887 17.8793 5.36779 17.9211 5.30812C17.9629 5.24844 18.022 5.20307 18.0905 5.17814Z" fill="#6ADBD9" />
-                                                            </g>
-                                                            <defs>
-                                                                <clipPath id="clip0_706_5175)">
-                                                                    <rect width="25" height="25" fill="white" transform="translate(0.5 2.76978)" />
-                                                                </clipPath>
-                                                                <clipPath id="clip1_706_5175)">
-                                                                    <rect width="10" height="10" fill="white" transform="translate(17.5 0.511719)" />
-                                                                </clipPath>
-                                                            </defs>
-                                                        </svg>',
+                                                                                                                    <g clip-path="url(#clip0_706_5175)">
+                                                                                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M14.6697 3.93946C14.1018 2.38053 11.8983 2.38053 11.3304 3.93946L8.75361 11.0234L1.66968 13.6002C0.110756 14.168 0.110756 16.3716 1.66968 16.9395L8.75361 19.5162L11.3304 26.6002C11.8983 28.1591 14.1018 28.1591 14.6697 26.6002L17.2465 19.5162L24.3304 16.9395C25.8893 16.3716 25.8893 14.168 24.3304 13.6002L17.2465 11.0234L14.6697 3.93946Z" fill="#6ADBD9" />
+                                                                                                                    </g>
+                                                                                                                    <g clip-path="url(#clip1_706_5175)">
+                                                                                                                        <path d="M18.0905 5.17814L21.079 4.09028L22.1662 1.10243C22.1911 1.03398 22.2365 0.974858 22.2962 0.933081C22.3558 0.891305 22.4269 0.868896 22.4997 0.868896C22.5726 0.868896 22.6437 0.891305 22.7033 0.933081C22.763 0.974858 22.8084 1.03398 22.8333 1.10243L23.9212 4.091L26.9097 5.17814C26.9782 5.20307 27.0373 5.24844 27.0791 5.30812C27.1209 5.36779 27.1433 5.43887 27.1433 5.51171C27.1433 5.58456 27.1209 5.65563 27.0791 5.71531C27.0373 5.77498 26.9782 5.82036 26.9097 5.84528L23.9205 6.93314L22.8333 9.92171C22.8084 9.99016 22.763 10.0493 22.7033 10.0911C22.6437 10.1328 22.5726 10.1552 22.4997 10.1552C22.4269 10.1552 22.3558 10.1328 22.2962 10.0911C22.2365 10.0493 22.1911 9.99016 22.1662 9.92171L21.0783 6.93243L18.0905 5.84528C18.022 5.82036 17.9629 5.77498 17.9211 5.71531C17.8793 5.65563 17.8569 5.58456 17.8569 5.51171C17.8569 5.43887 17.8793 5.36779 17.9211 5.30812C17.9629 5.24844 18.022 5.20307 18.0905 5.17814Z" fill="#6ADBD9" />
+                                                                                                                    </g>
+                                                                                                                    <defs>
+                                                                                                                        <clipPath id="clip0_706_5175)">
+                                                                                                                            <rect width="25" height="25" fill="white" transform="translate(0.5 2.76978)" />
+                                                                                                                        </clipPath>
+                                                                                                                        <clipPath id="clip1_706_5175)">
+                                                                                                                            <rect width="10" height="10" fill="white" transform="translate(17.5 0.511719)" />
+                                                                                                                        </clipPath>
+                                                                                                                    </defs>
+                                                                                                                </svg>',
             'features' => [
                 'extra' => 'Everything in the Premium Package, plus:',
                 'exterior' => [
@@ -399,7 +399,7 @@
                 <!-- Submit Button -->
                 <div class="flex justify-end mt-6">
                     <button type="submit" id="bookNowBtn"
-                        class="inline-flex items-center justify-center w-full md:w-auto px-6 py-3 text-base font-medium text-white bg-[var(--color-brand)] rounded-lg shadow-md hover:bg-[var(--color-brand)] transition focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                        class="inline-flex items-center justify-center w-full md:w-auto px-6 py-3 text-base font-medium text-white bg-[var(--color-brand)] rounded-lg shadow-md hover:bg-[var(--color-brand)] transition focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 cursor-pointer">
                         <span class="btn-text">Book Now</span>
                         <span class="spinner hidden ml-2"></span>
                     </button>
@@ -479,6 +479,7 @@
     document.getElementById('bookingForm').addEventListener('submit', function (e) {
         e.preventDefault();
 
+        const modal = document.getElementById('heroModal');
         const form = e.target;
         const formData = new FormData(form);
         const formMessage = document.getElementById('formMessage');
@@ -510,12 +511,27 @@
             .then(data => {
                 if (data.success) {
                     form.reset();
-                    formMessage.innerHTML = `<div class="p-4 mb-4 text-sm text-green-700 bg-green-100 rounded-lg" role="alert">${data.message}</div>`;
-                    formMessage.classList.remove('hidden');
-                    setTimeout(() => {
-                        formMessage.innerHTML = '';
-                        formMessage.classList.add('hidden');
-                    }, 3000);
+                    // formMessage.innerHTML = `<div class="p-4 mb-4 text-sm text-green-700 bg-green-100 rounded-lg" role="alert">${data.message}</div>`;
+                    // formMessage.classList.remove('hidden');
+                    // console.log("Response after form submission", data.message);
+                    modal.classList.remove('show');
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Success!',
+                        text: `${data.message}`,
+                        toast: true,
+                        position: 'top-end',
+                        showConfirmButton: false,
+                        timer: 3000,
+                        timerProgressBar: true,
+                        customClass: {
+                            popup: 'animate-fade-in my-swal-toast'
+                        }
+                    });
+                    // setTimeout(() => {
+                    //     formMessage.innerHTML = '';
+                    //     formMessage.classList.add('hidden');
+                    // }, 3000);
                 } else if (data.errors) {
                     Object.keys(data.errors).forEach(key => {
                         const input = form.querySelector(`[name="${key}"]`);
@@ -532,8 +548,23 @@
                 }
             })
             .catch(error => {
-                formMessage.innerHTML = `<div class="p-4 mb-4 text-sm text-red-700 bg-red-100 rounded-lg" role="alert">An unexpected error occurred. Please try again.</div>`;
-                formMessage.classList.remove('hidden');
+                // formMessage.innerHTML = `<div class="p-4 mb-4 text-sm text-red-700 bg-red-100 rounded-lg" role="alert">An unexpected error occurred. Please try again.</div>`;
+                // formMessage.classList.remove('hidden');
+                console.error('Caught fetch error:', error);
+                modal.classList.remove('show');
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error!',
+                    text: 'An unexpected error occurred. Please try again',
+                    toast: true,
+                    position: 'top-end',
+                    showConfirmButton: false,
+                    timer: 3000,
+                    timerProgressBar: true,
+                    customClass: {
+                        popup: 'animate-fade-in my-swal-toast'
+                    }
+                });
             })
             .finally(() => {
                 // Hide spinner and re-enable button
