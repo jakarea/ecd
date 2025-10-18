@@ -97,7 +97,7 @@
                 @foreach ($blogs as $blog)
                     <div class="rounded-[10px] border border-[#d9d9d9]">
                         <div class="w-full h-[300px] relative">
-                            <img src="{{ asset(path: $blog['image']) }}" alt="{{ $blog['id'] }}"
+                            <img src="{{ asset(path: $blog['image']) }}" alt="Blog {{ $blog['id'] }}"
                                 class="w-full h-full object-cover rounded-tl-[10px] rounded-tr-[10px]">
                             <div
                                 class="absolute bottom-0 left-0 right-0 flex justify-between items-center p-[10px]  bg-[var(--color-brand)]">
@@ -146,14 +146,14 @@
                         </div>
                         <div class="p-4 md:p-5">
                             <h3 class="text-[24px] font-extrabold text-[var(--color-heading)]"><a
-                                    href="{{ route('blog-single', $blog['id']) }}"
+                                    href="{{ route('blog-single', ['locale' => app()->getLocale(), 'id' => $blog['id']]) }}"
                                     class="text-[var(--color-heading)]">{{ $blog['title'] }}</a></h3>
                             <p class="mt-2 text-[16px] font-sf font-normal text-[var(--color-text)] leading-[24px]">
                                 {{ $blog['description'] }}
                             </p>
 
                         </div>
-                        <a href="{{ route('blog-single', $blog['id']) }}"
+                        <a href="{{ route('blog-single', ['locale' => app()->getLocale(), 'id' => $blog['id']]) }}"
                             class="flex items-center justify-between gap-4 mt-2 py-3 px-4 md:px-5 text-[16px] font-bold text-[var(--color-heading)] uppercase leading-[2] border-t border-[#d9d9d9] group hover:bg-[#6ADBD915] transition-all duration-300 ease-in-out">
                             <span href="#">Read More</span>
 
@@ -228,14 +228,14 @@
                         </div>
                         <div class="p-4 md:p-5">
                             <h3 class="text-[18px] font-extrabold text-[var(--color-heading)]"><a
-                                    href="{{ route('blog-single', $blog['id']) }}"
+                                    href="{{ route('blog-single', ['locale' => app()->getLocale(), 'id' => $blog['id']]) }}"
                                     class="text-[var(--color-heading)]">{{ $blog['title'] }}</a></h3>
                             <p class="mt-2 text-[14px] font-sf font-normal text-[var(--color-text)] leading-[1.6]">
                                 {{ $blog['description'] }}
                             </p>
 
                         </div>
-                        <a href="{{ route('blog-single', $blog['id']) }}"
+                        <a href="{{ route('blog-single', ['locale' => app()->getLocale(), 'id' => $blog['id']]) }}"
                             class="flex items-center justify-between gap-4 mt-2 py-3 px-4 md:px-5 text-[16px] font-bold text-[var(--color-heading)] uppercase leading-[2] border-t border-[#d9d9d9] group hover:bg-[#6ADBD915] transition-all duration-300 ease-in-out">
                             <span href="#">Read More</span>
 

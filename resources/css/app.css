@@ -94,17 +94,21 @@ body {
     margin: 0 auto;
 }
 
-.my-swal-toast {
-    z-index: 99999 !important; /* super high to appear on top */
-}
-
 /* === BUTTON STYLES === */
 .btn-brand {
     @apply bg-[var(--color-brand)] text-white text-base font-bold py-2 px-4 rounded-[60px] transition-all duration-300 ease-in-out inline-flex items-center justify-between gap-3 min-w-[182px] h-[45px] cursor-pointer;
 }
 
+.btn-brand:hover {
+    @apply bg-[#2bb4b1];
+}
+
 .btn-brand-sm {
     @apply bg-[var(--color-brand)] text-white text-sm font-bold py-2 px-4 rounded-[60px] transition-all duration-300 ease-in-out inline-flex items-center justify-between gap-3 min-w-[164px] h-[45px] cursor-pointer;
+}
+
+.btn-brand-sm:hover {
+    @apply bg-[#2bb4b1];
 }
 
 .btn-outline {
@@ -113,6 +117,10 @@ body {
 
 .btn-outline:hover svg path {
     stroke: #1b1b18;
+}
+
+.btn-outline-footer {
+    @apply min-w-[182px] h-[45px] border border-[var(--color-brand)] text-[var(--color-brand)] text-base font-bold py-2 px-4 rounded-[60px] transition-all duration-300 ease-in-out flex items-center justify-between gap-3 hover:bg-[var(--color-brand)] hover:text-[#1b1b18] cursor-pointer;
 }
 
 /* === NAVIGATION === */
