@@ -65,7 +65,7 @@
             @foreach ($images as $image)
                 <div class="w-auto flex-shrink-0">
                     <img src="{{ asset(path: $image['image']) }}" alt="{{ __('Showcase Image') }} {{ $image['id'] }}"
-                        class="h-[180px] md:h-[337px] w-auto" />
+                        class="h-[180px] md:h-[337px] w-auto rounded-[15px]" />
                 </div>
             @endforeach
         </div>

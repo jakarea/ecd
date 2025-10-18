@@ -31,7 +31,7 @@
 
     {{-- Title (allows HTML if you intentionally pass safe HTML) --}}
     <h2
-        class="text-[28px] md:text-[34px] font-extrabold leading-[1.2] tracking-[0.02px] text-[var(--color-heading)] mb-4">
+        class="text-[28px] md:text-[34px] font-extrabold leading-[1.2] tracking-[-0.28px] md:tracking-[-0.34px] text-[var(--color-heading)] mb-4">
         {!! $title !!}
     </h2>
 
