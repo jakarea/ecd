@@ -40,13 +40,13 @@
                     @if($heroData->subtitle)
                         <p class="text-white text-lg md:text-xl text-center">{{ $heroData->subtitle }}</p>
                     @endif
-                    <div class="flex justify-center gap-3">
-                        <a href="#" class="btn-brand" onclick="openHeroModal()"><span>{{ __('Book Now') }}</span>
+                    <div class="flex flex-wrap justify-center gap-3">
+                        <button class="btn-brand" onclick="openHeroModal()"><span>{{ __('Book Now') }}</span>
                             <svg width="25" height="11" viewBox="0 0 25 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M24 5.5H1M24 5.5L19.5 1M24 5.5L19.5 10" stroke="white" stroke-width="1.5"
                                     stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
-                        </a>
+                        </button>
                         <a href="{{ route('services-subscriptions', ['locale' => app()->getLocale()]) }}"
                             class="btn-outline"><span>{{ __('Our Services') }}</span>
                             <svg width="25" height="11" viewBox="0 0 25 11" fill="none" xmlns="http://www.w3.org/2000/svg">

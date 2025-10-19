@@ -9,8 +9,8 @@
         <div class="container">
             <div
                 class="font-sf font-medium text-[16px] md:text-[24px] leading-[28px] md:leading-[36px] text-[var(--color-text)] text-center max-w-[840px] mx-auto">{{ __('Explore
-                                our gallery of spotless finishes, detailed interiors, and shining results that showcase the quality and care
-                                we bring to every vehicle.') }}</div>
+                                    our gallery of spotless finishes, detailed interiors, and shining results that showcase the quality and care
+                                    we bring to every vehicle.') }}</div>
         </div>
     </section>
     <section class="pt-12 pb-8 md:py-20 relative">
@@ -18,18 +18,18 @@
             <div class="flex justify-center px-4">
                 <div class="flex justify-center absolute w-full -top-[21px] md:-top-[31px]">
                     <div id="filterButtons"
-                        class="flex items-center border border-[var(--color-brand)] rounded-[60px] py-2.5 md:py-5 px-4 md:px-10 filter-buttons bg-white">
+                        class="flex items-center border border-[var(--color-brand)] rounded-[60px] py-2.5 md:py-5 px-4 md:px-10 filter-buttons bg-white [box-shadow:0px_8px_13.78px_0px_#10182810]">
                         <button data-filter="all"
-                            class="filter-btn text-xs sm:text-sm text-[var(--color-text)] font-semibold text-center inline-block cursor-pointer pl-0 pr-[10px] md:pr-[28px] border-r border-[#D1D7DF] active">{{ __('All') }}</button>
+                            class="filter-btn text-xs sm:text-sm text-[var(--color-heading)] font-semibold text-center inline-block cursor-pointer pl-0 pr-[10px] md:pr-[28px] border-r border-[#D1D7DF] active">{{ __('All') }}</button>
                         <button data-filter="video"
-                            class="filter-btn text-xs sm:text-sm text-[var(--color-text)] font-semibold text-center inline-block cursor-pointer px-[10px] md:px-[28px] border-r border-[#D1D7DF]">{{ __('Videos') }}</button>
+                            class="filter-btn text-xs sm:text-sm text-[var(--color-heading)] font-semibold text-center inline-block cursor-pointer px-[10px] md:px-[28px] border-r border-[#D1D7DF]">{{ __('Videos') }}</button>
                         <button data-filter="interior"
-                            class="filter-btn text-xs sm:text-sm text-[var(--color-text)] font-semibold text-center inline-block cursor-pointer px-[10px] md:px-[28px] border-r border-[#D1D7DF]">{{ __('Interior') }}</button>
+                            class="filter-btn text-xs sm:text-sm text-[var(--color-heading)] font-semibold text-center inline-block cursor-pointer px-[10px] md:px-[28px] border-r border-[#D1D7DF]">{{ __('Interior') }}</button>
                         <button data-filter="exterior"
-                            class="filter-btn text-xs sm:text-sm text-[var(--color-text)] font-semibold text-center inline-block cursor-pointer px-[10px] md:px-[28px] border-r border-[#D1D7DF]">{{ __('Exterior') }}</button>
+                            class="filter-btn text-xs sm:text-sm text-[var(--color-heading)] font-semibold text-center inline-block cursor-pointer px-[10px] md:px-[28px] border-r border-[#D1D7DF]">{{ __('Exterior') }}</button>
                         <button data-filter="before&after"
-                            class="filter-btn text-xs sm:text-sm text-[var(--color-text)] font-semibold text-center inline-block cursor-pointer pl-[10px] pr-0 md:pl-[28px]">{{ __('Before
-                                            & After') }}</button>
+                            class="filter-btn text-xs sm:text-sm text-[var(--color-heading)] font-semibold text-center inline-block cursor-pointer pl-[10px] pr-0 md:pl-[28px]">{{ __('Before
+                                                & After') }}</button>
                     </div>
                 </div>
             </div>
