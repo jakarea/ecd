@@ -37,7 +37,7 @@
                 </button>
             </div>
             <div class="md:hidden">
-                <button class="mobile-menu-toggle" id="mobile-menu-toggle">
+                <button class="mobile-menu-toggle cursor-pointer" id="mobile-menu-toggle">
 
                     <svg width="27" height="18" viewBox="0 0 27 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -60,7 +60,7 @@
                 <img src="{{ asset(\App\Models\Setting::get('logo', 'assets/img/logo.png')) }}" alt="ECD Logo"
                     class="max-w-[80px] max-h-[40px]">
             </a>
-            <button id="mobile-menu-close" class="text-white text-opacity-80">
+            <button id="mobile-menu-close" class="text-white text-opacity-80 cursor-pointer">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                     <path d="M6 6L18 18M6 18L18 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round" />
@@ -73,7 +73,7 @@
             <a href="{{ route('home', ['locale' => app()->getLocale()]) }}" class="nav-link">{{ __('Home') }}</a>
             <a href="{{ route('about', ['locale' => app()->getLocale()]) }}" class="nav-link">{{ __('About Us') }}</a>
             <a href="{{ route('services-subscriptions', ['locale' => app()->getLocale()]) }}"
-                class="nav-link">{{ __('Services & Pricing') }}</a>
+                class="nav-link">{{ __('Services & Subscriptions') }}</a>
             <a href="{{ route('gallery', ['locale' => app()->getLocale()]) }}"
                 class="nav-link">{{ __('Our Works') }}</a>
             {{-- <a href="{{ route('contact', ['locale' => app()->getLocale()]) }}"
@@ -100,10 +100,14 @@
                     "md:right-6",
                     "md:left-auto"
                 );
-                el.classList.add("bottom-6", "right-6");
+                el.classList.add("bottom-6", "left-6",
+                    "md:right-6",
+                    "md:left-auto");
             } else {
                 // Back to top
-                el.classList.remove("bottom-6", "right-6");
+                el.classList.remove("bottom-6", "left-6",
+                    "md:right-6",
+                    "md:left-auto");
                 el.classList.add(
                     "top-1/2",
                     "-translate-y-1/2",
@@ -191,15 +195,15 @@
             'borderColor' => '#0C5798',
             'buttonText' => 'Get started with Basic',
             'icon' => '<svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                                                                            <g clip-path="url(#clip0_425_15641)">
-                                                                                                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M14.6697 1.93946C14.1018 0.380531 11.8983 0.380531 11.3304 1.93946L8.75361 9.02339L1.66968 11.6002C0.110756 12.168 0.110756 14.3716 1.66968 14.9395L8.75361 17.5162L11.3304 24.6002C11.8983 26.1591 14.1018 26.1591 14.6697 24.6002L17.2465 17.5162L24.3304 14.9395C25.8893 14.3716 25.8893 12.168 24.3304 11.6002L17.2465 9.02339L14.6697 1.93946Z" fill="#003868" />
-                                                                                                                            </g>
-                                                                                                                            <defs>
-                                                                                                                                <clipPath id="clip0_425_15641)">
-                                                                                                                                    <rect width="25" height="25" fill="white" transform="translate(0.5 0.769775)" />
-                                                                                                                                </clipPath>
-                                                                                                                            </defs>
-                                                                                                                        </svg>',
+                                                                                                                                                                <g clip-path="url(#clip0_425_15641)">
+                                                                                                                                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M14.6697 1.93946C14.1018 0.380531 11.8983 0.380531 11.3304 1.93946L8.75361 9.02339L1.66968 11.6002C0.110756 12.168 0.110756 14.3716 1.66968 14.9395L8.75361 17.5162L11.3304 24.6002C11.8983 26.1591 14.1018 26.1591 14.6697 24.6002L17.2465 17.5162L24.3304 14.9395C25.8893 14.3716 25.8893 12.168 24.3304 11.6002L17.2465 9.02339L14.6697 1.93946Z" fill="#003868" />
+                                                                                                                                                                </g>
+                                                                                                                                                                <defs>
+                                                                                                                                                                    <clipPath id="clip0_425_15641)">
+                                                                                                                                                                        <rect width="25" height="25" fill="white" transform="translate(0.5 0.769775)" />
+                                                                                                                                                                    </clipPath>
+                                                                                                                                                                </defs>
+                                                                                                                                                            </svg>',
             'features' => [
                 'extra' => null,
                 'exterior' => [
@@ -221,21 +225,21 @@
             'borderColor' => '#63FFFA',
             'buttonText' => 'Get started with Premium',
             'icon' => '<svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                                                                            <g clip-path="url(#clip0_706_5175)">
-                                                                                                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M14.6697 3.93946C14.1018 2.38053 11.8983 2.38053 11.3304 3.93946L8.75361 11.0234L1.66968 13.6002C0.110756 14.168 0.110756 16.3716 1.66968 16.9395L8.75361 19.5162L11.3304 26.6002C11.8983 28.1591 14.1018 28.1591 14.6697 26.6002L17.2465 19.5162L24.3304 16.9395C25.8893 16.3716 25.8893 14.168 24.3304 13.6002L17.2465 11.0234L14.6697 3.93946Z" fill="#6ADBD9" />
-                                                                                                                            </g>
-                                                                                                                            <g clip-path="url(#clip1_706_5175)">
-                                                                                                                                <path d="M18.0905 5.17814L21.079 4.09028L22.1662 1.10243C22.1911 1.03398 22.2365 0.974858 22.2962 0.933081C22.3558 0.891305 22.4269 0.868896 22.4997 0.868896C22.5726 0.868896 22.6437 0.891305 22.7033 0.933081C22.763 0.974858 22.8084 1.03398 22.8333 1.10243L23.9212 4.091L26.9097 5.17814C26.9782 5.20307 27.0373 5.24844 27.0791 5.30812C27.1209 5.36779 27.1433 5.43887 27.1433 5.51171C27.1433 5.58456 27.1209 5.65563 27.0791 5.71531C27.0373 5.77498 26.9782 5.82036 26.9097 5.84528L23.9205 6.93314L22.8333 9.92171C22.8084 9.99016 22.763 10.0493 22.7033 10.0911C22.6437 10.1328 22.5726 10.1552 22.4997 10.1552C22.4269 10.1552 22.3558 10.1328 22.2962 10.0911C22.2365 10.0493 22.1911 9.99016 22.1662 9.92171L21.0783 6.93243L18.0905 5.84528C18.022 5.82036 17.9629 5.77498 17.9211 5.71531C17.8793 5.65563 17.8569 5.58456 17.8569 5.51171C17.8569 5.43887 17.8793 5.36779 17.9211 5.30812C17.9629 5.24844 18.022 5.20307 18.0905 5.17814Z" fill="#6ADBD9" />
-                                                                                                                            </g>
-                                                                                                                            <defs>
-                                                                                                                                <clipPath id="clip0_706_5175)">
-                                                                                                                                    <rect width="25" height="25" fill="white" transform="translate(0.5 2.76978)" />
-                                                                                                                                </clipPath>
-                                                                                                                                <clipPath id="clip1_706_5175)">
-                                                                                                                                    <rect width="10" height="10" fill="white" transform="translate(17.5 0.511719)" />
-                                                                                                                                </clipPath>
-                                                                                                                            </defs>
-                                                                                                                        </svg>',
+                                                                                                                                                                <g clip-path="url(#clip0_706_5175)">
+                                                                                                                                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M14.6697 3.93946C14.1018 2.38053 11.8983 2.38053 11.3304 3.93946L8.75361 11.0234L1.66968 13.6002C0.110756 14.168 0.110756 16.3716 1.66968 16.9395L8.75361 19.5162L11.3304 26.6002C11.8983 28.1591 14.1018 28.1591 14.6697 26.6002L17.2465 19.5162L24.3304 16.9395C25.8893 16.3716 25.8893 14.168 24.3304 13.6002L17.2465 11.0234L14.6697 3.93946Z" fill="#6ADBD9" />
+                                                                                                                                                                </g>
+                                                                                                                                                                <g clip-path="url(#clip1_706_5175)">
+                                                                                                                                                                    <path d="M18.0905 5.17814L21.079 4.09028L22.1662 1.10243C22.1911 1.03398 22.2365 0.974858 22.2962 0.933081C22.3558 0.891305 22.4269 0.868896 22.4997 0.868896C22.5726 0.868896 22.6437 0.891305 22.7033 0.933081C22.763 0.974858 22.8084 1.03398 22.8333 1.10243L23.9212 4.091L26.9097 5.17814C26.9782 5.20307 27.0373 5.24844 27.0791 5.30812C27.1209 5.36779 27.1433 5.43887 27.1433 5.51171C27.1433 5.58456 27.1209 5.65563 27.0791 5.71531C27.0373 5.77498 26.9782 5.82036 26.9097 5.84528L23.9205 6.93314L22.8333 9.92171C22.8084 9.99016 22.763 10.0493 22.7033 10.0911C22.6437 10.1328 22.5726 10.1552 22.4997 10.1552C22.4269 10.1552 22.3558 10.1328 22.2962 10.0911C22.2365 10.0493 22.1911 9.99016 22.1662 9.92171L21.0783 6.93243L18.0905 5.84528C18.022 5.82036 17.9629 5.77498 17.9211 5.71531C17.8793 5.65563 17.8569 5.58456 17.8569 5.51171C17.8569 5.43887 17.8793 5.36779 17.9211 5.30812C17.9629 5.24844 18.022 5.20307 18.0905 5.17814Z" fill="#6ADBD9" />
+                                                                                                                                                                </g>
+                                                                                                                                                                <defs>
+                                                                                                                                                                    <clipPath id="clip0_706_5175)">
+                                                                                                                                                                        <rect width="25" height="25" fill="white" transform="translate(0.5 2.76978)" />
+                                                                                                                                                                    </clipPath>
+                                                                                                                                                                    <clipPath id="clip1_706_5175)">
+                                                                                                                                                                        <rect width="10" height="10" fill="white" transform="translate(17.5 0.511719)" />
+                                                                                                                                                                    </clipPath>
+                                                                                                                                                                </defs>
+                                                                                                                                                            </svg>',
             'features' => [
                 'extra' => 'Everything in the Basic Package, plus:',
                 'exterior' => [
@@ -259,21 +263,21 @@
             'borderColor' => '#E6BA30',
             'buttonText' => 'Get started with Full Detail',
             'icon' => '<svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                                                                            <g clip-path="url(#clip0_706_5175)">
-                                                                                                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M14.6697 3.93946C14.1018 2.38053 11.8983 2.38053 11.3304 3.93946L8.75361 11.0234L1.66968 13.6002C0.110756 14.168 0.110756 16.3716 1.66968 16.9395L8.75361 19.5162L11.3304 26.6002C11.8983 28.1591 14.1018 28.1591 14.6697 26.6002L17.2465 19.5162L24.3304 16.9395C25.8893 16.3716 25.8893 14.168 24.3304 13.6002L17.2465 11.0234L14.6697 3.93946Z" fill="#6ADBD9" />
-                                                                                                                            </g>
-                                                                                                                            <g clip-path="url(#clip1_706_5175)">
-                                                                                                                                <path d="M18.0905 5.17814L21.079 4.09028L22.1662 1.10243C22.1911 1.03398 22.2365 0.974858 22.2962 0.933081C22.3558 0.891305 22.4269 0.868896 22.4997 0.868896C22.5726 0.868896 22.6437 0.891305 22.7033 0.933081C22.763 0.974858 22.8084 1.03398 22.8333 1.10243L23.9212 4.091L26.9097 5.17814C26.9782 5.20307 27.0373 5.24844 27.0791 5.30812C27.1209 5.36779 27.1433 5.43887 27.1433 5.51171C27.1433 5.58456 27.1209 5.65563 27.0791 5.71531C27.0373 5.77498 26.9782 5.82036 26.9097 5.84528L23.9205 6.93314L22.8333 9.92171C22.8084 9.99016 22.763 10.0493 22.7033 10.0911C22.6437 10.1328 22.5726 10.1552 22.4997 10.1552C22.4269 10.1552 22.3558 10.1328 22.2962 10.0911C22.2365 10.0493 22.1911 9.99016 22.1662 9.92171L21.0783 6.93243L18.0905 5.84528C18.022 5.82036 17.9629 5.77498 17.9211 5.71531C17.8793 5.65563 17.8569 5.58456 17.8569 5.51171C17.8569 5.43887 17.8793 5.36779 17.9211 5.30812C17.9629 5.24844 18.022 5.20307 18.0905 5.17814Z" fill="#6ADBD9" />
-                                                                                                                            </g>
-                                                                                                                            <defs>
-                                                                                                                                <clipPath id="clip0_706_5175)">
-                                                                                                                                    <rect width="25" height="25" fill="white" transform="translate(0.5 2.76978)" />
-                                                                                                                                </clipPath>
-                                                                                                                                <clipPath id="clip1_706_5175)">
-                                                                                                                                    <rect width="10" height="10" fill="white" transform="translate(17.5 0.511719)" />
-                                                                                                                                </clipPath>
-                                                                                                                            </defs>
-                                                                                                                        </svg>',
+                                                                                                                                                                <g clip-path="url(#clip0_706_5175)">
+                                                                                                                                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M14.6697 3.93946C14.1018 2.38053 11.8983 2.38053 11.3304 3.93946L8.75361 11.0234L1.66968 13.6002C0.110756 14.168 0.110756 16.3716 1.66968 16.9395L8.75361 19.5162L11.3304 26.6002C11.8983 28.1591 14.1018 28.1591 14.6697 26.6002L17.2465 19.5162L24.3304 16.9395C25.8893 16.3716 25.8893 14.168 24.3304 13.6002L17.2465 11.0234L14.6697 3.93946Z" fill="#6ADBD9" />
+                                                                                                                                                                </g>
+                                                                                                                                                                <g clip-path="url(#clip1_706_5175)">
+                                                                                                                                                                    <path d="M18.0905 5.17814L21.079 4.09028L22.1662 1.10243C22.1911 1.03398 22.2365 0.974858 22.2962 0.933081C22.3558 0.891305 22.4269 0.868896 22.4997 0.868896C22.5726 0.868896 22.6437 0.891305 22.7033 0.933081C22.763 0.974858 22.8084 1.03398 22.8333 1.10243L23.9212 4.091L26.9097 5.17814C26.9782 5.20307 27.0373 5.24844 27.0791 5.30812C27.1209 5.36779 27.1433 5.43887 27.1433 5.51171C27.1433 5.58456 27.1209 5.65563 27.0791 5.71531C27.0373 5.77498 26.9782 5.82036 26.9097 5.84528L23.9205 6.93314L22.8333 9.92171C22.8084 9.99016 22.763 10.0493 22.7033 10.0911C22.6437 10.1328 22.5726 10.1552 22.4997 10.1552C22.4269 10.1552 22.3558 10.1328 22.2962 10.0911C22.2365 10.0493 22.1911 9.99016 22.1662 9.92171L21.0783 6.93243L18.0905 5.84528C18.022 5.82036 17.9629 5.77498 17.9211 5.71531C17.8793 5.65563 17.8569 5.58456 17.8569 5.51171C17.8569 5.43887 17.8793 5.36779 17.9211 5.30812C17.9629 5.24844 18.022 5.20307 18.0905 5.17814Z" fill="#6ADBD9" />
+                                                                                                                                                                </g>
+                                                                                                                                                                <defs>
+                                                                                                                                                                    <clipPath id="clip0_706_5175)">
+                                                                                                                                                                        <rect width="25" height="25" fill="white" transform="translate(0.5 2.76978)" />
+                                                                                                                                                                    </clipPath>
+                                                                                                                                                                    <clipPath id="clip1_706_5175)">
+                                                                                                                                                                        <rect width="10" height="10" fill="white" transform="translate(17.5 0.511719)" />
+                                                                                                                                                                    </clipPath>
+                                                                                                                                                                </defs>
+                                                                                                                                                            </svg>',
             'features' => [
                 'extra' => 'Everything in the Premium Package, plus:',
                 'exterior' => [
@@ -328,10 +332,11 @@
 
                     </div>
                     <div class="space-y-2">
-                        <h4 class="text-[24px] font-bold text-[var(--color-heading)] leading-[1.4]">{{ __('Book your
+                        <h4 class="tex-[20px] md:text-[24px] font-bold text-[var(--color-heading)] leading-[1.4]">{{ __('Book your
                             service') }}
                         </h4>
-                        <p class="text-[16px] font-medium text-[var(--color-text)] leading-[1.4] font-sans">{{ __('For your
+                        <p
+                            class="text-[12px] md:text-[16px] font-medium text-[var(--color-text)] leading-[1.4] font-sans">{{ __('For your
                             service,
                             share your details,
                             and we\'ll take care of the rest.') }}</p>
