@@ -18,13 +18,7 @@
 
                 </div>
                 <h4 class="text-[20px] text-[var(--color-heading)] font-semibold mt-8 mb-3">{{ __('What defines us') }}</h4>
-                <p class="text-[16px] leading-[1.5] text-[var(--color-text)] font-sf">{{ __('We’re more than just a car
-                    wash—we’re a
-                    team driven by passion, precision, and professionalism. What
-                    sets us apart is our commitment to quality at every step, from using premium products to delivering
-                    flawless detailing with care.Uncompromising Quality, Customer-Centered Service, Sustainable
-                    Practices, Trusted Expertise. This is what makes us unique—and why our customers trust us to keep
-                    their vehicles looking their very best.') }}</p>
+                <p class="text-[16px] leading-[1.5] text-[var(--color-text)] font-sf">{{ __('We’re more than just a car') }}</p>
             </div>
             <div class="border border-[#D1D7DF] rounded-[20px] p-6 md:p-8">
                 <div class="icon">
@@ -93,16 +87,11 @@
                 <h6 class="text-[20px] md:text-[24px] font-medium text-[var(--color-heading)] mb-8">{{ __('Built on Passion for
                     Shine') }}</h6>
                 <p class="text-[16px] leading-[1.5] text-[var(--color-text)] mb-8 font-sf">
-                    {{ __('ECD was founded with a simple mission—to redefine car care with professionalism, convenience, and
-                    attention to detail. What started as a passion for keeping cars spotless has grown into a trusted
-                    service that customers rely on for quality and reliability.') }} <br /> <br />
+                    {{ __('ECD was founded with a simple mission—to') }} <br /> <br />
 
-                    {{ __('From day one, we set out to make car washing and detailing easier, greener, and more effective. By
-                    combining premium products, skilled experts, and mobile convenience, we’ve built a service that fits
-                    seamlessly into your lifestyle.') }} <br /> <br />
+                    {{ __('From day one, we set out to make car washing') }} <br /> <br />
 
-                    {{ __('Today, our story continues with every vehicle we transform—delivering not just a clean car, but an
-                    elevated driving experience.') }}"
+                    {{ __('Today, our story continues with') }}"
                 </p>
             </div>
             <div class="w-full md:w-1/2 flex justify-center">

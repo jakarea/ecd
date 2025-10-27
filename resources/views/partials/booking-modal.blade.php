@@ -42,7 +42,7 @@
                 <div class="space-y-2">
                     <h4 class="text-[20px] md:text-[24px] font-bold text-[var(--color-heading)] leading-[1.4]">{{ __('Book your service') }}</h4>
                     <p class="text-[14px] md:text-[16px] font-medium text-[var(--color-text)] leading-[1.4] font-sans">
-                        {{ __('For your service, share your details, and we\'ll take care of the rest.') }}
+                        {{ __('For your service, share your details') }}
                     </p>
                 </div>
             </div>

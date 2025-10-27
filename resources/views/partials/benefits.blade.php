@@ -42,7 +42,7 @@
                                 {{ __('Tired of struggling to keep your car clean?') }}
                             </h2>
                             <p class="text-[16px] leading-[1.5] text-[var(--color-text)] font-sf">
-                                {{ __('Enjoy complimentary amenities with every wash, including free vacuums window cleaners, and more.') }}
+                                {{ __('Enjoy complimentary amenities with every wash') }}
                             </p>
                         </div>
                         <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6 mt-10 md:mt-20">

@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Storage;
 <section class="py-8 md:py-25">
     <div class="container">
         <x-section-heading pretitle="{{ __('We Prove It') }}" title="{{ __('Transform Your Ride: Stunning before & after car detailing') }}"
-            description="{{ __('Our skilled team employs top-notch techniques and eco-friendly products to rejuvenate your ride, ensuring it looks its absolute best. From quick washes to comprehensive detailing, we deliver remarkable results that will leave you amazed.') }}"
+            description="{{ __('Our skilled team employs top-notch techniques and') }}"
             width="max-w-[948px]">
             <x-slot name="icon">
                 <svg width="11" height="13" viewBox="0 0 11 13" fill="none" xmlns="http://www.w3.org/2000/svg">
