@@ -125,7 +125,7 @@
                 </h2>
                 <p class="text-[16px] text-white leading-[1.5]">
                     {{ __('We believe premium car care should come with clear and honest pricing.') }} <br />
-                    {{ __('No hidden fees, no surprises just flexible packages designed to fit your car’s needs and your budget.') }}
+                    {{ __('No hidden fees') }}
                 </p>
             </div>
             <div class="max-w-[413px] p-5 rounded-[12px] bg-[#2b2b2b]">

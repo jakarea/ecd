@@ -5,25 +5,25 @@
             'icon' => 'assets/img/about-icon1.svg',
             'title' => __('Expert Team'),
             'description' =>
-                __('Our skilled professionals bring years of hands-on experience, delivering precise, high-quality results every single time.'),
+                __('Our skilled professionals bring years of hands-on experience'),
         ],
         [
             'icon' => 'assets/img/about-icon2.svg',
             'title' => __('Premium-Grade Products'),
             'description' =>
-                __('We use only top-tier, industry-approved products to ensure a spotless shine and long-lasting protection for your vehicle.'),
+                __('We use only top-tier, industry-approved products to ensure'),
         ],
         [
             'icon' => 'assets/img/about-icon3.svg',
             'title' => __('Eco-Friendly Cleaning'),
             'description' =>
-                __('We care about both your car and the planet. That’s why we use eco-friendly solutions that are tough on dirt but gentle on the environment.'),
+                __('We care about both your car and the planet.'),
         ],
         [
             'icon' => 'assets/img/about-icon4.svg',
             'title' => __('Service at Your Doorstep'),
             'description' =>
-                __('Skip the hassle of driving to a car wash—our mobile service brings premium car care directly to your home or workplace.'),
+                __('Skip the hassle of driving to'),
         ],
 
         [
@@ -36,19 +36,19 @@
             'icon' => 'assets/img/about-icon2.svg',
             'title' => __('Premium-Grade Products'),
             'description' =>
-                __('We use only top-tier, industry-approved products to ensure a spotless shine and long-lasting protection for your vehicle.'),
+                __('We use only top-tier, industry-approved products to ensure'),
         ],
         [
             'icon' => 'assets/img/about-icon3.svg',
             'title' => __('Eco-Friendly Cleaning'),
             'description' =>
-                __('We care about both your car and the planet. That’s why we use eco-friendly solutions that are tough on dirt but gentle on the environment.'),
+                __('We care about both your car and the planet.'),
         ],
         [
             'icon' => 'assets/img/about-icon4.svg',
             'title' => __('Service at Your Doorstep'),
             'description' =>
-                __('Skip the hassle of driving to a car wash—our mobile service brings premium car care directly to your home or workplace.'),
+                __('Skip the hassle of driving to'),
         ],
     ];
 @endphp
@@ -75,8 +75,8 @@
                     {{ __('straight to your door') }}
                 </h2>
                 <p class="text-base leading-[1.5] text-[var(--color-text)] mb-10 font-sf">
-                    {{ __('We believe every vehicle deserves the highest standard of care. With years of experience in professional car washing and detailing, our mission is to provide a seamless, reliable, and premium service that restores both the look and value of your vehicle.') }} <br />
-                    {{ __('Our team of trained specialists uses advanced techniques, industry-grade products, and eco-friendly solutions to deliver exceptional results—whether it’s a quick wash, deep interior cleaning, or full detailing service.') }}
+                    {{ __('We believe every vehicle deserves the highest standard of care.') }} <br />
+                    {{ __('Our team of trained specialists uses advanced techniques') }}
                 </p>
                 <div class="inline-flex">
                     <a href="{{ route('about', ['locale' => app()->getLocale()]) }}" class="btn-brand"><span>{{ __('About Us') }}</span>

@@ -24,7 +24,7 @@
 <section class="py-12">
     <div class="container">
         <x-section-heading pretitle="{{ __('How it works') }}" title="{{ __('Sparkling clean in 3 easy steps') }}"
-            description="{{ __('Our team of trained specialists uses advanced techniques, industry-grade products, and eco-friendly solutions to deliver exceptional results—whether it’s a quick wash, deep interior cleaning, or full detailing service.') }}"
+            description="{{ __('Our team of trained specialists uses advanced techniques') }}"
             width="max-w-[900px]">
             <x-slot name="icon">
                 <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
