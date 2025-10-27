@@ -140,7 +140,7 @@
 
     {{-- Action Buttons --}}
     <div class="flex justify-end gap-3">
-        <a href="{{ route('admin.testimonials.index') }}"
+        <a href="{{ route('admin.testimonials.index', ['locale' => request()->route('locale') ?? request()->segment(1)]) }}"
             class="px-6 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition">
             Cancel
         </a>

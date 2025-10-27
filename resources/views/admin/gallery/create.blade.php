@@ -7,7 +7,7 @@
         {{-- Header --}}
         <div class="mb-6">
             <div class="flex items-center gap-2 text-sm text-gray-600 mb-2">
-                <a href="{{ route('admin.gallery.index') }}" class="hover:text-blue-600">Gallery</a>
+                <a href="{{ route('admin.gallery.index', ['locale' => request()->route('locale') ?? request()->segment(1)]) }}" class="hover:text-blue-600">Gallery</a>
                 <span>/</span>
                 <span>Create New Item</span>
             </div>
@@ -16,7 +16,7 @@
 
         {{-- Form --}}
         <div class="bg-white rounded-lg shadow p-6">
-            <form action="{{ route('admin.gallery.store') }}" method="POST" enctype="multipart/form-data">
+            <form action="{{ route('admin.gallery.store', ['locale' => request()->route('locale') ?? request()->segment(1)]) }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 @include('admin.gallery.form')
 

@@ -10,7 +10,7 @@
                 <h1 class="text-3xl font-bold text-gray-900">Team Members</h1>
                 <p class="text-gray-600 mt-1">Manage your team members</p>
             </div>
-            <a href="{{ route('admin.team-members.create') }}"
+            <a href="{{ route('admin.team-members.create', ['locale' => request()->route('locale') ?? request()->segment(1)]) }}"
                 class="px-4 py-2 bg-[var(--color-brand)] text-white rounded-lg hover:opacity-90 transition flex items-center gap-2 btn-animate">
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
@@ -45,7 +45,7 @@
                                 <p class="text-sm text-gray-600">{{ $member->position }}</p>
                                 <p class="text-xs text-gray-500 mt-1">Order: {{ $member->order }}</p>
                             </div>
-                            <form action="{{ route('admin.team-members.toggle', $member) }}" method="POST" class="inline">
+                            <form action="{{ route('admin.team-members.toggle', ['locale' => request()->route('locale') ?? request()->segment(1), 'teamMember' => $member]) }}" method="POST" class="inline">
                                 @csrf
                                 <button type="submit"
                                     class="px-2 py-1 rounded-full text-xs font-semibold badge-animate {{ $member->is_active ? 'bg-green-100 text-green-800' : 'bg-gray-100 text-gray-800' }}">
@@ -56,7 +56,10 @@
 
                         {{-- Actions --}}
                         <div class="flex gap-2 mt-4 pt-4 border-t">
-                            <a href="{{ route('admin.team-members.edit', $member) }}"
+                        <a href="{{ route('admin.team-members.edit', [
+    'locale' => request()->route('locale') ?? request()->segment(1), 
+    'team_member' => $member 
+]) }}"
                                 class="flex-1 text-center px-3 py-2 bg-gray-100 text-gray-700 rounded hover:bg-gray-200 transition text-sm font-medium">
                                 Edit
                             </a>
@@ -65,11 +68,12 @@
                                 Delete
                             </button>
                             <form id="delete-form-{{ $member->id }}"
-                                action="{{ route('admin.team-members.destroy', $member) }}"
+                                action="{{ route('admin.team-members.destroy', ['locale' => request()->route('locale') ?? request()->segment(1), 'team_member' => $member]) }}"
                                 method="POST" class="hidden">
                                 @csrf
                                 @method('DELETE')
                             </form>
+                            
                         </div>
                     </div>
                 </div>

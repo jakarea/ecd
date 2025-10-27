@@ -7,7 +7,9 @@
         {{-- Header --}}
         <div class="mb-6">
             <div class="flex items-center gap-2 text-sm text-gray-600 mb-2">
-                <a href="{{ route('admin.bookings.index') }}" class="hover:text-blue-600">Bookings</a>
+                <a href="{{ route('admin.bookings.index',[ 'locale' => request()->route('locale') ?? request()->segment(1)]) }}" class="hover:text-blue-600">Bookings</a>
+
+                
                 <span>/</span>
                 <span>Booking #{{ $booking->id }}</span>
             </div>
@@ -105,7 +107,11 @@
                 {{-- Status Update --}}
                 <div class="bg-white rounded-lg shadow p-6">
                     <h2 class="text-lg font-bold text-gray-900 mb-4">Update Status</h2>
-                    <form action="{{ route('admin.bookings.updateStatus', $booking) }}" method="POST">
+                   
+                    <form action="{{ route('admin.bookings.updateStatus', [
+                            'locale' => request()->route('locale') ?? request()->segment(1), 
+                            'booking' => $booking 
+                        ]) }}" method="POST">
                         @csrf
                         <div class="mb-4">
                             <label class="block text-sm font-medium text-gray-700 mb-2">Status</label>
@@ -153,11 +159,11 @@
                 <div class="bg-white rounded-lg shadow p-6">
                     <h2 class="text-lg font-bold text-gray-900 mb-3">Quick Actions</h2>
                     <div class="space-y-2">
-                        <a href="{{ route('admin.bookings.index') }}"
+                        <a href="{{ route('admin.bookings.index',['locale' => request()->route('locale') ?? request()->segment(1)]) }}"
                             class="block w-full px-4 py-2 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition text-center font-medium">
                             Back to Bookings
                         </a>
-                        <form action="{{ route('admin.bookings.destroy', $booking) }}" method="POST"
+                        <form action="{{ route('admin.bookings.destroy', ['locale' => request()->route('locale') ?? request()->segment(1), 'booking' => $booking]) }}" method="POST"
                             onsubmit="return confirm('Are you sure you want to delete this booking?')">
                             @csrf
                             @method('DELETE')

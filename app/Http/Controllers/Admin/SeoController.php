@@ -12,7 +12,7 @@ class SeoController extends Controller
     /**
      * Display a listing of SEO pages
      */
-    public function index(Request $request)
+    public function index(string $locale,Request $request)
     {
         $query = SeoMeta::query();
 
@@ -67,7 +67,7 @@ class SeoController extends Controller
     /**
      * Show the form for creating a new SEO entry
      */
-    public function create()
+    public function create(string $locale)
     {
         return view('admin.seo.create');
     }
@@ -75,7 +75,7 @@ class SeoController extends Controller
     /**
      * Store a newly created SEO entry in storage
      */
-    public function store(Request $request)
+    public function store(string $locale,Request $request)
     {
         $validator = Validator::make($request->all(), [
             'page_url' => 'required|string|unique:seo_meta,page_url',
@@ -133,14 +133,14 @@ class SeoController extends Controller
         // Calculate and update SEO score
         $seo->updateSeoScore();
 
-        return redirect()->route('admin.seo.index')
+        return redirect()->route('admin.seo.index',['locale' => $locale])
             ->with('success', 'SEO entry created successfully! SEO Score: ' . $seo->seo_score . '/100');
     }
 
     /**
      * Display the specified SEO entry
      */
-    public function show(SeoMeta $seo)
+    public function show(string $locale,SeoMeta $seo)
     {
         return view('admin.seo.show', compact('seo'));
     }
@@ -148,7 +148,7 @@ class SeoController extends Controller
     /**
      * Show the form for editing the specified SEO entry
      */
-    public function edit(SeoMeta $seo)
+    public function edit(string $locale,SeoMeta $seo)
     {
         return view('admin.seo.edit', compact('seo'));
     }
@@ -156,7 +156,7 @@ class SeoController extends Controller
     /**
      * Update the specified SEO entry in storage
      */
-    public function update(Request $request, SeoMeta $seo)
+    public function update(string $locale,Request $request, SeoMeta $seo)
     {
         $validator = Validator::make($request->all(), [
             'page_url' => 'required|string|unique:seo_meta,page_url,' . $seo->id,
@@ -214,25 +214,25 @@ class SeoController extends Controller
         // Recalculate SEO score
         $seo->updateSeoScore();
 
-        return redirect()->route('admin.seo.index')
+        return redirect()->route('admin.seo.index',['locale' => $locale])
             ->with('success', 'SEO entry updated successfully! SEO Score: ' . $seo->seo_score . '/100');
     }
 
     /**
      * Remove the specified SEO entry from storage (soft delete)
      */
-    public function destroy(SeoMeta $seo)
+    public function destroy(string $locale,SeoMeta $seo)
     {
         $seo->delete();
 
-        return redirect()->route('admin.seo.index')
+        return redirect()->route('admin.seo.index',['locale' => $locale])
             ->with('success', 'SEO entry deleted successfully.');
     }
 
     /**
      * Bulk recalculate SEO scores
      */
-    public function recalculateScores()
+    public function recalculateScores(string $locale)
     {
         $seoPages = SeoMeta::all();
 
@@ -240,19 +240,19 @@ class SeoController extends Controller
             $seo->updateSeoScore();
         }
 
-        return redirect()->route('admin.seo.index')
+        return redirect()->route('admin.seo.index',['locale' => $locale])
             ->with('success', 'SEO scores recalculated for ' . $seoPages->count() . ' pages.');
     }
 
     /**
      * Toggle active status
      */
-    public function toggleStatus(SeoMeta $seo)
+    public function toggleStatus(string $locale,SeoMeta $seo)
     {
         $seo->update(['is_active' => !$seo->is_active]);
 
         $status = $seo->is_active ? 'activated' : 'deactivated';
-        return redirect()->back()
+            return redirect()->route('admin.seo.index',['locale' => $locale])
             ->with('success', "SEO for '{$seo->page_name}' has been {$status}.");
     }
 }

@@ -12,7 +12,7 @@
                 <p class="text-gray-600 text-sm sm:text-base mt-1">Manage SEO meta tags for all pages</p>
             </div>
             <div class="flex flex-wrap gap-2">
-                <form action="{{ route('admin.seo.recalculate') }}" method="POST" class="inline">
+                <form action="{{ route('admin.seo.recalculate', ['locale' => request()->route('locale') ?? request()->segment(1)]) }}" method="POST" class="inline">
                     @csrf
                     <button type="submit"
                         class="inline-flex items-center justify-center px-4 py-2.5 bg-gray-700 text-white text-sm rounded-md font-medium transition-all duration-200 hover:opacity-90">
@@ -23,7 +23,7 @@
                         Recalculate All Scores
                     </button>
                 </form>
-                <a href="{{ route('admin.seo.create') }}"
+                <a href="{{ route('admin.seo.create', ['locale' => request()->route('locale') ?? request()->segment(1)]) }}"
                     class="inline-flex items-center justify-center px-4 py-2.5 bg-[var(--color-brand)] text-white text-sm rounded-md font-medium transition-all duration-200 hover:opacity-90">
                     <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
@@ -36,7 +36,7 @@
 
     {{-- Filters --}}
     <div class="bg-white rounded-lg shadow-sm p-4 mb-6">
-        <form method="GET" action="{{ route('admin.seo.index') }}" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <form method="GET" action="{{ route('admin.seo.index', ['locale' => request()->route('locale') ?? request()->segment(1)]) }}" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             <div>
                 <label class="block text-sm font-medium text-gray-700 mb-1">Search</label>
                 <input type="text" name="search" value="{{ request('search') }}"
@@ -84,7 +84,7 @@
                     class="px-4 py-2 bg-[var(--color-brand)] text-white rounded-md font-medium hover:opacity-90 transition-all">
                     Apply Filters
                 </button>
-                <a href="{{ route('admin.seo.index') }}"
+                <a href="{{ route('admin.seo.index', ['locale' => request()->route('locale') ?? request()->segment(1)]) }}"
                     class="px-4 py-2 bg-gray-200 text-gray-700 rounded-md font-medium hover:bg-gray-300 transition-all">
                     Clear Filters
                 </a>
@@ -145,7 +145,7 @@
                                     </div>
                                 </td>
                                 <td class="px-6 py-4">
-                                    <form action="{{ route('admin.seo.toggle', $seo) }}" method="POST" class="inline">
+                                    <form action="{{ route('admin.seo.toggle', ['locale' => request()->route('locale') ?? request()->segment(1), 'seo' => $seo]) }}" method="POST" class="inline">
                                         @csrf
                                         <button type="submit"
                                             class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium transition-all
@@ -169,7 +169,7 @@
                                                     d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
                                             </svg>
                                         </a>
-                                        <a href="{{ route('admin.seo.edit', $seo) }}"
+                                        <a href="{{ route('admin.seo.edit', ['locale' => request()->route('locale') ?? request()->segment(1), 'seo' => $seo]) }}"
                                             class="text-[var(--color-brand)] hover:opacity-80 transition-opacity"
                                             title="Edit">
                                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -177,7 +177,7 @@
                                                     d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
                                             </svg>
                                         </a>
-                                        <form action="{{ route('admin.seo.destroy', $seo) }}" method="POST" class="inline"
+                                        <form action="{{ route('admin.seo.destroy', ['locale' => request()->route('locale') ?? request()->segment(1), 'seo' => $seo]) }}" method="POST" class="inline"
                                             onsubmit="return confirm('Are you sure you want to delete this SEO entry?');">
                                             @csrf
                                             @method('DELETE')
@@ -224,7 +224,7 @@
                                 <div class="text-sm font-medium text-gray-900">{{ $seo->score_label }}</div>
                                 <div class="text-xs text-gray-500">SEO Score: {{ $seo->seo_score }}/100</div>
                             </div>
-                            <form action="{{ route('admin.seo.toggle', $seo) }}" method="POST" class="inline">
+                            <form action="{{ route('admin.seo.toggle', ['locale' => request()->route('locale') ?? request()->segment(1), 'seo' => $seo]) }}" method="POST" class="inline">
                                 @csrf
                                 <button type="submit"
                                     class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium
@@ -244,14 +244,14 @@
                                             d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                                     </svg>
                                 </a>
-                                <a href="{{ route('admin.seo.edit', $seo) }}"
+                                <a href="{{ route('admin.seo.edit', ['locale' => request()->route('locale') ?? request()->segment(1), 'seo' => $seo]) }}"
                                     class="text-[var(--color-brand)] hover:opacity-80">
                                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                             d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
                                     </svg>
                                 </a>
-                                <form action="{{ route('admin.seo.destroy', $seo) }}" method="POST" class="inline"
+                                <form action="{{ route('admin.seo.destroy', ['locale' => request()->route('locale') ?? request()->segment(1), 'seo' => $seo]) }}" method="POST" class="inline"
                                     onsubmit="return confirm('Delete this SEO entry?');">
                                     @csrf
                                     @method('DELETE')
@@ -281,7 +281,7 @@
                 </svg>
                 <h3 class="text-lg font-medium text-gray-900 mb-2">No SEO Pages Found</h3>
                 <p class="text-gray-600 mb-6">Get started by creating your first SEO entry.</p>
-                <a href="{{ route('admin.seo.create') }}"
+                <a href="{{ route('admin.seo.create', ['locale' => request()->route('locale') ?? request()->segment(1)]  ) }}"
                     class="inline-flex items-center px-4 py-2 bg-[var(--color-brand)] text-white rounded-md font-medium hover:opacity-90 transition-all">
                     <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />

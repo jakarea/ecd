@@ -7,7 +7,7 @@
 @section('content')
     <div class="mb-4 sm:mb-6">
         <div class="flex items-center gap-3 mb-4">
-            <a href="{{ route('admin.seo.index') }}"
+            <a href="{{ route('admin.seo.index', ['locale' => request()->route('locale') ?? request()->segment(1)]) }}"
                 class="text-gray-600 hover:text-gray-900 transition-colors">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
@@ -20,7 +20,7 @@
         </div>
     </div>
 
-    <form action="{{ route('admin.seo.store') }}" method="POST" class="space-y-6">
+    <form action="{{ route('admin.seo.store', ['locale' => request()->route('locale') ?? request()->segment(1)]) }}" method="POST" class="space-y-6">
         @csrf
         @include('admin.seo.form', ['seo' => null, 'submitText' => 'Create SEO Entry'])
     </form>

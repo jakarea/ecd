@@ -7,9 +7,9 @@
         {{-- Header --}}
         <div class="mb-6">
             <div class="flex items-center gap-2 text-sm text-gray-600 mb-2">
-                <a href="{{ route('admin.dashboard') }}" class="hover:text-gray-900">Dashboard</a>
+                <a href="{{ route('admin.dashboard', ['locale' => request()->route('locale') ?? request()->segment(1)]) }}" class="hover:text-gray-900">Dashboard</a>
                 <span>/</span>
-                <a href="{{ route('admin.testimonials.index') }}" class="hover:text-gray-900">Testimonials</a>
+                <a href="{{ route('admin.testimonials.index', ['locale' => request()->route('locale') ?? request()->segment(1)]) }}" class="hover:text-gray-900">Testimonials</a>
                 <span>/</span>
                 <span class="text-gray-900">Edit</span>
             </div>
@@ -18,7 +18,7 @@
         </div>
 
         {{-- Form --}}
-        <form action="{{ route('admin.testimonials.update', $testimonial) }}" method="POST" enctype="multipart/form-data">
+        <form action="{{ route('admin.testimonials.update', ['locale' => request()->route('locale') ?? request()->segment(1), 'testimonial' => $testimonial]) }}" method="POST" enctype="multipart/form-data">
             @csrf
             @method('PUT')
             @include('admin.testimonials.form', ['testimonial' => $testimonial, 'submitText' => 'Update Testimonial'])
