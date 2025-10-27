@@ -10,7 +10,7 @@
                 <h1 class="text-3xl font-bold text-gray-900">Edit Hero Section</h1>
                 <p class="text-gray-600 mt-1">Update hero section for {{ $heroSection->page_name }}</p>
             </div>
-            <a href="{{ route('admin.hero-sections.index') }}"
+            <a href="{{ route('admin.hero-sections.index', ['locale' => request()->route('locale') ?? request()->segment(1)]) }}"
                 class="px-4 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition flex items-center gap-2">
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
@@ -21,7 +21,7 @@
 
         {{-- Form --}}
         <div class="bg-white rounded-lg shadow p-6">
-            <form action="{{ route('admin.hero-sections.update', $heroSection) }}" method="POST" enctype="multipart/form-data">
+            <form action="{{ route('admin.hero-sections.update', ['locale' => request()->route('locale') ?? request()->segment(1), 'hero_section' => $heroSection]) }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 @method('PUT')
                 @include('admin.hero-sections.form')
@@ -31,7 +31,7 @@
                         class="px-6 py-2 bg-[var(--color-brand)] text-white rounded-lg hover:opacity-90 transition font-medium">
                         Update Hero Section
                     </button>
-                    <a href="{{ route('admin.hero-sections.index') }}"
+                    <a href="{{ route('admin.hero-sections.index', ['locale' => request()->route('locale') ?? request()->segment(1)]) }}"
                         class="px-6 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition font-medium">
                         Cancel
                     </a>

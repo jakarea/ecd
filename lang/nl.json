@@ -139,8 +139,8 @@
     "No team members available at the moment.": "Momenteel geen teamleden beschikbaar.",
     "Something went wrong. Please try again.": "Er is iets misgegaan. Probeer het opnieuw.",
     "An unexpected error occurred. Please try again.": "Er is een onverwachte fout opgetreden. Probeer het opnieuw.",
-    "Before Image ": "Afbeelding voor ",
-    "After Image ": "Afbeelding na ",
+    "Before Image ": "Afbeelding voor",
+    "After Image ": "Afbeelding na",
     "Vehicle": "Voertuig",
     "About Page": "Over ons pagina",
     "Homepage": "Startpagina",
@@ -169,9 +169,9 @@
     "Before & After": "Voor & Na",
     "Loading more items...": "Meer items laden...",
     "You've reached the end of the gallery": "U heeft het einde van de galerij bereikt",
-    "Before - ": "Voor - ",
+    "Before - ": "Voor -",
     "Gallery Item": "Galerij item",
-    "After - ": "Na - ",
+    "After - ": "Na -",
     "Video Thumbnail": "Video miniatuur",
     "Gallery Image": "Galerij afbeelding",
     "Services & Subscriptions": "Diensten & Abonnementen",
@@ -187,4 +187,4 @@
     "For your service, share your details, and we'll take care of the rest.": "Deel voor uw service uw gegevens, en wij zorgen voor de rest.",
     "Enter your address": "Voer uw adres in",
     "Back": "Terug"
-    }
+}

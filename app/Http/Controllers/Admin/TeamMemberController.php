@@ -9,18 +9,18 @@ use Illuminate\Support\Facades\Storage;
 
 class TeamMemberController extends Controller
 {
-    public function index()
+    public function index(string $locale)
     {
         $teamMembers = TeamMember::ordered()->paginate(15);
         return view('admin.team-members.index', compact('teamMembers'));
     }
 
-    public function create()
+    public function create(string $locale)
     {
         return view('admin.team-members.create');
     }
 
-    public function store(Request $request)
+    public function store(string $locale,Request $request)
     {
         $validated = $request->validate([
             'name' => 'required|string|max:255',
@@ -40,16 +40,16 @@ class TeamMemberController extends Controller
 
         TeamMember::create($validated);
 
-        return redirect()->route('admin.team-members.index')
+        return redirect()->route('admin.team-members.index',['locale' => $locale])
             ->with('success', 'Team member created successfully!');
     }
 
-    public function edit(TeamMember $teamMember)
+    public function edit(string $locale,TeamMember $teamMember)
     {
         return view('admin.team-members.edit', compact('teamMember'));
     }
 
-    public function update(Request $request, TeamMember $teamMember)
+    public function update(string $locale,Request $request, TeamMember $teamMember)
     {
         $validated = $request->validate([
             'name' => 'required|string|max:255',
@@ -72,11 +72,11 @@ class TeamMemberController extends Controller
 
         $teamMember->update($validated);
 
-        return redirect()->route('admin.team-members.index')
+        return redirect()->route('admin.team-members.index',['locale' => $locale])
             ->with('success', 'Team member updated successfully!');
     }
 
-    public function destroy(TeamMember $teamMember)
+    public function destroy(string $locale,TeamMember $teamMember)
     {
         // Delete associated image
         if ($teamMember->image) {
@@ -85,15 +85,15 @@ class TeamMemberController extends Controller
 
         $teamMember->delete();
 
-        return redirect()->route('admin.team-members.index')
+        return redirect()->route('admin.team-members.index',['locale' => $locale])
             ->with('success', 'Team member deleted successfully!');
     }
 
-    public function toggle(TeamMember $teamMember)
+    public function toggle(string $locale,TeamMember $teamMember)
     {
         $teamMember->update(['is_active' => !$teamMember->is_active]);
 
-        return redirect()->route('admin.team-members.index')
+        return redirect()->route('admin.team-members.index',['locale' => $locale])
             ->with('success', 'Team member status updated successfully!');
     }
 }

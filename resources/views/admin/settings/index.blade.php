@@ -17,7 +17,7 @@
             </div>
         @endif
 
-        <form action="{{ route('admin.settings.update') }}" method="POST" enctype="multipart/form-data">
+        <form action="{{ route('admin.settings.update', ['locale' => request()->route('locale') ?? request()->segment(1)]) }}" method="POST" enctype="multipart/form-data">
             @csrf
 
             {{-- General Settings --}}
@@ -406,7 +406,7 @@
 
             {{-- Save Button --}}
             <div class="flex justify-end gap-3">
-                <a href="{{ route('admin.dashboard') }}"
+                <a href="{{ route('admin.dashboard', ['locale' => request()->route('locale') ?? request()->segment(1)]) }}"
                     class="px-6 py-2.5 border border-gray-300 rounded-lg text-gray-700 hover:bg-gray-50 transition font-medium">
                     Cancel
                 </a>

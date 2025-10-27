@@ -20,7 +20,7 @@
         </div>
 
         {{-- Login Form --}}
-        <form action="{{ route('admin.login.post') }}" method="POST" class="space-y-5">
+        <form action="{{ route('admin.login.post', ['locale' => request()->route('locale') ?? request()->segment(1)]) }}" method="POST" class="space-y-5">
             @csrf
 
             <div>
@@ -57,7 +57,7 @@
 
         {{-- Back Link --}}
         <div class="text-center mt-6 sm:mt-8">
-            <a href="{{ route('home') }}"
+            <a href="{{ route('home', ['locale' => request()->route('locale') ?? request()->segment(1)]) }}"
                 class="text-[var(--color-brand)] text-sm sm:text-base font-medium hover:underline inline-flex items-center gap-1.5 transition-all duration-200">
                 <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/>

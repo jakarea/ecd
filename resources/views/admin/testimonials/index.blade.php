@@ -10,7 +10,7 @@
                 <h1 class="text-3xl font-bold text-gray-900">Testimonials</h1>
                 <p class="text-gray-600 mt-1">Manage customer reviews and testimonials</p>
             </div>
-            <a href="{{ route('admin.testimonials.create') }}"
+            <a href="{{ route('admin.testimonials.create', ['locale' => request()->route('locale') ?? request()->segment(1)]) }}"
                 class="px-4 py-2 bg-[var(--color-brand)] text-white rounded-lg hover:opacity-90 transition flex items-center gap-2">
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
@@ -91,7 +91,7 @@
                                 </p>
                             </td>
                             <td class="px-6 py-4 whitespace-nowrap">
-                                <form action="{{ route('admin.testimonials.toggle', $testimonial) }}" method="POST"
+                                <form action="{{ route('admin.testimonials.toggle', ['locale' => request()->route('locale') ?? request()->segment(1), 'testimonial' => $testimonial] ) }}" method="POST"
                                     class="inline">
                                     @csrf
                                     <button type="submit"
@@ -102,7 +102,7 @@
                             </td>
                             <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
                                 <div class="flex justify-end gap-2">
-                                    <a href="{{ route('admin.testimonials.edit', $testimonial) }}"
+                                    <a href="{{ route('admin.testimonials.edit', ['locale' => request()->route('locale') ?? request()->segment(1), 'testimonial' => $testimonial] ) }}"
                                         class="text-[var(--color-brand)] hover:opacity-70 font-medium link-hover">
                                         Edit
                                     </a>
@@ -111,7 +111,7 @@
                                         Delete
                                     </button>
                                     <form id="delete-form-{{ $testimonial->id }}"
-                                        action="{{ route('admin.testimonials.destroy', $testimonial) }}"
+                                        action="{{ route('admin.testimonials.destroy', ['locale' => request()->route('locale') ?? request()->segment(1), 'testimonial' => $testimonial] ) }}"
                                         method="POST" class="hidden">
                                         @csrf
                                         @method('DELETE')

@@ -10,7 +10,7 @@
                 <h1 class="text-3xl font-bold text-gray-900">Bookings</h1>
                 <p class="text-gray-600 mt-1">Manage customer service bookings</p>
             </div>
-            <a href="{{ route('admin.bookings.create') }}"
+            <a href="{{ route('admin.bookings.create', ['locale' => request()->route('locale') ?? request()->segment(1)]) }}"
                 class="inline-flex items-center px-4 py-2 bg-[var(--color-brand)] text-white rounded-lg hover:opacity-90 transition btn-animate">
                 <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
@@ -28,7 +28,7 @@
 
         {{-- Status Filter Cards --}}
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
-            <a href="{{ route('admin.bookings.index') }}"
+            <a href="{{ route('admin.bookings.index', ['locale' => request()->route('locale') ?? request()->segment(1)]) }}"
                 class="bg-white p-4 rounded-lg shadow hover:shadow-md transition card-hover stagger-item {{ !request('status') || request('status') === 'all' ? 'ring-2 ring-blue-500' : '' }}">
                 <div class="flex items-center justify-between">
                     <div>
@@ -41,7 +41,7 @@
                 </div>
             </a>
 
-            <a href="{{ route('admin.bookings.index', ['status' => 'pending']) }}"
+            <a href="{{ route('admin.bookings.index', ['status' => 'pending', 'locale' => request()->route('locale') ?? request()->segment(1)]) }}"
                 class="bg-white p-4 rounded-lg shadow hover:shadow-md transition card-hover stagger-item {{ request('status') === 'pending' ? 'ring-2 ring-yellow-500' : '' }}">
                 <div class="flex items-center justify-between">
                     <div>
@@ -54,8 +54,8 @@
                 </div>
             </a>
 
-            <a href="{{ route('admin.bookings.index', ['status' => 'confirmed']) }}"
-                class="bg-white p-4 rounded-lg shadow hover:shadow-md transition card-hover stagger-item {{ request('status') === 'confirmed' ? 'ring-2 ring-blue-500' : '' }}">
+            <a href="{{ route('admin.bookings.index', ['status' => 'confirmed', 'locale' => request()->route('locale') ?? request()->segment(1)]) }}"
+                    class="bg-white p-4 rounded-lg shadow hover:shadow-md transition card-hover stagger-item {{ request('status') === 'confirmed' ? 'ring-2 ring-blue-500' : '' }}">
                 <div class="flex items-center justify-between">
                     <div>
                         <p class="text-sm text-gray-600">Confirmed</p>
@@ -67,7 +67,7 @@
                 </div>
             </a>
 
-            <a href="{{ route('admin.bookings.index', ['status' => 'completed']) }}"
+            <a href="{{ route('admin.bookings.index', ['status' => 'completed', 'locale' => request()->route('locale') ?? request()->segment(1)]) }}"
                 class="bg-white p-4 rounded-lg shadow hover:shadow-md transition card-hover stagger-item {{ request('status') === 'completed' ? 'ring-2 ring-green-500' : '' }}">
                 <div class="flex items-center justify-between">
                     <div>
@@ -83,7 +83,7 @@
 
         {{-- Search Bar --}}
         <div class="bg-white rounded-lg shadow p-4 mb-6 animate-fade-in-up">
-            <form action="{{ route('admin.bookings.index') }}" method="GET" class="flex gap-4">
+            <form action="{{ route('admin.bookings.index', ['locale' => request()->route('locale') ?? request()->segment(1)]) }}" method="GET" class="flex gap-4">
                 <input type="hidden" name="status" value="{{ request('status') }}">
                 <input type="text" name="search" value="{{ request('search') }}"
                     placeholder="Search by name or address..."
@@ -92,7 +92,7 @@
                     Search
                 </button>
                 @if(request('search'))
-                    <a href="{{ route('admin.bookings.index', ['status' => request('status')]) }}"
+                    <a href="{{ route('admin.bookings.index', ['status' => request('status'), 'locale' => request()->route('locale') ?? request()->segment(1)]) }}"
                         class="px-6 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition btn-animate">
                         Clear
                     </a>
@@ -161,7 +161,7 @@
                                     {{ $booking->created_at->format('M d, Y') }}
                                 </td>
                                 <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                                    <a href="{{ route('admin.bookings.show', $booking) }}"
+                                    <a href="{{ route('admin.bookings.show', ['locale' => request()->route('locale') ?? request()->segment(1), 'booking' => $booking]) }}"
                                         class="text-[var(--color-brand)] hover:opacity-70 mr-3 link-hover font-medium">
                                         View
                                     </a>
@@ -170,7 +170,7 @@
                                         Delete
                                     </button>
                                     <form id="delete-form-{{ $booking->id }}"
-                                        action="{{ route('admin.bookings.destroy', $booking) }}"
+                                        action="{{ route('admin.bookings.destroy', ['locale' => request()->route('locale') ?? request()->segment(1), 'booking' => $booking]) }}"
                                         method="POST" class="hidden">
                                         @csrf
                                         @method('DELETE')

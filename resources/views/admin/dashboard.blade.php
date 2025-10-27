@@ -12,19 +12,19 @@
 
     {{-- Statistics Cards --}}
     <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-5 mb-6 sm:mb-8">
-        <a href="{{ route('admin.users.index') }}" class="bg-white p-4 sm:p-6 rounded-lg shadow-sm hover:shadow-md transition no-underline card-hover stagger-item">
+        <a href="{{ route('admin.users.index', ['locale' => request()->route('locale') ?? request()->segment(1)]) }}" class="bg-white p-4 sm:p-6 rounded-lg shadow-sm hover:shadow-md transition no-underline card-hover stagger-item">
             <h3 class="text-gray-600 text-xs sm:text-sm font-medium mb-1 sm:mb-2">Total Users</h3>
             <div class="text-2xl sm:text-4xl font-bold text-gray-900">{{ \App\Models\User::count() }}</div>
             <p class="text-gray-600 text-[10px] sm:text-xs mt-1 sm:mt-2">Registered users</p>
         </a>
 
-        <a href="{{ route('admin.bookings.index') }}" class="bg-white p-4 sm:p-6 rounded-lg shadow-sm hover:shadow-md transition no-underline card-hover stagger-item">
+        <a href="{{ route('admin.bookings.index', ['locale' => request()->route('locale') ?? request()->segment(1)]) }}" class="bg-white p-4 sm:p-6 rounded-lg shadow-sm hover:shadow-md transition no-underline card-hover stagger-item">
             <h3 class="text-gray-600 text-xs sm:text-sm font-medium mb-1 sm:mb-2">Total Bookings</h3>
             <div class="text-2xl sm:text-4xl font-bold text-gray-900">{{ \App\Models\Booking::count() }}</div>
             <p class="text-gray-600 text-[10px] sm:text-xs mt-1 sm:mt-2">All time bookings</p>
         </a>
 
-        <a href="{{ route('admin.bookings.index', ['status' => 'pending']) }}" class="bg-white p-4 sm:p-6 rounded-lg shadow-sm hover:shadow-md transition no-underline card-hover stagger-item">
+        <a href="{{ route('admin.bookings.index', ['status' => 'pending','locale' => request()->route('locale') ?? request()->segment(1)]) }}" class="bg-white p-4 sm:p-6 rounded-lg shadow-sm hover:shadow-md transition no-underline card-hover stagger-item">
             <h3 class="text-gray-600 text-xs sm:text-sm font-medium mb-1 sm:mb-2">Pending Bookings</h3>
             <div class="text-2xl sm:text-4xl font-bold text-gray-900">{{ \App\Models\Booking::pending()->count() }}</div>
             <p class="text-gray-600 text-[10px] sm:text-xs mt-1 sm:mt-2">Awaiting confirmation</p>
@@ -54,14 +54,14 @@
     <div class="bg-white rounded-lg shadow-sm p-4 sm:p-6 animate-fade-in-up">
         <h3 class="text-base sm:text-lg font-semibold mb-3 sm:mb-5">Quick Actions</h3>
         <div class="flex flex-col sm:flex-row flex-wrap gap-2 sm:gap-3">
-            <a href="{{ route('admin.bookings.create') }}"
+            <a href="{{ route('admin.bookings.create', ['locale' => request()->route('locale') ?? request()->segment(1)]) }}"
                 class="inline-flex items-center justify-center px-4 sm:px-5 py-2 sm:py-2.5 bg-[var(--color-brand)] text-white text-sm sm:text-base rounded-md font-medium transition-all duration-200 hover:opacity-90 no-underline btn-animate">
                 <svg class="w-4 h-4 sm:w-5 sm:h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
                 </svg>
                 New Booking
             </a>
-            <a href="{{ route('admin.users.create') }}"
+            <a href="{{ route('admin.users.create', ['locale' => request()->route('locale') ?? request()->segment(1)]) }}"
                 class="inline-flex items-center justify-center px-4 sm:px-5 py-2 sm:py-2.5 bg-gray-700 text-white text-sm sm:text-base rounded-md font-medium transition-all duration-200 hover:opacity-90 no-underline btn-animate">
                 <svg class="w-4 h-4 sm:w-5 sm:h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -69,7 +69,7 @@
                 </svg>
                 Add User
             </a>
-            <a href="{{ route('home') }}" target="_blank"
+            <a href="{{ route('home', ['locale' => request()->route('locale') ?? request()->segment(1)]) }}" target="_blank"
                 class="inline-flex items-center justify-center px-4 sm:px-5 py-2 sm:py-2.5 bg-gray-700 text-white text-sm sm:text-base rounded-md font-medium transition-all duration-200 hover:opacity-90 no-underline btn-animate">
                 <svg class="w-4 h-4 sm:w-5 sm:h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"

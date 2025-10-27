@@ -10,7 +10,7 @@
                 <h1 class="text-3xl font-bold text-gray-900">Users</h1>
                 <p class="text-gray-600 mt-1">Manage system users</p>
             </div>
-            <a href="{{ route('admin.users.create') }}"
+            <a href="{{ route('admin.users.create', ['locale' => request()->route('locale') ?? request()->segment(1)]) }}"
                 class="inline-flex items-center px-4 py-2 bg-[var(--color-brand)] text-white rounded-lg hover:opacity-90 transition btn-animate">
                 <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
@@ -35,7 +35,7 @@
 
         {{-- Search Bar --}}
         <div class="bg-white rounded-lg shadow p-4 mb-6 animate-fade-in-up">
-            <form action="{{ route('admin.users.index') }}" method="GET" class="flex gap-4">
+            <form action="{{ route('admin.users.index', ['locale' => request()->route('locale') ?? request()->segment(1)]) }}" method="GET" class="flex gap-4">
                 <input type="text" name="search" value="{{ request('search') }}"
                     placeholder="Search by name or email..."
                     class="flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent input-focus">
@@ -43,7 +43,7 @@
                     Search
                 </button>
                 @if(request('search'))
-                    <a href="{{ route('admin.users.index') }}"
+                    <a href="{{ route('admin.users.index', ['locale' => request()->route('locale') ?? request()->segment(1)]) }}"
                         class="px-6 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition btn-animate">
                         Clear
                     </a>
@@ -94,7 +94,7 @@
                                     {{ $user->created_at->format('M d, Y') }}
                                 </td>
                                 <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                                    <a href="{{ route('admin.users.edit', $user) }}"
+                                    <a href="{{ route('admin.users.edit', ['locale' => request()->route('locale') ?? request()->segment(1), 'user' => $user]) }}"
                                         class="text-[var(--color-brand)] hover:opacity-70 mr-3 link-hover font-medium">
                                         Edit
                                     </a>
@@ -104,7 +104,7 @@
                                             Delete
                                         </button>
                                         <form id="delete-form-{{ $user->id }}"
-                                            action="{{ route('admin.users.destroy', $user) }}"
+                                            action="{{ route('admin.users.destroy', ['locale' => request()->route('locale') ?? request()->segment(1), 'user' => $user]) }}"
                                             method="POST" class="hidden">
                                             @csrf
                                             @method('DELETE')

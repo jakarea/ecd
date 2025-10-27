@@ -38,7 +38,7 @@
 
             {{-- Sidebar Navigation --}}
             <nav class="flex-1 px-4 py-6 space-y-2 overflow-y-auto">
-                <a href="{{ route('admin.dashboard') }}"
+                <a href="{{ route('admin.dashboard', ['locale' => request()->route('locale') ?? request()->segment(1)]) }}"
                     class="flex items-center gap-3 px-4 py-3 text-gray-700 rounded-lg transition-all duration-200 hover:bg-gray-50 sidebar-item {{ request()->routeIs('admin.dashboard') ? 'bg-[var(--color-brand)] !text-white hover:!bg-[var(--color-brand)]' : '' }}">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -47,7 +47,7 @@
                     <span class="font-medium">Dashboard</span>
                 </a>
 
-                <a href="{{ route('admin.users.index') }}"
+                <a href="{{ route('admin.users.index', ['locale' => request()->route('locale') ?? request()->segment(1)]) }}"
                     class="flex items-center gap-3 px-4 py-3 text-gray-700 rounded-lg transition-all duration-200 hover:bg-gray-50 sidebar-item {{ request()->routeIs('admin.users.*') ? 'bg-[var(--color-brand)] !text-white hover:!bg-[var(--color-brand)]' : '' }}">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -56,7 +56,7 @@
                     <span class="font-medium">Users</span>
                 </a>
 
-                <a href="{{ route('admin.bookings.index') }}"
+                <a href="{{ route('admin.bookings.index', ['locale' => request()->route('locale') ?? request()->segment(1)]) }}"
                     class="flex items-center gap-3 px-4 py-3 text-gray-700 rounded-lg transition-all duration-200 hover:bg-gray-50 sidebar-item {{ request()->routeIs('admin.bookings.*') ? 'bg-[var(--color-brand)] !text-white hover:!bg-[var(--color-brand)]' : '' }}">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -65,7 +65,7 @@
                     <span class="font-medium">Bookings</span>
                 </a>
 
-                <a href="{{ route('admin.seo.index') }}"
+                <a href="{{ route('admin.seo.index', ['locale' => request()->route('locale') ?? request()->segment(1)]) }}"
                     class="flex items-center gap-3 px-4 py-3 text-gray-700 rounded-lg transition-all duration-200 hover:bg-gray-50 sidebar-item {{ request()->routeIs('admin.seo.*') ? 'bg-[var(--color-brand)] !text-white hover:!bg-[var(--color-brand)]' : '' }}">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -74,7 +74,7 @@
                     <span class="font-medium">SEO Management</span>
                 </a>
 
-                <a href="{{ route('admin.testimonials.index') }}"
+                <a href="{{ route('admin.testimonials.index', ['locale' => request()->route('locale') ?? request()->segment(1)]) }}"
                     class="flex items-center gap-3 px-4 py-3 text-gray-700 rounded-lg transition-all duration-200 hover:bg-gray-50 sidebar-item {{ request()->routeIs('admin.testimonials.*') ? 'bg-[var(--color-brand)] !text-white hover:!bg-[var(--color-brand)]' : '' }}">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -83,7 +83,7 @@
                     <span class="font-medium">Testimonials</span>
                 </a>
 
-                <a href="{{ route('admin.hero-sections.index') }}"
+                <a href="{{ route('admin.hero-sections.index', ['locale' => request()->route('locale') ?? request()->segment(1)]) }}"
                     class="flex items-center gap-3 px-4 py-3 text-gray-700 rounded-lg transition-all duration-200 hover:bg-gray-50 sidebar-item {{ request()->routeIs('admin.hero-sections.*') ? 'bg-[var(--color-brand)] !text-white hover:!bg-[var(--color-brand)]' : '' }}">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -92,7 +92,7 @@
                     <span class="font-medium">Hero Sections</span>
                 </a>
 
-                <a href="{{ route('admin.gallery.index') }}"
+                <a href="{{ route('admin.gallery.index', ['locale' => request()->route('locale') ?? request()->segment(1)]) }}"
                     class="flex items-center gap-3 px-4 py-3 text-gray-700 rounded-lg transition-all duration-200 hover:bg-gray-50 sidebar-item {{ request()->routeIs('admin.gallery.*') ? 'bg-[var(--color-brand)] !text-white hover:!bg-[var(--color-brand)]' : '' }}">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -101,7 +101,7 @@
                     <span class="font-medium">Gallery</span>
                 </a>
 
-                <a href="{{ route('admin.faqs.index') }}"
+                <a href="{{ route('admin.faqs.index', ['locale' => request()->route('locale') ?? request()->segment(1)]) }}"
                     class="flex items-center gap-3 px-4 py-3 text-gray-700 rounded-lg transition-all duration-200 hover:bg-gray-50 sidebar-item {{ request()->routeIs('admin.faqs.*') ? 'bg-[var(--color-brand)] !text-white hover:!bg-[var(--color-brand)]' : '' }}">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -110,7 +110,7 @@
                     <span class="font-medium">FAQs</span>
                 </a>
 
-                <a href="{{ route('admin.team-members.index') }}"
+                <a href="{{ route('admin.team-members.index', ['locale' => request()->route('locale') ?? request()->segment(1)]) }}"
                     class="flex items-center gap-3 px-4 py-3 text-gray-700 rounded-lg transition-all duration-200 hover:bg-gray-50 sidebar-item {{ request()->routeIs('admin.team-members.*') ? 'bg-[var(--color-brand)] !text-white hover:!bg-[var(--color-brand)]' : '' }}">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -119,7 +119,7 @@
                     <span class="font-medium">Team Members</span>
                 </a>
 
-                <a href="{{ route('admin.translations.index') }}"
+                <a href="{{ route('admin.translations.index', ['locale' => request()->route('locale') ?? request()->segment(1)]) }}"
                     class="flex items-center gap-3 px-4 py-3 text-gray-700 rounded-lg transition-all duration-200 hover:bg-gray-50 sidebar-item {{ request()->routeIs('admin.translations.*') ? 'bg-[var(--color-brand)] !text-white hover:!bg-[var(--color-brand)]' : '' }}">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -128,7 +128,7 @@
                     <span class="font-medium">Translations</span>
                 </a>
 
-                <a href="{{ route('home') }}" target="_blank"
+                <a href="{{ route('home', ['locale' => request()->route('locale') ?? request()->segment(1)]) }}" target="_blank"
                     class="flex items-center gap-3 px-4 py-3 text-gray-700 rounded-lg transition-all duration-200 hover:bg-gray-50 sidebar-item">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -138,7 +138,7 @@
                 </a>
 
                 <div class="pt-4 mt-4 border-t border-gray-200">
-                    <a href="{{ route('admin.settings.index') }}"
+                    <a href="{{ route('admin.settings.index', ['locale' => request()->route('locale') ?? request()->segment(1)]) }}"
                         class="flex items-center gap-3 px-4 py-3 text-gray-700 rounded-lg transition-all duration-200 hover:bg-gray-50 sidebar-item {{ request()->routeIs('admin.settings.*') ? 'bg-[var(--color-brand)] !text-white hover:!bg-[var(--color-brand)]' : '' }}">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -162,7 +162,7 @@
                         <p class="text-xs text-gray-500 truncate">{{ Auth::user()->email }}</p>
                     </div>
                 </div>
-                <form action="{{ route('admin.logout') }}" method="POST" class="mt-3">
+                <form action="{{ route('admin.logout', ['locale' => request()->route('locale') ?? request()->segment(1)]) }}" method="POST" class="mt-3">
                     @csrf
                     <button type="submit"
                         class="w-full flex items-center justify-center gap-2 px-4 py-2.5 bg-red-50 text-red-600 rounded-lg font-medium transition-all duration-200 hover:bg-red-100 btn-animate">

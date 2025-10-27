@@ -9,18 +9,18 @@ use Illuminate\Support\Facades\Storage;
 
 class GalleryItemController extends Controller
 {
-    public function index()
+    public function index(string $locale)
     {
         $galleryItems = GalleryItem::ordered()->paginate(20);
         return view('admin.gallery.index', compact('galleryItems'));
     }
 
-    public function create()
+    public function create(string $locale)
     {
         return view('admin.gallery.create');
     }
 
-    public function store(Request $request)
+    public function store(string $locale,Request $request)
     {
         $validated = $request->validate([
             'type' => 'required|in:video,interior,exterior,before&after',
@@ -56,15 +56,15 @@ class GalleryItemController extends Controller
 
         GalleryItem::create($validated);
 
-        return redirect()->route('admin.gallery.index')->with('success', 'Gallery item created successfully.');
+        return redirect()->route('admin.gallery.index',['locale' => $locale])->with('success', 'Gallery item created successfully.');
     }
 
-    public function edit(GalleryItem $galleryItem)
+    public function edit(string $locale, GalleryItem $galleryItem)
     {
         return view('admin.gallery.edit', compact('galleryItem'));
     }
 
-    public function update(Request $request, GalleryItem $galleryItem)
+    public function update(string $locale,Request $request, GalleryItem $galleryItem)
     {
         $validated = $request->validate([
             'type' => 'required|in:video,interior,exterior,before&after',
@@ -112,10 +112,10 @@ class GalleryItemController extends Controller
 
         $galleryItem->update($validated);
 
-        return redirect()->route('admin.gallery.index')->with('success', 'Gallery item updated successfully.');
+        return redirect()->route('admin.gallery.index',['locale' => $locale])->with('success', 'Gallery item updated successfully.');
     }
 
-    public function destroy(GalleryItem $galleryItem)
+    public function destroy(string $locale,GalleryItem $galleryItem)
     {
         // Delete associated images
         if ($galleryItem->image) {
@@ -133,6 +133,6 @@ class GalleryItemController extends Controller
 
         $galleryItem->delete();
 
-        return redirect()->route('admin.gallery.index')->with('success', 'Gallery item deleted successfully.');
+        return redirect()->route('admin.gallery.index',['locale' => $locale])->with('success', 'Gallery item deleted successfully.');
     }
 }

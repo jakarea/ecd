@@ -15,7 +15,7 @@
             <input type="text" id="translation-search" placeholder="Search for a translation key..." class="shadow-sm focus:ring-[var(--color-brand)] focus:border-[var(--color-brand)] block w-full sm:text-sm border-gray-300 rounded-md">
         </div>
 
-        <form action="{{ route('admin.translations.update') }}" method="POST">
+        <form action="{{ route('admin.translations.update', ['locale' => request()->route('locale') ?? request()->segment(1)]) }}" method="POST">
             @csrf
             @method('PUT')
 

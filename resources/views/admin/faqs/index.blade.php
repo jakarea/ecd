@@ -10,7 +10,7 @@
                 <h1 class="text-3xl font-bold text-gray-900">FAQs</h1>
                 <p class="text-gray-600 mt-1">Manage frequently asked questions</p>
             </div>
-            <a href="{{ route('admin.faqs.create') }}"
+            <a href="{{ route('admin.faqs.create', ['locale' => request()->route('locale') ?? request()->segment(1)]) }}"
                 class="px-4 py-2 bg-[var(--color-brand)] text-white rounded-lg hover:opacity-90 transition flex items-center gap-2 btn-animate">
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
@@ -56,7 +56,7 @@
                                 </p>
                             </td>
                             <td class="px-6 py-4 whitespace-nowrap">
-                                <form action="{{ route('admin.faqs.toggle', $faq) }}" method="POST" class="inline">
+                                <form action="{{ route('admin.faqs.toggle', ['locale' => request()->route('locale') ?? request()->segment(1), 'faq' => $faq->id]) }}" method="POST" class="inline">
                                     @csrf
                                     <button type="submit"
                                         class="px-3 py-1 rounded-full text-xs font-semibold badge-animate {{ $faq->is_active ? 'bg-green-100 text-green-800' : 'bg-gray-100 text-gray-800' }}">
@@ -66,7 +66,7 @@
                             </td>
                             <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
                                 <div class="flex justify-end gap-2">
-                                    <a href="{{ route('admin.faqs.edit', $faq) }}"
+                                    <a href="{{ route('admin.faqs.edit', ['locale' => request()->route('locale') ?? request()->segment(1), 'faq' => $faq->id]) }}"
                                         class="text-[var(--color-brand)] hover:opacity-70 font-medium link-hover">
                                         Edit
                                     </a>
@@ -75,7 +75,7 @@
                                         Delete
                                     </button>
                                     <form id="delete-form-{{ $faq->id }}"
-                                        action="{{ route('admin.faqs.destroy', $faq) }}"
+                                        action="{{ route('admin.faqs.destroy', ['locale' => request()->route('locale') ?? request()->segment(1), 'faq' => $faq->id]) }}"
                                         method="POST" class="hidden">
                                         @csrf
                                         @method('DELETE')

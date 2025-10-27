@@ -13,7 +13,7 @@ class HeroSectionController extends Controller
     /**
      * Display a listing of hero sections
      */
-    public function index()
+    public function index(string $locale)
     {
         $heroSections = HeroSection::orderBy('page_name', 'asc')->get();
         return view('admin.hero-sections.index', compact('heroSections'));
@@ -22,7 +22,7 @@ class HeroSectionController extends Controller
     /**
      * Show the form for creating a new hero section
      */
-    public function create()
+    public function create(string $locale)
     {
         return view('admin.hero-sections.create');
     }
@@ -30,7 +30,7 @@ class HeroSectionController extends Controller
     /**
      * Store a newly created hero section
      */
-    public function store(Request $request)
+    public function store(string $locale,Request $request)
     {
         $validated = $request->validate([
             'page_identifier' => 'required|string|max:255|unique:hero_sections,page_identifier',
@@ -60,14 +60,14 @@ class HeroSectionController extends Controller
 
         HeroSection::create($validated);
 
-        return redirect()->route('admin.hero-sections.index')
+        return redirect()->route('admin.hero-sections.index',['locale' => $locale])
             ->with('success', 'Hero section created successfully!');
     }
 
     /**
      * Show the form for editing the specified hero section
      */
-    public function edit(HeroSection $heroSection)
+    public function edit(string $locale,HeroSection $heroSection)
     {
         return view('admin.hero-sections.edit', compact('heroSection'));
     }
@@ -75,7 +75,7 @@ class HeroSectionController extends Controller
     /**
      * Update the specified hero section
      */
-    public function update(Request $request, HeroSection $heroSection)
+    public function update(string $locale,Request $request, HeroSection $heroSection)
     {
         $validated = $request->validate([
             'page_identifier' => 'required|string|max:255|unique:hero_sections,page_identifier,' . $heroSection->id,
@@ -104,14 +104,14 @@ class HeroSectionController extends Controller
 
         $heroSection->update($validated);
 
-        return redirect()->route('admin.hero-sections.index')
+        return redirect()->route('admin.hero-sections.index',['locale' => $locale])
             ->with('success', 'Hero section updated successfully!');
     }
 
     /**
      * Remove the specified hero section
      */
-    public function destroy(HeroSection $heroSection)
+    public function destroy(string $locale,HeroSection $heroSection)
     {
         // Delete associated image if exists and not an asset
         if ($heroSection->background_image && !str_starts_with($heroSection->background_image, 'assets/')) {
@@ -120,17 +120,18 @@ class HeroSectionController extends Controller
 
         $heroSection->delete();
 
-        return redirect()->route('admin.hero-sections.index')
+        return redirect()->route('admin.hero-sections.index',['locale' => $locale])
             ->with('success', 'Hero section deleted successfully!');
     }
 
     /**
      * Toggle active status
      */
-    public function toggleStatus(HeroSection $heroSection)
+    public function toggleStatus(string $locale,HeroSection $heroSection)
     {
         $heroSection->update(['is_active' => !$heroSection->is_active]);
 
-        return back()->with('success', 'Hero section status updated successfully!');
+            return redirect()->route('admin.hero-sections.index',['locale' => $locale])
+            ->with('success', 'Hero section status updated successfully!');
     }
 }

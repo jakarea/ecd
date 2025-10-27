@@ -10,7 +10,7 @@
                 <h1 class="text-3xl font-bold text-gray-900">Hero Sections</h1>
                 <p class="text-gray-600 mt-1">Manage hero sections for all pages</p>
             </div>
-            <a href="{{ route('admin.hero-sections.create') }}"
+            <a href="{{ route('admin.hero-sections.create', ['locale' => request()->route('locale') ?? request()->segment(1)]) }}"
                 class="px-4 py-2 bg-[var(--color-brand)] text-white rounded-lg hover:opacity-90 transition flex items-center gap-2">
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
@@ -67,7 +67,7 @@
                                     </span>
                                 </p>
                             </div>
-                            <form action="{{ route('admin.hero-sections.toggle', $heroSection) }}" method="POST" class="inline">
+                            <form action="{{ route('admin.hero-sections.toggle', ['locale' => request()->route('locale') ?? request()->segment(1), 'heroSection' => $heroSection ?? null]) }}" method="POST" class="inline">
                                 @csrf
                                 <button type="submit"
                                     class="px-2 py-1 rounded-full text-xs font-semibold {{ $heroSection->is_active ? 'bg-green-100 text-green-800' : 'bg-gray-100 text-gray-800' }}">
@@ -104,11 +104,11 @@
 
                         {{-- Actions --}}
                         <div class="flex gap-2 pt-3 border-t">
-                            <a href="{{ route('admin.hero-sections.edit', $heroSection) }}"
+                            <a href="{{ route('admin.hero-sections.edit', ['locale' => request()->route('locale') ?? request()->segment(1), 'hero_section' => $heroSection]) }}"
                                 class="flex-1 text-center px-3 py-2 bg-blue-50 text-blue-600 rounded-lg text-sm font-medium hover:bg-blue-100 transition">
                                 Edit
                             </a>
-                            <form action="{{ route('admin.hero-sections.destroy', $heroSection) }}" method="POST"
+                            <form action="{{ route('admin.hero-sections.destroy', ['locale' => request()->route('locale') ?? request()->segment(1), 'hero_section' => $heroSection]) }}" method="POST"
                                 class="flex-1" onsubmit="return confirm('Are you sure you want to delete this hero section?')">
                                 @csrf
                                 @method('DELETE')
@@ -128,7 +128,7 @@
                         </svg>
                         <h3 class="text-lg font-medium text-gray-900 mb-2">No hero sections found</h3>
                         <p class="text-gray-600 mb-6">Get started by creating your first hero section</p>
-                        <a href="{{ route('admin.hero-sections.create') }}"
+                        <a href="{{ route('admin.hero-sections.create', ['locale' => request()->route('locale') ?? request()->segment(1)]) }}"
                             class="inline-flex items-center px-4 py-2 bg-[var(--color-brand)] text-white rounded-lg hover:opacity-90 transition">
                             <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />

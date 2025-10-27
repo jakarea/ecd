@@ -12,8 +12,9 @@ class SetLocale
     {
         $locales = ['en', 'nl'];
         $firstSegment = $request->segment(1);
+        $secondSegment = $request->segment(2);
 
-        // If URL doesn’t start with a locale
+        // If URL doesn't start with a locale
         if (!in_array($firstSegment, $locales)) {
             $defaultLocale = config('app.locale', 'nl');
             $path = $request->path(); // e.g. 'about', 'contact'

@@ -12,7 +12,7 @@ class TestimonialController extends Controller
     /**
      * Display a listing of testimonials
      */
-    public function index()
+    public function index(string $locale)
     {
         $testimonials = Testimonial::orderBy('order', 'asc')
             ->orderBy('created_at', 'desc')
@@ -24,7 +24,7 @@ class TestimonialController extends Controller
     /**
      * Show the form for creating a new testimonial
      */
-    public function create()
+    public function create(string $locale)
     {
         return view('admin.testimonials.create');
     }
@@ -32,7 +32,7 @@ class TestimonialController extends Controller
     /**
      * Store a newly created testimonial
      */
-    public function store(Request $request)
+    public function store(string $locale,Request $request)
     {
         $validated = $request->validate([
             'name' => 'required|string|max:255',
@@ -58,14 +58,14 @@ class TestimonialController extends Controller
 
         Testimonial::create($validated);
 
-        return redirect()->route('admin.testimonials.index')
+        return redirect()->route('admin.testimonials.index',['locale' => $locale])
             ->with('success', 'Testimonial created successfully!');
     }
 
     /**
      * Show the form for editing the specified testimonial
      */
-    public function edit(Testimonial $testimonial)
+    public function edit(string $locale,Testimonial $testimonial)
     {
         return view('admin.testimonials.edit', compact('testimonial'));
     }
@@ -73,7 +73,7 @@ class TestimonialController extends Controller
     /**
      * Update the specified testimonial
      */
-    public function update(Request $request, Testimonial $testimonial)
+    public function update(string $locale,Request $request, Testimonial $testimonial)
     {
         $validated = $request->validate([
             'name' => 'required|string|max:255',
@@ -107,14 +107,14 @@ class TestimonialController extends Controller
 
         $testimonial->update($validated);
 
-        return redirect()->route('admin.testimonials.index')
+        return redirect()->route('admin.testimonials.index',['locale' => $locale])
             ->with('success', 'Testimonial updated successfully!');
     }
 
     /**
      * Remove the specified testimonial
      */
-    public function destroy(Testimonial $testimonial)
+    public function destroy(string $locale,Testimonial $testimonial)
     {
         // Delete associated images
         if ($testimonial->vehicle_image) {
@@ -126,17 +126,18 @@ class TestimonialController extends Controller
 
         $testimonial->delete();
 
-        return redirect()->route('admin.testimonials.index')
+        return redirect()->route('admin.testimonials.index',['locale' => $locale])
             ->with('success', 'Testimonial deleted successfully!');
     }
 
     /**
      * Toggle active status
      */
-    public function toggleStatus(Testimonial $testimonial)
+    public function toggleStatus(string $locale,Testimonial $testimonial)
     {
         $testimonial->update(['is_active' => !$testimonial->is_active]);
 
-        return back()->with('success', 'Testimonial status updated successfully!');
+            return redirect()->route('admin.testimonials.index',['locale' => $locale])
+            ->with('success', 'Testimonial status updated successfully!');
     }
 }

@@ -10,7 +10,7 @@
                 <h1 class="text-3xl font-bold text-gray-900">Gallery Items</h1>
                 <p class="text-gray-600 mt-1">Manage gallery videos, interior, exterior, and before/after images</p>
             </div>
-            <a href="{{ route('admin.gallery.create') }}"
+            <a href="{{ route('admin.gallery.create', ['locale' => request()->route('locale') ?? request()->segment(1)]) }}"
                 class="px-4 py-2 bg-[var(--color-brand)] text-white rounded-lg hover:opacity-90 transition flex items-center gap-2">
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
@@ -112,7 +112,7 @@
                             </td>
                             <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
                                 <div class="flex justify-end gap-2">
-                                    <a href="{{ route('admin.gallery.edit', $item) }}"
+                                    <a href="{{ route('admin.gallery.edit', ['locale' => request()->route('locale') ?? request()->segment(1), 'galleryItem' => $item]) }}"
                                         class="text-[var(--color-brand)] hover:opacity-70 font-medium link-hover">
                                         Edit
                                     </a>
@@ -121,7 +121,7 @@
                                         Delete
                                     </button>
                                     <form id="delete-form-{{ $item->id }}"
-                                        action="{{ route('admin.gallery.destroy', $item) }}"
+                                        action="{{ route('admin.gallery.destroy', ['locale' => request()->route('locale') ?? request()->segment(1), 'galleryItem' => $item]) }}"
                                         method="POST" class="hidden">
                                         @csrf
                                         @method('DELETE')

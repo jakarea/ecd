@@ -12,8 +12,14 @@ class AuthController extends Controller
     /**
      * Show the login form.
      */
-    public function showLogin()
+    public function showLogin(Request $request)
     {
+        // Set locale from URL segment
+        $locale = $request->segment(1);
+        if (in_array($locale, ['en', 'nl'])) {
+            app()->setLocale($locale);
+        }
+        
         return view('admin.auth.login');
     }
 
@@ -22,6 +28,12 @@ class AuthController extends Controller
      */
     public function login(Request $request)
     {
+        // Set locale from URL segment
+        $locale = $request->segment(1);
+        if (in_array($locale, ['en', 'nl'])) {
+            app()->setLocale($locale);
+        }
+        
         $credentials = $request->validate([
             'email' => ['required', 'email'],
             'password' => ['required'],
@@ -30,7 +42,7 @@ class AuthController extends Controller
         if (Auth::attempt($credentials, $request->boolean('remember'))) {
             $request->session()->regenerate();
 
-            return redirect()->intended(route('admin.dashboard'));
+            return redirect()->intended(route('admin.dashboard', ['locale' => $locale]));
         }
 
         throw ValidationException::withMessages([
@@ -43,11 +55,17 @@ class AuthController extends Controller
      */
     public function logout(Request $request)
     {
+        // Set locale from URL segment
+        $locale = $request->segment(1);
+        if (in_array($locale, ['en', 'nl'])) {
+            app()->setLocale($locale);
+        }
+        
         Auth::logout();
 
         $request->session()->invalidate();
         $request->session()->regenerateToken();
 
-        return redirect()->route('admin.login');
+        return redirect()->route('admin.login', ['locale' => $locale]);
     }
 }

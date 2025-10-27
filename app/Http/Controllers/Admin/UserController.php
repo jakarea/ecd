@@ -45,16 +45,17 @@ class UserController extends Controller
 
         $user = User::create($validated);
 
-        return redirect()->route('admin.users.index')
+        // FIX: Pass the 'locale' parameter for redirection to a localized route
+        return redirect()->route('admin.users.index', ['locale' => request()->route('locale')])
             ->with('success', 'User created successfully.');
     }
 
-    public function edit(User $user)
+    public function edit(string $locale, User $user)
     {
         return view('admin.users.edit', compact('user'));
     }
 
-    public function update(Request $request, User $user)
+    public function update(string $locale, Request $request, User $user)
     {
         $validated = $request->validate([
             'name' => 'required|string|max:255',
@@ -70,21 +71,24 @@ class UserController extends Controller
 
         $user->update($validated);
 
-        return redirect()->route('admin.users.index')
+        // FIX: Pass the 'locale' parameter for redirection to a localized route
+        return redirect()->route('admin.users.index', ['locale' => request()->route('locale')])
             ->with('success', 'User updated successfully.');
     }
 
-    public function destroy(User $user)
+    public function destroy(string $locale, User $user)
     {
         // Prevent deleting own account
         if ($user->id === auth()->id()) {
-            return redirect()->route('admin.users.index')
+            // FIX: Pass the 'locale' parameter for redirection to a localized route
+            return redirect()->route('admin.users.index', ['locale' => request()->route('locale')])
                 ->with('error', 'You cannot delete your own account.');
         }
 
         $user->delete();
 
-        return redirect()->route('admin.users.index')
+        // FIX: Pass the 'locale' parameter for redirection to a localized route
+        return redirect()->route('admin.users.index', ['locale' => request()->route('locale')])
             ->with('success', 'User deleted successfully.');
     }
 }

@@ -44,12 +44,13 @@ class BookingController extends Controller
         ));
     }
 
-    public function create()
+    public function create(string $locale)
     {
         return view('admin.bookings.create');
     }
 
-    public function store(Request $request)
+    // NOTE: Argument order is Request, then string $locale.
+    public function store(Request $request, string $locale)
     {
         $validated = $request->validate([
             'first_name' => 'required|string|max:255',
@@ -68,16 +69,21 @@ class BookingController extends Controller
 
         $booking = Booking::create($validated);
 
-        return redirect()->route('admin.bookings.show', $booking)
+        // FIX 1: Pass 'locale' and 'booking' parameters
+        return redirect()->route('admin.bookings.show', [
+            'locale' => $locale, // Use $locale from argument
+            'booking' => $booking
+        ])
             ->with('success', 'Booking created successfully.');
     }
 
-    public function show(Booking $booking)
+    public function show(string $locale, Booking $booking)
     {
         return view('admin.bookings.show', compact('booking'));
     }
 
-    public function updateStatus(Request $request, Booking $booking)
+    // NOTE: Corrected parameter order: Request, string $locale, then Model $booking
+    public function updateStatus(Request $request, string $locale, Booking $booking)
     {
         $validated = $request->validate([
             'status' => 'required|in:pending,confirmed,completed,cancelled',
@@ -86,15 +92,21 @@ class BookingController extends Controller
 
         $booking->update($validated);
 
-        return redirect()->route('admin.bookings.show', $booking)
+        // FIX 2b: Pass 'locale' and 'booking' parameters
+        return redirect()->route('admin.bookings.show', [
+            'locale' => $locale,
+            'booking' => $booking
+        ])
             ->with('success', 'Booking status updated successfully.');
     }
 
-    public function destroy(Booking $booking)
+    // NOTE: Corrected parameter order
+    public function destroy(string $locale, Booking $booking)
     {
         $booking->delete();
 
-        return redirect()->route('admin.bookings.index')
+        // FIX 3b: Pass 'locale' parameter
+        return redirect()->route('admin.bookings.index', ['locale' => $locale])
             ->with('success', 'Booking deleted successfully.');
     }
 }
