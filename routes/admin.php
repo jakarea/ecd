@@ -37,6 +37,14 @@ Route::get('/admin', function () {
     return redirect("/{$defaultLocale}/admin/login");
 });
 
+// Redirect localized /admin to dashboard if authenticated, or login if not
+Route::get('/{locale}/admin', function ($locale) {
+    if (\Illuminate\Support\Facades\Auth::check()) {
+        return redirect()->route('admin.dashboard', ['locale' => $locale]);
+    }
+    return redirect()->route('admin.login', ['locale' => $locale]);
+})->where('locale', 'en|nl')->middleware(\App\Http\Middleware\SetLocale::class);
+
 // Localized Admin Routes
 Route::group([
     'prefix' => '{locale}/admin',
