@@ -21,7 +21,7 @@
                 @include('admin.gallery.form')
 
                 <div class="flex justify-end gap-3 mt-6">
-                    <a href="{{ route('admin.gallery.index') }}"
+                    <a href="{{ route('admin.gallery.index', ['locale' => request()->route('locale') ?? request()->segment(1)]) }}"
                         class="px-4 py-2 border border-gray-300 rounded-lg text-gray-700 hover:bg-gray-50 transition">
                         Cancel
                     </a>
