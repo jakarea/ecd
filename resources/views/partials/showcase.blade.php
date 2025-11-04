@@ -2,9 +2,17 @@
 use Illuminate\Support\Facades\Storage;
 @endphp
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css" />
-<link rel="stylesheet" href="{{ asset('assets/css/cndk.beforeafter.css') }}">
+{{-- Preload critical CSS --}}
+<link rel="preload" href="{{ asset('assets/css/cndk.beforeafter.css') }}" as="style">
+
+{{-- Defer non-critical CSS --}}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" media="print" onload="this.media='all'" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css" media="print" onload="this.media='all'" />
+<link rel="stylesheet" href="{{ asset('assets/css/cndk.beforeafter.css') }}" />
+<noscript>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css" />
+</noscript>
 
 <section class="py-8 md:py-25">
     <div class="container">
@@ -28,9 +36,9 @@ use Illuminate\Support\Facades\Storage;
                 <div class="showcase-card">
                     <div class="slider-container relative w-full h-full overflow-hidden rounded-[15px]">
                                 <img src="{{ Storage::url($item->before_image) }}" alt="{{ __('Before Image ') . ($item->title ?? ('' . ($index + 1))) }}"
-                            class="before-image absolute inset-0 w-full h-full object-cover" />
+                            class="before-image absolute inset-0 w-full h-full object-cover" loading="lazy" decoding="async" />
                                 <img src="{{ Storage::url($item->after_image) }}" alt="{{ __('After Image ') . ($item->title ?? ('' . ($index + 1))) }}"
-                            class="after-image absolute inset-0 w-full h-full object-cover" />
+                            class="after-image absolute inset-0 w-full h-full object-cover" loading="lazy" decoding="async" />
                         <span class="slider-line absolute top-0 bottom-0 w-[2px] bg-[var(--color-brand)] left-1/2"></span>
                         <button
                             class="slider-handle absolute top-1/2 left-1/2 w-[55px] h-[55px] bg-[var(--color-brand)] border-2 border-[var(--color-brand)] rounded-full cursor-pointer transform -translate-x-1/2 -translate-y-1/2 shadow-md flex justify-center items-center gap-1.5">
@@ -67,9 +75,9 @@ use Illuminate\Support\Facades\Storage;
             <div class="slider-container relative w-full h-full overflow-hidden rounded-[15px]">
                     @php $firstItem = $galleryItems->first(); @endphp
                     <img src="{{ Storage::url($firstItem->before_image) }}" alt="{{ __('Before Image ') . ($firstItem->title ?? '') }}"
-                    class="before-image absolute inset-0 w-full h-full object-cover" />
+                    class="before-image absolute inset-0 w-full h-full object-cover" loading="eager" decoding="async" />
                     <img src="{{ Storage::url($firstItem->after_image) }}" alt="{{ __('After Image ') . ($firstItem->title ?? '') }}"
-                    class="after-image absolute inset-0 w-full h-full object-cover" />
+                    class="after-image absolute inset-0 w-full h-full object-cover" loading="eager" decoding="async" />
                 <span class="slider-line absolute top-0 bottom-0 w-[2px] bg-[var(--color-brand)] left-1/2"></span>
                 <button
                     class="slider-handle absolute top-1/2 left-1/2 w-[55px] h-[55px] bg-[var(--color-brand)] border-2 border-[var(--color-brand)] rounded-full cursor-pointer transform -translate-x-1/2 -translate-y-1/2 shadow-md flex justify-center items-center gap-1.5">
@@ -97,10 +105,10 @@ use Illuminate\Support\Facades\Storage;
 </section>
 
 
-<!-- scripts -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
-<script src="{{asset('assets/js/cndk.beforeafter.js')}}"></script>
+<!-- scripts - Deferred for performance -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" defer></script>
+<script src="{{asset('assets/js/cndk.beforeafter.js')}}" defer></script>
 
 <script>
     $(document).ready(function () {

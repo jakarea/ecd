@@ -4,6 +4,11 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\BookingController;
 
+// Sitemaps
+Route::get('/sitemap.xml', [\App\Http\Controllers\SitemapController::class, 'index'])->name('sitemap.index');
+Route::get('/sitemap-nl.xml', [\App\Http\Controllers\SitemapController::class, 'dutch'])->name('sitemap.nl');
+Route::get('/sitemap-en.xml', [\App\Http\Controllers\SitemapController::class, 'english'])->name('sitemap.en');
+
 // Redirect root "/" to default locale
 Route::get('/', function () {
     return redirect('/' . config('app.locale', 'nl'));

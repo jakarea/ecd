@@ -10,4 +10,34 @@ export default defineConfig({
         }),
         tailwindcss(),
     ],
+    build: {
+        // Optimize build output
+        minify: 'terser',
+        terserOptions: {
+            compress: {
+                drop_console: true, // Remove console.logs in production
+                drop_debugger: true,
+            },
+        },
+        // Code splitting for better caching
+        rollupOptions: {
+            output: {
+                manualChunks(id) {
+                    // Split node_modules into separate chunk
+                    if (id.includes('node_modules')) {
+                        return 'vendor';
+                    }
+                },
+            },
+        },
+        // Chunk size warnings
+        chunkSizeWarningLimit: 600,
+        // Enable CSS code splitting
+        cssCodeSplit: true,
+    },
+    server: {
+        hmr: {
+            host: 'localhost',
+        },
+    },
 });

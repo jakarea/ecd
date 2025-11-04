@@ -55,15 +55,15 @@
     <div id="videoModal" class="fixed inset-0 bg-black bg-opacity-75 z-50 hidden flex items-center justify-center p-4">
         <div class="relative w-full max-w-4xl bg-black rounded-lg overflow-hidden">
             <button id="closeModal"
-                class="absolute top-4 right-4 z-10 w-10 h-10 bg-white rounded-full flex items-center justify-center hover:bg-gray-200 transition">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                class="absolute top-4 right-4 z-10 w-12 h-12 bg-white rounded-full flex items-center justify-center hover:bg-gray-200 transition" aria-label="{{ __('Close video') }}">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
                 </svg>
             </button>
             <div class="relative pt-[56.25%]">
                 <iframe id="videoFrame" class="absolute inset-0 w-full h-full" src="" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>
+                    allowfullscreen title="{{ __('Video player') }}"></iframe>
             </div>
         </div>
     </div>

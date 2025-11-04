@@ -37,9 +37,9 @@
                 </button>
             </div>
             <div class="md:hidden">
-                <button class="mobile-menu-toggle cursor-pointer" id="mobile-menu-toggle">
+                <button class="mobile-menu-toggle cursor-pointer" id="mobile-menu-toggle" aria-label="{{ __('Open menu') }}" aria-expanded="false">
 
-                    <svg width="27" height="18" viewBox="0 0 27 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg width="27" height="18" viewBox="0 0 27 18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                         <path
                             d="M1.83334 17.75C1.42014 17.75 1.07403 17.61 0.795005 17.33C0.515977 17.05 0.375977 16.7039 0.375005 16.2917C0.374033 15.8794 0.514033 15.5333 0.795005 15.2533C1.07598 14.9733 1.42209 14.8333 1.83334 14.8333H25.1667C25.5799 14.8333 25.9265 14.9733 26.2065 15.2533C26.4865 15.5333 26.626 15.8794 26.625 16.2917C26.624 16.7039 26.484 17.0505 26.205 17.3315C25.926 17.6124 25.5799 17.7519 25.1667 17.75H1.83334ZM1.83334 10.4583C1.42014 10.4583 1.07403 10.3183 0.795005 10.0383C0.515977 9.75833 0.375977 9.41222 0.375005 9C0.374033 8.58778 0.514033 8.24167 0.795005 7.96167C1.07598 7.68167 1.42209 7.54167 1.83334 7.54167H25.1667C25.5799 7.54167 25.9265 7.68167 26.2065 7.96167C26.4865 8.24167 26.626 8.58778 26.625 9C26.624 9.41222 26.484 9.75882 26.205 10.0398C25.926 10.3208 25.5799 10.4603 25.1667 10.4583H1.83334ZM1.83334 3.16667C1.42014 3.16667 1.07403 3.02667 0.795005 2.74667C0.515977 2.46667 0.375977 2.12056 0.375005 1.70833C0.374033 1.29611 0.514033 0.95 0.795005 0.67C1.07598 0.39 1.42209 0.25 1.83334 0.25H25.1667C25.5799 0.25 25.9265 0.39 26.2065 0.67C26.4865 0.95 26.626 1.29611 26.625 1.70833C26.624 2.12056 26.484 2.46715 26.205 2.74812C25.926 3.0291 25.5799 3.16861 25.1667 3.16667H1.83334Z"
                             fill="white" />
@@ -60,8 +60,8 @@
                 <img src="{{ asset(\App\Models\Setting::get('logo', 'assets/img/logo.png')) }}" alt="ECD Logo"
                     class="max-w-[80px] max-h-[40px]">
             </a>
-            <button id="mobile-menu-close" class="text-white text-opacity-80 cursor-pointer">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <button id="mobile-menu-close" class="text-white text-opacity-80 cursor-pointer" aria-label="{{ __('Close menu') }}">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                     <path d="M6 6L18 18M6 18L18 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round" />
                 </svg>
@@ -332,9 +332,9 @@
 
                     </div>
                     <div class="space-y-2">
-                        <h4 class="tex-[20px] md:text-[24px] font-bold text-[var(--color-heading)] leading-[1.4]">{{ __('Book your
+                        <h2 class="tex-[20px] md:text-[24px] font-bold text-[var(--color-heading)] leading-[1.4]">{{ __('Book your
                             service') }}
-                        </h4>
+                        </h2>
                         <p
                             class="text-[12px] md:text-[16px] font-medium text-[var(--color-text)] leading-[1.4] font-sans">{{ __('For your
                             service,
@@ -437,12 +437,14 @@
         toggleBtn.addEventListener('click', () => {
             mobileMenu.classList.remove('-translate-y-full');
             mobileMenu.classList.add('translate-y-0');
+            toggleBtn.setAttribute('aria-expanded', 'true');
         });
 
         // Hide mobile menu
         closeBtn.addEventListener('click', () => {
             mobileMenu.classList.add('-translate-y-full');
             mobileMenu.classList.remove('translate-y-0');
+            toggleBtn.setAttribute('aria-expanded', 'false');
         });
 
 

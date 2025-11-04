@@ -6,10 +6,12 @@
     $gtmId = Setting::get('gtm_id');
 @endphp
 
-{{-- Google Tag Manager (noscript) - Should be placed immediately after opening <body> tag --}}
+{{-- Google Tag Manager (noscript) - Only loads if consent given --}}
 @if($gtmEnabled && $gtmId)
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id={{ $gtmId }}"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+<script>
+// Only show GTM noscript if analytics consent given
+if (window.cookieConsent && window.cookieConsent.analytics) {
+    document.write('<noscript><iframe src="https://www.googletagmanager.com/ns.html?id={{ $gtmId }}" height="0" width="0" style="display:none;visibility:hidden" title="Google Tag Manager"></iframe></noscript>');
+}
+</script>
 @endif

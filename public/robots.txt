@@ -1,2 +1,52 @@
+# robots.txt for Exclusive Car Detailing
+# https://www.exclusivecardetailing.nl/robots.txt
+
+# Allow all crawlers
 User-agent: *
-Disallow:
+Allow: /
+
+# Disallow admin area
+Disallow: /admin/
+Disallow: /admin
+
+# Disallow private directories
+Disallow: /storage/
+Disallow: /vendor/
+Disallow: /node_modules/
+
+# Disallow API endpoints (if any)
+Disallow: /api/
+
+# Disallow search parameters that create duplicate content
+Disallow: /*?*page=
+Disallow: /*?*sort=
+Disallow: /*?*filter=
+
+# Sitemap location (update with your actual domain)
+Sitemap: https://www.exclusivecardetailing.nl/sitemap.xml
+Sitemap: https://www.exclusivecardetailing.nl/sitemap-en.xml
+Sitemap: https://www.exclusivecardetailing.nl/sitemap-nl.xml
+
+# Crawl-delay (optional, remove if you want faster crawling)
+# Crawl-delay: 1
+
+# Specific bot rules
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /storage/
+Allow: /images/
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+# Block bad bots (optional)
+User-agent: AhrefsBot
+Crawl-delay: 10
+
+User-agent: SemrushBot
+Crawl-delay: 10
