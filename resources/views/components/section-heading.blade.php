@@ -26,7 +26,7 @@
                 @endisset
         </span>
 
-        <h3 class="text-[11px] font-semibold uppercase font-poppins">{{ $pretitle }}</h3>
+        <span class="text-[11px] font-semibold uppercase font-poppins">{{ $pretitle }}</span>
     </div>
 
     {{-- Title (allows HTML if you intentionally pass safe HTML) --}}

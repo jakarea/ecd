@@ -8,11 +8,11 @@
                 @if ($item->before_image)
 
                     <img src="{{ Storage::url($item->before_image) }}" alt="{{ __('Before - ') . ($item->title ?? __('Gallery Item')) }}"
-                        class="before-image absolute inset-0 w-full h-full object-cover" />
+                        class="before-image absolute inset-0 w-full h-full object-cover" loading="lazy" decoding="async" />
                 @endif
                 @if ($item->after_image)
                     <img src="{{ Storage::url($item->after_image) }}" alt="{{ __('After - ') . ($item->title ?? __('Gallery Item')) }}"
-                        class="after-image absolute inset-0 w-full h-full object-cover" />
+                        class="after-image absolute inset-0 w-full h-full object-cover" loading="lazy" decoding="async" />
                 @endif
                 <div class="slider-line absolute top-0 bottom-0 w-[2px] bg-[var(--color-brand)] left-1/2"></div>
                 <div
@@ -45,7 +45,7 @@
                 data-video-url="{{ $item->getVideoEmbedUrl() }}">
                 @if ($item->video_thumbnail)
                     <img src="{{ Storage::url($item->video_thumbnail) }}" alt="{{ $item->title ?? __('Video Thumbnail') }}"
-                        class="w-full h-full object-cover" />
+                        class="w-full h-full object-cover" loading="lazy" decoding="async" />
                 @else
                     <div class="w-full h-full bg-gray-200 flex items-center justify-center min-h-[300px]">
                         <svg class="w-20 h-20 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
@@ -74,7 +74,7 @@
             {{-- Normal image (Interior/Exterior) --}}
             @if ($item->image)
                 <img src="{{ Storage::url($item->image) }}" alt="{{ $item->title ?? __('Gallery Image') }}"
-                    class="w-full h-full object-cover rounded-[15px]" />
+                    class="w-full h-full object-cover rounded-[15px]" loading="lazy" decoding="async" />
             @else
                 <div class="w-full h-full bg-gray-200 rounded-[15px] flex items-center justify-center min-h-[300px]">
                     <svg class="w-20 h-20 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">

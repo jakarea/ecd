@@ -87,26 +87,26 @@
         <meta name="twitter:description" content="@yield('description', 'Welcome to ' . config('app.name'))">
     @endif
 
-    <link href="https://fonts.googleapis.com/css2?family=Waiting+for+the+Sunrise&display=swap" rel="stylesheet">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
-    <link
-        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
-        rel="stylesheet">
+    {{-- Preconnect to Google Fonts for faster loading --}}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
+    {{-- Optimized Google Fonts - Only load weights actually used --}}
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"></noscript>
 
     {{-- Common CSS --}}
-    {{--
-    <link rel="stylesheet" href="{{ asset('css/app.css') }}"> --}}
-    @stack('styles') {{-- For page-specific styles --}}
     @vite('resources/css/app.css')
+    @stack('styles') {{-- For page-specific styles --}}
 
     {{-- Tracking Codes (Head) --}}
     @include('partials.tracking-codes')
 </head>
 
 <body>
+    {{-- Cookie Consent Banner --}}
+    @include('partials.cookie-consent')
+
     {{-- Tracking Codes (Body - noscript) --}}
     @include('partials.tracking-codes-body')
 

@@ -51,7 +51,8 @@ class GalleryItem extends Model
         $pattern = '/(?:youtube\.com\/(?:[^\/]+\/.+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/)([^"&?\/\s]{11})/i';
 
         if (preg_match($pattern, $this->video_url, $matches)) {
-            return 'https://www.youtube.com/embed/' . $matches[1];
+            // Use youtube-nocookie.com for privacy-enhanced mode (no cookies until play)
+            return 'https://www.youtube-nocookie.com/embed/' . $matches[1];
         }
 
         return $this->video_url;

@@ -227,3 +227,43 @@ body {
 .scrollbar-hide::-webkit-scrollbar {
     display: none;
 }
+
+/* === ACCESSIBILITY - TOUCH TARGET SIZES === */
+/* Ensure all interactive elements meet WCAG 2.5.5 minimum 48x48px touch target size */
+
+/* Filter buttons */
+.filter-btn {
+    @apply min-h-[48px] px-4 py-3;
+}
+
+/* Social media icons - add padding to increase touch area */
+footer a[aria-label] {
+    @apply inline-flex items-center justify-center min-w-[48px] min-h-[48px] p-2;
+}
+
+/* Mobile menu toggle button */
+.mobile-menu-toggle {
+    @apply min-w-[48px] min-h-[48px] inline-flex items-center justify-center p-2;
+}
+
+/* Close buttons */
+#mobile-menu-close,
+.cookie-modal-close,
+#closeModal {
+    @apply min-w-[48px] min-h-[48px];
+}
+
+/* Ensure adequate spacing between touch targets */
+.cookie-consent-buttons {
+    gap: 12px;
+}
+
+/* Gallery filter buttons spacing */
+#filterButtons button {
+    @apply py-3;
+}
+
+/* Footer social icons spacing */
+footer .flex.justify-center.items-center.gap-\[26px\] {
+    @apply gap-8;
+}

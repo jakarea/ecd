@@ -66,8 +66,8 @@
                             fill="#124846" />
                     </svg>
 
-                    <h3 class="text-[11px] font-semibold uppercase text-[var(--color-heading)] font-poppins">{{ __('Super Staff. Super Service.') }}
-                    </h3>
+                    <span class="text-[11px] font-semibold uppercase text-[var(--color-heading)] font-poppins">{{ __('Super Staff. Super Service.') }}
+                    </span>
                 </div>
                 <h2 class="text-[32px] font-extrabold mb-9 text-[var(--color-heading)] leading-[1.2] tracking-[0.02px]">
                     {{ __('Premium car care expert') }}
