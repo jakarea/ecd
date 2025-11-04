@@ -57,5 +57,10 @@ Route::group([
     Route::get('/blog/{id}', fn($locale, $id) => view('blog-single', ['id' => $id]))->name('blog-single');
     Route::get('/gallery', [GalleryController::class, 'index'])->name('gallery');
     Route::post('/book-service', [BookingController::class, 'store'])->name('booking.store');
+
+    Route::get('/privacy', function($locale) {
+        $seoMeta = \App\Models\SeoMeta::active()->byUrl('/' . $locale . '/privacy')->first();
+        return view('privacy', compact('seoMeta'));
+    })->name('privacy');
 });
 
