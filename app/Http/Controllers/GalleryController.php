@@ -3,11 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Models\GalleryItem;
+use App\Models\SeoMeta;
 use Illuminate\Http\Request;
 
 class GalleryController extends Controller
 {
-    public function index(Request $request)
+    public function index(Request $request, $locale)
     {
         $perPage = 9; // Initial load
 
@@ -29,6 +30,9 @@ class GalleryController extends Controller
             ]);
         }
 
-        return view('gallery', compact('galleryItems'));
+        // Load SEO meta data
+        $seoMeta = SeoMeta::active()->byUrl('/' . $locale . '/gallery')->first();
+
+        return view('gallery', compact('galleryItems', 'seoMeta'));
     }
 }
