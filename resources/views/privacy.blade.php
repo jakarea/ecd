@@ -127,12 +127,6 @@
                         <p class="text-[var(--color-text)]">{{ __('privacy_security') }}</p>
                     </div>
 
-                    <!-- Children's Privacy -->
-                    <div>
-                        <h2 class="text-2xl font-bold text-[var(--color-heading)] mb-4">{{ __('Children\'s Privacy') }}</h2>
-                        <p class="text-[var(--color-text)]">{{ __('privacy_children') }}</p>
-                    </div>
-
                     <!-- Changes to Policy -->
                     <div>
                         <h2 class="text-2xl font-bold text-[var(--color-heading)] mb-4">{{ __('Changes to This Privacy Policy') }}</h2>

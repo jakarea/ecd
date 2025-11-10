@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\BookingNotification;
 use App\Models\Booking;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\Mail;
 
 class BookingController extends Controller
 {
@@ -48,7 +50,16 @@ class BookingController extends Controller
         $validated['user_agent'] = $request->userAgent();
         $validated['status'] = 'pending';
 
-        Booking::create($validated);
+        $booking = Booking::create($validated);
+
+        // Send email notification
+        try {
+            $adminEmail = env('ADMIN_EMAIL', config('mail.from.address'));
+            Mail::to($adminEmail)->send(new BookingNotification($booking));
+        } catch (\Exception $e) {
+            // Log the error but don't fail the booking
+            \Log::error('Failed to send booking notification email: ' . $e->getMessage());
+        }
 
         // Return JSON for AJAX requests
         if ($request->expectsJson()) {
