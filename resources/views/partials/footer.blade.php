@@ -223,15 +223,46 @@
                     {{ __('Designed and Developed by') }}
                     <a href="https://www.giopio.com/" target="_blank" class="text-[#FF8D28]">Giopio</a>
                 </p>
-                <div class="flex items-center gap-2">
-                    <a href="#" target="_blank"
-                        class="text-base font-normal tracking-[0.03px] text-white opacity-80">{{ __('Terms') }}</a>
-                    <span>|</span>
-                    <a href="#" target="_blank"
-                        class="text-base font-normal tracking-[0.03px] text-white opacity-80">{{ __('Privacy') }}</a>
-                    <span>|</span>
-                    <a href="#" target="_blank"
-                        class="text-base font-normal tracking-[0.03px] text-white opacity-80">{{ __('Security Statement') }}</a>
+                <div class="flex items-center gap-4 flex-wrap">
+                    <div class="flex items-center gap-2">
+                        <a href="#" target="_blank"
+                            class="text-base font-normal tracking-[0.03px] text-white opacity-80">{{ __('Terms') }}</a>
+                        <span>|</span>
+                        <a href="{{ route('privacy', ['locale' => app()->getLocale()]) }}"
+                            class="text-base font-normal tracking-[0.03px] text-white opacity-80">{{ __('Privacy') }}</a>
+                        <span>|</span>
+                        <a href="#" target="_blank"
+                            class="text-base font-normal tracking-[0.03px] text-white opacity-80">{{ __('Security Statement') }}</a>
+                    </div>
+
+                    {{-- Language Switcher --}}
+                    @php
+                        $currentLocale = app()->getLocale();
+                        $currentRoute = Route::currentRouteName();
+                        $routeParams = Route::current()->parameters();
+
+                        // Remove locale from params to avoid duplication
+                        unset($routeParams['locale']);
+
+                        $languages = [
+                            'en' => ['name' => 'EN', 'flag' => '🇬🇧', 'full' => 'English'],
+                            'nl' => ['name' => 'NL', 'flag' => '🇳🇱', 'full' => 'Nederlands']
+                        ];
+                    @endphp
+
+                    <div class="language-switcher flex items-center gap-2 bg-[#2B2B2B] rounded-full p-1">
+                        @foreach($languages as $langCode => $language)
+                            @php
+                                $isActive = $currentLocale === $langCode;
+                                $switchUrl = route($currentRoute, array_merge($routeParams, ['locale' => $langCode]));
+                            @endphp
+                            <a href="{{ $switchUrl }}"
+                               class="language-btn relative flex items-center gap-1.5 px-3 py-1.5 rounded-full transition-all duration-300 {{ $isActive ? 'bg-[var(--color-brand)] text-[var(--color-black)]' : 'text-white opacity-70 hover:opacity-100' }}"
+                               title="{{ $language['full'] }}">
+                                <span class="text-sm font-medium">{{ $language['name'] }}</span>
+                            </a>
+                        @endforeach
+                    </div>
                 </div>
             </div>
         </div>

@@ -14,6 +14,8 @@ class Booking extends Model
         'licence_plate',
         'whatsapp',
         'preferred_date',
+        'package_name',
+        'package_price',
         'status',
         'notes',
         'ip_address',
