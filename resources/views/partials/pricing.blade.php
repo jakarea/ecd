@@ -21,9 +21,9 @@
                             </h3>
                             <div class="flex items-center mt-[35px]">
                                 <div class="flex items-center border border-[#D1D7DF] rounded-[60px] p-1.5">
-                                    <button
+                                    <button data-type="single"
                                         class="pricing-opt bg-[var(--color-brand)] text-white text-base font-bold rounded-[60px] py-2.5 px-6 text-center uppercase inline-block cursor-pointer">{{ __('Single') }}</button>
-                                    <button
+                                    <button data-type="monthly"
                                         class="pricing-opt text-[#8D8D8D] text-base font-bold rounded-[60px] py-2.5 px-6 text-center uppercase inline-block cursor-pointer">{{ __('Monthly') }}</button>
                                 </div>
 
@@ -770,7 +770,7 @@
         buttons.forEach(button => {
             button.addEventListener('click', function () {
                 setActive(this);
-                const selectedType = this.textContent.trim().toLowerCase();
+                const selectedType = this.dataset.type;
                 updatePrices(selectedType);
             });
         });
@@ -780,7 +780,7 @@
 
         if (defaultBtn) {
             // Only call updatePrices — don't re-style
-            const selectedType = defaultBtn.textContent.trim().toLowerCase();
+            const selectedType = defaultBtn.dataset.type;
             updatePrices(selectedType);
         }
     });
