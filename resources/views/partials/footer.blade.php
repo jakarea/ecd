@@ -219,10 +219,7 @@
                 <p class="text-base font-normal tracking-[0.03px] text-white opacity-80">
                     {!! __('&copy; Copyright :year ECD. All rights reserved.', ['year' => date('Y')]) !!}
                 </p>
-                <p class="text-base font-normal tracking-[0.03px] text-white opacity-80">
-                    {{ __('Designed and Developed by') }}
-                    <a href="https://www.giopio.com/" target="_blank" class="text-[#FF8D28]">Giopio</a>
-                </p>
+                
                 <div class="flex items-center gap-4 flex-wrap">
                     <div class="flex items-center gap-2">
                         <a href="#" target="_blank"
@@ -248,7 +245,9 @@
                             'en' => ['name' => 'EN', 'flag' => '🇬🇧', 'full' => 'English'],
                             'nl' => ['name' => 'NL', 'flag' => '🇳🇱', 'full' => 'Nederlands']
                         ];
+                        
                     @endphp
+                   
 
                     <div class="language-switcher flex items-center gap-2 bg-[#2B2B2B] rounded-full p-1">
                         @foreach($languages as $langCode => $language)
@@ -268,6 +267,14 @@
         </div>
     </div>
     <div class="absolute left-0 bottom-0 right-0 w-full">
+        <p class="text-base font-normal tracking-[0.03px] text-white opacity-80 text-center mb-2">
+                    @if($currentLocale == 'nl')
+                        Met passie ❤️ en talloze kopjes koffie ☕ gemaakt door
+                    @else
+                        Crafted with passion ❤️ and countless cups of coffee ☕ by
+                    @endif
+                    <a href="https://www.giopio.com/" target="_blank" class="text-[#FF8D28]">Giopio</a>
+                </p>
         <img src="{{ asset('assets/img/footer-shape.png') }}" alt="shape" class="w-full">
     </div>
 </footer>

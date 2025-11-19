@@ -71,8 +71,6 @@
                 </div>
                 <h2 class="text-[32px] font-extrabold mb-9 text-[var(--color-heading)] leading-[1.2] tracking-[0.02px]">
                     {{ __('Premium car care expert') }}
-                    <br />{{ __('detailing') }}
-                    {{ __('straight to your door') }}
                 </h2>
                 <p class="text-base leading-[1.5] text-[var(--color-text)] mb-10 font-sf">
                     {{ __('We believe every vehicle deserves the highest standard of care.') }} <br />

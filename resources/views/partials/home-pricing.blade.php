@@ -151,11 +151,11 @@
         </div>
         <div class="flex items-center flex-wrap gap-6">
             <div class="flex items-center border border-[#5E5E5E] rounded-[60px] p-1.5">
-                <button
+                <button data-type="single"
                     class="pricing-opt bg-white text-[#454852] text-base font-bold rounded-[60px] p-2.5 text-center uppercase inline-block cursor-pointer min-w-[164px] ">
                     {{ __('Single') }}
                 </button>
-                <button
+                <button data-type="monthly"
                     class="pricing-opt text-[#8D8D8D] text-base font-bold rounded-[60px] p-2.5 text-center uppercase inline-block cursor-pointer min-w-[164px]">
                     {{ __('Monthly') }}
                 </button>
@@ -462,7 +462,7 @@
         if (planName && packageSelect) {
             console.log({ planName, packageSelect })
             // Get current pricing mode (single or monthly)
-            const isPricingMonthly = document.querySelector('.pricing-opt.bg-white')?.textContent.trim().toLowerCase() === 'monthly';
+            const isPricingMonthly = document.querySelector('.pricing-opt.bg-white')?.dataset.type === 'monthly';
             const price = isPricingMonthly ? priceMonthly : priceSingle;
             const packageValue = `${planName} - ${price}`;
 
@@ -548,7 +548,7 @@
         buttons.forEach(button => {
             button.addEventListener('click', function () {
                 setActive(this);
-                const selectedType = this.textContent.trim().toLowerCase();
+                const selectedType = this.dataset.type;
                 updatePrices(selectedType);
             });
         });
@@ -558,7 +558,7 @@
 
         if (defaultBtn) {
             // Only call updatePrices — don't re-style
-            const selectedType = defaultBtn.textContent.trim().toLowerCase();
+            const selectedType = defaultBtn.dataset.type;
             updatePrices(selectedType);
         }
 
