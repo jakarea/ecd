@@ -8,9 +8,7 @@
     <section class="pt-8 pb-16 md:py-25 bg-[#ededed] border-b border-[var(--color-brand)]">
         <div class="container">
             <div
-                class="font-sf font-medium text-[16px] md:text-[24px] leading-[28px] md:leading-[36px] text-[var(--color-text)] text-center max-w-[840px] mx-auto">{{ __('Explore
-                                    our gallery of spotless finishes, detailed interiors, and shining results that showcase the quality and care
-                                    we bring to every vehicle.') }}</div>
+                class="font-sf font-medium text-[16px] md:text-[24px] leading-[28px] md:leading-[36px] text-[var(--color-text)] text-center max-w-[840px] mx-auto">{{ __('Explore our gallery') }}</div>
         </div>
     </section>
     <section class="pt-12 pb-8 md:py-20 relative">
