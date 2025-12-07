@@ -177,6 +177,6 @@ class SettingController extends Controller
         // Clear all settings cache
         Setting::clearCache();
 
-        return redirect()->route('admin.settings.index')->with('success', 'Settings updated successfully.');
+        return redirect()->route('admin.settings.index', ['locale' => request()->route('locale') ?? request()->segment(1)] )->with('success', 'Settings updated successfully.');
     }
 }

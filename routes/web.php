@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\BookingController;
+use Illuminate\Support\Facades\Artisan;
 
 // Sitemaps
 Route::get('/sitemap.xml', [\App\Http\Controllers\SitemapController::class, 'index'])->name('sitemap.index');
@@ -31,6 +32,28 @@ Route::group([
         $galleryItems = \App\Models\GalleryItem::active()->ofType('before&after')->ordered()->get();
         return view('home', compact('galleryItems', 'seoMeta'));
     })->name('home');
+
+    Route::get('/maintenance-run', function () {
+    
+        $commands = [
+            'storage:link',
+            'config:clear',
+            'config:cache',
+            'cache:clear',
+            'route:clear',
+            'view:clear',
+            'optimize',
+            'optimize:clear',
+            'event:clear',
+            'event:cache',
+        ];
+    
+        foreach ($commands as $cmd) {
+            Artisan::call($cmd);
+        }
+    
+        return "<h2>All maintenance commands executed successfully!</h2>";
+    });
 
     Route::get('/about', function($locale) {
         $seoMeta = \App\Models\SeoMeta::active()->byUrl('/' . $locale . '/about')->first();

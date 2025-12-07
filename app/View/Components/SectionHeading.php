@@ -34,7 +34,7 @@ class SectionHeading extends Component
         string $width = 'max-w-[566px]',
         string $pretitle = 'Our Teams',
         string $title = 'Meet Our Dedicated Team',
-        ?string $description = 'Introducing our dedicated team of car care professionals in the Netherlands, ready to serve you with expertise and passion.',
+        ?string $description = 'Maak kennis met ons specialisten team van geheel Zuid Holland - gepassioneerd, ervaren en klaar om uw auto te laten stralen.',
         // string $titleClass = 'text-[34px] font-extrabold leading-[1.2] tracking-[0.02px] text-[var(--color-heading)] mb-4',
     ) {
         $this->width = $width;
