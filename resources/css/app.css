@@ -170,10 +170,12 @@ body {
 @media (max-width: 767px) {
     .swiper-container > .swiper-button-prev {
         left: 0 !important;
+        display: none !important;
     }
 
     .swiper-container > .swiper-button-next {
         right: 0 !important;
+        display: none !important;
     }
 }
 

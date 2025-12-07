@@ -66,7 +66,8 @@
                             fill="#124846" />
                     </svg>
 
-                    <span class="text-[11px] font-semibold uppercase text-[var(--color-heading)] font-poppins">{{ __('Super Staff. Super Service.') }}
+                    <span
+                        class="text-[11px] font-semibold uppercase text-[var(--color-heading)] font-poppins">{{ __('Super Staff. Super Service.') }}
                     </span>
                 </div>
                 <h2 class="text-[32px] font-extrabold mb-9 text-[var(--color-heading)] leading-[1.2] tracking-[0.02px]">
@@ -74,10 +75,11 @@
                 </h2>
                 <p class="text-base leading-[1.5] text-[var(--color-text)] mb-10 font-sf">
                     {{ __('We believe every vehicle deserves the highest standard of care.') }} <br />
-                    {{ __('Our team of trained specialists uses advanced techniques') }}
+                    {{-- {{ __('Our team of trained specialists uses advanced techniques') }} --}}
                 </p>
                 <div class="inline-flex">
-                    <a href="{{ route('about', ['locale' => app()->getLocale()]) }}" class="btn-brand"><span>{{ __('About Us') }}</span>
+                    <a href="{{ route('about', ['locale' => app()->getLocale()]) }}"
+                        class="btn-brand"><span>{{ __('About Us') }}</span>
                         <svg width="25" height="11" viewBox="0 0 25 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M24 5.5H1M24 5.5L19.5 1M24 5.5L19.5 10" stroke="white" stroke-width="1.5"
                                 stroke-linecap="round" stroke-linejoin="round" />
@@ -121,8 +123,8 @@
 
             </div>
             <!-- Navigation Buttons -->
-            <div class="swiper-button-next swiper-btn"></div>
-            <div class="swiper-button-prev swiper-btn"></div>
+            <div class="swiper-button-next swiper-btn hidden md:block"></div>
+            <div class="swiper-button-prev swiper-btn hidden md:block"></div>
         </div>
 
     </div>
