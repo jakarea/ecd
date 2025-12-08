@@ -17,8 +17,11 @@
                     </svg>
 
                 </div>
-                <h4 class="text-[20px] text-[var(--color-heading)] font-semibold mt-8 mb-3">{{ __('What defines us') }}</h4>
-                <p class="text-[16px] leading-[1.5] text-[var(--color-text)] font-sf">{{ __('We’re more than just a car') }}</p>
+                <h4 class="text-[20px] text-[var(--color-heading)] font-semibold mt-8 mb-3">{{ __('What defines us') }}
+                </h4>
+                <p class="text-[16px] leading-[1.5] text-[var(--color-text)] font-sf">
+                    {{ __('We’re more than just a car') }}
+                </p>
             </div>
             <div class="border border-[#D1D7DF] rounded-[20px] p-6 md:p-8">
                 <div class="icon">
@@ -65,7 +68,8 @@
                         </defs>
                     </svg>
                 </div>
-                <h4 class="text-[20px] text-[var(--color-heading)] font-semibold mt-8 mb-3">{{ __('What inspires us') }}</h4>
+                <h4 class="text-[20px] text-[var(--color-heading)] font-semibold mt-8 mb-3">{{ __('What inspires us') }}
+                </h4>
                 <p class="text-[16px] leading-[1.5] text-[var(--color-text)] font-sf">{{ __('Our inspiration comes from the
                     pride
                     people feel when their car looks and feels brand new. We believe every vehicle tells a story, and
@@ -94,9 +98,9 @@
                     {{ __('Today, our story continues with') }}"
                 </p>
             </div>
-            <div class="w-full md:w-1/2 flex justify-center">
+            <div class="w-full md:w-1/2 flex justify-center items-center">
                 <img src="{{ asset('assets/img/about1.webp') }}" alt="About Us"
-                    class="w-full max-w-[587px]max-h-[410px] rounded-[16px]">
+                    class="w-full max-w-[587px] max-h-[410px] rounded-[16px] object-cover">
             </div>
         </div>
     </div>
