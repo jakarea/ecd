@@ -6,7 +6,7 @@
     $plans = [
         [
             'name' => __('Basic Treatment'),
-            'price_single' => '€54,95',
+            'price_single' => '€55',
             'price_monthly' => '€74,45',
             'frequency' => __('1x per month'),
             'color' => '#003868',
@@ -51,7 +51,7 @@
         [
             'name' => __('Full Detail Treatment'),
             'price_single' => '€274,45',
-            'price_monthly' => '€244,95',
+            'price_monthly' => '€289,95',
             'frequency' => __('4x per month') . ' <br /> <sub>' . __('weekly') . '</sub>',
             'color' => '#CBA328',
             'borderColor' => '#E6BA30',
