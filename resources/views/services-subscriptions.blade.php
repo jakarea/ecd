@@ -9,43 +9,43 @@
     @php
         $services = [
             [
-                'title' => __('Vacuuming'),
+                'title' => __('Light vacuuming / Quick vacuum'),
             ],
             [
-                'title' => __('Cleaning windows'),
+                'title' => __('Door jambs cleaning'),
             ],
             [
-                'title' => __('Cleaning compartments and trays'),
+                'title' => __('Dashboard wiping'),
+            ],
+            [
+                'title' => __('Streak-free window cleaning'),
+            ],
+            [
+                'title' => __('Vacuuming (General/Thorough)'),
             ],
             [
                 'title' => __('Dashboard cleaning'),
             ],
             [
-                'title' => __('Plastic parts cleaning'),
+                'title' => __('Door panel cleaning'),
             ],
             [
-                'title' => __('Carpet mats cleaning'),
+                'title' => __('Compartment and cubby cleaning'),
             ],
             [
-                'title' => __('Steering wheel cleaning'),
+                'title' => __('Cleaning and conditioning of plastic parts'),
             ],
             [
-                'title' => __('Thorough wash rims'),
+                'title' => __('Floor mat treatment / Mat cleaning'),
             ],
             [
-                'title' => __('Thorough wash bumpers'),
+                'title' => __('Air freshener of choice / Scent selection'),
             ],
             [
-                'title' => __('Thorough wash windows'),
+                'title' => __('Leather / fabric upholstery cleaning'),
             ],
             [
-                'title' => __('Removes dirt'),
-            ],
-            [
-                'title' => __('Removes, deposits'),
-            ],
-            [
-                'title' => __('Removes, insect residues'),
+                'title' => __('Steam cleaning'),
             ],
             [
                 'title' => __('Perfume of choice'),
