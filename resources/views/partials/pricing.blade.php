@@ -131,7 +131,7 @@
                                         </defs>
                                     </svg>
                                 </div>
-                                <h3 class="text-[22px] font-medium text-white tracking-[-0.44px]">{{ __('Full Detail
+                                <h3 class="text-[22px] font-medium text-white tracking-[-0.44px]">{{ __('Platinum
                                     Subscription') }}</h3>
                                 <span class="price text-[36px] font-extrabold text-white" data-single="€274,45"
                                     data-monthly="€289,95">€274,45</span>
@@ -163,14 +163,17 @@
                             <span class="text-[16px] text-[var(--color-heading)] font-sf">{{ __('Service') }}</span>
                         </div>
                         <div class="td max-w-[267.33px] w-full py-5 px-[30px] border-r border-[#CBD6E9] text-center">
-                            <span class="text-[16px] text-[var(--color-text)] text-left font-sf">{{ __('1x per month') }}</span>
+                            <span
+                                class="text-[16px] text-[var(--color-text)] text-left font-sf">{{ __('1x per month') }}</span>
                         </div>
                         <div class="td max-w-[267.33px] w-full py-5 px-[30px] border-r border-[#CBA328] text-center">
-                            <span class="text-[16px] text-[var(--color-text)] text-left font-sf">{{ __('2x per month') }}</span>
+                            <span
+                                class="text-[16px] text-[var(--color-text)] text-left font-sf">{{ __('2x per month') }}</span>
                         </div>
                         <div
                             class="td max-w-[267.33px] w-full py-5 px-[30px] text-center bg-[#CBA32810] border-r border-[#CBA328]">
-                            <span class="text-[16px] text-[var(--color-text)] text-left font-sf">{{ __('4x per month') }}</span>
+                            <span
+                                class="text-[16px] text-[var(--color-text)] text-left font-sf">{{ __('4x per month') }}</span>
                         </div>
                     </div>
                     <div class="tr flex border-l border-b border-[#CBD6E9]">
@@ -205,470 +208,483 @@
                             <span class="text-[16px] text-[var(--color-text)] font-sf"></span>
                         </div>
                     </div>
-                    
+
                     <div class="tr flex border-l border-b border-[#CBD6E9]">
-                    <div class="td max-w-[398px] w-full py-5 px-[30px] border-r border-[#CBD6E9]">
-                        <span class="text-[16px] text-[var(--color-heading)] font-sf">{{ __('Light vacuuming / Quick vacuum') }}</span>
+                        <div class="td max-w-[398px] w-full py-5 px-[30px] border-r border-[#CBD6E9]">
+                            <span
+                                class="text-[16px] text-[var(--color-heading)] font-sf">{{ __('Light vacuuming / Quick vacuum') }}</span>
+                        </div>
+                        <div
+                            class="td max-w-[267.33px] w-full py-5 px-[30px] border-r border-[#CBD6E9] text-center flex justify-center items-center">
+                            <span class="text-[16px] text-[var(--color-text)] font-sf">
+                                <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <ellipse cx="12.667" cy="12.4999" rx="12" ry="12.0001" fill="#34C759" />
+                                    <path
+                                        d="M10.7052 14.6448L8.12057 12.0602L7.01074 13.17L10.7052 16.8645L18.3241 9.24557L17.2142 8.13574L10.7052 14.6448Z"
+                                        fill="white" />
+                                </svg>
+                            </span>
+                        </div>
+                        <div
+                            class="td max-w-[267.33px] w-full py-5 px-[30px] border-r border-[#CBA328] text-center flex justify-center items-center">
+                            <span class="text-[16px] text-[var(--color-text)] font-sf">
+                                <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <ellipse cx="12.667" cy="12.4999" rx="12" ry="12.0001" fill="#34C759" />
+                                    <path
+                                        d="M10.7052 14.6448L8.12057 12.0602L7.01074 13.17L10.7052 16.8645L18.3241 9.24557L17.2142 8.13574L10.7052 14.6448Z"
+                                        fill="white" />
+                                </svg>
+                            </span>
+                        </div>
+                        <div
+                            class="td max-w-[267.33px] w-full py-5 px-[30px] text-center flex justify-center items-center bg-[#CBA32810] border-r border-[#CBA328]">
+                            <span class="text-[16px] text-[var(--color-text)] font-sf">
+                                <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <ellipse cx="12.667" cy="12.4999" rx="12" ry="12.0001" fill="#34C759" />
+                                    <path
+                                        d="M10.7052 14.6448L8.12057 12.0602L7.01074 13.17L10.7052 16.8645L18.3241 9.24557L17.2142 8.13574L10.7052 14.6448Z"
+                                        fill="white" />
+                                </svg>
+                            </span>
+                        </div>
                     </div>
-                    <div
-                        class="td max-w-[267.33px] w-full py-5 px-[30px] border-r border-[#CBD6E9] text-center flex justify-center items-center">
-                        <span class="text-[16px] text-[var(--color-text)] font-sf">
-                            <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <ellipse cx="12.667" cy="12.4999" rx="12" ry="12.0001" fill="#34C759" />
-                                <path
-                                    d="M10.7052 14.6448L8.12057 12.0602L7.01074 13.17L10.7052 16.8645L18.3241 9.24557L17.2142 8.13574L10.7052 14.6448Z"
-                                    fill="white" />
-                            </svg>
-                        </span>
+                    <div class="tr flex border-l border-b border-[#CBD6E9]">
+                        <div class="td max-w-[398px] w-full py-5 px-[30px] border-r border-[#CBD6E9]">
+                            <span
+                                class="text-[16px] text-[var(--color-heading)] font-sf">{{ __('Door jambs cleaning') }}</span>
+                        </div>
+                        <div
+                            class="td max-w-[267.33px] w-full py-5 px-[30px] border-r border-[#CBD6E9] text-center flex justify-center items-center">
+                            <span class="text-[16px] text-[var(--color-text)] font-sf">
+                                <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <ellipse cx="12.667" cy="12.4999" rx="12" ry="12.0001" fill="#34C759" />
+                                    <path
+                                        d="M10.7052 14.6448L8.12057 12.0602L7.01074 13.17L10.7052 16.8645L18.3241 9.24557L17.2142 8.13574L10.7052 14.6448Z"
+                                        fill="white" />
+                                </svg>
+                            </span>
+                        </div>
+                        <div
+                            class="td max-w-[267.33px] w-full py-5 px-[30px] border-r border-[#CBA328] text-center flex justify-center items-center">
+                            <span class="text-[16px] text-[var(--color-text)] font-sf">
+                                <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <ellipse cx="12.667" cy="12.4999" rx="12" ry="12.0001" fill="#34C759" />
+                                    <path
+                                        d="M10.7052 14.6448L8.12057 12.0602L7.01074 13.17L10.7052 16.8645L18.3241 9.24557L17.2142 8.13574L10.7052 14.6448Z"
+                                        fill="white" />
+                                </svg>
+                            </span>
+                        </div>
+                        <div
+                            class="td max-w-[267.33px] w-full py-5 px-[30px] text-center flex justify-center items-center bg-[#CBA32810] border-r border-[#CBA328]">
+                            <span class="text-[16px] text-[var(--color-text)] font-sf">
+                                <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <ellipse cx="12.667" cy="12.4999" rx="12" ry="12.0001" fill="#34C759" />
+                                    <path
+                                        d="M10.7052 14.6448L8.12057 12.0602L7.01074 13.17L10.7052 16.8645L18.3241 9.24557L17.2142 8.13574L10.7052 14.6448Z"
+                                        fill="white" />
+                                </svg>
+                            </span>
+                        </div>
                     </div>
-                    <div
-                        class="td max-w-[267.33px] w-full py-5 px-[30px] border-r border-[#CBA328] text-center flex justify-center items-center">
-                        <span class="text-[16px] text-[var(--color-text)] font-sf">
-                            <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <ellipse cx="12.667" cy="12.4999" rx="12" ry="12.0001" fill="#34C759" />
-                                <path
-                                    d="M10.7052 14.6448L8.12057 12.0602L7.01074 13.17L10.7052 16.8645L18.3241 9.24557L17.2142 8.13574L10.7052 14.6448Z"
-                                    fill="white" />
-                            </svg>
-                        </span>
+                    <div class="tr flex border-l border-b border-[#CBD6E9]">
+                        <div class="td max-w-[398px] w-full py-5 px-[30px] border-r border-[#CBD6E9]">
+                            <span
+                                class="text-[16px] text-[var(--color-heading)] font-sf">{{ __('Dashboard wiping / Dashboard dusting') }}</span>
+                        </div>
+                        <div
+                            class="td max-w-[267.33px] w-full py-5 px-[30px] border-r border-[#CBD6E9] text-center flex justify-center items-center">
+                            <span class="text-[16px] text-[var(--color-text)] font-sf">
+                                <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <ellipse cx="12.667" cy="12.4999" rx="12" ry="12.0001" fill="#34C759" />
+                                    <path
+                                        d="M10.7052 14.6448L8.12057 12.0602L7.01074 13.17L10.7052 16.8645L18.3241 9.24557L17.2142 8.13574L10.7052 14.6448Z"
+                                        fill="white" />
+                                </svg>
+                            </span>
+                        </div>
+                        <div
+                            class="td max-w-[267.33px] w-full py-5 px-[30px] border-r border-[#CBA328] text-center flex justify-center items-center">
+                            <span class="text-[16px] text-[var(--color-text)] font-sf">
+                                <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <ellipse cx="12.667" cy="12.4999" rx="12" ry="12.0001" fill="#34C759" />
+                                    <path
+                                        d="M10.7052 14.6448L8.12057 12.0602L7.01074 13.17L10.7052 16.8645L18.3241 9.24557L17.2142 8.13574L10.7052 14.6448Z"
+                                        fill="white" />
+                                </svg>
+                            </span>
+                        </div>
+                        <div
+                            class="td max-w-[267.33px] w-full py-5 px-[30px] text-center flex justify-center items-center bg-[#CBA32810] border-r border-[#CBA328]">
+                            <span class="text-[16px] text-[var(--color-text)] font-sf">
+                                <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <ellipse cx="12.667" cy="12.4999" rx="12" ry="12.0001" fill="#34C759" />
+                                    <path
+                                        d="M10.7052 14.6448L8.12057 12.0602L7.01074 13.17L10.7052 16.8645L18.3241 9.24557L17.2142 8.13574L10.7052 14.6448Z"
+                                        fill="white" />
+                                </svg>
+                            </span>
+                        </div>
                     </div>
-                    <div
-                        class="td max-w-[267.33px] w-full py-5 px-[30px] text-center flex justify-center items-center bg-[#CBA32810] border-r border-[#CBA328]">
-                        <span class="text-[16px] text-[var(--color-text)] font-sf">
-                            <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <ellipse cx="12.667" cy="12.4999" rx="12" ry="12.0001" fill="#34C759" />
-                                <path
-                                    d="M10.7052 14.6448L8.12057 12.0602L7.01074 13.17L10.7052 16.8645L18.3241 9.24557L17.2142 8.13574L10.7052 14.6448Z"
-                                    fill="white" />
-                            </svg>
-                        </span>
+                    <div class="tr flex border-l border-b border-[#CBD6E9]">
+                        <div class="td max-w-[398px] w-full py-5 px-[30px] border-r border-[#CBD6E9]">
+                            <span
+                                class="text-[16px] text-[var(--color-heading)] font-sf">{{ __('Streak-free window cleaning') }}</span>
+                        </div>
+                        <div
+                            class="td max-w-[267.33px] w-full py-5 px-[30px] border-r border-[#CBD6E9] text-center flex justify-center items-center">
+                            <span class="text-[16px] text-[var(--color-text)] font-sf">
+                                -
+                            </span>
+                        </div>
+                        <div
+                            class="td max-w-[267.33px] w-full py-5 px-[30px] border-r border-[#CBA328] text-center flex justify-center items-center">
+                            <span class="text-[16px] text-[var(--color-text)] font-sf">
+                                <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <ellipse cx="12.667" cy="12.4999" rx="12" ry="12.0001" fill="#34C759" />
+                                    <path
+                                        d="M10.7052 14.6448L8.12057 12.0602L7.01074 13.17L10.7052 16.8645L18.3241 9.24557L17.2142 8.13574L10.7052 14.6448Z"
+                                        fill="white" />
+                                </svg>
+                            </span>
+                        </div>
+                        <div
+                            class="td max-w-[267.33px] w-full py-5 px-[30px] text-center flex justify-center items-center bg-[#CBA32810] border-r border-[#CBA328]">
+                            <span class="text-[16px] text-[var(--color-text)] font-sf">
+                                <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <ellipse cx="12.667" cy="12.4999" rx="12" ry="12.0001" fill="#34C759" />
+                                    <path
+                                        d="M10.7052 14.6448L8.12057 12.0602L7.01074 13.17L10.7052 16.8645L18.3241 9.24557L17.2142 8.13574L10.7052 14.6448Z"
+                                        fill="white" />
+                                </svg>
+                            </span>
+                        </div>
                     </div>
-                </div>
-                <div class="tr flex border-l border-b border-[#CBD6E9]">
-                    <div class="td max-w-[398px] w-full py-5 px-[30px] border-r border-[#CBD6E9]">
-                        <span class="text-[16px] text-[var(--color-heading)] font-sf">{{ __('Door jambs cleaning') }}</span>
+                    <div class="tr flex border-l border-b border-[#CBD6E9]">
+                        <div class="td max-w-[398px] w-full py-5 px-[30px] border-r border-[#CBD6E9]">
+                            <span
+                                class="text-[16px] text-[var(--color-heading)] font-sf">{{ __('Vacuuming (General/Thorough)') }}</span>
+                        </div>
+                        <div
+                            class="td max-w-[267.33px] w-full py-5 px-[30px] border-r border-[#CBD6E9] text-center flex justify-center items-center">
+                            <span class="text-[16px] text-[var(--color-text)] font-sf">
+                                -
+                            </span>
+                        </div>
+                        <div
+                            class="td max-w-[267.33px] w-full py-5 px-[30px] border-r border-[#CBA328] text-center flex justify-center items-center">
+                            <span class="text-[16px] text-[var(--color-text)] font-sf">
+                                <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <ellipse cx="12.667" cy="12.4999" rx="12" ry="12.0001" fill="#34C759" />
+                                    <path
+                                        d="M10.7052 14.6448L8.12057 12.0602L7.01074 13.17L10.7052 16.8645L18.3241 9.24557L17.2142 8.13574L10.7052 14.6448Z"
+                                        fill="white" />
+                                </svg>
+                            </span>
+                        </div>
+                        <div
+                            class="td max-w-[267.33px] w-full py-5 px-[30px] text-center flex justify-center items-center bg-[#CBA32810] border-r border-[#CBA328]">
+                            <span class="text-[16px] text-[var(--color-text)] font-sf">
+                                <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <ellipse cx="12.667" cy="12.4999" rx="12" ry="12.0001" fill="#34C759" />
+                                    <path
+                                        d="M10.7052 14.6448L8.12057 12.0602L7.01074 13.17L10.7052 16.8645L18.3241 9.24557L17.2142 8.13574L10.7052 14.6448Z"
+                                        fill="white" />
+                                </svg>
+                            </span>
+                        </div>
                     </div>
-                    <div
-                        class="td max-w-[267.33px] w-full py-5 px-[30px] border-r border-[#CBD6E9] text-center flex justify-center items-center">
-                        <span class="text-[16px] text-[var(--color-text)] font-sf">
-                            <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <ellipse cx="12.667" cy="12.4999" rx="12" ry="12.0001" fill="#34C759" />
-                                <path
-                                    d="M10.7052 14.6448L8.12057 12.0602L7.01074 13.17L10.7052 16.8645L18.3241 9.24557L17.2142 8.13574L10.7052 14.6448Z"
-                                    fill="white" />
-                            </svg>
-                        </span>
+                    <div class="tr flex border-l border-b border-[#CBD6E9]">
+                        <div class="td max-w-[398px] w-full py-5 px-[30px] border-r border-[#CBD6E9]">
+                            <span
+                                class="text-[16px] text-[var(--color-heading)] font-sf">{{ __('Dashboard cleaning') }}</span>
+                        </div>
+                        <div
+                            class="td max-w-[267.33px] w-full py-5 px-[30px] border-r border-[#CBD6E9] text-center flex justify-center items-center">
+                            <span class="text-[16px] text-[var(--color-text)] font-sf">
+                                -
+                            </span>
+                        </div>
+                        <div
+                            class="td max-w-[267.33px] w-full py-5 px-[30px] border-r border-[#CBA328] text-center flex justify-center items-center">
+                            <span class="text-[16px] text-[var(--color-text)] font-sf">
+                                <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <ellipse cx="12.667" cy="12.4999" rx="12" ry="12.0001" fill="#34C759" />
+                                    <path
+                                        d="M10.7052 14.6448L8.12057 12.0602L7.01074 13.17L10.7052 16.8645L18.3241 9.24557L17.2142 8.13574L10.7052 14.6448Z"
+                                        fill="white" />
+                                </svg>
+                            </span>
+                        </div>
+                        <div
+                            class="td max-w-[267.33px] w-full py-5 px-[30px] text-center flex justify-center items-center bg-[#CBA32810] border-r border-[#CBA328]">
+                            <span class="text-[16px] text-[var(--color-text)] font-sf">
+                                <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <ellipse cx="12.667" cy="12.4999" rx="12" ry="12.0001" fill="#34C759" />
+                                    <path
+                                        d="M10.7052 14.6448L8.12057 12.0602L7.01074 13.17L10.7052 16.8645L18.3241 9.24557L17.2142 8.13574L10.7052 14.6448Z"
+                                        fill="white" />
+                                </svg>
+                            </span>
+                        </div>
                     </div>
-                    <div
-                        class="td max-w-[267.33px] w-full py-5 px-[30px] border-r border-[#CBA328] text-center flex justify-center items-center">
-                        <span class="text-[16px] text-[var(--color-text)] font-sf">
-                            <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <ellipse cx="12.667" cy="12.4999" rx="12" ry="12.0001" fill="#34C759" />
-                                <path
-                                    d="M10.7052 14.6448L8.12057 12.0602L7.01074 13.17L10.7052 16.8645L18.3241 9.24557L17.2142 8.13574L10.7052 14.6448Z"
-                                    fill="white" />
-                            </svg>
-                        </span>
+                    <div class="tr flex border-l border-b border-[#CBD6E9]">
+                        <div class="td max-w-[398px] w-full py-5 px-[30px] border-r border-[#CBD6E9]">
+                            <span
+                                class="text-[16px] text-[var(--color-heading)] font-sf">{{ __('Door panel cleaning') }}</span>
+                        </div>
+                        <div
+                            class="td max-w-[267.33px] w-full py-5 px-[30px] border-r border-[#CBD6E9] text-center flex justify-center items-center">
+                            <span class="text-[16px] text-[var(--color-text)] font-sf">
+                                -
+                            </span>
+                        </div>
+                        <div
+                            class="td max-w-[267.33px] w-full py-5 px-[30px] border-r border-[#CBA328] text-center flex justify-center items-center">
+                            <span class="text-[16px] text-[var(--color-text)] font-sf">
+                                <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <ellipse cx="12.667" cy="12.4999" rx="12" ry="12.0001" fill="#34C759" />
+                                    <path
+                                        d="M10.7052 14.6448L8.12057 12.0602L7.01074 13.17L10.7052 16.8645L18.3241 9.24557L17.2142 8.13574L10.7052 14.6448Z"
+                                        fill="white" />
+                                </svg>
+                            </span>
+                        </div>
+                        <div
+                            class="td max-w-[267.33px] w-full py-5 px-[30px] text-center flex justify-center items-center bg-[#CBA32810] border-r border-[#CBA328]">
+                            <span class="text-[16px] text-[var(--color-text)] font-sf">
+                                <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <ellipse cx="12.667" cy="12.4999" rx="12" ry="12.0001" fill="#34C759" />
+                                    <path
+                                        d="M10.7052 14.6448L8.12057 12.0602L7.01074 13.17L10.7052 16.8645L18.3241 9.24557L17.2142 8.13574L10.7052 14.6448Z"
+                                        fill="white" />
+                                </svg>
+                            </span>
+                        </div>
                     </div>
-                    <div
-                        class="td max-w-[267.33px] w-full py-5 px-[30px] text-center flex justify-center items-center bg-[#CBA32810] border-r border-[#CBA328]">
-                        <span class="text-[16px] text-[var(--color-text)] font-sf">
-                            <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <ellipse cx="12.667" cy="12.4999" rx="12" ry="12.0001" fill="#34C759" />
-                                <path
-                                    d="M10.7052 14.6448L8.12057 12.0602L7.01074 13.17L10.7052 16.8645L18.3241 9.24557L17.2142 8.13574L10.7052 14.6448Z"
-                                    fill="white" />
-                            </svg>
-                        </span>
+                    <div class="tr flex border-l border-b border-[#CBD6E9]">
+                        <div class="td max-w-[398px] w-full py-5 px-[30px] border-r border-[#CBD6E9]">
+                            <span
+                                class="text-[16px] text-[var(--color-heading)] font-sf">{{ __('Compartment and cubby cleaning') }}</span>
+                        </div>
+                        <div
+                            class="td max-w-[267.33px] w-full py-5 px-[30px] border-r border-[#CBD6E9] text-center flex justify-center items-center">
+                            <span class="text-[16px] text-[var(--color-text)] font-sf">
+                                -
+                            </span>
+                        </div>
+                        <div
+                            class="td max-w-[267.33px] w-full py-5 px-[30px] border-r border-[#CBA328] text-center flex justify-center items-center">
+                            <span class="text-[16px] text-[var(--color-text)] font-sf">
+                                <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <ellipse cx="12.667" cy="12.4999" rx="12" ry="12.0001" fill="#34C759" />
+                                    <path
+                                        d="M10.7052 14.6448L8.12057 12.0602L7.01074 13.17L10.7052 16.8645L18.3241 9.24557L17.2142 8.13574L10.7052 14.6448Z"
+                                        fill="white" />
+                                </svg>
+                            </span>
+                        </div>
+                        <div
+                            class="td max-w-[267.33px] w-full py-5 px-[30px] text-center flex justify-center items-center bg-[#CBA32810] border-r border-[#CBA328]">
+                            <span class="text-[16px] text-[var(--color-text)] font-sf">
+                                <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <ellipse cx="12.667" cy="12.4999" rx="12" ry="12.0001" fill="#34C759" />
+                                    <path
+                                        d="M10.7052 14.6448L8.12057 12.0602L7.01074 13.17L10.7052 16.8645L18.3241 9.24557L17.2142 8.13574L10.7052 14.6448Z"
+                                        fill="white" />
+                                </svg>
+                            </span>
+                        </div>
                     </div>
-                </div>
-                <div class="tr flex border-l border-b border-[#CBD6E9]">
-                    <div class="td max-w-[398px] w-full py-5 px-[30px] border-r border-[#CBD6E9]">
-                        <span class="text-[16px] text-[var(--color-heading)] font-sf">{{ __('Dashboard wiping / Dashboard dusting') }}</span>
+                    <div class="tr flex border-l border-b border-[#CBD6E9]">
+                        <div class="td max-w-[398px] w-full py-5 px-[30px] border-r border-[#CBD6E9]">
+                            <span
+                                class="text-[16px] text-[var(--color-heading)] font-sf">{{ __('Cleaning and conditioning of plastic parts') }}</span>
+                        </div>
+                        <div
+                            class="td max-w-[267.33px] w-full py-5 px-[30px] border-r border-[#CBD6E9] text-center flex justify-center items-center">
+                            <span class="text-[16px] text-[var(--color-text)] font-sf">
+                                -
+                            </span>
+                        </div>
+                        <div
+                            class="td max-w-[267.33px] w-full py-5 px-[30px] border-r border-[#CBA328] text-center flex justify-center items-center">
+                            <span class="text-[16px] text-[var(--color-text)] font-sf">
+                                <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <ellipse cx="12.667" cy="12.4999" rx="12" ry="12.0001" fill="#34C759" />
+                                    <path
+                                        d="M10.7052 14.6448L8.12057 12.0602L7.01074 13.17L10.7052 16.8645L18.3241 9.24557L17.2142 8.13574L10.7052 14.6448Z"
+                                        fill="white" />
+                                </svg>
+                            </span>
+                        </div>
+                        <div
+                            class="td max-w-[267.33px] w-full py-5 px-[30px] text-center flex justify-center items-center bg-[#CBA32810] border-r border-[#CBA328]">
+                            <span class="text-[16px] text-[var(--color-text)] font-sf">
+                                <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <ellipse cx="12.667" cy="12.4999" rx="12" ry="12.0001" fill="#34C759" />
+                                    <path
+                                        d="M10.7052 14.6448L8.12057 12.0602L7.01074 13.17L10.7052 16.8645L18.3241 9.24557L17.2142 8.13574L10.7052 14.6448Z"
+                                        fill="white" />
+                                </svg>
+                            </span>
+                        </div>
                     </div>
-                    <div
-                        class="td max-w-[267.33px] w-full py-5 px-[30px] border-r border-[#CBD6E9] text-center flex justify-center items-center">
-                        <span class="text-[16px] text-[var(--color-text)] font-sf">
-                            <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <ellipse cx="12.667" cy="12.4999" rx="12" ry="12.0001" fill="#34C759" />
-                                <path
-                                    d="M10.7052 14.6448L8.12057 12.0602L7.01074 13.17L10.7052 16.8645L18.3241 9.24557L17.2142 8.13574L10.7052 14.6448Z"
-                                    fill="white" />
-                            </svg>
-                        </span>
+                    <div class="tr flex border-l border-b border-[#CBD6E9]">
+                        <div class="td max-w-[398px] w-full py-5 px-[30px] border-r border-[#CBD6E9]">
+                            <span
+                                class="text-[16px] text-[var(--color-heading)] font-sf">{{ __('Floor mat treatment / Mat cleaning') }}</span>
+                        </div>
+                        <div
+                            class="td max-w-[267.33px] w-full py-5 px-[30px] border-r border-[#CBD6E9] text-center flex justify-center items-center">
+                            <span class="text-[16px] text-[var(--color-text)] font-sf">
+                                -
+                            </span>
+                        </div>
+                        <div
+                            class="td max-w-[267.33px] w-full py-5 px-[30px] border-r border-[#CBA328] text-center flex justify-center items-center">
+                            <span class="text-[16px] text-[var(--color-text)] font-sf">
+                                <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <ellipse cx="12.667" cy="12.4999" rx="12" ry="12.0001" fill="#34C759" />
+                                    <path
+                                        d="M10.7052 14.6448L8.12057 12.0602L7.01074 13.17L10.7052 16.8645L18.3241 9.24557L17.2142 8.13574L10.7052 14.6448Z"
+                                        fill="white" />
+                                </svg>
+                            </span>
+                        </div>
+                        <div
+                            class="td max-w-[267.33px] w-full py-5 px-[30px] text-center flex justify-center items-center bg-[#CBA32810] border-r border-[#CBA328]">
+                            <span class="text-[16px] text-[var(--color-text)] font-sf">
+                                <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <ellipse cx="12.667" cy="12.4999" rx="12" ry="12.0001" fill="#34C759" />
+                                    <path
+                                        d="M10.7052 14.6448L8.12057 12.0602L7.01074 13.17L10.7052 16.8645L18.3241 9.24557L17.2142 8.13574L10.7052 14.6448Z"
+                                        fill="white" />
+                                </svg>
+                            </span>
+                        </div>
                     </div>
-                    <div
-                        class="td max-w-[267.33px] w-full py-5 px-[30px] border-r border-[#CBA328] text-center flex justify-center items-center">
-                        <span class="text-[16px] text-[var(--color-text)] font-sf">
-                            <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <ellipse cx="12.667" cy="12.4999" rx="12" ry="12.0001" fill="#34C759" />
-                                <path
-                                    d="M10.7052 14.6448L8.12057 12.0602L7.01074 13.17L10.7052 16.8645L18.3241 9.24557L17.2142 8.13574L10.7052 14.6448Z"
-                                    fill="white" />
-                            </svg>
-                        </span>
+                    <div class="tr flex border-l border-b border-[#CBD6E9]">
+                        <div class="td max-w-[398px] w-full py-5 px-[30px] border-r border-[#CBD6E9]">
+                            <span
+                                class="text-[16px] text-[var(--color-heading)] font-sf">{{ __('Air freshener of choice / Scent selection') }}</span>
+                        </div>
+                        <div
+                            class="td max-w-[267.33px] w-full py-5 px-[30px] border-r border-[#CBD6E9] text-center flex justify-center items-center">
+                            <span class="text-[16px] text-[var(--color-text)] font-sf">
+                                -
+                            </span>
+                        </div>
+                        <div
+                            class="td max-w-[267.33px] w-full py-5 px-[30px] border-r border-[#CBA328] text-center flex justify-center items-center">
+                            <span class="text-[16px] text-[var(--color-text)] font-sf">
+                                <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <ellipse cx="12.667" cy="12.4999" rx="12" ry="12.0001" fill="#34C759" />
+                                    <path
+                                        d="M10.7052 14.6448L8.12057 12.0602L7.01074 13.17L10.7052 16.8645L18.3241 9.24557L17.2142 8.13574L10.7052 14.6448Z"
+                                        fill="white" />
+                                </svg>
+                            </span>
+                        </div>
+                        <div
+                            class="td max-w-[267.33px] w-full py-5 px-[30px] text-center flex justify-center items-center bg-[#CBA32810] border-r border-[#CBA328]">
+                            <span class="text-[16px] text-[var(--color-text)] font-sf">
+                                <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <ellipse cx="12.667" cy="12.4999" rx="12" ry="12.0001" fill="#34C759" />
+                                    <path
+                                        d="M10.7052 14.6448L8.12057 12.0602L7.01074 13.17L10.7052 16.8645L18.3241 9.24557L17.2142 8.13574L10.7052 14.6448Z"
+                                        fill="white" />
+                                </svg>
+                            </span>
+                        </div>
                     </div>
-                    <div
-                        class="td max-w-[267.33px] w-full py-5 px-[30px] text-center flex justify-center items-center bg-[#CBA32810] border-r border-[#CBA328]">
-                        <span class="text-[16px] text-[var(--color-text)] font-sf">
-                            <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <ellipse cx="12.667" cy="12.4999" rx="12" ry="12.0001" fill="#34C759" />
-                                <path
-                                    d="M10.7052 14.6448L8.12057 12.0602L7.01074 13.17L10.7052 16.8645L18.3241 9.24557L17.2142 8.13574L10.7052 14.6448Z"
-                                    fill="white" />
-                            </svg>
-                        </span>
+                    <div class="tr flex border-l border-b border-[#CBD6E9]">
+                        <div class="td max-w-[398px] w-full py-5 px-[30px] border-r border-[#CBD6E9]">
+                            <span
+                                class="text-[16px] text-[var(--color-heading)] font-sf">{{ __('Leather / fabric upholstery cleaning') }}</span>
+                        </div>
+                        <div
+                            class="td max-w-[267.33px] w-full py-5 px-[30px] border-r border-[#CBD6E9] text-center flex justify-center items-center">
+                            <span class="text-[16px] text-[var(--color-text)] font-sf">
+                                -
+                            </span>
+                        </div>
+                        <div
+                            class="td max-w-[267.33px] w-full py-5 px-[30px] border-r border-[#CBA328] text-center flex justify-center items-center">
+                            <span class="text-[16px] text-[var(--color-text)] font-sf">
+                                -
+                            </span>
+                        </div>
+                        <div
+                            class="td max-w-[267.33px] w-full py-5 px-[30px] text-center flex justify-center items-center bg-[#CBA32810] border-r border-[#CBA328]">
+                            <span class="text-[16px] text-[var(--color-text)] font-sf">
+                                <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <ellipse cx="12.667" cy="12.4999" rx="12" ry="12.0001" fill="#34C759" />
+                                    <path
+                                        d="M10.7052 14.6448L8.12057 12.0602L7.01074 13.17L10.7052 16.8645L18.3241 9.24557L17.2142 8.13574L10.7052 14.6448Z"
+                                        fill="white" />
+                                </svg>
+                            </span>
+                        </div>
                     </div>
-                </div>
-                <div class="tr flex border-l border-b border-[#CBD6E9]">
-                    <div class="td max-w-[398px] w-full py-5 px-[30px] border-r border-[#CBD6E9]">
-                        <span class="text-[16px] text-[var(--color-heading)] font-sf">{{ __('Streak-free window cleaning') }}</span>
+                    <div class="tr flex border-l border-b border-[#CBD6E9]">
+                        <div class="td max-w-[398px] w-full py-5 px-[30px] border-r border-[#CBD6E9]">
+                            <span
+                                class="text-[16px] text-[var(--color-heading)] font-sf">{{ __('Steam cleaning') }}</span>
+                        </div>
+                        <div
+                            class="td max-w-[267.33px] w-full py-5 px-[30px] border-r border-[#CBD6E9] text-center flex justify-center items-center">
+                            <span class="text-[16px] text-[var(--color-text)] font-sf">
+                                -
+                            </span>
+                        </div>
+                        <div
+                            class="td max-w-[267.33px] w-full py-5 px-[30px] border-r border-[#CBA328] text-center flex justify-center items-center">
+                            <span class="text-[16px] text-[var(--color-text)] font-sf">
+                                -
+                            </span>
+                        </div>
+                        <div
+                            class="td max-w-[267.33px] w-full py-5 px-[30px] text-center flex justify-center items-center bg-[#CBA32810] border-r border-[#CBA328]">
+                            <span class="text-[16px] text-[var(--color-text)] font-sf">
+                                <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <ellipse cx="12.667" cy="12.4999" rx="12" ry="12.0001" fill="#34C759" />
+                                    <path
+                                        d="M10.7052 14.6448L8.12057 12.0602L7.01074 13.17L10.7052 16.8645L18.3241 9.24557L17.2142 8.13574L10.7052 14.6448Z"
+                                        fill="white" />
+                                </svg>
+                            </span>
+                        </div>
                     </div>
-                    <div
-                        class="td max-w-[267.33px] w-full py-5 px-[30px] border-r border-[#CBD6E9] text-center flex justify-center items-center">
-                        <span class="text-[16px] text-[var(--color-text)] font-sf">
-                            -
-                        </span>
-                    </div>
-                    <div
-                        class="td max-w-[267.33px] w-full py-5 px-[30px] border-r border-[#CBA328] text-center flex justify-center items-center">
-                        <span class="text-[16px] text-[var(--color-text)] font-sf">
-                            <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <ellipse cx="12.667" cy="12.4999" rx="12" ry="12.0001" fill="#34C759" />
-                                <path
-                                    d="M10.7052 14.6448L8.12057 12.0602L7.01074 13.17L10.7052 16.8645L18.3241 9.24557L17.2142 8.13574L10.7052 14.6448Z"
-                                    fill="white" />
-                            </svg>
-                        </span>
-                    </div>
-                    <div
-                        class="td max-w-[267.33px] w-full py-5 px-[30px] text-center flex justify-center items-center bg-[#CBA32810] border-r border-[#CBA328]">
-                        <span class="text-[16px] text-[var(--color-text)] font-sf">
-                            <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <ellipse cx="12.667" cy="12.4999" rx="12" ry="12.0001" fill="#34C759" />
-                                <path
-                                    d="M10.7052 14.6448L8.12057 12.0602L7.01074 13.17L10.7052 16.8645L18.3241 9.24557L17.2142 8.13574L10.7052 14.6448Z"
-                                    fill="white" />
-                            </svg>
-                        </span>
-                    </div>
-                </div>
-                <div class="tr flex border-l border-b border-[#CBD6E9]">
-                    <div class="td max-w-[398px] w-full py-5 px-[30px] border-r border-[#CBD6E9]">
-                        <span class="text-[16px] text-[var(--color-heading)] font-sf">{{ __('Vacuuming (General/Thorough)') }}</span>
-                    </div>
-                    <div
-                        class="td max-w-[267.33px] w-full py-5 px-[30px] border-r border-[#CBD6E9] text-center flex justify-center items-center">
-                        <span class="text-[16px] text-[var(--color-text)] font-sf">
-                            -
-                        </span>
-                    </div>
-                    <div
-                        class="td max-w-[267.33px] w-full py-5 px-[30px] border-r border-[#CBA328] text-center flex justify-center items-center">
-                        <span class="text-[16px] text-[var(--color-text)] font-sf">
-                            <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <ellipse cx="12.667" cy="12.4999" rx="12" ry="12.0001" fill="#34C759" />
-                                <path
-                                    d="M10.7052 14.6448L8.12057 12.0602L7.01074 13.17L10.7052 16.8645L18.3241 9.24557L17.2142 8.13574L10.7052 14.6448Z"
-                                    fill="white" />
-                            </svg>
-                        </span>
-                    </div>
-                    <div
-                        class="td max-w-[267.33px] w-full py-5 px-[30px] text-center flex justify-center items-center bg-[#CBA32810] border-r border-[#CBA328]">
-                        <span class="text-[16px] text-[var(--color-text)] font-sf">
-                            <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <ellipse cx="12.667" cy="12.4999" rx="12" ry="12.0001" fill="#34C759" />
-                                <path
-                                    d="M10.7052 14.6448L8.12057 12.0602L7.01074 13.17L10.7052 16.8645L18.3241 9.24557L17.2142 8.13574L10.7052 14.6448Z"
-                                    fill="white" />
-                            </svg>
-                        </span>
-                    </div>
-                </div>
-                <div class="tr flex border-l border-b border-[#CBD6E9]">
-                    <div class="td max-w-[398px] w-full py-5 px-[30px] border-r border-[#CBD6E9]">
-                        <span class="text-[16px] text-[var(--color-heading)] font-sf">{{ __('Dashboard cleaning') }}</span>
-                    </div>
-                    <div
-                        class="td max-w-[267.33px] w-full py-5 px-[30px] border-r border-[#CBD6E9] text-center flex justify-center items-center">
-                        <span class="text-[16px] text-[var(--color-text)] font-sf">
-                            -
-                        </span>
-                    </div>
-                    <div
-                        class="td max-w-[267.33px] w-full py-5 px-[30px] border-r border-[#CBA328] text-center flex justify-center items-center">
-                        <span class="text-[16px] text-[var(--color-text)] font-sf">
-                            <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <ellipse cx="12.667" cy="12.4999" rx="12" ry="12.0001" fill="#34C759" />
-                                <path
-                                    d="M10.7052 14.6448L8.12057 12.0602L7.01074 13.17L10.7052 16.8645L18.3241 9.24557L17.2142 8.13574L10.7052 14.6448Z"
-                                    fill="white" />
-                            </svg>
-                        </span>
-                    </div>
-                    <div
-                        class="td max-w-[267.33px] w-full py-5 px-[30px] text-center flex justify-center items-center bg-[#CBA32810] border-r border-[#CBA328]">
-                        <span class="text-[16px] text-[var(--color-text)] font-sf">
-                            <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <ellipse cx="12.667" cy="12.4999" rx="12" ry="12.0001" fill="#34C759" />
-                                <path
-                                    d="M10.7052 14.6448L8.12057 12.0602L7.01074 13.17L10.7052 16.8645L18.3241 9.24557L17.2142 8.13574L10.7052 14.6448Z"
-                                    fill="white" />
-                            </svg>
-                        </span>
-                    </div>
-                </div>
-                <div class="tr flex border-l border-b border-[#CBD6E9]">
-                    <div class="td max-w-[398px] w-full py-5 px-[30px] border-r border-[#CBD6E9]">
-                        <span class="text-[16px] text-[var(--color-heading)] font-sf">{{ __('Door panel cleaning') }}</span>
-                    </div>
-                    <div
-                        class="td max-w-[267.33px] w-full py-5 px-[30px] border-r border-[#CBD6E9] text-center flex justify-center items-center">
-                        <span class="text-[16px] text-[var(--color-text)] font-sf">
-                            -
-                        </span>
-                    </div>
-                    <div
-                        class="td max-w-[267.33px] w-full py-5 px-[30px] border-r border-[#CBA328] text-center flex justify-center items-center">
-                        <span class="text-[16px] text-[var(--color-text)] font-sf">
-                            <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <ellipse cx="12.667" cy="12.4999" rx="12" ry="12.0001" fill="#34C759" />
-                                <path
-                                    d="M10.7052 14.6448L8.12057 12.0602L7.01074 13.17L10.7052 16.8645L18.3241 9.24557L17.2142 8.13574L10.7052 14.6448Z"
-                                    fill="white" />
-                            </svg>
-                        </span>
-                    </div>
-                    <div
-                        class="td max-w-[267.33px] w-full py-5 px-[30px] text-center flex justify-center items-center bg-[#CBA32810] border-r border-[#CBA328]">
-                        <span class="text-[16px] text-[var(--color-text)] font-sf">
-                            <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <ellipse cx="12.667" cy="12.4999" rx="12" ry="12.0001" fill="#34C759" />
-                                <path
-                                    d="M10.7052 14.6448L8.12057 12.0602L7.01074 13.17L10.7052 16.8645L18.3241 9.24557L17.2142 8.13574L10.7052 14.6448Z"
-                                    fill="white" />
-                            </svg>
-                        </span>
-                    </div>
-                </div>
-                <div class="tr flex border-l border-b border-[#CBD6E9]">
-                    <div class="td max-w-[398px] w-full py-5 px-[30px] border-r border-[#CBD6E9]">
-                        <span class="text-[16px] text-[var(--color-heading)] font-sf">{{ __('Compartment and cubby cleaning') }}</span>
-                    </div>
-                    <div
-                        class="td max-w-[267.33px] w-full py-5 px-[30px] border-r border-[#CBD6E9] text-center flex justify-center items-center">
-                        <span class="text-[16px] text-[var(--color-text)] font-sf">
-                            -
-                        </span>
-                    </div>
-                    <div
-                        class="td max-w-[267.33px] w-full py-5 px-[30px] border-r border-[#CBA328] text-center flex justify-center items-center">
-                        <span class="text-[16px] text-[var(--color-text)] font-sf">
-                            <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <ellipse cx="12.667" cy="12.4999" rx="12" ry="12.0001" fill="#34C759" />
-                                <path
-                                    d="M10.7052 14.6448L8.12057 12.0602L7.01074 13.17L10.7052 16.8645L18.3241 9.24557L17.2142 8.13574L10.7052 14.6448Z"
-                                    fill="white" />
-                            </svg>
-                        </span>
-                    </div>
-                    <div
-                        class="td max-w-[267.33px] w-full py-5 px-[30px] text-center flex justify-center items-center bg-[#CBA32810] border-r border-[#CBA328]">
-                        <span class="text-[16px] text-[var(--color-text)] font-sf">
-                            <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <ellipse cx="12.667" cy="12.4999" rx="12" ry="12.0001" fill="#34C759" />
-                                <path
-                                    d="M10.7052 14.6448L8.12057 12.0602L7.01074 13.17L10.7052 16.8645L18.3241 9.24557L17.2142 8.13574L10.7052 14.6448Z"
-                                    fill="white" />
-                            </svg>
-                        </span>
-                    </div>
-                </div>
-                <div class="tr flex border-l border-b border-[#CBD6E9]">
-                    <div class="td max-w-[398px] w-full py-5 px-[30px] border-r border-[#CBD6E9]">
-                        <span class="text-[16px] text-[var(--color-heading)] font-sf">{{ __('Cleaning and conditioning of plastic parts') }}</span>
-                    </div>
-                    <div
-                        class="td max-w-[267.33px] w-full py-5 px-[30px] border-r border-[#CBD6E9] text-center flex justify-center items-center">
-                        <span class="text-[16px] text-[var(--color-text)] font-sf">
-                            -
-                        </span>
-                    </div>
-                    <div
-                        class="td max-w-[267.33px] w-full py-5 px-[30px] border-r border-[#CBA328] text-center flex justify-center items-center">
-                        <span class="text-[16px] text-[var(--color-text)] font-sf">
-                            <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <ellipse cx="12.667" cy="12.4999" rx="12" ry="12.0001" fill="#34C759" />
-                                <path
-                                    d="M10.7052 14.6448L8.12057 12.0602L7.01074 13.17L10.7052 16.8645L18.3241 9.24557L17.2142 8.13574L10.7052 14.6448Z"
-                                    fill="white" />
-                            </svg>
-                        </span>
-                    </div>
-                    <div
-                        class="td max-w-[267.33px] w-full py-5 px-[30px] text-center flex justify-center items-center bg-[#CBA32810] border-r border-[#CBA328]">
-                        <span class="text-[16px] text-[var(--color-text)] font-sf">
-                            <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <ellipse cx="12.667" cy="12.4999" rx="12" ry="12.0001" fill="#34C759" />
-                                <path
-                                    d="M10.7052 14.6448L8.12057 12.0602L7.01074 13.17L10.7052 16.8645L18.3241 9.24557L17.2142 8.13574L10.7052 14.6448Z"
-                                    fill="white" />
-                            </svg>
-                        </span>
-                    </div>
-                </div>
-                <div class="tr flex border-l border-b border-[#CBD6E9]">
-                    <div class="td max-w-[398px] w-full py-5 px-[30px] border-r border-[#CBD6E9]">
-                        <span class="text-[16px] text-[var(--color-heading)] font-sf">{{ __('Floor mat treatment / Mat cleaning') }}</span>
-                    </div>
-                    <div
-                        class="td max-w-[267.33px] w-full py-5 px-[30px] border-r border-[#CBD6E9] text-center flex justify-center items-center">
-                        <span class="text-[16px] text-[var(--color-text)] font-sf">
-                            -
-                        </span>
-                    </div>
-                    <div
-                        class="td max-w-[267.33px] w-full py-5 px-[30px] border-r border-[#CBA328] text-center flex justify-center items-center">
-                        <span class="text-[16px] text-[var(--color-text)] font-sf">
-                            <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <ellipse cx="12.667" cy="12.4999" rx="12" ry="12.0001" fill="#34C759" />
-                                <path
-                                    d="M10.7052 14.6448L8.12057 12.0602L7.01074 13.17L10.7052 16.8645L18.3241 9.24557L17.2142 8.13574L10.7052 14.6448Z"
-                                    fill="white" />
-                            </svg>
-                        </span>
-                    </div>
-                    <div
-                        class="td max-w-[267.33px] w-full py-5 px-[30px] text-center flex justify-center items-center bg-[#CBA32810] border-r border-[#CBA328]">
-                        <span class="text-[16px] text-[var(--color-text)] font-sf">
-                            <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <ellipse cx="12.667" cy="12.4999" rx="12" ry="12.0001" fill="#34C759" />
-                                <path
-                                    d="M10.7052 14.6448L8.12057 12.0602L7.01074 13.17L10.7052 16.8645L18.3241 9.24557L17.2142 8.13574L10.7052 14.6448Z"
-                                    fill="white" />
-                            </svg>
-                        </span>
-                    </div>
-                </div>
-                <div class="tr flex border-l border-b border-[#CBD6E9]">
-                    <div class="td max-w-[398px] w-full py-5 px-[30px] border-r border-[#CBD6E9]">
-                        <span class="text-[16px] text-[var(--color-heading)] font-sf">{{ __('Air freshener of choice / Scent selection') }}</span>
-                    </div>
-                    <div
-                        class="td max-w-[267.33px] w-full py-5 px-[30px] border-r border-[#CBD6E9] text-center flex justify-center items-center">
-                        <span class="text-[16px] text-[var(--color-text)] font-sf">
-                            -
-                        </span>
-                    </div>
-                    <div
-                        class="td max-w-[267.33px] w-full py-5 px-[30px] border-r border-[#CBA328] text-center flex justify-center items-center">
-                        <span class="text-[16px] text-[var(--color-text)] font-sf">
-                            <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <ellipse cx="12.667" cy="12.4999" rx="12" ry="12.0001" fill="#34C759" />
-                                <path
-                                    d="M10.7052 14.6448L8.12057 12.0602L7.01074 13.17L10.7052 16.8645L18.3241 9.24557L17.2142 8.13574L10.7052 14.6448Z"
-                                    fill="white" />
-                            </svg>
-                        </span>
-                    </div>
-                    <div
-                        class="td max-w-[267.33px] w-full py-5 px-[30px] text-center flex justify-center items-center bg-[#CBA32810] border-r border-[#CBA328]">
-                        <span class="text-[16px] text-[var(--color-text)] font-sf">
-                            <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <ellipse cx="12.667" cy="12.4999" rx="12" ry="12.0001" fill="#34C759" />
-                                <path
-                                    d="M10.7052 14.6448L8.12057 12.0602L7.01074 13.17L10.7052 16.8645L18.3241 9.24557L17.2142 8.13574L10.7052 14.6448Z"
-                                    fill="white" />
-                            </svg>
-                        </span>
-                    </div>
-                </div>
-                <div class="tr flex border-l border-b border-[#CBD6E9]">
-                    <div class="td max-w-[398px] w-full py-5 px-[30px] border-r border-[#CBD6E9]">
-                        <span class="text-[16px] text-[var(--color-heading)] font-sf">{{ __('Leather / fabric upholstery cleaning') }}</span>
-                    </div>
-                    <div
-                        class="td max-w-[267.33px] w-full py-5 px-[30px] border-r border-[#CBD6E9] text-center flex justify-center items-center">
-                        <span class="text-[16px] text-[var(--color-text)] font-sf">
-                            -
-                        </span>
-                    </div>
-                    <div
-                        class="td max-w-[267.33px] w-full py-5 px-[30px] border-r border-[#CBA328] text-center flex justify-center items-center">
-                        <span class="text-[16px] text-[var(--color-text)] font-sf">
-                            -
-                        </span>
-                    </div>
-                    <div
-                        class="td max-w-[267.33px] w-full py-5 px-[30px] text-center flex justify-center items-center bg-[#CBA32810] border-r border-[#CBA328]">
-                        <span class="text-[16px] text-[var(--color-text)] font-sf">
-                            <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <ellipse cx="12.667" cy="12.4999" rx="12" ry="12.0001" fill="#34C759" />
-                                <path
-                                    d="M10.7052 14.6448L8.12057 12.0602L7.01074 13.17L10.7052 16.8645L18.3241 9.24557L17.2142 8.13574L10.7052 14.6448Z"
-                                    fill="white" />
-                            </svg>
-                        </span>
-                    </div>
-                </div>
-                <div class="tr flex border-l border-b border-[#CBD6E9]">
-                    <div class="td max-w-[398px] w-full py-5 px-[30px] border-r border-[#CBD6E9]">
-                        <span class="text-[16px] text-[var(--color-heading)] font-sf">{{ __('Steam cleaning') }}</span>
-                    </div>
-                    <div
-                        class="td max-w-[267.33px] w-full py-5 px-[30px] border-r border-[#CBD6E9] text-center flex justify-center items-center">
-                        <span class="text-[16px] text-[var(--color-text)] font-sf">
-                            -
-                        </span>
-                    </div>
-                    <div
-                        class="td max-w-[267.33px] w-full py-5 px-[30px] border-r border-[#CBA328] text-center flex justify-center items-center">
-                        <span class="text-[16px] text-[var(--color-text)] font-sf">
-                            -
-                        </span>
-                    </div>
-                    <div
-                        class="td max-w-[267.33px] w-full py-5 px-[30px] text-center flex justify-center items-center bg-[#CBA32810] border-r border-[#CBA328]">
-                        <span class="text-[16px] text-[var(--color-text)] font-sf">
-                            <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <ellipse cx="12.667" cy="12.4999" rx="12" ry="12.0001" fill="#34C759" />
-                                <path
-                                    d="M10.7052 14.6448L8.12057 12.0602L7.01074 13.17L10.7052 16.8645L18.3241 9.24557L17.2142 8.13574L10.7052 14.6448Z"
-                                    fill="white" />
-                            </svg>
-                        </span>
-                    </div>
-                </div>
-                    
-                    
+
+
                     <div class="tr flex border-l border-b border-[#CBD6E9] bg-[#F6F9FF]">
                         <div class="td max-w-[398px] w-full py-2 px-[30px] border-r border-[#CBD6E9]">
                             <span
@@ -687,7 +703,8 @@
                     </div>
                     <div class="tr flex border-l border-b border-[#CBD6E9]">
                         <div class="td max-w-[398px] w-full py-5 px-[30px] border-r border-[#CBD6E9]">
-                            <span class="text-[16px] text-[var(--color-heading)] font-sf">{{ __('Wheel detailing') }}</span>
+                            <span
+                                class="text-[16px] text-[var(--color-heading)] font-sf">{{ __('Wheel detailing') }}</span>
                         </div>
                         <div
                             class="td max-w-[267.33px] w-full py-5 px-[30px] border-r border-[#CBD6E9] text-center flex justify-center items-center">
@@ -769,7 +786,8 @@
                     </div>
                     <div class="tr flex border-l border-b border-[#CBD6E9]">
                         <div class="td max-w-[398px] w-full py-5 px-[30px] border-r border-[#CBD6E9]">
-                            <span class="text-[16px] text-[var(--color-heading)] font-sf">{{ __('Details treating') }}</span>
+                            <span
+                                class="text-[16px] text-[var(--color-heading)] font-sf">{{ __('Details treating') }}</span>
                         </div>
                         <div
                             class="td max-w-[267.33px] w-full py-5 px-[30px] border-r border-[#CBD6E9] text-center flex justify-center items-center">
@@ -798,7 +816,8 @@
                     </div>
                     <div class="tr flex border-l border-b border-[#CBD6E9]">
                         <div class="td max-w-[398px] w-full py-5 px-[30px] border-r border-[#CBD6E9]">
-                            <span class="text-[16px] text-[var(--color-heading)] font-sf">{{ __('Tire dressing') }}</span>
+                            <span
+                                class="text-[16px] text-[var(--color-heading)] font-sf">{{ __('Tire dressing') }}</span>
                         </div>
                         <div
                             class="td max-w-[267.33px] w-full py-5 px-[30px] border-r border-[#CBD6E9] text-center flex justify-center items-center">
@@ -810,41 +829,6 @@
                                         d="M10.7052 14.6448L8.12057 12.0602L7.01074 13.17L10.7052 16.8645L18.3241 9.24557L17.2142 8.13574L10.7052 14.6448Z"
                                         fill="white" />
                                 </svg>
-                            </span>
-                        </div>
-                        <div
-                            class="td max-w-[267.33px] w-full py-5 px-[30px] border-r border-[#CBA328] text-center flex justify-center items-center">
-                            <span class="text-[16px] text-[var(--color-text)] font-sf">
-                                <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <ellipse cx="12.667" cy="12.4999" rx="12" ry="12.0001" fill="#34C759" />
-                                    <path
-                                        d="M10.7052 14.6448L8.12057 12.0602L7.01074 13.17L10.7052 16.8645L18.3241 9.24557L17.2142 8.13574L10.7052 14.6448Z"
-                                        fill="white" />
-                                </svg>
-                            </span>
-                        </div>
-                        <div
-                            class="td max-w-[267.33px] w-full py-5 px-[30px] text-center flex justify-center items-center bg-[#CBA32810] border-r border-[#CBA328]">
-                            <span class="text-[16px] text-[var(--color-text)] font-sf">
-                                <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <ellipse cx="12.667" cy="12.4999" rx="12" ry="12.0001" fill="#34C759" />
-                                    <path
-                                        d="M10.7052 14.6448L8.12057 12.0602L7.01074 13.17L10.7052 16.8645L18.3241 9.24557L17.2142 8.13574L10.7052 14.6448Z"
-                                        fill="white" />
-                                </svg>
-                            </span>
-                        </div>
-                    </div>
-                    <div class="tr flex border-l border-b border-[#CBD6E9]">
-                        <div class="td max-w-[398px] w-full py-5 px-[30px] border-r border-[#CBD6E9]">
-                            <span class="text-[16px] text-[var(--color-heading)] font-sf">{{ __('Details cleaning') }}</span>
-                        </div>
-                        <div
-                            class="td max-w-[267.33px] w-full py-5 px-[30px] border-r border-[#CBD6E9] text-center flex justify-center items-center">
-                            <span class="text-[16px] text-[var(--color-text)] font-sf">
-                                -
                             </span>
                         </div>
                         <div
@@ -874,7 +858,8 @@
                     </div>
                     <div class="tr flex border-l border-b border-[#CBD6E9]">
                         <div class="td max-w-[398px] w-full py-5 px-[30px] border-r border-[#CBD6E9]">
-                            <span class="text-[16px] text-[var(--color-heading)] font-sf">{{ __('Paint sealant') }}</span>
+                            <span
+                                class="text-[16px] text-[var(--color-heading)] font-sf">{{ __('Details cleaning') }}</span>
                         </div>
                         <div
                             class="td max-w-[267.33px] w-full py-5 px-[30px] border-r border-[#CBD6E9] text-center flex justify-center items-center">
@@ -909,7 +894,44 @@
                     </div>
                     <div class="tr flex border-l border-b border-[#CBD6E9]">
                         <div class="td max-w-[398px] w-full py-5 px-[30px] border-r border-[#CBD6E9]">
-                            <span class="text-[16px] text-[var(--color-heading)] font-sf">{{ __('Engine bay cleaning') }}</span>
+                            <span
+                                class="text-[16px] text-[var(--color-heading)] font-sf">{{ __('Paint sealant') }}</span>
+                        </div>
+                        <div
+                            class="td max-w-[267.33px] w-full py-5 px-[30px] border-r border-[#CBD6E9] text-center flex justify-center items-center">
+                            <span class="text-[16px] text-[var(--color-text)] font-sf">
+                                -
+                            </span>
+                        </div>
+                        <div
+                            class="td max-w-[267.33px] w-full py-5 px-[30px] border-r border-[#CBA328] text-center flex justify-center items-center">
+                            <span class="text-[16px] text-[var(--color-text)] font-sf">
+                                <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <ellipse cx="12.667" cy="12.4999" rx="12" ry="12.0001" fill="#34C759" />
+                                    <path
+                                        d="M10.7052 14.6448L8.12057 12.0602L7.01074 13.17L10.7052 16.8645L18.3241 9.24557L17.2142 8.13574L10.7052 14.6448Z"
+                                        fill="white" />
+                                </svg>
+                            </span>
+                        </div>
+                        <div
+                            class="td max-w-[267.33px] w-full py-5 px-[30px] text-center flex justify-center items-center bg-[#CBA32810] border-r border-[#CBA328]">
+                            <span class="text-[16px] text-[var(--color-text)] font-sf">
+                                <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <ellipse cx="12.667" cy="12.4999" rx="12" ry="12.0001" fill="#34C759" />
+                                    <path
+                                        d="M10.7052 14.6448L8.12057 12.0602L7.01074 13.17L10.7052 16.8645L18.3241 9.24557L17.2142 8.13574L10.7052 14.6448Z"
+                                        fill="white" />
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="tr flex border-l border-b border-[#CBD6E9]">
+                        <div class="td max-w-[398px] w-full py-5 px-[30px] border-r border-[#CBD6E9]">
+                            <span
+                                class="text-[16px] text-[var(--color-heading)] font-sf">{{ __('Engine bay cleaning') }}</span>
                         </div>
                         <div
                             class="td max-w-[267.33px] w-full py-5 px-[30px] border-r border-[#CBD6E9] text-center flex justify-center items-center">
@@ -938,7 +960,8 @@
                     </div>
                     <div class="tr flex border-l border-b border-[#CBD6E9]">
                         <div class="td max-w-[398px] w-full py-5 px-[30px] border-r border-[#CBD6E9]">
-                            <span class="text-[16px] text-[var(--color-heading)] font-sf">{{ __('Undercarriage cleaning') }}</span>
+                            <span
+                                class="text-[16px] text-[var(--color-heading)] font-sf">{{ __('Undercarriage cleaning') }}</span>
                         </div>
                         <div
                             class="td max-w-[267.33px] w-full py-5 px-[30px] border-r border-[#CBD6E9] text-center flex justify-center items-center">
@@ -967,7 +990,8 @@
                     </div>
                     <div class="tr flex border-l border-b border-[#CBD6E9]">
                         <div class="td max-w-[398px] w-full py-5 px-[30px] border-r border-[#CBD6E9]">
-                            <span class="text-[16px] text-[var(--color-heading)] font-sf">{{ __('Hybrid Ceramic') }}</span>
+                            <span
+                                class="text-[16px] text-[var(--color-heading)] font-sf">{{ __('Hybrid Ceramic') }}</span>
                         </div>
                         <div
                             class="td max-w-[267.33px] w-full py-5 px-[30px] border-r border-[#CBD6E9] text-center flex justify-center items-center">
@@ -996,7 +1020,8 @@
                     </div>
                     <div class="tr flex border-l border-b border-[#CBD6E9]">
                         <div class="td max-w-[398px] w-full py-5 px-[30px] border-r border-[#CBD6E9]">
-                            <span class="text-[16px] text-[var(--color-heading)] font-sf">{{ __('6-month coating') }}</span>
+                            <span
+                                class="text-[16px] text-[var(--color-heading)] font-sf">{{ __('6-month coating') }}</span>
                         </div>
                         <div
                             class="td max-w-[267.33px] w-full py-5 px-[30px] border-r border-[#CBD6E9] text-center flex justify-center items-center">
@@ -1042,7 +1067,8 @@
                     </div>
                     <div class="tr flex border-l border-b border-[#CBD6E9]">
                         <div class="td max-w-[398px] w-full py-5 px-[30px] border-r border-[#CBD6E9]">
-                            <span class="text-[16px] text-[var(--color-heading)] font-sf">{{ __('Perfume of choice') }}</span>
+                            <span
+                                class="text-[16px] text-[var(--color-heading)] font-sf">{{ __('Perfume of choice') }}</span>
                         </div>
                         <div
                             class="td max-w-[267.33px] w-full py-5 px-[30px] border-r border-[#CBD6E9] text-center flex justify-center items-center">
