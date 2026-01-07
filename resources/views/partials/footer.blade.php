@@ -25,13 +25,13 @@
                 </div>
 
             </div>
-            <button class="btn-outline-footer w-full md:w-auto" onclick="openHeroModal()">
+            <a href="{{ route('services-subscriptions', ['locale' => app()->getLocale()]) }}" class="btn-outline-footer w-full md:w-auto">
                 <span>{{ __('Book Now') }}</span>
                 <svg width="25" height="11" viewBox="0 0 25 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M24 5.5H1M24 5.5L19.5 1M24 5.5L19.5 10" stroke="var(--color-brand)" stroke-width="1.5"
                         stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
-            </button>
+            </a>
         </div>
     </div>
     <div class="my-10">
@@ -268,11 +268,7 @@
     </div>
     <div class="absolute left-0 bottom-0 right-0 w-full">
         <p class="text-base font-normal tracking-[0.03px] text-white opacity-80 text-center mb-2">
-                    @if($currentLocale == 'nl')
-                        Met passie ❤️ en talloze kopjes koffie ☕ gemaakt door
-                    @else
-                        Crafted with passion ❤️ and countless cups of coffee ☕ by
-                    @endif
+                     
                     <a href="https://www.giopio.com/" target="_blank" class="text-[#FF8D28]">Giopio</a>
                 </p>
         <img src="{{ asset('assets/img/footer-shape.png') }}" alt="shape" class="w-full">

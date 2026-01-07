@@ -41,12 +41,12 @@
                         <p class="text-white text-lg md:text-xl text-center">{{ $heroData->subtitle }}</p>
                     @endif
                     <div class="flex flex-wrap justify-center gap-3">
-                        <button class="btn-brand" onclick="openHeroModal()"><span>{{ __('Book Now') }}</span>
+                        <a href="{{ route('services-subscriptions', ['locale' => app()->getLocale()]) }}" class="btn-brand"><span>{{ __('Book Now') }}</span>
                             <svg width="25" height="11" viewBox="0 0 25 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M24 5.5H1M24 5.5L19.5 1M24 5.5L19.5 10" stroke="white" stroke-width="1.5"
                                     stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
-                        </button>
+                        </a>
                         <a href="{{ route('services-subscriptions', ['locale' => app()->getLocale()]) }}"
                             class="btn-outline"><span>{{ __('Our Services') }}</span>
                             <svg width="25" height="11" viewBox="0 0 25 11" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -79,15 +79,14 @@
                                         fill="white" />
                                 </svg>
                             </a> --}}
-                            <button
-                                class="w-10 h-10 flex items-center justify-center bg-[var(--color-brand)] rounded-full cursor-pointer [box-shadow:0px_8px_13.78px_0px_#10182826] "
-                                onclick="openHeroModal()">
+                            <a href="{{ route('services-subscriptions', ['locale' => app()->getLocale()]) }}"
+                                class="w-10 h-10 flex items-center justify-center bg-[var(--color-brand)] rounded-full cursor-pointer [box-shadow:0px_8px_13.78px_0px_#10182826] ">
                                 <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path
                                         d="M17.2222 17.2222H4.77778V7.44445H17.2222M14.5556 1.22223V3.00001H7.44444V1.22223H5.66667V3.00001H4.77778C3.79111 3.00001 3 3.79112 3 4.77778V17.2222C3 17.6937 3.1873 18.1459 3.5207 18.4793C3.8541 18.8127 4.30628 19 4.77778 19H17.2222C17.6937 19 18.1459 18.8127 18.4793 18.4793C18.8127 18.1459 19 17.6937 19 17.2222V4.77778C19 4.30629 18.8127 3.8541 18.4793 3.52071C18.1459 3.18731 17.6937 3.00001 17.2222 3.00001H16.3333V1.22223M15.4444 11H11V15.4445H15.4444V11Z"
                                         fill="white" />
                                 </svg>
-                            </button>
+                            </a>
                         </nav>
                     </div>
                 @endif
@@ -142,9 +141,8 @@
                         </svg>
 
                     </a> --}}
-                    <button
-                        class="w-10 h-10 flex items-center justify-center bg-[var(--color-brand)] rounded-full [box-shadow:0px_8px_13.78px_0px_#10182826] cursor-pointer"
-                        onclick="openHeroModal()">
+                    <a href="{{ route('services-subscriptions', ['locale' => app()->getLocale()]) }}"
+                        class="w-10 h-10 flex items-center justify-center bg-[var(--color-brand)] rounded-full [box-shadow:0px_8px_13.78px_0px_#10182826] cursor-pointer">
 
                         <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -152,7 +150,7 @@
                                 fill="white" />
                         </svg>
 
-                    </button>
+                    </a>
                 </nav>
             </div>
         @endif

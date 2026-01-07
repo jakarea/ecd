@@ -20,7 +20,7 @@ class HeroSectionSeeder extends Seeder
                 'subtitle' => null,
                 'media_type' => 'video',
                 'background_image' => 'assets/img/hero-bg1.png',
-                'background_video' => 'https://www.youtube.com/embed/4IiPxPXpSPk?autoplay=1&mute=1&controls=0&showinfo=0&rel=0&loop=1&playlist=4IiPxPXpSPk&modestbranding=1',
+                'background_video' => 'https://www.youtube.com/embed/VzyFqwlDWDg?autoplay=1&mute=1&controls=0&showinfo=0&rel=0&loop=1&playlist=VzyFqwlDWDg&modestbranding=1',
                 'background_color' => 'bg-transparent',
                 'show_social_icons' => true,
                 'is_active' => true,

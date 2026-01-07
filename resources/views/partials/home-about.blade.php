@@ -122,9 +122,6 @@
 
 
             </div>
-            <!-- Navigation Buttons -->
-            <div class="swiper-button-next swiper-btn hidden md:flex"></div>
-            <div class="swiper-button-prev swiper-btn hidden md:flex"></div>
         </div>
 
     </div>
