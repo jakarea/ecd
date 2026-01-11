@@ -99,6 +99,8 @@
     @vite('resources/css/app.css')
     @stack('styles') {{-- For page-specific styles --}}
 
+    <script src="https://elfsightcdn.com/platform.js" async></script>
+
     {{-- Tracking Codes (Head) --}}
     @include('partials.tracking-codes')
 </head>
@@ -109,6 +111,10 @@
 
     {{-- Tracking Codes (Body - noscript) --}}
     @include('partials.tracking-codes-body')
+
+    {{-- whatsapp --}} 
+        <!-- Elfsight WhatsApp Chat | Untitled WhatsApp Chat -->
+        <div class="elfsight-app-8eca0237-ff7b-4c06-8cf0-1644c25d8a7e" data-elfsight-app-lazy></div>
 
     @include('partials.header')
     {{-- Main Content --}}

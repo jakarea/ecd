@@ -268,7 +268,7 @@
     </div>
     <div class="absolute left-0 bottom-0 right-0 w-full">
         <p class="text-base font-normal tracking-[0.03px] text-white opacity-80 text-center mb-2">
-                     
+                     Developed by
                     <a href="https://www.giopio.com/" target="_blank" class="text-[#FF8D28]">Giopio</a>
                 </p>
         <img src="{{ asset('assets/img/footer-shape.png') }}" alt="shape" class="w-full">

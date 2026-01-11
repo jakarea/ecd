@@ -88,19 +88,17 @@
                     "top-1/2",
                     "-translate-y-1/2",
                     "left-6",
-                    "md:right-6",
-                    "md:left-auto"
+                    "md:left-6"
                 );
-                el.classList.add("bottom-6", "right-6");
+                el.classList.add("bottom-6", "left-6");
             } else {
                 // Back to top
-                el.classList.remove("bottom-6", "right-6");
+                el.classList.remove("bottom-6", "left-6");
                 el.classList.add(
                     "top-1/2",
                     "-translate-y-1/2",
                     "left-6",
-                    "md:right-6",
-                    "md:left-auto"
+                    "md:left-6"
                 );
             }
         }

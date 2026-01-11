@@ -219,9 +219,11 @@
         ],
     ];
 
-@endphp
+@endphp 
 
+{{-- geadient bg color --}} 
 
+<div class="bg-gradient-to-t from-gray-900 to-gray-600/05 h-20"></div>
 
 <section class="bg-gray-900 py-20 sm:py-32 relative" id="pricing">
     <div class="container">
@@ -243,7 +245,7 @@
                     </h3>
                 </div>
                 <h2 class="text-[34px] font-extrabold leading-[1.2] tracking-[0.02px] text-white mb-4">
-                    {{ __('Save up to 20% on your car wash.') }}
+                    {{ __('Save up to 25% on your car wash.') }}
                 </h2>
                 <p class="text-[16px] text-white leading-[1.5]">
                     {{ __('We believe premium car care should come with clear and honest pricing.') }} <br />
@@ -294,8 +296,8 @@
                         d="M45.1053 33.7188C54.5885 29.5922 62.0254 21.262 68.2212 7.83068C68.3616 7.44942 68.2004 7.09906 67.9278 6.99571C67.5435 6.85015 67.1893 7.01185 67.0851 7.28623L67.0735 7.31286L66.506 8.52153C60.5994 20.8634 53.5811 28.6646 44.5699 32.5794C35.2815 36.6146 23.9536 36.4861 9.70248 33.0867C9.31185 33.0232 8.9821 33.2552 8.90418 33.5211C8.84906 33.9113 9.08774 34.2385 9.35566 34.3074L9.35517 34.3087C23.9903 37.8035 35.6116 37.85 45.1053 33.7188Z"
                         fill="#6ADBD9" stroke="#6ADBD9" stroke-width="0.8125" />
                 </svg>
-                <div class="text-[18px] text-[var(--color-brand)] tracking-[0.8px] font-cursive">{{ __('Save') }}
-                    <span class="text-[22px] text-white">{{ __('20%') }}</span> {{ __('on') }} <br />
+                <div class="text-[18px] text-[var(--color-brand)] tracking-[0.8px] font-cursive">{{ __('Save up to') }}
+                    <span class="text-[22px] text-white">{{ __('25%') }}</span> {{ __('on') }} <br />
                     {{ __('Monthly Subscriptions') }}
                 </div>
             </div>
