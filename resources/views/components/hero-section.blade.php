@@ -56,7 +56,7 @@
                         </a>
                     </div>
                 </div>
-                @if($heroData->show_social_icons)
+                {{-- @if($heroData->show_social_icons)
                     <div id="socialIcons"
                         class="fixed top-1/2 -translate-y-1/2 left-6 md:right-6 md:left-auto z-[100] transition-all duration-500">
                         <nav class="flex flex-col gap-2">
@@ -71,14 +71,14 @@
                                     </svg>
                                 </a>
                             @endif
-                            {{-- <a href="#"
+                            <a href="#"
                                 class="w-10 h-10 flex items-center justify-center bg-[var(--color-brand)] rounded-full">
                                 <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path
                                         d="M6.21778 9.92444C7.49778 12.44 9.56 14.5022 12.0756 15.7822L14.0311 13.8267C14.28 13.5778 14.6267 13.5067 14.9378 13.6044C15.9333 13.9333 17 14.1111 18.1111 14.1111C18.3469 14.1111 18.573 14.2048 18.7397 14.3715C18.9064 14.5382 19 14.7643 19 15V18.1111C19 18.3469 18.9064 18.573 18.7397 18.7397C18.573 18.9064 18.3469 19 18.1111 19C14.1034 19 10.2598 17.4079 7.42594 14.5741C4.59206 11.7402 3 7.89661 3 3.88889C3 3.65314 3.09365 3.42705 3.26035 3.26035C3.42705 3.09365 3.65314 3 3.88889 3H7C7.23575 3 7.46184 3.09365 7.62854 3.26035C7.79524 3.42705 7.88889 3.65314 7.88889 3.88889C7.88889 5 8.06667 6.06667 8.39556 7.06222C8.49333 7.37333 8.42222 7.72 8.17333 7.96889L6.21778 9.92444Z"
                                         fill="white" />
                                 </svg>
-                            </a> --}}
+                            </a>
                             <a href="{{ route('services-subscriptions', ['locale' => app()->getLocale()]) }}"
                                 class="w-10 h-10 flex items-center justify-center bg-[var(--color-brand)] rounded-full cursor-pointer [box-shadow:0px_8px_13.78px_0px_#10182826] ">
                                 <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -89,7 +89,7 @@
                             </a>
                         </nav>
                     </div>
-                @endif
+                @endif --}}
             </div>
         </div>
         <div class="w-full absolute -bottom-[5px] top-0 left-0 right-0 z-[-1]">

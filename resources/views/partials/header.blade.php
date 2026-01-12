@@ -1,5 +1,5 @@
 {{-- Header --}}
-<header class="pb-4 pt-6 md:pt-10 absolute top-0 z-[999] w-full">
+<header id="main-header" class="py-1 absolute top-0 z-[999] w-full transition-all duration-300">
     <div class="container mx-auto">
         <div class="flex items-center justify-between gap-4">
             <div>
@@ -87,34 +87,49 @@
 <script>
     document.addEventListener("DOMContentLoaded", function () {
         const el = document.getElementById("socialIcons");
+        const header = document.getElementById("main-header");
 
         function handleScroll() {
             const scrollTop = window.scrollY || document.documentElement.scrollTop;
 
-            if (scrollTop > 100) {
-                // User started scrolling
-                el.classList.remove(
-                    "top-1/2",
-                    "-translate-y-1/2",
-                    "left-6",
-                    "md:right-6",
-                    "md:left-auto"
-                );
-                el.classList.add("bottom-6", "left-6",
-                    "md:right-6",
-                    "md:left-auto");
-            } else {
-                // Back to top
-                el.classList.remove("bottom-6", "left-6",
-                    "md:right-6",
-                    "md:left-auto");
-                el.classList.add(
-                    "top-1/2",
-                    "-translate-y-1/2",
-                    "left-6",
-                    "md:right-6",
-                    "md:left-auto"
-                );
+            // Handle social icons if element exists
+            // if (el) {
+            //     if (scrollTop > 100) {
+            //         // User started scrolling
+            //         el.classList.remove(
+            //             "top-1/2",
+            //             "-translate-y-1/2",
+            //             "left-6",
+            //             "md:right-6",
+            //             "md:left-auto"
+            //         );
+            //         el.classList.add("bottom-6", "left-6",
+            //             "md:right-6",
+            //             "md:left-auto");
+            //     } else {
+            //         // Back to top
+            //         el.classList.remove("bottom-6", "left-6",
+            //             "md:right-6",
+            //             "md:left-auto");
+            //         el.classList.add(
+            //             "top-1/2",
+            //             "-translate-y-1/2",
+            //             "left-6",
+            //             "md:right-6",
+            //             "md:left-auto"
+            //         );
+            //     }
+            // }
+
+            // Header fixed behavior at 10px scroll
+            if (header) {
+                if (scrollTop > 5) {
+                    header.classList.remove("absolute","py-3");
+                    header.classList.add("fixed", "bg-gray-900/10", "shadow-md","py-1");
+                } else {
+                    header.classList.remove("fixed", "bg-gray-900/10", "shadow-md","py-1");
+                    header.classList.add("absolute","py-3");
+                }
             }
         }
 

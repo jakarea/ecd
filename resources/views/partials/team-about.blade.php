@@ -1,6 +1,6 @@
 <section class="py-8 md:py-[50px]">
     <div class="container">
-        <x-section-heading pretitle="{{ __('Our Teams') }}" title="{{ __('Meet Our Dedicated Team') }}">
+        {{-- <x-section-heading pretitle="{{ __('Our Teams') }}" title="{{ __('Meet Our Dedicated Team') }}">
             <x-slot name="icon">
                 <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g clip-path="url(#clip0_310_8500)">
@@ -15,8 +15,8 @@
                     </defs>
                 </svg>
             </x-slot>
-        </x-section-heading>
-        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 mt-6 md:mt-[70px]">
+        </x-section-heading> --}}
+        {{-- <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 mt-6 md:mt-[70px]">
             @forelse ($teamMembers as $member)
                 <div class="relative rounded-[20px] group transition-all duration-300">
                     <img src="{{ Storage::url($member->image) }}" alt="{{ $member->name }}"
@@ -37,6 +37,10 @@
                     <p class="text-gray-500">{{ __('No team members available at the moment.') }}</p>
                 </div>
             @endforelse
+        </div> --}}
+        <div class="w-full">
+            <iframe class="w-full h-48 lg:h-120 rounded-xl" src="https://www.youtube.com/embed/VzyFqwlDWDg?si=i8QVjx-PqqYL6kiw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
+
     </div>
 </section>
