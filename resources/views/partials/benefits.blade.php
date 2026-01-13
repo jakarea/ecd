@@ -1,19 +1,23 @@
 @php
     $benefits = [
         [
-            'title' => 'Fragrance',
-            'image' => 'assets/img/fragrance.png',
+            'id' => 1,
+            'title' => 'Handel dressing',
+            'image' => 'assets/img/coating.png',
         ],
         [
-            'title' => 'Gas Cleaner',
-            'image' => 'assets/img/cleaner.png',
+            'id' => 2,
+            'title' => 'Coating',
+            'image' => 'assets/img/car-glow.png',
         ],
         [
-            'title' => 'Microfiber Towels',
+            'id' => 3,
+            'title' => 'Microvezel doek',
             'image' => 'assets/img/towel.png',
         ],
         [
-            'title' => 'Compressed Air',
+            'id' => 4,
+            'title' => 'Banden dressing',
             'image' => 'assets/img/air.png',
         ],
     ];
@@ -46,7 +50,7 @@
             @foreach ($benefits as $benefit)
                 <div
                     class="h-[166px] bg-white rounded-[20px] p-[30px] flex flex-col justify-center items-center gap-8 text-center">
-                    <img src="{{ asset($benefit['image']) }}" alt="{{ $benefit['title'] }}">
+                    <img src="{{ asset($benefit['image']) }}" alt="{{ $benefit['title'] }}" class="max-w-22 {{ $benefit['id'] === 1 ? '!max-w-16' : '' }}">
                     <h3 class="text-[20px] font-medium text-[var(--color-heading)] font-sf">{{  __($benefit['title']) }}
                     </h3>
                 </div>
