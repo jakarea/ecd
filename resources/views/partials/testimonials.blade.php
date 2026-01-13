@@ -44,7 +44,7 @@
                 </li>
             </ul>
             <h6 class="text-gray-900 font-semibold text-lg lg:text-xl">5/5</h6>
-            <p class="text-gray-700 font-semibold text-sm lg:t-ext-base">(50+ Review)</p>
+            <p class="text-gray-700 font-semibold text-sm lg:t-ext-base">(5+ Review)</p>
         </div>
 
 
