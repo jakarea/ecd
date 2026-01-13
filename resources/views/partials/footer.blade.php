@@ -1,6 +1,9 @@
 {{-- Footer --}}
-<footer class="bg-[var(--color-black)] py-20 relative">
-    <div class="container mx-auto">
+<footer class="bg-[var(--color-black)] py-20 relative overflow-hidden">
+    <!-- Floating Dots Animation -->
+    <div class="footer-dots absolute inset-0 pointer-events-none" id="footerDots"></div>
+
+    <div class="container mx-auto relative z-10">
         <div class="footer-cta">
             <div class="flex gap-4">
 
@@ -271,6 +274,94 @@
                      Developed by
                     <a href="https://www.giopio.com/" target="_blank" class="text-[#FF8D28]">Giopio</a>
                 </p>
-        <img src="{{ asset('assets/img/footer-shape.png') }}" alt="shape" class="w-full">
+        {{-- <img src="{{ asset('assets/img/footer-shape.png') }}" alt="shape" class="w-full"> --}}
     </div>
+
+    <!-- Floating Dots Animation Styles -->
+    <style>
+        .footer-dot {
+            position: absolute;
+            width: 3px;
+            height: 3px;
+            background-color: rgba(58, 203, 198, 0.4);
+            border-radius: 50%;
+            animation: floatUp linear infinite;
+        }
+
+        @keyframes floatUp {
+            0% {
+                transform: translateY(100vh) translateX(0);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-10vh) translateX(20px);
+                opacity: 0;
+            }
+        }
+
+        .footer-dot:nth-child(odd) {
+            animation-direction: reverse;
+            animation-name: floatDown;
+        }
+
+        @keyframes floatDown {
+            0% {
+                transform: translateY(-10vh) translateX(0);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(100vh) translateX(-20px);
+                opacity: 0;
+            }
+        }
+    </style>
+
+    <!-- Floating Dots Animation Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const footerDots = document.getElementById('footerDots');
+            const numberOfDots = 400;
+
+            for (let i = 0; i < numberOfDots; i++) {
+                createDot();
+            }
+
+            function createDot() {
+                const dot = document.createElement('div');
+                dot.className = 'footer-dot';
+
+                // Random position
+                dot.style.left = Math.random() * 100 + '%';
+
+                // Random size variation (2-3px)
+                const size = 4 + Math.random() * 1;
+                dot.style.width = size + 'px';
+                dot.style.height = size + 'px';
+
+                // Random animation duration
+                const duration = 10 + Math.random() * 20;
+                dot.style.animationDuration = duration + 's';
+
+                // Random delay
+                dot.style.animationDelay = Math.random() * 10 + 's';
+
+                // Random opacity
+                dot.style.opacity = 0.2 + Math.random() * 0.6;
+
+                footerDots.appendChild(dot);
+            }
+        });
+    </script>
 </footer>

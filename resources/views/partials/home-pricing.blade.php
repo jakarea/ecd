@@ -306,7 +306,7 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
 
                 @foreach ($plans as $plan)
-                    <div class="pricing-card flex flex-col justify-between p-[30px] rounded-[20px] text-white relative"
+                    <div class="pricing-card flex flex-col justify-between p-[30px] rounded-[20px] text-white relative {{ $plan['isMostChosen'] ? 'border-2 border-[#FF8D28]' : ''}}"
                         style="background-color: {{ $plan['singleColor'] }}"
                         data-plan='@json($plan['packages'])'
                         data-single-color="{{ $plan['singleColor'] }}"
