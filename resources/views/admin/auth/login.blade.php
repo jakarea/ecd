@@ -49,11 +49,26 @@
                 <label for="remember" class="text-sm sm:text-base text-gray-700 cursor-pointer select-none">Remember me</label>
             </div>
 
-            <button type="submit"
+            <button type="submit" id="loginButton"
                 class="w-full cursor-pointer py-3 sm:py-4 bg-[var(--color-brand)] text-white font-semibold text-base sm:text-lg rounded-lg transition-all duration-200 hover:opacity-90 hover:shadow-lg active:scale-[0.98]">
                 Sign In
             </button>
         </form>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const form = document.querySelector('form');
+                const loginButton = document.getElementById('loginButton');
+
+                form.addEventListener('submit', function(e) {
+                    // Disable the button to prevent double submission
+                    loginButton.disabled = true;
+                    loginButton.textContent = 'Signing in...';
+                    loginButton.classList.add('opacity-75', 'cursor-not-allowed');
+                    loginButton.classList.remove('hover:opacity-90', 'hover:shadow-lg', 'active:scale-[0.98]');
+                });
+            });
+        </script>
 
         {{-- Back Link --}}
         <div class="text-center mt-6 sm:mt-8">
