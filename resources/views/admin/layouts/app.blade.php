@@ -22,7 +22,7 @@
     <div class="flex h-screen overflow-hidden page-load">
         {{-- Sidebar --}}
         <aside id="sidebar"
-            class="fixed inset-y-0 left-0 z-50 w-64 bg-white border-r border-gray-200 transform -translate-x-full lg:translate-x-0 lg:static transition-transform duration-300 ease-in-out">
+            class="fixed inset-y-0 left-0 z-50 w-64 bg-[#e6e1e1] border-r border-gray-200 transform -translate-x-full lg:translate-x-0 lg:static transition-transform duration-300 ease-in-out">
             {{-- Sidebar Header --}}
             <div class="flex items-center justify-between h-16 px-6 border-b border-gray-200">
                 <div class="flex items-center gap-3">
