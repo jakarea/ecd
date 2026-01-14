@@ -171,7 +171,7 @@
                         <p class="text-[18px] text-white leading-[1.3] mt-4 mb-6.5 font-sf">Book your wash and detailing in
                             minutes.
                             We'll come to you and leave your ride spotless inside and out.</p>
-                        <a href="{{ route('services-subscriptions', ['locale' => app()->getLocale()]) }}" class="btn-brand"><span>Book Now</span>
+                        <a href="{{ route('book-now', ['locale' => app()->getLocale()]) }}" class="btn-brand"><span>{{ __('Book Now') }}</span>
                             <svg width="25" height="11" viewBox="0 0 25 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M24 5.5H1M24 5.5L19.5 1M24 5.5L19.5 10" stroke="white" stroke-width="1.5"
                                     stroke-linecap="round" stroke-linejoin="round" />

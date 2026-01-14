@@ -97,7 +97,7 @@
                 </div>
             @endforeach
         </div>
-        <div class="flex flex-wrap gap-2 justify-center mt-2">
+        <div class="flex-wrap gap-2 justify-center mt-2 hidden lg:flex">
             @foreach ($images as $image)
                 <div class="w-[171px] h-[119px]">
                     <img src="{{ asset($image['image']) }}" alt="{{ $image['id'] }}"

@@ -72,6 +72,11 @@ Route::group([
         return view('contact', compact('seoMeta'));
     })->name('contact');
 
+    Route::get('/book-now', function($locale) {
+        $seoMeta = \App\Models\SeoMeta::active()->byUrl('/' . $locale . '/book-now')->first();
+        return view('booking', compact('seoMeta'));
+    })->name('book-now');
+
     Route::get('/blog', function($locale) {
         $seoMeta = \App\Models\SeoMeta::active()->byUrl('/' . $locale . '/blog')->first();
         return view('blog', compact('seoMeta'));

@@ -82,7 +82,7 @@
 
         <div
             class="flex flex-col md:flex-row justify-between gap-4 border border-[#D1D7DF] rounded-[20px] p-6 md:p-8 mt-6">
-            <div class="w-full md:w-1/2 md:pr-[48px]">
+            <div class="w-full md:w-1/2 md:pr-[48px] order-2 lg:order-1">
 
                 <h2
                     class="text-[28px] md:text-[32px] font-extrabold mb-1 text-[var(--color-heading)] leading-[1.2] tracking-[0.02px]">
@@ -98,7 +98,7 @@
                     {{ __('Today, our story continues with') }}"
                 </p>
             </div>
-            <div class="w-full md:w-1/2 flex justify-center items-center">
+            <div class="w-full md:w-1/2 flex justify-center items-center order-1 lg:order-2">
                 <img src="{{ asset('assets/img/about1.webp') }}" alt="About Us"
                     class="w-full max-w-[587px] max-h-[410px] rounded-[16px] object-cover">
             </div>
