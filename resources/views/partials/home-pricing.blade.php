@@ -7,10 +7,10 @@
         [
             'name' => __('REGULAR'),
             'color' => '#003868',
-            'borderColor' => '#fff',
+            'borderColor' => '#f1f1f1',
             'buttonText' => __('Get started with Regular'),
-            'icon' => '<svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_425_15641)"><path fill-rule="evenodd" clip-rule="evenodd"d="M14.6697 1.93946C14.1018 0.380531 11.8983 0.380531 11.3304 1.93946L8.75361 9.02339L1.66968 11.6002C0.110756 12.168 0.110756 14.3716 1.66968 14.9395L8.75361 17.5162L11.3304 24.6002C11.8983 26.1591 14.1018 26.1591 14.6697 24.6002L17.2465 17.5162L24.3304 14.9395C25.8893 14.3716 25.8893 12.168 24.3304 11.6002L17.2465 9.02339L14.6697 1.93946Z" fill="#003868" /></g><defs><clipPath id="clip0_425_15641"><rect width="25" height="25" fill="white" transform="translate(0.5 0.769775)" /></clipPath></defs></svg>',
-            'singleColor' => '#0ABAB5',
+            'icon' => '<svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_425_15641)"><path fill-rule="evenodd" clip-rule="evenodd"d="M14.6697 1.93946C14.1018 0.380531 11.8983 0.380531 11.3304 1.93946L8.75361 9.02339L1.66968 11.6002C0.110756 12.168 0.110756 14.3716 1.66968 14.9395L8.75361 17.5162L11.3304 24.6002C11.8983 26.1591 14.1018 26.1591 14.6697 24.6002L17.2465 17.5162L24.3304 14.9395C25.8893 14.3716 25.8893 12.168 24.3304 11.6002L17.2465 9.02339L14.6697 1.93946Z" fill="#6adbd9" /></g><defs><clipPath id="clip0_425_15641"><rect width="25" height="25" fill="white" transform="translate(0.5 0.769775)" /></clipPath></defs></svg>',
+            'singleColor' => '#6adbd9',
             'monthlyColor' => '#1f3a5f',
             'isMostChosen' => false,
             'packages' => [
@@ -66,11 +66,11 @@
         [
             'name' => __('PREMIUM'),
             'color' => 'var(--color-brand)',
-            'borderColor' => '#c1c1c1',
+            'borderColor' => '#ccc',
             'buttonText' => __('Get started with Premium'),
-            'icon' => '<svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"> <g clip-path="url(#clip0_706_5175)"> <path fill-rule="evenodd" clip-rule="evenodd" d="M14.6697 3.93946C14.1018 2.38053 11.8983 2.38053 11.3304 3.93946L8.75361 11.0234L1.66968 13.6002C0.110756 14.168 0.110756 16.3716 1.66968 16.9395L8.75361 19.5162L11.3304 26.6002C11.8983 28.1591 14.1018 28.1591 14.6697 26.6002L17.2465 19.5162L24.3304 16.9395C25.8893 16.3716 25.8893 14.168 24.3304 13.6002L17.2465 11.0234L14.6697 3.93946Z" fill="#6ADBD9" /></g><g clip-path="url(#clip1_706_5175)"><path d="M18.0905 5.17814L21.079 4.09028L22.1662 1.10243C22.1911 1.03398 22.2365 0.974858 22.2962 0.933081C22.3558 0.891305 22.4269 0.868896 22.4997 0.868896C22.5726 0.868896 22.6437 0.891305 22.7033 0.933081C22.763 0.974858 22.8084 1.03398 22.8333 1.10243L23.9212 4.091L26.9097 5.17814C26.9782 5.20307 27.0373 5.24844 27.0791 5.30812C27.1209 5.36779 27.1433 5.43887 27.1433 5.51171C27.1433 5.58456 27.1209 5.65563 27.0791 5.71531C27.0373 5.77498 26.9782 5.82036 26.9097 5.84528L23.9205 6.93314L22.8333 9.92171C22.8084 9.99016 22.763 10.0493 22.7033 10.0911C22.6437 10.1328 22.5726 10.1552 22.4997 10.1552C22.4269 10.1552 22.3558 10.1328 22.2962 10.0911C22.2365 10.0493 22.1911 9.99016 22.1662 9.92171L21.0783 6.93243L18.0905 5.84528C18.022 5.82036 17.9629 5.77498 17.9211 5.71531C17.8793 5.65563 17.8569 5.58456 17.8569 5.51171C17.8569 5.43887 17.8793 5.36779 17.9211 5.30812C17.9629 5.24844 18.022 5.20307 18.0905 5.17814Z" fill="#6ADBD9" /></g><defs><clipPath id="clip0_706_5175"><rect width="25" height="25" fill="white" transform="translate(0.5 2.76978)" /></clipPath><clipPath id="clip1_706_5175"><rect width="10" height="10" fill="white" transform="translate(17.5 0.511719)" /></clipPath></defs></svg>',
+            'icon' => '<svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"> <g clip-path="url(#clip0_706_5175)"> <path fill-rule="evenodd" clip-rule="evenodd" d="M14.6697 3.93946C14.1018 2.38053 11.8983 2.38053 11.3304 3.93946L8.75361 11.0234L1.66968 13.6002C0.110756 14.168 0.110756 16.3716 1.66968 16.9395L8.75361 19.5162L11.3304 26.6002C11.8983 28.1591 14.1018 28.1591 14.6697 26.6002L17.2465 19.5162L24.3304 16.9395C25.8893 16.3716 25.8893 14.168 24.3304 13.6002L17.2465 11.0234L14.6697 3.93946Z" fill="#2a3f55" /></g><g clip-path="url(#clip1_706_5175)"><path d="M18.0905 5.17814L21.079 4.09028L22.1662 1.10243C22.1911 1.03398 22.2365 0.974858 22.2962 0.933081C22.3558 0.891305 22.4269 0.868896 22.4997 0.868896C22.5726 0.868896 22.6437 0.891305 22.7033 0.933081C22.763 0.974858 22.8084 1.03398 22.8333 1.10243L23.9212 4.091L26.9097 5.17814C26.9782 5.20307 27.0373 5.24844 27.0791 5.30812C27.1209 5.36779 27.1433 5.43887 27.1433 5.51171C27.1433 5.58456 27.1209 5.65563 27.0791 5.71531C27.0373 5.77498 26.9782 5.82036 26.9097 5.84528L23.9205 6.93314L22.8333 9.92171C22.8084 9.99016 22.763 10.0493 22.7033 10.0911C22.6437 10.1328 22.5726 10.1552 22.4997 10.1552C22.4269 10.1552 22.3558 10.1328 22.2962 10.0911C22.2365 10.0493 22.1911 9.99016 22.1662 9.92171L21.0783 6.93243L18.0905 5.84528C18.022 5.82036 17.9629 5.77498 17.9211 5.71531C17.8793 5.65563 17.8569 5.58456 17.8569 5.51171C17.8569 5.43887 17.8793 5.36779 17.9211 5.30812C17.9629 5.24844 18.022 5.20307 18.0905 5.17814Z" fill="#2a3f55" /></g><defs><clipPath id="clip0_706_5175"><rect width="25" height="25" fill="white" transform="translate(0.5 2.76978)" /></clipPath><clipPath id="clip1_706_5175"><rect width="10" height="10" fill="white" transform="translate(17.5 0.511719)" /></clipPath></defs></svg>',
             'singleColor' => '#2a3f55',
-            'monthlyColor' => '#2ec4b6',
+            'monthlyColor' => '#6adbd9',
             'isMostChosen' => true,
             'packages' => [
 
@@ -134,7 +134,7 @@
         [
             'name' => __('PLATINUM'),
             'color' => '#CBA328',
-            'borderColor' => '#CBA328',
+            'borderColor' => '#E6BA30',
             'buttonText' => __('Get started with Full Detail'),
             'icon' => '<svg width="31" height="34" viewBox="0 0 31 34" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_707_5176)"><path fill-rule="evenodd" clip-rule="evenodd" d="M15.6697 5.93946C15.1018 4.38053 12.8983 4.38053 12.3304 5.93946L9.75361 13.0234L2.66968 15.6002C1.11076 16.168 1.11076 18.3716 2.66968 18.9395L9.75361 21.5162L12.3304 28.6002C12.8983 30.1591 15.1018 30.1591 15.6697 28.6002L18.2465 21.5162L25.3304 18.9395C26.8893 18.3716 26.8893 16.168 25.3304 15.6002L18.2465 13.0234L15.6697 5.93946Z" fill="#CBA328" /></g><g clip-path="url(#clip1_707_5176)"><path d="M19.2089 6.11152L22.7952 4.80609L24.0998 1.22067C24.1297 1.13853 24.1842 1.06758 24.2558 1.01745C24.3274 0.96732 24.4127 0.94043 24.5001 0.94043C24.5875 0.94043 24.6728 0.96732 24.7444 1.01745C24.816 1.06758 24.8705 1.13853 24.9004 1.22067L26.2058 4.80695L29.7921 6.11152C29.8742 6.14143 29.9452 6.19589 29.9953 6.26749C30.0454 6.3391 30.0723 6.4244 30.0723 6.51181C30.0723 6.59922 30.0454 6.68452 29.9953 6.75612C29.9452 6.82773 29.8742 6.88218 29.7921 6.91209L26.2049 8.21752L24.9004 11.8038C24.8705 11.8859 24.816 11.9569 24.7444 12.007C24.6728 12.0572 24.5875 12.084 24.5001 12.084C24.4127 12.084 24.3274 12.0572 24.2558 12.007C24.1842 11.9569 24.1297 11.8859 24.0998 11.8038L22.7944 8.21667L19.2089 6.91209C19.1268 6.88218 19.0559 6.82773 19.0057 6.75612C18.9556 6.68452 18.9287 6.59922 18.9287 6.51181C18.9287 6.4244 18.9556 6.3391 19.0057 6.26749C19.0559 6.19589 19.1268 6.14143 19.2089 6.11152Z" fill="#CBA328" /></g> <g clip-path="url(#clip2_707_5176)"><path d="M0.913471 26.2665L3.00547 25.505L3.76647 23.4135C3.78392 23.3656 3.81568 23.3242 3.85745 23.2949C3.89922 23.2657 3.94898 23.25 3.99997 23.25C4.05096 23.25 4.10072 23.2657 4.14249 23.2949C4.18426 23.3242 4.21602 23.3656 4.23347 23.4135L4.99497 25.5055L7.08697 26.2665C7.13488 26.2839 7.17627 26.3157 7.20551 26.3575C7.23476 26.3992 7.25044 26.449 7.25044 26.5C7.25044 26.551 7.23476 26.6007 7.20551 26.6425C7.17627 26.6843 7.13488 26.716 7.08697 26.7335L4.99447 27.495L4.23347 29.587C4.21602 29.6349 4.18426 29.6763 4.14249 29.7055C4.10072 29.7348 4.05096 29.7504 3.99997 29.7504C3.94898 29.7504 3.89922 29.7348 3.85745 29.7055C3.81568 29.6763 3.78392 29.6349 3.76647 29.587L3.00497 27.4945L0.913471 26.7335C0.865558 26.716 0.824173 26.6843 0.794929 26.6425C0.765686 26.6007 0.75 26.551 0.75 26.5C0.75 26.449 0.765686 26.3992 0.794929 26.3575C0.824173 26.3157 0.865558 26.2839 0.913471 26.2665Z"
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      fill="#CBA328" /></g><g clip-path="url(#clip3_707_5176)"> <path d="M18.8545 30.7999L20.6476 30.1472L21.2999 28.3545C21.3149 28.3134 21.3421 28.2779 21.3779 28.2529C21.4137 28.2278 21.4563 28.2144 21.5 28.2144C21.5438 28.2144 21.5864 28.2278 21.6222 28.2529C21.658 28.2779 21.6852 28.3134 21.7002 28.3545L22.3529 30.1476L24.146 30.7999C24.1871 30.8149 24.2226 30.8421 24.2477 30.8779C24.2727 30.9137 24.2862 30.9563 24.2862 31C24.2862 31.0438 24.2727 31.0864 24.2477 31.1222C24.2226 31.158 24.1871 31.1852 24.146 31.2002L22.3525 31.8529L21.7002 33.646C21.6852 33.6871 21.658 33.7226 21.6222 33.7477C21.5864 33.7727 21.5438 33.7862 21.5 33.7862C21.4563 33.7862 21.4137 33.7727 21.3779 33.7477C21.3421 33.7226 21.3149 33.6871 21.2999 33.646L20.6472 31.8525L18.8545 31.2002C18.8134 31.1852 18.7779 31.158 18.7529 31.1222C18.7278 31.0864 18.7144 31.0438 18.7144 31C18.7144 30.9563 18.7278 30.9137 18.7529 30.8779C18.7779 30.8421 18.8134 30.8149 18.8545 30.7999Z" fill="#CBA328" /></g> <defs><clipPath id="clip0_707_5176"><rect width="25" height="25" fill="white" transform="translate(1.5 4.76978)" /></clipPath><clipPath id="clip1_707_5176"> <rect width="12" height="12" fill="white" transform="translate(18.5 0.511719)" /></clipPath><clipPath id="clip2_707_5176"><rect width="7" height="7" fill="white" transform="translate(0.5 23)" /></clipPath><clipPath id="clip3_707_5176"><rect width="6" height="6" fill="white" transform="translate(18.5 28)" /></clipPath></defs></svg>',
@@ -415,4 +415,433 @@
 </section>
 
 {{-- Booking Form Modal --}}
-<x-booking-modal />
+<div class="modal px-5" id="pricingModal">
+    <div class="modal-content relative h-[calc(100vh-50px)] w-full max-w-[751px]">
+        <form id="pricingBookingForm" class="h-full" method="POST"
+            action="{{ route('booking.store', ['locale' => app()->getLocale()]) }}">
+            @csrf
+
+            <!-- Close Button -->
+            <div class="close-modal-2 bg-white w-[28px] h-[28px] rounded-full flex items-center justify-center absolute top-[-14px] right-[-14px] cursor-pointer"
+                onClick="closeModal()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <path fill="#EA6216"
+                        d="M20.48 3.512a11.97 11.97 0 0 0-8.486-3.514C5.366-.002-.007 5.371-.007 11.999c0 3.314 1.344 6.315 3.516 8.487A11.97 11.97 0 0 0 11.995 24c6.628 0 12.001-5.373 12.001-12.001c0-3.314-1.344-6.315-3.516-8.487m-1.542 15.427a9.8 9.8 0 0 1-6.943 2.876c-5.423 0-9.819-4.396-9.819-9.819a9.8 9.8 0 0 1 2.876-6.943a9.8 9.8 0 0 1 6.942-2.876c5.422 0 9.818 4.396 9.818 9.818a9.8 9.8 0 0 1-2.876 6.942z" />
+                    <path fill="#EA6216"
+                        d="m13.537 12l3.855-3.855a1.091 1.091 0 0 0-1.542-1.541l-.001-.001-3.855 3.855-3.855-3.855A1.091 1.091 0 0 0 6.6 8.145l-.001-.001 3.855 3.855-3.855 3.855a1.091 1.091 0 1 0 1.541 1.542l.001-.001 3.855-3.855 3.855 3.855a1.091 1.091 0 1 0 1.542-1.541l-.001-.001z" />
+                </svg>
+            </div>
+
+            <div class="h-full flex flex-col justify-between overflow-y-auto pr-5 md:pr-[30px]">
+
+                <!-- Success/Error Message -->
+                <div id="formMessage" class="hidden mb-4 p-4 rounded-lg"></div>
+
+                <!-- Header -->
+                <div class="flex items-center gap-4 px-5 py-5 border border-[#C8CEDD] rounded-[16px]">
+                    <div
+                        class="w-[50px] h-[50px] rounded-[16px] bg-[#E7F1FF] flex items-center justify-center flex-shrink-0">
+                        <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M7.37473 0.8125C7.62337 0.8125 7.86182 0.911272 8.03764 1.08709C8.21345 1.2629 8.31223 1.50136 8.31223 1.75V2.06625C8.74139 2.06292 9.20764 2.06167 9.71098 2.0625H16.2885C16.7918 2.0625 17.2581 2.06375 17.6872 2.06625V1.75C17.6872 1.50136 17.786 1.2629 17.9618 1.08709C18.1376 0.911272 18.3761 0.8125 18.6247 0.8125C18.8734 0.8125 19.1118 0.911272 19.2876 1.08709C19.4635 1.2629 19.5622 1.50136 19.5622 1.75V2.12625C19.5772 2.12625 19.5918 2.1275 19.606 2.13C20.4935 2.1975 21.2422 2.34125 21.926 2.67C23.0316 3.1961 23.9428 4.05791 24.5297 5.1325C24.8885 5.7975 25.0422 6.52375 25.116 7.37375C25.1872 8.20125 25.1872 9.22625 25.1872 10.5112V16.7375C25.1872 18.0238 25.1872 19.05 25.116 19.8762C25.041 20.7262 24.8885 21.4525 24.5297 22.1162C23.943 23.1913 23.0318 24.0536 21.926 24.58C21.2422 24.9088 20.4935 25.0525 19.606 25.12C18.736 25.1875 17.656 25.1875 16.2885 25.1875H9.71223C8.34473 25.1875 7.26473 25.1875 6.39473 25.12C5.50723 25.0512 4.75848 24.9088 4.07473 24.58C2.96911 24.0539 2.05787 23.1921 1.47098 22.1175C1.11223 21.4525 0.958477 20.7262 0.884727 19.8762C0.813477 19.0487 0.813477 18.0238 0.813477 16.7388V10.5125C0.813477 9.22625 0.813477 8.2 0.884727 7.37375C0.959727 6.52375 1.11223 5.7975 1.47098 5.13375C2.05766 4.0587 2.96892 3.19643 4.07473 2.67C4.75848 2.34125 5.50723 2.1975 6.39473 2.13L6.43723 2.125V1.75C6.43723 1.50136 6.536 1.2629 6.71181 1.08709C6.88763 0.911272 7.12609 0.8125 7.37473 0.8125ZM6.43723 4.0075C5.71598 4.07 5.25473 4.1825 4.88723 4.36C4.13774 4.71428 3.51919 5.29609 3.11973 6.0225C2.97723 6.2875 2.87473 6.605 2.80723 7.0625H23.1935C23.1247 6.605 23.0222 6.2875 22.8797 6.02375C22.4808 5.29706 21.8627 4.71483 21.1135 4.36C20.7447 4.1825 20.2835 4.07 19.5622 4.0075V4.25C19.5622 4.49864 19.4635 4.7371 19.2876 4.91291C19.1118 5.08873 18.8734 5.1875 18.6247 5.1875C18.3761 5.1875 18.1376 5.08873 17.9618 4.91291C17.786 4.7371 17.6872 4.49864 17.6872 4.25V3.94125C17.2614 3.93792 16.7822 3.93667 16.2497 3.9375H9.74973C9.21723 3.9375 8.73806 3.93875 8.31223 3.94125V4.25C8.31223 4.49864 8.21345 4.7371 8.03764 4.91291C7.86182 5.08873 7.62337 5.1875 7.37473 5.1875C7.12609 5.1875 6.88763 5.08873 6.71181 4.91291C6.536 4.7371 6.43723 4.49864 6.43723 4.25V4.0075Z"
+                                fill="var(--color-brand)" />
+                        </svg>
+
+                    </div>
+                    <div class="space-y-2">
+                        <h4 class="text-[24px] font-bold text-[var(--color-heading)] leading-[1.4]">
+                            {{ __('Book your service') }}
+                        </h4>
+                        <p class="text-[16px] font-medium text-[var(--color-text)] leading-[1.4] font-sans">
+                            {{ __('For your') }}
+                            {{ __('service, share your details,') }}
+                            {{ __('and we\'ll take care of the rest.') }}
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Form Fields -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">{{ __('First Name') }}</label>
+                        <input type="text" name="first_name" id="first_name" required
+                            class="block w-full rounded-lg border border-gray-300 h-12 focus:outline-none focus:ring-[var(--color-brand)] focus:border-[var(--color-brand)] px-4"
+                            placeholder="{{ __('Enter first name') }}">
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">{{ __('Last Name') }}</label>
+                        <input type="text" name="last_name" id="last_name" required
+                            class="block w-full rounded-lg border border-gray-300 h-12 focus:outline-none focus:ring-[var(--color-brand)] focus:border-[var(--color-brand)] px-4"
+                            placeholder="{{ __('Enter last name') }}">
+                    </div>
+
+
+                    <div class="md:col-span-2">
+                        <label class="block text-sm font-medium text-gray-700 mb-1">{{ __('Address') }}</label>
+                        <textarea name="address" id="address" required
+                            class="block w-full px-4 py-3 text-base text-gray-900 placeholder-gray-500 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-[var(--color-brand)] focus:ring-offset-2 focus:border-[var(--color-brand)]"
+                            rows="3" placeholder="{{ __('Your address') }}"></textarea>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">{{ __('Number of Cars') }}</label>
+                        <input type="number" name="number_of_cars" id="number_of_cars" required
+                            class="block w-full px-4 py-3 text-base text-gray-900 placeholder-gray-500 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-[var(--color-brand)] focus:ring-offset-2 focus:border-[var(--color-brand)]"
+                            placeholder="{{ __('Enter number of cars') }}">
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">{{ __('Licence Plate') }}</label>
+                        <input type="text" name="licence_plate" id="licence_plate" required
+                            class="block w-full px-4 py-3 text-base text-gray-900 placeholder-gray-500 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-[var(--color-brand)] focus:ring-offset-2 focus:border-[var(--color-brand)]"
+                            placeholder="{{ __('Enter licence plate') }}">
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">{{ __('WhatsApp Number') }}</label>
+                        <input type="text" name="whatsapp" id="whatsapp" required
+                            class="block w-full px-4 py-3 text-base text-gray-900 placeholder-gray-500 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-[var(--color-brand)] focus:ring-offset-2 focus:border-[var(--color-brand)]"
+                            placeholder="{{ __('Enter WhatsApp number') }}">
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">{{ __('Package Choice') }}</label>
+                        <select id="packageSelect" name="package" required
+                            class="block w-full px-4 py-3 text-base text-gray-900 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-[var(--color-brand)] focus:ring-offset-2 focus:border-[var(--color-brand)]">
+                            <option value="">{{ __('Select a package') }}</option>
+                            <option value="Basic Treatment - €79,95">{{ __('Basic Treatment - €79,95') }}</option>
+                            <option value="Basic Treatment Monthly - €74,45">
+                                {{ __('Basic Treatment Monthly - €74,45') }}
+                            </option>
+                            <option value="Premium Treatment - €149,95">{{ __('Premium Treatment - €149,95') }}</option>
+                            <option value="Premium Treatment Monthly - €144,45">
+                                {{ __('Premium Treatment Monthly - €144,45') }}
+                            </option>
+                            <option value="Full Detail Treatment - €289,95">{{ __('Full Detail Treatment - €289,95') }}
+                            </option>
+                            <option value="Full Detail Treatment Monthly - €249,45">
+                                {{ __('Full Detail Treatment Monthly -') }}
+                                €249,45
+                            </option>
+                        </select>
+                        <input type="hidden" name="package_name" id="package_name">
+                        <input type="hidden" name="package_price" id="package_price">
+                    </div>
+
+                    <div>
+                        <label
+                            class="block text-base font-medium text-[var(--color-text)] mb-2">{{ __('Preferred Date') }}</label>
+                        <input type="date" name="preferred_date" id="preferred_date" required
+                            class="block w-full px-4 py-3 text-base text-gray-900 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-[var(--color-brand)] focus:ring-offset-2 focus:border-[var(--color-brand)]">
+                    </div>
+                </div>
+
+                <!-- Buttons -->
+                <div class="flex justify-end gap-3 mt-6">
+                    <button type="button"
+                        class="inline-flex justify-center px-4 py-3 text-base font-medium text-gray-700 bg-gray-200 border border-transparent rounded-md shadow-sm hover:bg-gray-300 focus:outline-none focus:ring-[var(--color-brand)] focus:ring-offset-2 focus:border-[var(--color-brand)] cursor-pointer"
+                        onclick="closeModal()">{{ __('Cancel') }}</button>
+
+                    <button type="submit" id="bookNowBtn"
+                        class="inline-flex justify-center px-4 py-3 text-base font-medium text-white bg-[var(--color-brand)] border border-transparent rounded-md shadow-sm hover:bg-[var(--color-brand)] focus:outline-none focus:ring-[var(--color-brand)] focus:ring-offset-2 focus:border-[var(--color-brand)] cursor-pointer">
+                        <span class="btn-text">{{ __('Book Now') }}</span>
+                        <span class="btn-spinner hidden">
+                            <svg class="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                viewBox="0 0 24 24">
+                                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor"
+                                    stroke-width="4"></circle>
+                                <path class="opacity-75" fill="currentColor"
+                                    d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z">
+                                </path>
+                            </svg>
+                        </span>
+                    </button>
+                </div>
+
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+<script>
+    function openModal(planName = null, priceSingle = null, priceMonthly = null) {
+        const modal = document.querySelector('#pricingModal');
+        const packageSelect = document.querySelector('#packageSelect');
+        console.log({ packageSelect })
+        // If plan information is provided, pre-select the package
+        if (planName && packageSelect) {
+            console.log({ planName, packageSelect })
+            // Get current pricing mode (single or monthly)
+            const isPricingMonthly = document.querySelector('.pricing-opt.bg-white')?.dataset.type === 'monthly';
+            const price = isPricingMonthly ? priceMonthly : priceSingle;
+            const packageValue = `${planName} - ${price}`;
+
+            // Try to find and select the matching option
+            const options = packageSelect.querySelectorAll('option');
+            let optionFound = false;
+
+            options.forEach(option => {
+                if (option.value.includes(planName)) {
+                    if (isPricingMonthly && option.value.toLowerCase().includes('monthly')) {
+                        packageSelect.value = option.value;
+                        optionFound = true;
+                    } else if (!isPricingMonthly && !option.value.toLowerCase().includes('monthly')) {
+                        packageSelect.value = option.value;
+                        optionFound = true;
+                    }
+                }
+            });
+        }
+
+        modal.classList.add('show');
+        document.body.classList.add('modal-open');
+    }
+
+    function closeModal() {
+        const modal = document.querySelector('#pricingModal');
+        modal.classList.remove('show');
+        document.body.classList.remove('modal-open');
+    }
+
+    // Close modal when clicking outside of it
+    document.addEventListener('DOMContentLoaded', function () {
+        // Handle pricing plan button clicks
+        const pricingPlanButtons = document.querySelectorAll('.pricing-plan-btn');
+        pricingPlanButtons.forEach(button => {
+            button.addEventListener('click', function (e) {
+                e.preventDefault();
+                const planName = this.dataset.planName;
+                const priceSingle = this.dataset.planPriceSingle;
+                const priceMonthly = this.dataset.planPriceMonthly;
+                openModal(planName, priceSingle, priceMonthly);
+            });
+        });
+
+        // Close modal handlers
+        document.querySelector('.modal')?.addEventListener('click', function (e) {
+            if (e.target === this) {
+                closeModal();
+            }
+        });
+
+        document.querySelector('.close-modal-2')?.addEventListener('click', function (e) {
+            e.preventDefault();
+            closeModal();
+        });
+    });
+</script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+
+        const buttons = document.querySelectorAll('.pricing-opt');
+        const cards = document.querySelectorAll('.pricing-card');
+
+        function featureItem(text) {
+            return `
+            <div class="flex gap-3">
+                <svg width="20" height="21" viewBox="0 0 20 21" fill="none">
+                    <rect x="0.5" y="1.05347" width="19" height="19" rx="6.16667" stroke="white"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M16.6237 7.0549L8.05424 15.6243L3.37646 10.9466L4.9487 9.37433L8.05424 12.4799L15.0514 5.48267L16.6237 7.0549Z"
+                        fill="white"/>
+                </svg>
+                <span class="text-[15px] font-medium">${text}</span>
+            </div>
+        `;
+        }
+
+        function render(card, type) {
+            const data = JSON.parse(card.dataset.plan);
+            const pkg = data[type];
+
+            // Update background color
+            const newColor = type === 'single' ? card.dataset.singleColor : card.dataset.monthlyColor;
+            card.style.backgroundColor = newColor;
+
+            // Price
+            card.querySelector('.price').textContent = pkg.price;
+
+            // Frequency
+            const freq = card.querySelector('.plan-frequency');
+            if (pkg.frequency) {
+                freq.innerHTML = `/ ${pkg.frequency}`;
+                freq.style.display = 'inline';
+            } else {
+                freq.style.display = 'none';
+            }
+
+            // Extra
+            const extra = card.querySelector('.features-extra');
+            if (pkg.features.extra) {
+                extra.textContent = pkg.features.extra;
+                extra.classList.remove('hidden');
+            } else {
+                extra.classList.add('hidden');
+            }
+
+            // Exterior
+            const exterior = card.querySelector('.features-exterior');
+            exterior.innerHTML = pkg.features.exterior.map(featureItem).join('');
+
+            // Interior
+            const interior = card.querySelector('.features-interior');
+            interior.innerHTML = pkg.features.interior.map(featureItem).join('');
+
+            card.dataset.activePackage = type;
+        }
+
+        function setActive(button) {
+            buttons.forEach(btn => {
+                btn.classList.remove('bg-white', 'text-[#454852]');
+                btn.classList.add('text-[#8D8D8D]');
+            });
+            button.classList.add('bg-white', 'text-[#454852]');
+            button.classList.remove('text-[#8D8D8D]');
+        }
+
+        // Click handler
+        buttons.forEach(button => {
+            button.addEventListener('click', () => {
+                const type = button.dataset.type;
+                setActive(button);
+                cards.forEach(card => render(card, type));
+            });
+        });
+
+        // ✅ DEFAULT → SINGLE
+        const defaultBtn = document.querySelector('.pricing-opt[data-type="single"]');
+        setActive(defaultBtn);
+        cards.forEach(card => render(card, 'single'));
+
+    });
+</script>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+
+        const modal = document.getElementById('pricingModal');
+        const bookingForm = document.getElementById('pricingBookingForm');
+        if (bookingForm) {
+            bookingForm.addEventListener('submit', function (e) {
+                e.preventDefault();
+                console.log('bookingForm submission started.');
+
+                const form = this;
+                const formData = new FormData(form);
+                const submitBtn = form.querySelector('#bookNowBtn');
+                const btnText = submitBtn.querySelector('.btn-text');
+                const spinner = submitBtn.querySelector('.btn-spinner');
+
+                // Disable button and show spinner
+                if (submitBtn) {
+                    submitBtn.disabled = true;
+                }
+                if (btnText) {
+                    btnText.classList.add('hidden');
+                }
+                if (spinner) {
+                    spinner.classList.remove('hidden');
+                }
+
+                fetch(form.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'X-Requested-With': 'XMLHttpRequest',
+                        'X-CSRF-TOKEN': document.querySelector('input[name="_token"]').value
+                    }
+                })
+                    .then(response => response.json())
+                    .then(data => {
+                        console.log('Response data:', data);
+                        const formMessage = form.querySelector('#formMessage');
+                        if (data.success) {
+                            form.reset();
+                            // if (formMessage) {
+                            //     formMessage.innerHTML = `<div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded-lg mb-4">${data.message}</div>`;
+                            //     formMessage.classList.remove('hidden');
+                            // }
+                            // setTimeout(() => {
+                            //     closeModal();
+                            // }, 4000);
+
+                            modal.classList.remove('show');
+                            Swal.fire({
+                                icon: 'success',
+                                title: 'Success!',
+                                text: `${data.message}`,
+                                toast: true,
+                                position: 'top-end',
+                                showConfirmButton: false,
+                                timer: 3000,
+                                timerProgressBar: true,
+                                customClass: {
+                                    popup: 'animate-fade-in'
+                                }
+                            });
+                        } else {
+                            // if (formMessage) {
+                            //     formMessage.innerHTML = `<div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded-lg mb-4">${data.message}</div>`;
+                            //     formMessage.classList.remove('hidden');
+                            // }
+                            modal.classList.remove('show');
+                            Swal.fire({
+                                icon: 'error',
+                                title: 'Error!',
+                                text: `${data.message}`,
+                                toast: true,
+                                position: 'top-end',
+                                showConfirmButton: false,
+                                timer: 3000,
+                                timerProgressBar: true,
+                                customClass: {
+                                    popup: 'animate-fade-in'
+                                }
+                            });
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error during form submission:', error);
+                        // const formMessage = form.querySelector('#formMessage');
+                        // if (formMessage) {
+                        //     formMessage.innerHTML = `<div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded-lg mb-4">An unexpected error occurred. Please try again.</div>`;
+                        //     formMessage.classList.remove('hidden');
+                        // }
+
+                        modal.classList.remove('show');
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Error!',
+                            text: 'An unexpected error occurred. Please try again',
+                            toast: true,
+                            position: 'top-end',
+                            showConfirmButton: false,
+                            timer: 3000,
+                            timerProgressBar: true,
+                            customClass: {
+                                popup: 'animate-fade-in'
+                            }
+                        });
+                    })
+                    .finally(() => {
+                        console.log('Form submission finished.');
+                        // Re-enable button and hide spinner
+                        if (submitBtn) {
+                            submitBtn.disabled = false;
+                        }
+                        if (btnText) {
+                            btnText.classList.remove('hidden');
+                        }
+                        if (spinner) {
+                            spinner.classList.add('hidden');
+                        }
+                    });
+            });
+        }
+    });
+</script>

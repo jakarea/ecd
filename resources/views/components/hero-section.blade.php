@@ -23,8 +23,9 @@
     $whatsappNumber = $whatsappPhone ? preg_replace('/[^0-9+]/', '', $whatsappPhone) : null;
 @endphp
 
-@if($heroData->media_type === 'video' && $heroData->background_video)
-    {{-- Video Hero Section (Homepage style) --}}
+@if($heroData->media_type === 'video' && $heroData->background_video) 
+
+    {{-- Video Hero Section (Homepage style) --}} 
     <section class="hero-section bg-no-repeat bg-cover bg-center h-screen relative">
         <div class="video-background">
             <iframe src="{{ $heroData->background_video }}" frameborder="0" allow="autoplay; encrypted-media"
@@ -64,7 +65,7 @@
                 class="w-full h-full object-cover object-bottom">
         </div>
     </section>
-@else
+@else 
     {{-- Image Hero Section (Other pages style) --}}
     <section
         class="{{ $heroData->background_color }} hero-section bg-no-repeat bg-cover bg-center h-[281px] md:h-[451px] relative py-[50px]"
@@ -82,9 +83,8 @@
             </div>
         </div>
 
-        @if($heroData->show_social_icons)
-            {{-- Floating social icons --}}
-            {{-- <div id="socialIcons"
+        {{-- @if($heroData->show_social_icons) 
+            <div id="socialIcons"
                 class="fixed top-1/2 -translate-y-1/2 left-6 md:right-6 md:left-auto z-[100] transition-all duration-500">
                 <nav class="flex flex-col gap-2">
                     @if($whatsappNumber)
@@ -119,8 +119,8 @@
 
                     </a>
                 </nav>
-            </div> --}}
-        @endif
+            </div>
+        @endif --}}
         @php
             if (Request::is('*/about')) {
                 $hero_shape = 'hero_shape_white_inner_page.png';

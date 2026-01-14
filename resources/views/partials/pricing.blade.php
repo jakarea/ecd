@@ -1,6 +1,218 @@
 <section class="py-8 md:pt-25">
     <div class="container">
-        <div class="overflow-x-auto">
+        {{-- Mobile Pricing Cards (Visible on mobile only) --}}
+        <div class="lg:hidden">
+            <h3 class="text-black font-medium text-[20px] mb-6 text-center">
+                {{ __('Choose Your Plan') }}
+            </h3>
+            <div class="flex items-center justify-center mb-6">
+                <div class="flex items-center border border-[#D1D7DF] rounded-[60px] p-1.5">
+                    <button data-type="single" class="mobile-pricing-opt bg-[var(--color-brand)] text-white text-base font-bold rounded-[60px] py-2 px-4 text-center uppercase inline-block cursor-pointer">{{ __('Single') }}</button>
+                    <button data-type="monthly" class="mobile-pricing-opt text-[#8D8D8D] text-base font-bold rounded-[60px] py-2 px-4 text-center uppercase inline-block cursor-pointer">{{ __('Monthly') }}</button>
+                </div>
+            </div>
+
+            {{-- Regular Card --}}
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden mb-6">
+                <div class="bg-[#003868] p-6">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-[35px] h-[35px] bg-white rounded-[13px] flex justify-center items-center">
+                            <svg width="20" height="20" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_425_15641)">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M14.6697 1.93946C14.1018 0.380531 11.8983 0.380531 11.3304 1.93946L8.75361 9.02339L1.66968 11.6002C0.110756 12.168 0.110756 14.3716 1.66968 14.9395L8.75361 17.5162L11.3304 24.6002C11.8983 26.1591 14.1018 26.1591 14.6697 24.6002L17.2465 17.5162L24.3304 14.9395C25.8893 14.3716 25.8893 12.168 24.3304 11.6002L17.2465 9.02339L14.6697 1.93946Z" fill="#003868"/>
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_425_15641">
+                                        <rect width="25" height="25" fill="white" transform="translate(0.5 0.769775)"/>
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </div>
+                        <h3 class="text-[22px] font-medium text-white">{{ __('Regular Subscription') }}</h3>
+                    </div>
+                    <div class="mobile-price text-[36px] font-extrabold text-white" data-monthly="€79,95" data-single="€55">€55</div>
+                </div>
+                <div class="p-6">
+                    <ul class="space-y-3">
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-[#003868] mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-gray-700">{{ __('Light vacuuming / Quick vacuum') }}</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-[#003868] mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-gray-700">{{ __('Door jambs cleaning') }}</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-[#003868] mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-gray-700">{{ __('Dashboard wiping') }}</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-[#003868] mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-gray-700">{{ __('Streak-free window cleaning') }}</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-[#003868] mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-gray-700">{{ __('Vacuuming (General/Thorough)') }}</span>
+                        </li>
+                    </ul>
+                    <a href="{{ route('book-now', ['locale' => app()->getLocale()]) }}?package=Basic%20Treatment%20-%20%E2%82%AC55" class="mt-6 w-full bg-[#003868] text-white text-center py-3 rounded-lg font-semibold block hover:opacity-90 transition">
+                        {{ __('Choose Regular') }}
+                    </a>
+                </div>
+            </div>
+
+            {{-- Premium Card --}}
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden mb-6">
+                <div class="bg-[var(--color-brand)] p-6 relative">
+                    <div class="absolute top-4 right-4 bg-white text-[var(--color-brand)] text-xs font-bold px-3 py-1 rounded-full">
+                        {{ __('Most Popular') }}
+                    </div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-[35px] h-[35px] bg-white rounded-[13px] flex justify-center items-center">
+                            <svg width="20" height="20" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_706_5175)">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M14.6697 3.93946C14.1018 2.38053 11.8983 2.38053 11.3304 3.93946L8.75361 11.0234L1.66968 13.6002C0.110756 14.168 0.110756 16.3716 1.66968 16.9395L8.75361 19.5162L11.3304 26.6002C11.8983 28.1591 14.1018 28.1591 14.6697 26.6002L17.2465 19.5162L24.3304 16.9395C25.8893 16.3716 25.8893 14.168 24.3304 13.6002L17.2465 11.0234L14.6697 3.93946Z" fill="#6ADBD9"/>
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_706_5175">
+                                        <rect width="25" height="25" fill="white" transform="translate(0.5 2.76978)"/>
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </div>
+                        <h3 class="text-[22px] font-medium text-white">{{ __('Premium Subscription') }}</h3>
+                    </div>
+                    <div class="mobile-price text-[36px] font-extrabold text-white" data-single="€84,45" data-monthly="€149,95">€84,45</div>
+                </div>
+                <div class="p-6">
+                    <ul class="space-y-3">
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-[var(--color-brand)] mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-gray-700">{{ __('All Regular features plus:') }}</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-[var(--color-brand)] mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-gray-700">{{ __('Dashboard cleaning') }}</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-[var(--color-brand)] mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-gray-700">{{ __('Door panel cleaning') }}</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-[var(--color-brand)] mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-gray-700">{{ __('Compartment and cubby cleaning') }}</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-[var(--color-brand)] mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-gray-700">{{ __('Cleaning and conditioning of plastic parts') }}</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-[var(--color-brand)] mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-gray-700">{{ __('Floor mat treatment / Mat cleaning') }}</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-[var(--color-brand)] mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-gray-700">{{ __('Air freshener of choice') }}</span>
+                        </li>
+                    </ul>
+                    <a href="{{ route('book-now', ['locale' => app()->getLocale()]) }}?package=Premium%20Treatment%20-%20%E2%82%AC84.45" class="mt-6 w-full bg-[var(--color-brand)] text-white text-center py-3 rounded-lg font-semibold block hover:opacity-90 transition">
+                        {{ __('Choose Premium') }}
+                    </a>
+                </div>
+            </div>
+
+            {{-- Platinum Card --}}
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+                <div class="bg-[#CBA328] p-6">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-[35px] h-[35px] bg-white rounded-[13px] flex justify-center items-center">
+                            <svg width="20" height="20" viewBox="0 0 31 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_707_5176)">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M15.6697 5.93946C15.1018 4.38053 12.8983 4.38053 12.3304 5.93946L9.75361 13.0234L2.66968 15.6002C1.11076 16.168 1.11076 18.3716 2.66968 18.9395L9.75361 21.5162L12.3304 28.6002C12.8983 30.1591 15.1018 30.1591 15.6697 28.6002L18.2465 21.5162L25.3304 18.9395C26.8893 18.3716 26.8893 16.168 25.3304 15.6002L18.2465 13.0234L15.6697 5.93946Z" fill="#CBA328"/>
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_707_5176">
+                                        <rect width="25" height="25" fill="white" transform="translate(1.5 4.76978)"/>
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </div>
+                        <h3 class="text-[22px] font-medium text-white">{{ __('Platinum Subscription') }}</h3>
+                    </div>
+                    <div class="mobile-price text-[36px] font-extrabold text-white" data-single="€274,45" data-monthly="€289,95">€274,45</div>
+                </div>
+                <div class="p-6">
+                    <ul class="space-y-3">
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-[#CBA328] mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-gray-700">{{ __('All Premium features plus:') }}</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-[#CBA328] mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-gray-700">{{ __('Leather / fabric upholstery cleaning') }}</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-[#CBA328] mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-gray-700">{{ __('Steam cleaning') }}</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-[#CBA328] mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-gray-700">{{ __('Perfume of choice') }}</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-[#CBA328] mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-gray-700">{{ __('Thorough wash rims') }}</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-[#CBA328] mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-gray-700 font-semibold">{{ __('Ceramic coating') }}</span>
+                        </li>
+                    </ul>
+                    <a href="{{ route('book-now', ['locale' => app()->getLocale()]) }}?package=Full%20Detail%20Treatment%20-%20%E2%82%AC274.45" class="mt-6 w-full bg-[#CBA328] text-white text-center py-3 rounded-lg font-semibold block hover:opacity-90 transition">
+                        {{ __('Choose Platinum') }}
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        {{-- Desktop Pricing Table (Hidden on mobile) --}}
+        <div class="overflow-x-auto hidden lg:block">
             <div class="table w-full min-w-[980px]">
                 <div class="table-header-group">
                     <div class="tr flex">
@@ -1159,9 +1371,14 @@
 
 <script>
     document.addEventListener('DOMContentLoaded', function () {
+        // Desktop pricing buttons
         const buttons = document.querySelectorAll('.pricing-opt');
 
+        // Mobile pricing buttons
+        const mobileButtons = document.querySelectorAll('.mobile-pricing-opt');
+
         function updatePrices(type) {
+            // Update desktop prices
             const allPrices = document.querySelectorAll('.price');
             allPrices.forEach(priceEl => {
                 const newPrice = priceEl.dataset[type];
@@ -1169,10 +1386,22 @@
                     priceEl.textContent = newPrice;
                 }
             });
+
+            // Update mobile prices
+            const mobilePrices = document.querySelectorAll('.mobile-price');
+            mobilePrices.forEach(priceEl => {
+                const newPrice = priceEl.dataset[type];
+                if (newPrice) {
+                    priceEl.textContent = newPrice;
+                }
+            });
         }
 
-        function setActive(button) {
-            buttons.forEach(btn => {
+        function setActive(button, isMobile = false) {
+            const selector = isMobile ? '.mobile-pricing-opt' : '.pricing-opt';
+            const allBtns = document.querySelectorAll(selector);
+
+            allBtns.forEach(btn => {
                 btn.classList.remove('bg-[var(--color-brand)]', 'text-white');
                 btn.classList.add('text-[#8D8D8D]');
             });
@@ -1181,20 +1410,39 @@
             button.classList.remove('text-[#8D8D8D]');
         }
 
+        // Desktop buttons event listeners
         buttons.forEach(button => {
             button.addEventListener('click', function () {
-                setActive(this);
+                setActive(this, false);
                 const selectedType = this.dataset.type;
                 updatePrices(selectedType);
             });
         });
 
-        // ✅ Detect which button is already active (via class in HTML)
+        // Mobile buttons event listeners
+        mobileButtons.forEach(button => {
+            button.addEventListener('click', function () {
+                setActive(this, true);
+                const selectedType = this.dataset.type;
+                updatePrices(selectedType);
+            });
+        });
+
+        // ✅ Detect which button is already active (via class in HTML) - Desktop
         const defaultBtn = [...buttons].find(btn => btn.classList.contains('bg-[var(--color-brand)]'));
 
         if (defaultBtn) {
             // Only call updatePrices — don't re-style
             const selectedType = defaultBtn.dataset.type;
+            updatePrices(selectedType);
+        }
+
+        // ✅ Detect which button is already active (via class in HTML) - Mobile
+        const defaultMobileBtn = [...mobileButtons].find(btn => btn.classList.contains('bg-[var(--color-brand)]'));
+
+        if (defaultMobileBtn) {
+            // Only call updatePrices — don't re-style
+            const selectedType = defaultMobileBtn.dataset.type;
             updatePrices(selectedType);
         }
     });
