@@ -296,7 +296,7 @@
                 </svg>
                 <div class="text-[18px] text-white tracking-[0.8px] font-cursive">{{ __('Save up to') }}
                     <span class="text-[22px] text-[var(--color-brand)]">{{ __('25%') }}</span> {{ __('on') }} <br />
-                    {{ __('Monthly Subscriptions') }}
+                    {{ __('your wash') }}
                 </div>
             </div>
         </div>
