@@ -23,7 +23,7 @@
                     <h4 class="text-[20px] text-white font-bold">{{ __('Book your wash and detailing in minutes.') }}
                     </h4>
                     <p class="text-sm text-white font-normal opacity-70 font-sans leading-[1.3]">
-                        {{ __('We’ll come to you and leave your ride spotless inside and out.') }}
+                        {{ __('we make your car showroom ready') }}
                     </p>
                 </div>
 

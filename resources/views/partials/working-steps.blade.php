@@ -21,10 +21,10 @@
     ];
 @endphp
 
-<section class="py-12">
-    <div class="container">
+<section class="py-12 relative lg:py-20">
+    <div class="container relative z-50">
         <x-section-heading pretitle="{{ __('How it works') }}" title="{{ __('Sparkling clean in 3 easy steps') }}"
-            description="{{ __('Our team of trained specialists uses advanced techniques') }}"
+            description=""
             width="max-w-[900px]">
             <x-slot name="icon">
                 <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -96,4 +96,7 @@
             </div>
         </div>
     </div>
+
+    <div class="bg-gradient-to-t from-gray-900 to-gray-600/05 h-[40%] absolute bottom-0 left-0 w-full"></div>
 </section>
+

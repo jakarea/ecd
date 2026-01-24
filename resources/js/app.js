@@ -61,7 +61,8 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     const swiper = new Swiper(".testimonialSwiper", {
-        slidesPerView: 1,
+        slidesPerView: 3,
+         spaceBetween: 25,
         pagination: {
             el: ".swiper-pagination",
             clickable: true,

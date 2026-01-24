@@ -89,15 +89,15 @@
                 quick washes to premium detailing, choose the perfect package or subscribe for regular care and keep your
                 car shining all year round.') }}</div>
         </div>
-        <div class="flex flex-wrap gap-2 justify-center mt-8 md:mt-25">
+        {{-- <div class="flex flex-wrap gap-2 justify-center mt-8 md:mt-25">
             @foreach ($services as $service)
                 <div
                     class="bg-white rounded-[8px] p-[30px] flex flex-col justify-center items-center gap-8 text-center w-[171px] h-[119px]">
                     <h3 class="text-[16px] font-medium text-[var(--color-text)] font-sf">{{  $service['title'] }}</h3>
                 </div>
             @endforeach
-        </div>
-        <div class="flex-wrap gap-2 justify-center mt-2 hidden lg:flex">
+        </div> --}}
+        <div class="flex-wrap gap-2 justify-center mt-2 lg:mt-10 hidden lg:flex">
             @foreach ($images as $image)
                 <div class="w-[171px] h-[119px]">
                     <img src="{{ asset($image['image']) }}" alt="{{ $image['id'] }}"

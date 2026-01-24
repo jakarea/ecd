@@ -33,7 +33,7 @@
         </div>
         <div class="container mx-auto">
             <div class="flex flex-col items-center justify-center gap-4 h-screen">
-                <div class="max-w-[692px] space-y-8 relative">
+                <div class="max-w-4xl space-y-8 relative">
                     <h1
                         class="text-white text-[28px] md:text-[45px] font-bold text-center leading-[33px] md:leading-[52px]">
                         {!! nl2br(e($heroData->title)) !!}
