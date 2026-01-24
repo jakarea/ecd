@@ -38,7 +38,7 @@
                 </div>
             @endforelse
         </div> --}}
-        <div class="w-full">
+        <div class="w-full lg:w-[70%] mx-auto">
             <iframe class="w-full h-48 lg:h-120 rounded-xl" src="https://www.youtube.com/embed/VzyFqwlDWDg?si=i8QVjx-PqqYL6kiw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
 
