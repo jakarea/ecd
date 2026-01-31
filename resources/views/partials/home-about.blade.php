@@ -99,10 +99,10 @@
             <div class="swiper mySwiper mt-10">
                 <div class="swiper-wrapper items-stretch">
                     @foreach ($features as $feature)
-                        <div class="swiper-slide flex h-[288px]">
+                        <div class="swiper-slide h-auto">
                             <div
                                 class="flex flex-col justify-between h-full w-full p-8 border border-[#D1D7DF] rounded-[20px] bg-white">
-                                <div>
+                                <div class="flex-grow">
                                     <div class="inline-block mb-6">
                                         <img src="{{ asset($feature['icon']) }}" alt="icon" class="w-10 h-10">
                                     </div>
@@ -117,10 +117,6 @@
                         </div>
                     @endforeach
                 </div>
-
-
-
-
             </div>
         </div>
 

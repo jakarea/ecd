@@ -17,7 +17,7 @@
                         fill="#124846" />
                 </svg>
             </x-slot>
-        </x-section-heading>
+        </x-section-heading> 
 
         <div class="flex justify-center items-center gap-x-4 mt-3 lg:mt-6">
             {{-- google --}}

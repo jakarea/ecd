@@ -6,18 +6,22 @@ import Swiper from "swiper/bundle";
 import "swiper/css/bundle";
 
 function equalizeSlideHeights() {
-    const slides = document.querySelectorAll(".swiper-slide");
-    let maxHeight = 0;
+    const swiperContainers = document.querySelectorAll(".mySwiper");
 
-    slides.forEach((slide) => {
-        slide.style.height = "auto";
-        maxHeight = Math.max(maxHeight, slide.offsetHeight);
-    });
+    swiperContainers.forEach((container) => {
+        const slides = container.querySelectorAll(".swiper-slide");
+        let maxHeight = 0;
 
-    const adjustedHeight = maxHeight - 30;
+        slides.forEach((slide) => {
+            slide.style.height = "auto";
+            maxHeight = Math.max(maxHeight, slide.offsetHeight);
+        });
 
-    slides.forEach((slide) => {
-        slide.style.height = adjustedHeight + "px";
+        const adjustedHeight = maxHeight - 30;
+
+        slides.forEach((slide) => {
+            slide.style.height = adjustedHeight + "px";
+        });
     });
 }
 
@@ -61,11 +65,19 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     const swiper = new Swiper(".testimonialSwiper", {
-        slidesPerView: 3,
-         spaceBetween: 25,
+        slidesPerView: 1,
+        spaceBetween: 25,
         pagination: {
             el: ".swiper-pagination",
             clickable: true,
+        },
+        breakpoints: {
+            640: {
+                slidesPerView: 1,
+            },
+            1024: {
+                slidesPerView: 3,
+            },
         },
     });
 
