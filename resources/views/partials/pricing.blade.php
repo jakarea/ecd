@@ -65,7 +65,7 @@
                             <span class="text-gray-700">{{ __('Vacuuming (General/Thorough)') }}</span>
                         </li>
                     </ul>
-                    <a href="{{ route('book-now', ['locale' => app()->getLocale()]) }}?package=Basic%20Treatment%20-%20%E2%82%AC55" class="mt-6 w-full bg-[#003868] text-white text-center py-3 rounded-lg font-semibold block hover:opacity-90 transition">
+                    <a href="{{ route('book-now', ['locale' => app()->getLocale()]) }}?package=Regular%20Subscription%20-%20%E2%82%AC55" class="mt-6 w-full bg-[#003868] text-white text-center py-3 rounded-lg font-semibold block hover:opacity-90 transition">
                         {{ __('Choose Regular') }}
                     </a>
                 </div>
@@ -139,7 +139,7 @@
                             <span class="text-gray-700">{{ __('Air freshener of choice') }}</span>
                         </li>
                     </ul>
-                    <a href="{{ route('book-now', ['locale' => app()->getLocale()]) }}?package=Premium%20Treatment%20-%20%E2%82%AC84.45" class="mt-6 w-full bg-[var(--color-brand)] text-white text-center py-3 rounded-lg font-semibold block hover:opacity-90 transition">
+                    <a href="{{ route('book-now', ['locale' => app()->getLocale()]) }}?package=Premium%20Subscription%20-%20%E2%82%AC84.45" class="mt-6 w-full bg-[var(--color-brand)] text-white text-center py-3 rounded-lg font-semibold block hover:opacity-90 transition">
                         {{ __('Choose Premium') }}
                     </a>
                 </div>
@@ -204,7 +204,7 @@
                             <span class="text-gray-700 font-semibold">{{ __('Ceramic coating') }}</span>
                         </li>
                     </ul>
-                    <a href="{{ route('book-now', ['locale' => app()->getLocale()]) }}?package=Full%20Detail%20Treatment%20-%20%E2%82%AC274.45" class="mt-6 w-full bg-[#CBA328] text-white text-center py-3 rounded-lg font-semibold block hover:opacity-90 transition">
+                    <a href="{{ route('book-now', ['locale' => app()->getLocale()]) }}?package=Platinum%20Subscription%20-%20%E2%82%AC274.45" class="mt-6 w-full bg-[#CBA328] text-white text-center py-3 rounded-lg font-semibold block hover:opacity-90 transition">
                         {{ __('Choose Platinum') }}
                     </a>
                 </div>

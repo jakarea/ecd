@@ -82,17 +82,17 @@
                                 <select id="pagePackageSelect" name="package" required
                                     class="block w-full px-4 py-3 text-base text-gray-900 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-[var(--color-brand)] focus:ring-offset-2 focus:border-[var(--color-brand)]">
                                     <option value="">{{ __('Select a package') }}</option>
-                                    <option value="Basic Treatment - €79,95">{{ __('Basic Treatment - €79,95') }}</option>
-                                    <option value="Basic Treatment Monthly - €74,45">
-                                        {{ __('Basic Treatment Monthly - €74,45') }}
+                                    <option value="Regular Subscription - €55">{{ __('Regular Subscription - €55') }}</option>
+                                    <option value="Regular Subscription Monthly - €79,95">
+                                        {{ __('Regular Subscription Monthly - €79,95') }}
                                     </option>
-                                    <option value="Premium Treatment - €149,95">{{ __('Premium Treatment - €149,95') }}</option>
-                                    <option value="Premium Treatment Monthly - €144,45">
-                                        {{ __('Premium Treatment Monthly - €144,45') }}
+                                    <option value="Premium Subscription - €84,45">{{ __('Premium Subscription - €84,45') }}</option>
+                                    <option value="Premium Subscription Monthly - €149,95">
+                                        {{ __('Premium Subscription Monthly - €149,95') }}
                                     </option>
-                                    <option value="Full Detail Treatment - €289,95">{{ __('Full Detail Treatment - €289,95') }}</option>
-                                    <option value="Full Detail Treatment Monthly - €249,45">
-                                        {{ __('Full Detail Treatment Monthly - €249,45') }}
+                                    <option value="Platinum Subscription - €274,45">{{ __('Platinum Subscription - €274,45') }}</option>
+                                    <option value="Platinum Subscription Monthly - €289,95">
+                                        {{ __('Platinum Subscription Monthly - €289,95') }}
                                     </option>
                                 </select>
                                 <input type="hidden" name="package_name" id="page_package_name">

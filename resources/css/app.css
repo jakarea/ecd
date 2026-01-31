@@ -269,3 +269,43 @@ footer a[aria-label] {
 footer .flex.justify-center.items-center.gap-\[26px\] {
     @apply gap-8;
 }
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.modal.show {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 25px;
+}
+
+@media (min-width: 640px) {
+    .modal.show {
+        padding-top: 50px;
+        align-items: center;
+    }
+}
+
+.modal-content {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+body.modal-open {
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+}

@@ -6,6 +6,16 @@ import Swiper from "swiper/bundle";
 import "swiper/css/bundle";
 
 function equalizeSlideHeights() {
+    // Only equalize heights on desktop/tablet (768px and above)
+    if (window.innerWidth < 768) {
+        // Reset heights on mobile
+        const slides = document.querySelectorAll(".mySwiper .swiper-slide");
+        slides.forEach((slide) => {
+            slide.style.height = "auto";
+        });
+        return;
+    }
+
     const swiperContainers = document.querySelectorAll(".mySwiper");
 
     swiperContainers.forEach((container) => {
